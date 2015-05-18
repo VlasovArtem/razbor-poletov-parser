@@ -1,0 +1,1082 @@
+[
+  {
+    "link": "http://bitwiseshiftleft.github.com/sjcl/",
+    "provider": "bitwiseshiftleft",
+    "tags": [
+      "Java",
+      "Git",
+      "Mac OSX",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 2,
+    "description": null
+  },
+  {
+    "link": "https://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates",
+    "provider": "engineering",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "JSON",
+      "Git",
+      "Google",
+      "REST",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 4,
+    "description": null
+  },
+  {
+    "link": "https://github.com/vesln/issues",
+    "provider": "issues",
+    "tags": [
+      "Java",
+      "Web",
+      "Git",
+      "DB",
+      "REST",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 9,
+    "description": "GitHub Issues from the CLI."
+  },
+  {
+    "link": "http://www.sparkjava.com/readme.html",
+    "provider": "sparkjava",
+    "tags": ["Java"],
+    "checked": false,
+    "podcastId": 12,
+    "description": null
+  },
+  {
+    "link": "http://icedtea.classpath.org/wiki/Thermostat",
+    "provider": "icedtea",
+    "tags": [
+      "Java",
+      "Web",
+      "JVM",
+      "DB"
+    ],
+    "checked": false,
+    "podcastId": 13,
+    "description": null
+  },
+  {
+    "link": "http://www.opennet.ru/opennews/art.shtml?num=33169",
+    "provider": "opennet",
+    "tags": [
+      "Java",
+      "Google",
+      "Mac OSX"
+    ],
+    "checked": false,
+    "podcastId": 13,
+    "description": "dtrace for linux - kernel driver and userland tools"
+  },
+  {
+    "link": "http://code.google.com/p/adbcj/",
+    "provider": "code",
+    "tags": [
+      "Java",
+      "Git",
+      "Apache",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 14,
+    "description": null
+  },
+  {
+    "link": "https://github.com/goldmansachs",
+    "provider": "goldmansachs",
+    "tags": [
+      "Java",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 14,
+    "description": null
+  },
+  {
+    "link": "http://sourceforge.net/projects/javaconcurrenta/",
+    "provider": "sourceforge",
+    "tags": [
+      "Java",
+      "Web",
+      "Google",
+      "DB"
+    ],
+    "checked": false,
+    "podcastId": 14,
+    "description": null
+  },
+  {
+    "link": "http://stackapps.com/questions/3099/stacktrace-for-ipad",
+    "provider": "stackapps",
+    "tags": [
+      "Java",
+      "Web",
+      "Android",
+      "Google",
+      "DB",
+      "REST"
+    ],
+    "checked": false,
+    "podcastId": 16,
+    "description": null
+  },
+  {
+    "link": "http://mosh.mit.edu/",
+    "provider": "mosh",
+    "tags": [],
+    "checked": false,
+    "podcastId": 16,
+    "description": null
+  },
+  {
+    "link": "http://vertx.io/",
+    "provider": "vertx",
+    "tags": [
+      "Java",
+      "Web",
+      "Maven",
+      "Git",
+      "Open source",
+      "Apache",
+      "Google",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": false,
+    "podcastId": 17,
+    "description": "The Vert.x main project"
+  },
+  {
+    "link": "https://github.com/purplefox/vert.x",
+    "provider": "vert.x",
+    "tags": [
+      "Web",
+      "Framework",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 17,
+    "description": null
+  },
+  {
+    "link": "http://www.jumperz.net/index.php?i=2&a=0&b=9",
+    "provider": "jumperz",
+    "tags": [
+      "Java",
+      "Web",
+      "JSON",
+      "Google",
+      "DB",
+      "Mac OSX"
+    ],
+    "checked": false,
+    "podcastId": 17,
+    "description": "MonjaDB is a MongoDB GUI client tool for rapid application development. It aims to provide a thoroughly straightforward way of updating MongoDB documents. It runs on Windows/Mac/Linux. MonjaDB has been developed as a plugin for Eclipse, so you will need to have Eclipse installed."
+  },
+  {
+    "link": "http://dillinger.io/",
+    "provider": "dillinger",
+    "tags": [
+      "Java",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 19,
+    "description": "Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending."
+  },
+  {
+    "link": "https://github.com/foursquare/fongo",
+    "provider": "fongo",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 20,
+    "description": "faked out in-memory mongo for java"
+  },
+  {
+    "link": "https://github.com/cbeams/distyles",
+    "provider": "distyles",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Gradle",
+      "JSON",
+      "Git",
+      "Spring",
+      "DB",
+      "bash",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 20,
+    "description": "A tour of Spring dependency injection styles"
+  },
+  {
+    "link": "http://www.manning.com/walls4/",
+    "provider": "manning",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Spring",
+      "Google",
+      "REST"
+    ],
+    "checked": false,
+    "podcastId": 20,
+    "description": null
+  },
+  {
+    "link": "http://metrics.codahale.com/",
+    "provider": "metrics",
+    "tags": [
+      "Git",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 21,
+    "description": "Capturing JVM- and application-level metrics. So you know what's going on."
+  },
+  {
+    "link": "http://engineering.twitter.com/2012/06/distributed-systems-tracing-with-zipkin.html",
+    "provider": "engineering",
+    "tags": [],
+    "checked": false,
+    "podcastId": 21,
+    "description": null
+  },
+  {
+    "link": "http://jaxenter.com/java-class-reloader-javeleon-hits-2-0-release-43149.html",
+    "provider": "jaxenter",
+    "tags": [
+      "Java",
+      "Web",
+      "Android",
+      "JSON",
+      "JVM",
+      "Open source",
+      "Spring",
+      "Google",
+      "REST",
+      "Ruby"
+    ],
+    "checked": false,
+    "podcastId": 22,
+    "description": null
+  },
+  {
+    "link": "https://bitbucket.org/dfa/dollar/wiki/Home",
+    "provider": "bitbucket",
+    "tags": [
+      "Web",
+      "Git",
+      "Google",
+      "DB",
+      "Mac OSX",
+      "REST",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 22,
+    "description": null
+  },
+  {
+    "link": "http://code.google.com/p/chromedevtools/",
+    "provider": "code",
+    "tags": [
+      "Java",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 23,
+    "description": null
+  },
+  {
+    "link": "http://www.textasticapp.com",
+    "provider": "textasticapp",
+    "tags": [
+      "Java",
+      "Web",
+      "DB",
+      "Mac OSX"
+    ],
+    "checked": true,
+    "podcastId": 28,
+    "description": "Powerful and fast text editor for iPad"
+  },
+  {
+    "link": "http://blog.geekli.st/post/34361344887/how-to-crack-the-toughest-coding-interviews-by-gayle",
+    "provider": "blog",
+    "tags": [
+      "Java",
+      "Web",
+      "Android",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": false,
+    "podcastId": 28,
+    "description": null
+  },
+  {
+    "link": "http://it-sobytie.ru",
+    "provider": "it-sobytie",
+    "tags": [
+      "Java",
+      "Web",
+      "Android",
+      "DB",
+      "REST"
+    ],
+    "checked": true,
+    "podcastId": 28,
+    "description": null
+  },
+  {
+    "link": "http://anti-code.com/devtools-cheatsheet/",
+    "provider": "anti-code",
+    "tags": [
+      "Java",
+      "Web",
+      "Git",
+      "Google",
+      "Mac OSX",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 29,
+    "description": "A cheatsheet for developers using Chrome DevTools"
+  },
+  {
+    "link": "http://www.git-legit.org",
+    "provider": "legit",
+    "tags": [
+      "Java",
+      "Git",
+      "Mac OSX",
+      "REST",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 30,
+    "description": "Legit is a complementary command-line interface for Git, optimized for workflow simplicity."
+  },
+  {
+    "link": "http://lviggiano.github.com/owner/",
+    "provider": "lviggiano",
+    "tags": [
+      "Java",
+      "Git",
+      "Google",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 31,
+    "description": "Get rid of the boilerplate code in properties based configuration."
+  },
+  {
+    "link": "http://msgpack.org",
+    "provider": "msgpack",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Maven",
+      "JSON",
+      "Git",
+      "Open source",
+      "Apache",
+      "Google",
+      "DB",
+      "REST",
+      "bash",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": true,
+    "podcastId": 31,
+    "description": "It's like JSON, but fast and small."
+  },
+  {
+    "link": "https://github.com/alvins82/java-mini-profiler-core",
+    "provider": "Java mini profiler",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Maven",
+      "SQL",
+      "Git",
+      "Spring",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 34,
+    "description": "JMP is a mini-profiler for Java"
+  },
+  {
+    "link": "https://saucelabs.com",
+    "provider": "saucelabs",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Android",
+      "Google"
+    ],
+    "checked": true,
+    "podcastId": 34,
+    "description": "Automated testing in the cloud for CI."
+  },
+  {
+    "link": "http://squash.io",
+    "provider": "squash",
+    "tags": [
+      "Java",
+      "Web",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 34,
+    "description": "Squash’s front-end and API host."
+  },
+  {
+    "link": "http://tin.cr/",
+    "provider": "tin",
+    "tags": [
+      "Java",
+      "Mac OSX"
+    ],
+    "checked": true,
+    "podcastId": 35,
+    "description": "Edit and save files from Chrome Developer tools."
+  },
+  {
+    "link": "https://github.com/google/tracing-framework",
+    "provider": "Tracing framework",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 35,
+    "description": "Web Tracing Framework libraries and extensions."
+  },
+  {
+    "link": "https://github.com/alexruiz/fest-assert-2.x",
+    "provider": "fest assert 2.x",
+    "tags": [
+      "Java",
+      "Web",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 36,
+    "description": "FEST Fluent Assertions 2.x"
+  },
+  {
+    "link": "https://github.com/paulrouget/firefox-jsterm",
+    "provider": "firefox jsterm",
+    "tags": [
+      "Java",
+      "Web",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 36,
+    "description": "JavaScript Terminal For Firefox"
+  },
+  {
+    "link": "https://github.com/facebook/buck",
+    "provider": "buck",
+    "tags": [
+      "Java",
+      "Android",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 38,
+    "description": "A build system that encourages the creation of small, reusable modules."
+  },
+  {
+    "link": "http://logstash.net/",
+    "provider": "logstash",
+    "tags": [
+      "Web",
+      "Google"
+    ],
+    "checked": true,
+    "podcastId": 38,
+    "description": "logstash - logs/event transport, processing, management, search."
+  },
+  {
+    "link": "https://github.com/visionmedia/git-extras",
+    "provider": "git extras",
+    "tags": [
+      "Web",
+      "Framework",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 39,
+    "description": "Git-extras project covering several sub-commands"
+  },
+  {
+    "link": "http://gitignore.io/",
+    "provider": "gitignore",
+    "tags": [
+      "Git",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 39,
+    "description": ".gitignore generator for your project"
+  },
+  {
+    "link": "http://www.togglz.org/quickstart.html",
+    "provider": "togglz",
+    "tags": [
+      "Java",
+      "Web",
+      "Google"
+    ],
+    "checked": true,
+    "podcastId": 42,
+    "description": "Togglz is an implementation of the Feature Toggles pattern for Java."
+  },
+  {
+    "link": "https://github.com/dinedal/textql",
+    "provider": "textql",
+    "tags": [
+      "Web",
+      "Framework",
+      "SQL",
+      "Git",
+      "DB",
+      "bash",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 55,
+    "description": "Execute SQL against structured text like CSV or TSV"
+  },
+  {
+    "link": "http://direnv.net/",
+    "provider": "direnv",
+    "tags": [
+      "Git",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 56,
+    "description": "Environment variable manager for your shell"
+  },
+  {
+    "link": "https://github.com/sindresorhus/pageres",
+    "provider": "pageres",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Git",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 56,
+    "description": "Capture website screenshots"
+  },
+  {
+    "link": "https://github.com/alloy/terminal-notifier",
+    "provider": "terminal notifier",
+    "tags": [
+      "Web",
+      "Git",
+      "DB",
+      "Mac OSX",
+      "REST",
+      "Homebrew",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": true,
+    "podcastId": 56,
+    "description": "Send User Notifications on Mac OS X 10.8 from the command-line."
+  },
+  {
+    "link": "https://github.com/rombert/desktop-maven-notifier",
+    "provider": "Desktop maven notifier",
+    "tags": [
+      "Java",
+      "Web",
+      "Maven",
+      "Git",
+      "DB",
+      "Mac OSX",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 56,
+    "description": "Desktop Notifier for Maven"
+  },
+  {
+    "link": "https://code.google.com/p/rest-assured/",
+    "provider": "code",
+    "tags": [
+      "Java",
+      "JSON",
+      "Git",
+      "Spring",
+      "Google",
+      "DB",
+      "REST",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": true,
+    "podcastId": 56,
+    "description": "Testing and validating REST services in Java is harder than in dynamic languages such as Ruby and Groovy."
+  },
+  {
+    "link": "https://segment.io/",
+    "provider": "segment",
+    "tags": [
+      "Web",
+      "Android",
+      "SQL"
+    ],
+    "checked": true,
+    "podcastId": 57,
+    "description": "Segment is the single hub to collect, translate and route your customer data."
+  },
+  {
+    "link": "http://pragprog.com/book/bhtmux/tmux",
+    "provider": "pragprog",
+    "tags": [
+      "Book"
+    ],
+    "checked": true,
+    "podcastId": 62,
+    "description": null
+  },
+  {
+    "link": "http://www.syntevo.com/smartgithg/",
+    "provider": "smartgithg",
+    "tags": [
+      "Java",
+      "Web",
+      "Git",
+      "Mac OSX",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 62,
+    "description": "SmartGit is a Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial."
+  },
+  {
+    "link": "http://www.mattstine.com/microservices",
+    "provider": "microservices",
+    "tags": [
+      "Java",
+      "Web",
+      "Spring",
+      "Google",
+      "REST"
+    ],
+    "checked": true,
+    "podcastId": 64,
+    "description": null
+  },
+  {
+    "link": "https://github.com/vladmihalcea/flexy-pool",
+    "provider": "flexy pool",
+    "tags": [
+      "Web",
+      "Framework",
+      "Maven",
+      "Git",
+      "Apache",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 64,
+    "description": "FlexyPool adds metrics and failover strategies to a given Connection Pool, allowing it to resize on demand."
+  },
+  {
+    "link": "https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing",
+    "provider": "About pool sizing",
+    "tags": [
+      "Web",
+      "Framework",
+      "SQL",
+      "Git",
+      "Apache",
+      "Spring",
+      "DB",
+      "REST",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 64,
+    "description": null
+  },
+  {
+    "link": "https://github.com/jeluard/semantic-versioning",
+    "provider": "semantic versioning",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Maven",
+      "Git",
+      "Apache",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 65,
+    "description": "Java library relying on semver.org principles to check binary code compatibility"
+  },
+  {
+    "link": "https://github.com/zafarkhaja/java-semver",
+    "provider": "semver",
+    "tags": [
+      "Java",
+      "Web",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 65,
+    "description": "Java implementation of the SemVer Specification"
+  },
+  {
+    "link": "http://www.jcabi.com/index.html",
+    "provider": "jcabi",
+    "tags": [
+      "Java",
+      "Maven",
+      "Git",
+      "Apache",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 66,
+    "description": "Elementary Java Components"
+  },
+  {
+    "link": "http://githut.info/",
+    "provider": "githut",
+    "tags": [
+      "Web",
+      "Git",
+      "Google",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 72,
+    "description": "A small place to discover languages in github"
+  },
+  {
+    "link": "https://github.com/tripit/slate",
+    "provider": "slate",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Git",
+      "DB",
+      "Mac OSX",
+      "REST",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": true,
+    "podcastId": 72,
+    "description": "Beautiful static documentation for your API"
+  },
+  {
+    "link": "http://brackets.io/",
+    "provider": "brackets",
+    "tags": [
+      "Java",
+      "Web",
+      "Android",
+      "JSON",
+      "Git",
+      "Open source",
+      "Google",
+      "Mac OSX",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 72,
+    "description": "A modern, open source text editor that understands web design."
+  },
+  {
+    "link": "http://www.noisli.com/",
+    "provider": "noisli",
+    "tags": null,
+    "checked": true,
+    "podcastId": 77,
+    "description": null
+  },
+  {
+    "link": "http://noiz.io",
+    "provider": "noiz",
+    "tags": null,
+    "checked": true,
+    "podcastId": 77,
+    "description": "Nice sound"
+  },
+  {
+    "link": "https://github.com/fusesource/jansi",
+    "provider": "jansi",
+    "tags": [
+      "Java",
+      "Web",
+      "Maven",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 77,
+    "description": "Jansi is a small java library that allows you to use ANSI escape sequences to format your console output which works even on windows."
+  },
+  {
+    "link": "http://bliker.github.io/cmder/",
+    "provider": "bliker",
+    "tags": [
+      "Java",
+      "Git",
+      "Google",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 77,
+    "description": "Portable console emulator for Windows"
+  },
+  {
+    "link": "http://websocketd.com/",
+    "provider": "websocketd",
+    "tags": [
+      "Java",
+      "Web",
+      "WebSocket",
+      "Git",
+      "Google",
+      "Mac OSX",
+      "bash",
+      "GitHub",
+      "Ruby"
+    ],
+    "checked": true,
+    "podcastId": 78,
+    "description": "Turn any program that uses STDIN/STDOUT into a WebSocket server. Like inetd, but for WebSockets."
+  },
+  {
+    "link": "https://github.com/HubPress/hubpress.io",
+    "provider": "hubpress",
+    "tags": [
+      "Java",
+      "Web",
+      "Android",
+      "JSON",
+      "Git",
+      "Open source",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 78,
+    "description": "A web application to build your blog on GitHub"
+  },
+  {
+    "link": "https://jitpack.io/",
+    "provider": "jitpack",
+    "tags": [
+      "Framework",
+      "Gradle",
+      "Maven",
+      "Android",
+      "Git",
+      "Google",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 78,
+    "description": "Easy to use package repository for Gradle, Maven and Android projects"
+  },
+  {
+    "link": "https://github.com/yaronn/blessed-contrib",
+    "provider": "Blessed",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Git",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 78,
+    "description": "Build terminal dashboards using ascii/ansi art and javascript"
+  },
+  {
+    "link": "http://jodd.org/",
+    "provider": "jodd",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "JSON",
+      "JVM",
+      "Git",
+      "Spring",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": "Jodd is set of open-source Java tools and micro frameworks"
+  },
+  {
+    "link": "http://www.ninjaframework.org",
+    "provider": "ninjaframework",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Maven",
+      "JSON",
+      "Git",
+      "Apache",
+      "Google",
+      "DB",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": "Ninja is a full stack web framework for Java."
+  },
+  {
+    "link": "http://arhipov.blogspot.com/2015/03/packaging-java-application-for-mac-os.html",
+    "provider": "Packaging java app",
+    "tags": [
+      "Java",
+      "Web"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": null
+  },
+  {
+    "link": "http://docs.oracle.com/javase/8/docs/technotes/guides/deploy/self-contained-packaging.html",
+    "provider": "Self contained packaging",
+    "tags": [
+      "Java",
+      "Web",
+      "JVM",
+      "DB",
+      "Mac OSX",
+      "bash"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": "This topic describes how to generate the package for a self-contained application."
+  },
+  {
+    "link": "https://itunes.apple.com/us/app/icon-slate/id439697913?mt=12",
+    "provider": "itunes",
+    "tags": [
+      "Java",
+      "Web",
+      "Framework",
+      "Google",
+      "Mac OSX"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": "Icon Slate lets you easily compose, import and export icons in many formats for desktop and mobile."
+  },
+  {
+    "link": "https://github.com/KeyboardFire/mkcast",
+    "provider": "mkcast",
+    "tags": [
+      "Web",
+      "Git",
+      "DB",
+      "bash",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": "A tool for creating GIF screencasts of a terminal, with key presses overlaid."
+  },
+  {
+    "link": "http://stedolan.github.io/jq/",
+    "provider": "stedolan",
+    "tags": [
+      "Web",
+      "Git",
+      "Mac OSX",
+      "GitHub"
+    ],
+    "checked": true,
+    "podcastId": 81,
+    "description": "Command-line JSON processor"
+  }
+]
