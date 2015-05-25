@@ -10,7 +10,7 @@ import java.util.List;
 @JsonAutoDetect
 public class UsefulThing {
     private String link;
-    private String provider;
+    private String name;
     private List<String> tags;
     private boolean checked;
     private long podcastId;
@@ -24,12 +24,12 @@ public class UsefulThing {
         this.link = link;
     }
 
-    public String getProvider() {
-        return provider;
+    public String getName() {
+        return name;
     }
 
-    public void setProvider(String provider) {
-        this.provider = provider;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<String> getTags() {

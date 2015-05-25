@@ -47,7 +47,7 @@ public class JsonFileComparator {
         usefulThing.setLink(target.getLink());
         usefulThing.setChecked(target.isChecked());
         usefulThing.setPodcastId(target.getPodcastId());
-        usefulThing.setProvider(target.getProvider());
+        usefulThing.setName(target.getName());
         return usefulThing;
     }
 }

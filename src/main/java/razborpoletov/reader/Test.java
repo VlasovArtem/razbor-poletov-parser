@@ -1,20 +1,14 @@
 package razborpoletov.reader;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
+import com.mpatric.mp3agic.InvalidDataException;
+import com.mpatric.mp3agic.UnsupportedTagException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
  * Created by artemvlasov on 24/04/15.
@@ -160,7 +154,7 @@ public class Test {
 //        List<Podcast> podcasts = new ArrayList<>();
 //        List<List<Conference>> conferencesLists = new ArrayList<>();
 //        Set<String> uniqueConferenceWebsite = new HashSet<>();
-//        List<String> ignoredUrls = Arrays.asList("instagram", "youtube");
+//        List<String> IGNORED_URLS = Arrays.asList("instagram", "youtube");
 //        for(Content content : contents) {
 //            Podcast podcast = new Podcast();
 //            List<Conference> conferences = new ArrayList<>();
@@ -173,7 +167,7 @@ public class Test {
 //                    Conference conference = new Conference();
 //                    String name = element.textNodes().stream().findFirst().get().getWholeText();
 //                    String url = element.attributes().get("href");
-//                    if(!uniqueConferenceWebsite.contains(url) && !ignoredUrls.contains(url)) {
+//                    if(!uniqueConferenceWebsite.contains(url) && !IGNORED_URLS.contains(url)) {
 //                        uniqueConferenceWebsite.add(url);
 //                        if (name.equals(url)) {
 //                            if (name.contains("http") || name.contains("https") || name.contains("www")) {
@@ -242,7 +236,7 @@ public class Test {
 //            this.contentPart = contentPart;
 //        }
 //    }
-    public static void main(String[] args) throws IOException, URISyntaxException {
+    public static void main(String[] args) throws IOException, URISyntaxException, InvalidDataException, UnsupportedTagException {
         Logger logger = LoggerFactory.getLogger(Test.class);
 //        final Logger logger = LoggerFactory.getLogger(Test.class);
 //        File folder = new File("/Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/");
@@ -261,8 +255,8 @@ public class Test {
 //            }
 //        }
 //        String outerUrl = "queues.io";
-//        List<String> protocols = Arrays.asList("http://", "https://");
-//        String formattedUrl = protocols.stream().anyMatch(outerUrl::contains) ? outerUrl :
+//        List<String> PROTOCOLS = Arrays.asList("http://", "https://");
+//        String formattedUrl = PROTOCOLS.stream().anyMatch(outerUrl::contains) ? outerUrl :
 //                String.format("http://%s", outerUrl);
 //        List<String> tags = Arrays.asList("Java", "Web", "Framework", "WebSocket", "Gradle", "Maven", "Android",
 //                "JSON", "JVM", "SQL", "Git", "Open source", "Apache");
@@ -332,26 +326,28 @@ public class Test {
 //                    return m.find() ? m.group(0) : null;})
 //                .collect(Collectors.toSet()).stream().forEach(System.out::println);
 //        List<String>
-        Connection connection = Jsoup.connect("http://msgpack.org");
-        Document document = connection.get();
-        ObjectMapper mapper = new ObjectMapper();
-        List<String> tags = mapper.readValue(new File("tags.json"), new TypeReference<List<String>>() {});
-        Element body = document.body();
-        tags.stream()
-                .filter(tag -> body.getElementsMatchingOwnText(Pattern.compile(tag, Pattern.CASE_INSENSITIVE)).size() > 0)
-                .distinct()
-                .sorted(Comparator.comparing(tag -> -body.getElementsMatchingOwnText(tag).size()))
-                .limit(5)
-                .forEach(tag -> System.out.println(tag + ": " + body.getElementsMatchingOwnText(tag).size()));
-        System.out.println("Matching text");
-        System.out.println(body.getElementsMatchingText("Ruby").size());
-        System.out.println("Matching own text");
-        System.out.println(body.getElementsMatchingOwnText("Ruby").size());
-        System.out.println("Containing own text");
-        System.out.println(body.getElementsContainingOwnText("Ruby").size());
-        System.out.println("Containing text");
-        System.out.println(body.getElementsContainingText("Ruby").size());
-
+//        Connection connection = Jsoup.connect("http://msgpack.org");
+//        Document document = connection.get();
+//        ObjectMapper mapper = new ObjectMapper();
+//        List<String> tags = mapper.readValue(new File("tags.json"), new TypeReference<List<String>>() {});
+//        Element body = document.body();
+//        tags.stream()
+//                .filter(tag -> body.getElementsMatchingOwnText(Pattern.compile(tag, Pattern.CASE_INSENSITIVE)).size() > 0)
+//                .distinct()
+//                .sorted(Comparator.comparing(tag -> -body.getElementsMatchingOwnText(tag).size()))
+//                .limit(5)
+//                .forEach(tag -> System.out.println(tag + ": " + body.getElementsMatchingOwnText(tag).size()));
+//        System.out.println("Matching text");
+//        System.out.println(body.getElementsMatchingText("Ruby").size());
+//        System.out.println("Matching own text");
+//        System.out.println(body.getElementsMatchingOwnText("Ruby").size());
+//        System.out.println("Containing own text");
+//        System.out.println(body.getElementsContainingOwnText("Ruby").size());
+//        System.out.println("Containing text");
+//        System.out.println(body.getElementsContainingText("Ruby").size());
+//        LocalDateTime dateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(Long.valueOf("1433970000000")), ZoneId
+//                .systemDefault());
+//        System.out.println(dateTime);
 
 //        BufferedReader br = new BufferedReader(new InputStreamReader(huc.getInputStream()));
 //        StringBuilder builder = new StringBuilder();
@@ -368,6 +364,65 @@ public class Test {
 //            uniqueTags.add(m.group());
 //        }
 //        uniqueTags.stream().forEach(System.out::println);
+//        File file = new File("/Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/2011-11-16-episode-0-pilot.html");
+//        Document document = Jsoup.parse(file, "UTF-8");
+//        Elements elements = document.getElementsByTag("a");
+//        String url = elements.stream().filter(element -> element.attributes().get("ep").contains("libsyn"))
+//                .findFirst()
+//                .get()
+//                .attributes().get("href");
+//
+//        System.out.println(url);
+//        if(url != null) {
+//
+//            URLConnection huc = UrlUtils.getURL(url).openConnection();
+//            InputStream in = huc.getInputStream();
+//            String filename = "/tmp/" + file.getName() + ".mp3";
+//            OutputStream outstream = new FileOutputStream(new File(filename));
+//            byte[] buffer = new byte[4096];
+//            int len;
+//            while ((len = in.read(buffer)) > 0) {
+//                outstream.write(buffer, 0, len);
+//            }
+//            outstream.close();
+//            Mp3File song = new Mp3File(filename);
+//            if (song.hasId3v2Tag()){
+//                ID3v2 id3v2tag = song.getId3v2Tag();
+//                System.out.println("Length in seconds: " + song.getLengthInSeconds());
+//                System.out.println("Length in millis: " + song.getLengthInMilliseconds());
+//                if(file.delete()) {
+//                    System.out.println("File deleted");
+//                } else {
+//                    System.out.println("File is not deleted");
+//                }
+//            }
+//        }
+
+        List<String> test = Arrays.asList("t", "b", "v");
+
+//        Pattern pattern = Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?");
+//        Matcher matcher = pattern.matcher("hello.adoc");
+//        if(matcher.matches()) {
+//            System.out.println("Pattern matches");
+//        }
+    }
+
+    private static boolean checkOptions(List<String> checker, List<String> equals, List<String> notEquals) {
+        boolean eq;
+        boolean notEq;
+        if(equals == null) {
+            return false;
+        } else {
+            eq = equals.stream().allMatch(checker::contains);
+            if(!eq) return eq;
+        }
+        if(notEquals == null) {
+            return true;
+        } else {
+            notEq = notEquals.stream().allMatch(checker::contains);
+            if(notEq) return !notEq;
+        }
+        return true;
     }
 
 }

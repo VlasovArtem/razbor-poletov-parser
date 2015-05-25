@@ -6,170 +6,152 @@ import com.google.common.base.Preconditions;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.RegexFileFilter;
-import org.jsoup.Jsoup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import razborpoletov.reader.PropertiesSelector;
 import razborpoletov.reader.entity.Conference;
-import razborpoletov.reader.entity.Podcast;
+import razborpoletov.reader.entity.ProjectStatistics;
 import razborpoletov.reader.entity.Twitter;
 import razborpoletov.reader.entity.UsefulThing;
-import razborpoletov.reader.utils.AsciidocUtils;
-import razborpoletov.reader.utils.HtmlUtils;
-import razborpoletov.reader.utils.MarkdownUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+import static razborpoletov.reader.utils.Constants.*;
 
 /**
  * Created by artemvlasov on 20/04/15.
  */
 public class FileParser {
-    private final static String MARKDOWN_FORMAT = "markdown";
-    private final static String ASCII_DOC = "adoc";
-    private final static String HTML = "html";
-    private final static String PODCAST_FILE = "podcast.json";
-    private final static String CONFERENCES_FILE = "conferences.json";
-    private final static String USEFULSTUFF_FILE = "useful-things.json";
-    private final static String PODCAST_ASSOCIATIONS_FILE = "podcast-associations.json";
-    private final static String PODCAST_COUNT_KEY = "podcast.count";
-    private final static String LAST_PODCAST_KEY = "last.podcast";
-    private final static String CONF_COMPLETE = "complete-conferences.json";
-    private final static String USEFUL_COMPLETE = "complete-useful-things.json";
-    private List<Podcast> podcasts;
-    private List<UsefulThing> usefulThings;
-    private List<Conference> conferences;
-    private Map<Twitter, Integer> twitterCount;
-    private Map<String, Integer> podcastAssociations;
-    private MarkdownUtils markdownUtils;
-    private AsciidocUtils asciidocUtils;
-    private HtmlUtils htmlUtils;
     private PropertiesSelector propertiesSelector;
     private final static Logger LOG = LoggerFactory.getLogger(FileParser.class);
-    private boolean test;
     private File[] podcastsFolderFileList;
 
-    public FileParser(String podcastsFolder, PropertiesSelector propertiesSelector, boolean test) throws IOException {
-        Preconditions.checkNotNull(podcastsFolder, "Podcast folder cannot be null");
+    public FileParser(PropertiesSelector propertiesSelector) throws IOException {
         this.propertiesSelector = Preconditions.checkNotNull(propertiesSelector, "Properties selector cannot be null");
-        LOG.info("Podcasts folder set to: {}", podcastsFolder);
-        markdownUtils = new MarkdownUtils();
-        asciidocUtils = new AsciidocUtils();
-        htmlUtils = new HtmlUtils();
-        twitterCount = new HashMap<>();
-        podcasts = new ArrayList<>();
-        usefulThings = new ArrayList<>();
-        conferences = new ArrayList<>();
-        podcastAssociations = new HashMap<>();
-        this.test = test;
-        podcastsFolderFileList = Preconditions.checkNotNull(new File(podcastsFolder).listFiles(), "Folder file list is " +
-                "empty");
+        podcastsFolderFileList = Preconditions.checkNotNull(new File(propertiesSelector.getProperty
+                        (PODCASTS_FOLDER_PROP_NAME)).listFiles(),
+                "Folder file list is empty");
     }
 
-    @Deprecated
-    /**
-     * Parser for twitter associations for podcast to count most permanent guests
-     */
-    public void fileParserTwitter() throws IOException {
-        for (File file : podcastsFolderFileList) {
-            FilenameUtils.getExtension(file.getAbsolutePath());
-            switch (FilenameUtils.getExtension(file.getAbsolutePath())) {
-                case ASCII_DOC:
-                    countTwitter(htmlUtils.parseTwitter(asciidocUtils.parseTwitterPart(file)));
-                    break;
-                case MARKDOWN_FORMAT:
-                    countTwitter(htmlUtils.parseTwitter(Jsoup.parse(markdownUtils.parseToHtml(file))));
-                    break;
-                case HTML:
-                    countTwitter(htmlUtils.parseTwitter(file));
-                    break;
-            }
-        }
-        persistTwitterCountToFile();
+    public List<File> getPodcastFiles() throws IOException, URISyntaxException {
+        List<File> files;
+            files = Arrays.asList(podcastsFolderFileList);
+        propertiesSelector.setProperty(PODCASTS_COUNT_PROP_NAME, files.size());
+        files = files.stream().filter(file -> Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName()))
+                .collect(Collectors.toList());
+        propertiesSelector.setProperty(LAST_PODCAST_PROP_NAME, files.get(files.size() - 1).getName());
+        return files;
     }
 
-    @Deprecated
-    /**
-     * Initial podcast parser, was created to parse all content form previous podcasts. No longer used.
-     */
-    public void fileParserPodcast() throws IOException, URISyntaxException {
-        File[] files;
-        if (test) {
-            files = podcastsFolderFileList;
-        } else {
-            RegexFileFilter filter = new RegexFileFilter(Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?"));
-            files = FileFilterUtils.filter(filter, podcastsFolderFileList);
-        }
-        for (File file : files) {
-            if(Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName())) {
-                parseFile(file);
-            }
-        }
-        persistPodcastsToFile(false);
-        persistToFile(PODCAST_ASSOCIATIONS_FILE, false);
-        propertiesSelector.setProperty(PODCAST_COUNT_KEY, files.length);
-        propertiesSelector.setProperty(LAST_PODCAST_KEY, files[files.length - 1].getName());
+    public List<File> getPodcastAsciidocFiles() {
+        RegexFileFilter filter = new RegexFileFilter(Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?"));
+        return FileFilterUtils.filterList(filter, podcastsFolderFileList);
     }
-
-    public void fileParserLastPodcast() throws IOException, URISyntaxException {
-        if(Integer.valueOf(propertiesSelector.getProperty(PODCAST_COUNT_KEY)) == podcastsFolderFileList.length &&
-                Objects.equals(propertiesSelector.getProperty(LAST_PODCAST_KEY), podcastsFolderFileList[podcastsFolderFileList
+    public File getLastPodcastFile() throws IOException, URISyntaxException {
+        if(Integer.valueOf(propertiesSelector.getProperty(PODCASTS_COUNT_PROP_NAME)) == podcastsFolderFileList.length &&
+                Objects.equals(propertiesSelector.getProperty(LAST_PODCAST_PROP_NAME), podcastsFolderFileList[podcastsFolderFileList
                         .length - 1].getName())) {
             LOG.info("Podcasts is alread up to date. Last parsed podcast: {}", propertiesSelector.getProperty
                     ("last.podcast"));
+            return null;
         } else {
-            File conferenceComplete = new File(CONF_COMPLETE);
-            File usefulThingsComplete = new File(USEFUL_COMPLETE);
-            ObjectMapper mapper = new ObjectMapper();
-            List<Conference> conferencesTarget = mapper.readValue(conferenceComplete,
-                    new TypeReference<List<Conference>>() {});
-            List<UsefulThing> usefulThingsTarget = mapper.readValue(usefulThingsComplete,
-                    new TypeReference<List<UsefulThing>>() {});
             File file = podcastsFolderFileList[podcastsFolderFileList.length - 1];
             if(Pattern.matches(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?", file.getName())) {
-                parseFile(file);
-                conferencesTarget.addAll(conferences);
-                usefulThingsTarget.addAll(usefulThings);
-                mapper.writeValue(conferenceComplete, conferencesTarget);
-                mapper.writeValue(usefulThingsComplete, usefulThingsTarget);
+                return file;
             } else {
                 LOG.warn("Last podcast file is not asciidoc format, file format: {}", FilenameUtils.getExtension(file
                         .getName()));
+                throw new RuntimeException();
             }
+        }
+    }
+    public void updateAll(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics) throws IOException {
+        updateUsefulThingsFile(usefulThings);
+        updateConferencesFile(conferences);
+        updateStatisticsFile(statistics);
+    }
+    public void updateUsefulThingsFile(List<UsefulThing> usefulThings) throws IOException {
+        Preconditions.checkNotNull(usefulThings, "Persisted useful things list is empty");
+        File usefulThingsComplete = new File(USEFUL_THINGS_COMPLETE);
+        ObjectMapper mapper = new ObjectMapper();
+        List<UsefulThing> usefulThingsTarget = mapper.readValue(usefulThingsComplete,
+                new TypeReference<List<UsefulThing>>() {});
+        usefulThingsTarget.addAll(usefulThings);
+        mapper.writeValue(usefulThingsComplete, usefulThingsTarget);
+    }
+    public void updateConferencesFile(List<Conference> conferences) throws IOException {
+        Preconditions.checkNotNull(conferences, "Persisted conferences things list is empty");
+        File conferenceComplete = new File(CONF_COMPLETE);
+        ObjectMapper mapper = new ObjectMapper();
+        List<Conference> conferencesTarget = mapper.readValue(conferenceComplete,
+                new TypeReference<List<Conference>>() {});
+        conferencesTarget.addAll(conferences);
+        mapper.writeValue(conferenceComplete, conferencesTarget);
+    }
+    public void updateStatisticsFile(ProjectStatistics source) throws IOException {
+        Preconditions.checkNotNull(source, "Persisted statistics list is empty");
+        File statistics = new File(PROJECT_STATISTICS_FILE);
+        ObjectMapper mapper = new ObjectMapper();
+        ProjectStatistics target = mapper.readValue(statistics,
+                ProjectStatistics.class);
+        target.setFemaleGuests(target.getFemaleGuests() + source.getFemaleGuests());
+        target.setMaleGuests(target.getMaleGuests() + source.getMaleGuests());
+        target.setTotalAge(target.getTotalAge() + source.getTotalAge());
+        target.setTotalPodcastsTime(target.getTotalPodcastsTime() + source.getTotalPodcastsTime());
+        target.setLongestPodcast(target.getLongestPodcast() > source.getLongestPodcast() ? target.getLongestPodcast()
+                : source.getLongestPodcast());
+        target.setTotalGuests(target.getTotalGuests() + source.getTotalGuests());
+        target.getProgrammingLanguages().addAll(source.getProgrammingLanguages());
+        mapper.writeValue(statistics, target);
+    }
+    public void saveAll(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics) {
+        saveConferencesToFile(conferences);
+        saveStatisticsToFile(statistics);
+        saveUsefulThingsToFile(usefulThings);
+    }
+    public void saveUsefulThingsToFile(List<UsefulThing> usefulThings) {
+        try(FileOutputStream fos = new FileOutputStream(new File(USEFUL_THINGS_FILE))) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(fos, usefulThings);
+        } catch (IOException e) {
+            LOG.warn(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    public void saveConferencesToFile(List<Conference> conferences) {
+        try(FileOutputStream fos = new FileOutputStream(new File(CONFERENCES_FILE))) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(fos, conferences);
+        } catch (IOException e) {
+            LOG.warn(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    public void saveStatisticsToFile(ProjectStatistics projectStatistics) {
+        try(FileOutputStream fos = new FileOutputStream(new File(PROJECT_STATISTICS_FILE))) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(fos, projectStatistics);
+        } catch (IOException e) {
+            LOG.warn(e.getMessage());
+            e.printStackTrace();
+        }
+    }
 
-        }
-    }
-    private void parseFile(File file) throws IOException, URISyntaxException {
-        String podcastName = parsePodcastData(file);
-        switch (FilenameUtils.getExtension(file.getName())) {
-            case ASCII_DOC:
-                parseUsefulStuffs(htmlUtils.parseUsefulStuffsAsciidoc(asciidocUtils.parsePartById(file, "_Полезняшки")),
-                        podcastName);
-                parseConferences(htmlUtils.parseConferencesAsciidoc(asciidocUtils.parsePartById(file, "_Конференции")),
-                        podcastName);
-                break;
-            case MARKDOWN_FORMAT:
-                parseUsefulStuffs(htmlUtils.parseUsefulStuff(markdownUtils.parseToHtml(file)), podcastName);
-                break;
-            case HTML:
-                parseUsefulStuffs(htmlUtils.parseUsefulStuff(file), podcastName);
-                break;
-        }
-    }
-    private void persistTwitterCountToFile() throws IOException {
+    public void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
         Map<Twitter, Integer> sortedCount = sortByComparator(twitterCount);
         try (FileOutputStream fos = new FileOutputStream(new File("creator-and-guests.txt"))) {
             StringBuilder builder = new StringBuilder();
@@ -184,33 +166,6 @@ public class FileParser {
         }
 
     }
-    private void persistPodcastsToFile(boolean update) {
-        persistToFile(PODCAST_FILE, update);
-        persistToFile(USEFULSTUFF_FILE, update);
-        persistToFile(CONFERENCES_FILE, update);
-    }
-    private void persistToFile(String fileName, boolean update) {
-        try(FileOutputStream fos = new FileOutputStream(new File(fileName), update)) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            switch (fileName) {
-                case PODCAST_FILE:
-                    objectMapper.writeValue(fos, podcasts);
-                    break;
-                case USEFULSTUFF_FILE:
-                    objectMapper.writeValue(fos, usefulThings);
-                    break;
-                case CONFERENCES_FILE:
-                    objectMapper.writeValue(fos, conferences);
-                    break;
-                case PODCAST_ASSOCIATIONS_FILE:
-                    objectMapper.writeValue(fos, podcastAssociations);
-                    break;
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     private Map<Twitter, Integer> sortByComparator(Map<Twitter, Integer> unsortedMap) {
         List<Map.Entry<Twitter, Integer>> list =
                 new LinkedList<>(unsortedMap.entrySet());
@@ -221,15 +176,10 @@ public class FileParser {
         }
         return sortedMap;
     }
-
-    private String parsePodcastData(File file) {
-        Podcast podcast = new Podcast();
+    public static long getPodcastId(File file) {
         String podcastName = file.getName();
         String[] splited = podcastName.split("-");
-
-        podcast.setDate(LocalDateTime.of(Integer.valueOf(splited[0]), Integer.valueOf(splited[1]),
-                Integer.valueOf(splited[2]), 0, 0));
-        int podcastId = 0;
+        long podcastId = 0;
         for(int i = 0; i < splited.length; i++) {
             if(Objects.equals(splited[i], "episode")) {
                 if(splited[i + 1].contains(".")) {
@@ -240,34 +190,29 @@ public class FileParser {
 
             }
         }
-        podcast.setId(podcastId);
-        podcasts.add(podcast);
-        podcastAssociations.put(podcastName, podcasts.indexOf(podcast));
-        return podcastName;
-    }
-    private void countTwitter(List<Twitter> twitters) {
-        if(twitters != null) {
-            for(Twitter twitter: twitters) {
-                if (!twitterCount.containsKey(twitter)) {
-                    twitterCount.put(twitter, 1);
-                } else {
-                    twitterCount.put(twitter, twitterCount.get(twitter) + 1);
-                }
-            }
+        if(podcastId == 0) {
+            LOG.info("Podcast id of file {} parsed incorrect", file.getName());
         }
+        return podcastId;
     }
-    private void parseUsefulStuffs(List<UsefulThing> usefulStuffs, String podcastName) {
-        if(usefulStuffs != null && usefulStuffs.size() != 0) {
-            Podcast podcast = podcasts.get(podcastAssociations.get(podcastName));
-            usefulStuffs.stream().forEach(us -> us.setPodcastId(podcast.getId()));
-            this.usefulThings.addAll(usefulStuffs);
-            podcast.setUsefulStuffs(usefulStuffs);
+    public static LocalDate getPodcastDate(File file) {
+        int year = getDataByPattern(file.getName(), Pattern.compile("201[0-9]"));
+        int month = getDataByPattern(file.getName(), Pattern.compile("\b0\b|0[1-9]|1[0-2]"));
+        int day = getDataByPattern(file.getName(), Pattern.compile("0[1-9]|[1-2][0-9]|3[0-1]"));
+        if(year == 0 || month == 0 || day == 0) {
+            LOG.info("File {} has no one of the data: year {}, month {}, day {}", file.getName(), year, month, day);
+            return null;
         }
+        return LocalDate.of(year, month, day);
     }
-    private void parseConferences(List<Conference> conferences, String podcastName) {
-        if(conferences != null && conferences.size() != 0) {
-            this.conferences.addAll(conferences);
-            podcasts.get(podcastAssociations.get(podcastName)).setConferences(conferences);
+    private static int getDataByPattern(String filename, Pattern pattern) {
+        List<String> splitedFileName = Arrays.asList(filename.split("-"));
+        List<String> filtered = splitedFileName.stream().filter(data -> pattern.matcher(data).matches()).collect
+                (Collectors.toList());
+        if(filtered.isEmpty()) {
+            return 0;
+        } else {
+            return Integer.valueOf(filtered.stream().findFirst().get());
         }
     }
 }

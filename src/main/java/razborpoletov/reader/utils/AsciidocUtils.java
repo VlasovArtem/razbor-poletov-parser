@@ -17,16 +17,13 @@ import java.util.List;
  * Created by artemvlasov on 26/04/15.
  */
 public class AsciidocUtils {
-    private final Asciidoctor asciidoctor;
+    private static final Asciidoctor asciidoctor = Asciidoctor.Factory.create();
     private static final Logger LOG = LoggerFactory.getLogger(AsciidocUtils.class);
     private static final String TWITTER_PART_NAME = "_twitter";
     private static final List<String> DOCUMENT_IDS = Arrays.asList("_Полезняшки", "_Конференции");
 
-    public AsciidocUtils() {
-        asciidoctor = Asciidoctor.Factory.create();
-    }
 
-    public Document parseTwitterPart(File file) {
+    public static Document parseTwitterPart(File file) {
         StructuredDocument document = asciidoctor.readDocumentStructure(file, new HashMap<>());
         ContentPart part = document.getPartById(TWITTER_PART_NAME);
         String podcastName = file.getName();
@@ -36,7 +33,7 @@ public class AsciidocUtils {
         return part == null ? null : Jsoup.parse(part.getContent());
     }
 
-    public Document parsePartById(File file, String partId) {
+    public static Document parsePartById(File file, String partId) {
         if(!DOCUMENT_IDS.contains(partId)) {
             throw new IllegalArgumentException("Incorrect part id");
         }

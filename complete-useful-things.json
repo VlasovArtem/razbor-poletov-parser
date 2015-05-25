@@ -39,7 +39,6 @@
   },
   {
     "link": "http://code.google.com/p/adbcj/",
-
     "name": "adbcj",
     "tags": [
       "DB",
@@ -359,7 +358,9 @@
   {
     "link": "https://github.com/visionmedia/git-extras",
     "name": "git extras",
-    "tags": ["Git"],
+    "tags": [
+      "Git"
+    ],
     "checked": true,
     "podcastId": 39,
     "description": "GIT utilities -- repo summary, repl, changelog population, author commit percentages and more"
@@ -367,7 +368,9 @@
   {
     "link": "http://gitignore.io/",
     "name": "gitignore",
-    "tags": ["Git"],
+    "tags": [
+      "Git"
+    ],
     "checked": true,
     "podcastId": 39,
     "description": ".gitignore generator for your project"
@@ -722,7 +725,9 @@
   {
     "link": "https://github.com/KeyboardFire/mkcast",
     "name": "mkcast",
-    "tags": ["Web"],
+    "tags": [
+      "Web"
+    ],
     "checked": true,
     "podcastId": 81,
     "description": "A tool for creating GIF screencasts of a terminal, with key presses overlaid."
@@ -738,5 +743,78 @@
     "checked": true,
     "podcastId": 81,
     "description": "Command-line JSON processor"
+  },
+  {
+    "link": "http://blog.arungupta.me/jdk9-repl-getting-started/",
+    "name": "blog",
+    "tags": [
+      "Java"
+    ],
+    "checked": false,
+    "podcastId": 84,
+    "description": "The new Jline"
+  },
+  {
+    "link": "http://rationalwiki.org/wiki/Frequency_illusion",
+    "name": "rationalwiki",
+    "tags": [],
+    "checked": false,
+    "podcastId": 84,
+    "description": null
+  },
+  {
+    "link": "http://javaslang.com/",
+    "name": "javaslang",
+    "tags": [
+      "Gradle",
+      "Maven"
+    ],
+    "checked": false,
+    "podcastId": 84,
+    "description": "Functional component library for Java 8+."
+  },
+  {
+    "link": "https://softwaremill.com/mqperf/",
+    "name": "softwaremill",
+    "tags": [
+      "Mac OSX"
+    ],
+    "checked": false,
+    "podcastId": 84,
+    "description": null
+  },
+  {
+    "link": "http://blog.arungupta.me/wildfly-swarm-microservices-javaee/",
+    "name": "blog",
+    "tags": [
+      "Java",
+      "Web",
+      "Maven",
+      "Book"
+    ],
+    "checked": false,
+    "podcastId": 84,
+    "description": null
+  },
+  {
+    "link": "https://github.com/oracle",
+    "name": "oracle",
+    "tags": [
+      "Java",
+      "GitHub"
+    ],
+    "checked": false,
+    "podcastId": 84,
+    "description": null
+  },
+  {
+    "link": "https://www.jetbrains.com/cpp-today-oreilly/",
+    "name": "jetbrains",
+    "tags": [
+      "Book"
+    ],
+    "checked": false,
+    "podcastId": 84,
+    "description": null
   }
 ]

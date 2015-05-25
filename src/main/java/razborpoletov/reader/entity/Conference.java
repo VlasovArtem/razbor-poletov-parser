@@ -1,8 +1,10 @@
 package razborpoletov.reader.entity;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import razborpoletov.reader.serializers.LocalDateTimeSerializer;
+import razborpoletov.reader.serializers.LocatDateTimeDeserializer;
 
 import java.time.LocalDateTime;
 
@@ -12,8 +14,10 @@ import java.time.LocalDateTime;
 @JsonAutoDetect
 public class Conference {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocatDateTimeDeserializer.class)
     private LocalDateTime startDate;
     @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocatDateTimeDeserializer.class)
     private LocalDateTime endDate;
     private String name;
     private Location location;

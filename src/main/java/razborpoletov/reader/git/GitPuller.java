@@ -12,7 +12,6 @@ import java.io.IOException;
  * Created by artemvlasov on 19/04/15.
  */
 public class GitPuller {
-    public static final String LOCAL_GIT_FOLDER_PROP_NAME = "local.git.folder";
     private Git git;
 
     public GitPuller(String gitLocalPath) throws IOException {

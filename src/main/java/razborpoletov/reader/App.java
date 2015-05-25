@@ -1,83 +1,193 @@
 package razborpoletov.reader;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import razborpoletov.reader.parcers.FileParser;
-import razborpoletov.reader.git.GitPuller;
+import com.google.common.base.Preconditions;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.ParseException;
 import org.eclipse.jgit.api.PullResult;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import razborpoletov.reader.git.GitPuller;
+import razborpoletov.reader.parcers.ConferenceParser;
+import razborpoletov.reader.parcers.FileParser;
+import razborpoletov.reader.parcers.StatisticParser;
+import razborpoletov.reader.parcers.UsefulThingParser;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-/**
- * Hello world!
- *
- */
+import static razborpoletov.reader.utils.Constants.*;
+
 class App {
-    private static final String[] PROP_KEYS = {"podcasts.folder", "local.git.folder"};
-    private static final String PODCASTS_COUNT_PROP_NAME = "podcasts.count";
-    private static final String PODCASTS_FOLDER_PROP_NAME = "podcasts.folder";
     private static final Logger LOG = LoggerFactory.getLogger(App.class);
-    public static void main( String[] args ) throws IOException, URISyntaxException {
-        String propertiesFolderPath = null;
-        boolean test = false;
-        PropertiesSelector propertiesSelector = null;
-        if(args.length == 0) {
-            throw new RuntimeException("You need to setup properties file path");
+    public static void main( String[] args ) throws IOException, URISyntaxException, GitAPIException {
+        CLIUtils cliUtils = new CLIUtils();
+        if(args == null || args.length < 1) {
+            cliUtils.printHelp();
+            System.exit(0);
         }
-        for(String arg : args) {
-            if(arg.contains("properties")) {
-                propertiesFolderPath = arg;
-            } else if (arg.equals("test")){
-                test = true;
-            }
-        }
-        if(propertiesFolderPath == null) {
-            throw new RuntimeException("You need to setup properties file path");
-        }
+        cliUtils.setArgs(args);
+        CommandLine commandLine = null;
         try {
-            propertiesSelector = new PropertiesSelector(propertiesFolderPath);
-            for(String prop : PROP_KEYS) {
-                if(propertiesSelector.getProperty(prop) == null) {
-                    throw new RuntimeException("There is incorrect data in properties file. Preferable keys: " +
-                            "podcasts.count, podcasts.folder, local.git.folder");
-                }
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
+            commandLine = cliUtils.createCommandLine();
+        } catch (ParseException e) {
+            System.out.println("Incorrect argument");
+            cliUtils.printHelp();
+            System.exit(0);
         }
-        if(!test) {
-            try {
-                GitPuller gitPuller = new GitPuller(propertiesSelector.getProperty(GitPuller.LOCAL_GIT_FOLDER_PROP_NAME));
-                PullResult pullResult = gitPuller.pull();
-                if(!pullResult.isSuccessful()) {
-                    throw new RuntimeException("Git pull execute unsuccessfully");
-                } else if(pullResult.toString().contains("Already up-to-date.")) {
-                    LOG.info("All podcasts are parsed");
-                }
-                File file = new File(propertiesSelector.getProperty(PODCASTS_FOLDER_PROP_NAME));
-                if(propertiesSelector.getProperty(PODCASTS_COUNT_PROP_NAME) == null) {
-                    propertiesSelector.setProperty(PODCASTS_COUNT_PROP_NAME, 0);
-                }
-                if(file.listFiles() != null) {
-                    if (file.listFiles().length != Integer.valueOf(propertiesSelector.getProperty(PODCASTS_COUNT_PROP_NAME))) {
-                        FileParser fileParser = new FileParser(propertiesSelector.getProperty
-                                (PODCASTS_FOLDER_PROP_NAME), propertiesSelector, test);
-                        fileParser.fileParserLastPodcast();
+        if(commandLine.hasOption("h")) {
+            cliUtils.printHelp();
+            System.exit(0);
+        }
+        if(!commandLine.hasOption("p")) {
+            LOG.warn("Properties file path is empty");
+            System.exit(0);
+        }
+        if(!new File(commandLine.getOptionValue("p")).exists()) {
+            LOG.warn("Properties file is not exists");
+            cliUtils.printHelp();
+            System.exit(0);
+        }
+        PropertiesSelector propertiesSelector = Preconditions.checkNotNull(
+                checkPropertiesSelectorClass(commandLine.getOptionValue("p")),
+                "Properties selector is null");
+        checkPodcastFolder(propertiesSelector);
+        checkGitPull(propertiesSelector);
+        FileParser fileParser = new FileParser(propertiesSelector);
+        ConferenceParser conferenceParser = new ConferenceParser();
+        StatisticParser statisticParser = new StatisticParser();
+        UsefulThingParser usefulThingParser = new UsefulThingParser();
+        if(commandLine.hasOption("a")) {
+            List<File> podcastFiles = fileParser.getPodcastFiles();
+            if(commandLine.hasOption("u")) {
+                fileParser.updateAll(
+                        usefulThingParser.parseUsefulThings(podcastFiles, false),
+                        conferenceParser.parseConferences(podcastFiles, false),
+                        statisticParser.parseProjectStatistics(podcastFiles));
+            } else {
+                fileParser.saveAll(
+                        usefulThingParser.parseUsefulThings(podcastFiles, false),
+                        conferenceParser.parseConferences(podcastFiles, false),
+                        statisticParser.parseProjectStatistics(podcastFiles));
+            }
+        } else if(commandLine.hasOption("l")) {
+            updateLast(fileParser, conferenceParser, statisticParser, usefulThingParser, commandLine);
+        } else {
+            save(fileParser, conferenceParser, statisticParser, usefulThingParser, commandLine);
+        }
+    }
+
+    private static void checkGitPull(PropertiesSelector propertiesSelector) throws IOException, GitAPIException {
+        GitPuller gitPuller = new GitPuller(propertiesSelector.getProperty(LOCAL_GIT_FOLDER_PROP_NAME));
+        PullResult pullResult = gitPuller.pull();
+        if(!pullResult.isSuccessful()) {
+            throw new RuntimeException("Git pull execute unsuccessfully");
+        } else if(pullResult.toString().contains("Already up-to-date.")) {
+            LOG.info("All podcasts are parsed");
+            System.exit(0);
+        }
+    }
+
+    /**
+     * Check podcast folder address and files list size.
+     * @param propertiesSelector Use to get podcast folder from properties file
+     */
+    private static void checkPodcastFolder(PropertiesSelector propertiesSelector) {
+        File file = Preconditions.checkNotNull(new File(propertiesSelector.getProperty(PODCASTS_FOLDER_PROP_NAME)),
+                "File folder is null, please check address of podcast property " +
+                        "folder, current folder" + propertiesSelector.getProperty(PODCASTS_FOLDER_PROP_NAME));
+        File[] listFiles = Preconditions.checkNotNull(file.listFiles(), "Podcast folder files list in null");
+        if(listFiles.length == 0) {
+            LOG.info("Folder is empty");
+            System.exit(0);
+        }
+    }
+
+    private static PropertiesSelector checkPropertiesSelectorClass(String filePath) throws IOException {
+        PropertiesSelector propertiesSelector = new PropertiesSelector(filePath);
+        for(String prop : PROP_NAMES) {
+            if(propertiesSelector.getProperty(prop) == null) {
+                throw new RuntimeException("There is incorrect data in properties file. Preferable keys: " +
+                        "podcasts.count, podcasts.folder, local.git.folder");
+            }
+        }
+        return propertiesSelector;
+    }
+
+    private static boolean checkOptions(CommandLine commandLine, List<String> equals, List<String> notEquals) {
+        if(equals == null && notEquals.stream().allMatch
+                (commandLine::hasOption)) {
+            return false;
+        } else if(notEquals == null && equals.stream().allMatch(commandLine::hasOption)) {
+            return true;
+        }
+        return true;
+    }
+
+    /**
+     * Update files using different parsers according to command line arguments.
+     * @param fileParser
+     * @param conferenceParser
+     * @param statisticParser
+     * @param usefulThingParser
+     * @param commandLine
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+    private static void updateLast(FileParser fileParser, ConferenceParser conferenceParser, StatisticParser
+            statisticParser, UsefulThingParser usefulThingParser, CommandLine commandLine) throws IOException, URISyntaxException {
+        if(!commandLine.hasOption("l")) {
+            LOG.info("Command line not contains l argument please check code");
+        } else {
+            File lastPodcast = fileParser.getLastPodcastFile();
+            if(commandLine.getOptions().length == 1) {
+                fileParser.updateAll(
+                        usefulThingParser.parse(lastPodcast),
+                        conferenceParser.parse(lastPodcast),
+                        statisticParser.parseProjectStatistics(Collections.singletonList(lastPodcast)));
+            }
+            if(checkOptions(commandLine, Arrays.asList("c", "s", "t"), null)) {
+                fileParser.updateAll(
+                        usefulThingParser.parse(lastPodcast),
+                        conferenceParser.parse(lastPodcast),
+                        statisticParser.parseProjectStatistics(Collections.singletonList(lastPodcast)));
+            } else {
+                for (Option option : commandLine.getOptions()) {
+                    if (option.getOpt().equals("c")) {
+                        fileParser.updateConferencesFile(conferenceParser.parse(lastPodcast));
+                    } else if (option.getOpt().equals("s")) {
+                        fileParser.updateStatisticsFile(statisticParser.parseProjectStatistics(Collections.singletonList(lastPodcast)));
+                    } else if (option.getOpt().equals("t")) {
+                        fileParser.updateUsefulThingsFile(usefulThingParser.parse(lastPodcast));
                     }
                 }
-            } catch (GitAPIException e) {
-                e.printStackTrace();
             }
-        } else {
-            FileParser fileParser = new FileParser(propertiesSelector.getProperty(PODCASTS_FOLDER_PROP_NAME), propertiesSelector, test);
-            fileParser.fileParserTwitter();
-            fileParser.fileParserPodcast();
         }
+    }
 
-
+    private static void save(FileParser fileParser, ConferenceParser conferenceParser, StatisticParser
+            statisticParser, UsefulThingParser usefulThingParser, CommandLine commandLine) throws IOException, URISyntaxException {
+        List<File> files = fileParser.getPodcastFiles();
+        if(checkOptions(commandLine, Arrays.asList("c", "s", "t"), null)) {
+            fileParser.saveAll(
+                    usefulThingParser.parseUsefulThings(files, false),
+                    conferenceParser.parseConferences(files, false),
+                    statisticParser.parseProjectStatistics(files));
+        } else {
+            for (Option option : commandLine.getOptions()) {
+                if (option.getOpt().equals("c")) {
+                    fileParser.saveConferencesToFile(conferenceParser.parseConferences(files, false));
+                } else if (option.getOpt().equals("s")) {
+                    fileParser.saveStatisticsToFile(statisticParser.parseProjectStatistics(files));
+                } else if (option.getOpt().equals("t")) {
+                    fileParser.saveUsefulThingsToFile(usefulThingParser.parseUsefulThings(files, false));
+                }
+            }
+        }
     }
 }

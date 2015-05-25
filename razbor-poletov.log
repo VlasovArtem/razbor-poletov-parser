@@ -310,3 +310,46 @@
 [INFO ] 2015-04-30 18:12:12,555 razborpoletov.reader.utils.AsciidocUtils - Document 2015-03-29-episode-81.adoc has no _Конференции part
 [INFO ] 2015-04-30 18:12:12,614 razborpoletov.reader.utils.AsciidocUtils - Document 2015-04-12-episode-82.adoc has no _Полезняшки part
 [INFO ] 2015-04-30 18:12:12,678 razborpoletov.reader.utils.AsciidocUtils - Document 2015-04-12-episode-82.adoc has no _Конференции part
+[INFO ] 2015-05-19 23:27:23,292 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-19 23:28:58,535 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-19 23:37:13,120 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-19 23:38:41,357 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-19 23:41:50,622 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-19 23:42:18,390 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-19 23:47:17,609 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:11:07,235 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:13:09,926 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:16:09,033 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:16:24,768 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-03-episode-83.adoc has no _Полезняшки part
+[INFO ] 2015-05-20 00:16:24,884 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-03-episode-83.adoc has no _Конференции part
+[INFO ] 2015-05-20 00:20:47,627 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:22:26,248 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:22:31,391 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
+[INFO ] 2015-05-20 00:22:37,370 razborpoletov.reader.utils.HtmlUtils - http://rationalwiki.org/wiki/Frequency_illusion url has no github links
+[WARN ] 2015-05-20 00:22:45,068 razborpoletov.reader.utils.HtmlUtils - http://blog.arungupta.me/wildfly-swarm-microservices-javaee/ url contains more than one github links: [https://github.com/wildfly-swarm/example-datasource-deployment, https://github.com/wildfly-swarm/example-messaging, https://github.com/arun-gupta/wildfly-samples, https://github.com/wildfly-swarm/example-jaxrs-shrinkwrap, https://github.com/wildfly-swarm/example-servlet, https://github.com/wildfly-swarm/wildfly-swarm]
+[INFO ] 2015-05-20 00:22:47,826 razborpoletov.reader.utils.HtmlUtils - https://www.jetbrains.com/cpp-today-oreilly/ url has no github links
+[INFO ] 2015-05-20 00:22:48,531 razborpoletov.reader.utils.HtmlUtils - Url http://razbor-poletov.com return error with status 200
+[INFO ] 2015-05-20 00:22:48,652 razborpoletov.reader.utils.HtmlUtils - Url http://razbor-poletov.com/broadcast.html return error with status 200
+[INFO ] 2015-05-20 00:22:49,542 razborpoletov.reader.utils.HtmlUtils - Url https://twitter.com/a_abashev return error with status 500
+[INFO ] 2015-05-20 00:22:51,187 razborpoletov.reader.utils.HtmlUtils - https://twitter.com/antonarhipov url has no github links
+[INFO ] 2015-05-20 00:22:52,920 razborpoletov.reader.utils.HtmlUtils - https://twitter.com/dzmitryc url has no github links
+[INFO ] 2015-05-20 00:22:54,547 razborpoletov.reader.utils.HtmlUtils - https://twitter.com/gamussa url has no github links
+[INFO ] 2015-05-20 00:22:55,796 razborpoletov.reader.utils.HtmlUtils - https://twitter.com/tolkv url has no github links
+[INFO ] 2015-05-20 00:22:57,138 razborpoletov.reader.utils.HtmlUtils - https://twitter.com/jbaruch url has no github links
+[INFO ] 2015-05-20 00:22:58,315 razborpoletov.reader.utils.HtmlUtils - http://feeds.feedburner.com/razbor-podcast url has no github links
+[INFO ] 2015-05-20 00:24:20,576 razborpoletov.reader.utils.HtmlUtils - http://traffic.libsyn.com/razborpoletov/razbor_84.mp3 url has no github links
+[INFO ] 2015-05-20 00:24:21,319 razborpoletov.reader.utils.HtmlUtils - Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml
+[INFO ] 2015-05-20 00:24:22,949 razborpoletov.reader.utils.HtmlUtils - http://www.audiobank.fm/single-music/27/111/More-And-Less/ url has no github links
+[INFO ] 2015-05-20 00:24:24,620 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-17-episode-84.adoc has no _Конференции part
+[INFO ] 2015-05-20 00:24:25,886 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:26:14,999 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
+[INFO ] 2015-05-20 00:27:41,081 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:29:50,202 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:33:01,603 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
+[INFO ] 2015-05-20 00:33:35,782 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:35:13,028 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
+[INFO ] 2015-05-20 00:35:21,348 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:35:50,801 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
+[INFO ] 2015-05-20 00:36:29,750 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:41:26,435 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+[INFO ] 2015-05-20 00:42:04,908 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
