@@ -1,2 +1,52 @@
-# razbor-poletov-parser
-Parser for main content of the Podcast Razbor Poletov
+= Specialized content parser from Razbor Poletov Podcast
+Vlasov Artem <vlasovartem21@gmail.com>
+
+Parser for main content of the podcast Razbor Poletov
+
+== Possible file types
+This parser could take content form different type of files (*.html, *.md, *.adoc).
+
+== Parsed content
+It could use to parse next part of content:
+
+* Useful Things
+* Conferences
+* Project statistics
+
+== How to use this project
+As usual, you can start App class from your favorite IDE or you can use command 
+[source, Java]
+----
+java -jar <jar-file> -p <properties-file> -lt
+----
+
+Previous command will parse useful things from last podcast.
+
+=== Command line arguments
+* *p* or *prop* - mandatory arqument. This arqument should containt properties file path. Example of properties you could find on the next section.(priority: high).
+* *a* or *all* - parse all content (Conferences, Useful Things, Project Statistics) from all podcasts. This is high priortiy argument, that prevail on other arguments.
+* *l* or *last* - parse all content from last podcast.
+* *u* or *useful* - parse Useful Thing from all podcasts.
+* *s* or *stat* - parse Statistics from all podcasts.
+* *c* or *conf* - parse Conferences from all podcasts.
+* *h* or *help* - show help
+
+=== Properties file example
+
+[source]
+----
+podcasts.folder=/Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
+local.git.folder=/Users/artemvlasov/git/razbor-poletov.github.com
+----
+
+Keys in properties files is required.
+
+[NOTE]
+====
+Files with content will be create in folder where you execute jar file. +
+
+When you parse Useful things be aware of some issues with tags and description parsing. This parser get description
+from
+github page if it available, if project will have duplicate github pages you will see alert in console.
+====
+

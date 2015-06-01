@@ -64,7 +64,7 @@ class App {
         UsefulThingParser usefulThingParser = new UsefulThingParser();
         if(commandLine.hasOption("a")) {
             List<File> podcastFiles = fileParser.getPodcastsFiles();
-            if(commandLine.hasOption("u")) {
+            if(commandLine.hasOption("l")) {
                 fileParser.saveLast(
                         usefulThingParser.parseUsefulThings(podcastFiles, false),
                         conferenceParser.parseConferences(podcastFiles, false),
@@ -145,7 +145,7 @@ class App {
             LOG.info("Command line not contains l argument please check code");
         } else {
             File lastPodcast = fileParser.getLastPodcastFile();
-            if(checkOptions(commandLine, Arrays.asList("c", "s", "t"), null)) {
+            if(checkOptions(commandLine, Arrays.asList("c", "s", "u"), null)) {
                 fileParser.saveLast(
                         usefulThingParser.parse(lastPodcast),
                         conferenceParser.parse(lastPodcast),
@@ -156,7 +156,7 @@ class App {
                         fileParser.saveConferencesToFile(conferenceParser.parse(lastPodcast));
                     } else if (option.getOpt().equals("s")) {
                         fileParser.saveStatisticsToFile(statisticParser.parseProjectStatistics(Collections.singletonList(lastPodcast)));
-                    } else if (option.getOpt().equals("t")) {
+                    } else if (option.getOpt().equals("u")) {
                         fileParser.saveUsefulThingsToFile(usefulThingParser.parse(lastPodcast));
                     }
                 }
@@ -167,7 +167,7 @@ class App {
     private static void save(FileParser fileParser, ConferenceParser conferenceParser, StatisticParser
             statisticParser, UsefulThingParser usefulThingParser, CommandLine commandLine) throws IOException, URISyntaxException {
         List<File> files = fileParser.getPodcastsFiles();
-        if(checkOptions(commandLine, Arrays.asList("c", "s", "t"), null)) {
+        if(checkOptions(commandLine, Arrays.asList("c", "s", "u"), null)) {
             fileParser.saveAll(
                     usefulThingParser.parseUsefulThings(files, false),
                     conferenceParser.parseConferences(files, false),
@@ -178,7 +178,7 @@ class App {
                     fileParser.saveConferencesToFile(conferenceParser.parseConferences(files, false));
                 } else if (option.getOpt().equals("s")) {
                     fileParser.saveStatisticsToFile(statisticParser.parseProjectStatistics(files));
-                } else if (option.getOpt().equals("t")) {
+                } else if (option.getOpt().equals("u")) {
                     fileParser.saveUsefulThingsToFile(usefulThingParser.parseUsefulThings(files, false));
                 }
             }

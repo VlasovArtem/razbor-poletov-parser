@@ -22,12 +22,11 @@ public class CLIUtils {
         options.addOption(new Option("a", "all", false, "Parse all data from all podcast files"));
         options.addOption(new Option("l", "last", false, "Parse all data from last podcast file"));
         options.addOption(new Option("c", "conf", false, "Parse conference data"));
-        options.addOption(new Option("t", "things", false, "Parse useful things data"));
+        options.addOption(new Option("u", "useful", false, "Parse useful things data"));
         options.addOption(new Option("s", "stat", false, "Parse statistic data"));
         options.addOption(new Option("p", "prop", true, "Properties file address. If you will not put custom file " +
                 "address program will you default properties file"));
         options.addOption(new Option("h", "help", false, "Show help"));
-        options.addOption(new Option("u", "update", false, "Update data folder and not to rewrite previous data"));
     }
 
     public CLIUtils(String[] args) {
