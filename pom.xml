@@ -56,6 +56,21 @@
         </executions>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>content</directory>
+        <includes>
+          <include>duplicateTags.json</include>
+          <include>statistics.json</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
   </build>
   <dependencies>
     <dependency>

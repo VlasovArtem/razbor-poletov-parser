@@ -12,6 +12,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by artemvlasov on 26/04/15.
@@ -37,8 +38,17 @@ public class AsciidocUtils {
         if(!DOCUMENT_IDS.contains(partId)) {
             throw new IllegalArgumentException("Incorrect part id");
         }
-        StructuredDocument document = asciidoctor.readDocumentStructure(file, new HashMap<>());
-        ContentPart part = document.getPartById(partId);
+        List<ContentPart> parts = asciidoctor.readDocumentStructure(file, new HashMap<>()).getParts();
+        ContentPart part = parts.stream()
+                .filter(filePart -> {
+                    if(filePart.getId() != null) {
+                        return Pattern.compile(partId, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE).matcher
+                                (filePart.getId()).matches();
+                    }
+                    return false;
+                })
+                .findFirst()
+                .get();
         String podcastName = file.getName();
         if(part == null) {
             LOG.info("Document {} has no {} part", podcastName, partId);

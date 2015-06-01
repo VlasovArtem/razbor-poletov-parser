@@ -76,6 +76,9 @@ public class UsefulThingParser {
         return parse(Jsoup.parse(file, "UTF-8"), FileParser.getPodcastId(file));
     }
     private List<UsefulThing> parseAsciidoc(File file) throws IOException, URISyntaxException {
+        if(AsciidocUtils.parsePartById(file, "_Полезняшки") == null) {
+            return null;
+        }
         return parse(AsciidocUtils.parsePartById(file, "_Полезняшки").getElementsByTag("a"), FileParser.getPodcastId
                 (file));
     }
@@ -122,10 +125,11 @@ public class UsefulThingParser {
      * @throws IOException
      */
     private void localParseTags() throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        duplicateTags = mapper.readValue(new File("duplicateTags.json"), new TypeReference<Map<String, List<String>>>() {});
-        tags = mapper.readValue(new File("tags.json"), new TypeReference<List<String>>() {
-        });
+        ObjectMapper objectMapper = new ObjectMapper();
+        duplicateTags = objectMapper.readValue(getClass().getResourceAsStream(DUPLICATE_TAGS),
+                new TypeReference<Map<String, List<String>>>() {});
+        tags = objectMapper.readValue(getClass().getResourceAsStream(TAGS),
+                new TypeReference<List<String>>() {});
     }
 
     /**

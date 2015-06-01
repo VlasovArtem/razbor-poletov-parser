@@ -68,6 +68,9 @@ public class ConferenceParser {
         return parse(Jsoup.parse(file, "UTF-8"));
     }
     private List<Conference> parseAsciidoc(File file) throws IOException, URISyntaxException {
+        if(AsciidocUtils.parsePartById(file, "_Конференции") == null) {
+            return null;
+        }
         return parse(AsciidocUtils.parsePartById(file, "_Конференции").getElementsByTag("a"));
     }
 

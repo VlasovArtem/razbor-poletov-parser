@@ -1,6 +1,5 @@
 package razborpoletov.reader.parcers;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Preconditions;
 import org.apache.commons.io.FilenameUtils;
@@ -38,119 +37,78 @@ import static razborpoletov.reader.utils.Constants.*;
 public class FileParser {
     private PropertiesSelector propertiesSelector;
     private final static Logger LOG = LoggerFactory.getLogger(FileParser.class);
-    private File[] podcastsFolderFileList;
+    private List<File> podcastsFiles;
 
     public FileParser(PropertiesSelector propertiesSelector) throws IOException {
         this.propertiesSelector = Preconditions.checkNotNull(propertiesSelector, "Properties selector cannot be null");
-        podcastsFolderFileList = Preconditions.checkNotNull(new File(propertiesSelector.getProperty
-                        (PODCASTS_FOLDER_PROP_NAME)).listFiles(),
-                "Folder file list is empty");
+        podcastsFiles = Arrays.asList(Preconditions.checkNotNull(new File(propertiesSelector.getProperty
+                        (PODCASTS_FOLDER_PROP_NAME)).listFiles(), "Folder file list is empty"))
+                .stream()
+                .filter(file -> Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName()))
+                .collect(Collectors.toList());
     }
 
-    public List<File> getPodcastFiles() throws IOException, URISyntaxException {
-        List<File> files;
-            files = Arrays.asList(podcastsFolderFileList);
-        propertiesSelector.setProperty(PODCASTS_COUNT_PROP_NAME, files.size());
-        files = files.stream().filter(file -> Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName()))
-                .collect(Collectors.toList());
-        propertiesSelector.setProperty(LAST_PODCAST_PROP_NAME, files.get(files.size() - 1).getName());
-        return files;
+    public List<File> getPodcastsFiles() throws IOException, URISyntaxException {
+        return podcastsFiles;
     }
 
     public List<File> getPodcastAsciidocFiles() {
         RegexFileFilter filter = new RegexFileFilter(Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?"));
-        return FileFilterUtils.filterList(filter, podcastsFolderFileList);
+        return FileFilterUtils.filterList(filter, podcastsFiles);
     }
     public File getLastPodcastFile() throws IOException, URISyntaxException {
-        if(Integer.valueOf(propertiesSelector.getProperty(PODCASTS_COUNT_PROP_NAME)) == podcastsFolderFileList.length &&
-                Objects.equals(propertiesSelector.getProperty(LAST_PODCAST_PROP_NAME), podcastsFolderFileList[podcastsFolderFileList
-                        .length - 1].getName())) {
-            LOG.info("Podcasts is alread up to date. Last parsed podcast: {}", propertiesSelector.getProperty
-                    ("last.podcast"));
-            return null;
+        File file = podcastsFiles.get(podcastsFiles.size() - 1);
+        if(Pattern.matches(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?", file.getName())) {
+            return file;
         } else {
-            File file = podcastsFolderFileList[podcastsFolderFileList.length - 1];
-            if(Pattern.matches(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?", file.getName())) {
-                return file;
-            } else {
-                LOG.warn("Last podcast file is not asciidoc format, file format: {}", FilenameUtils.getExtension(file
-                        .getName()));
-                throw new RuntimeException();
-            }
+            LOG.warn("Last podcast file is not asciidoc format, file format: {}", FilenameUtils.getExtension(file
+                    .getName()));
+            throw new RuntimeException();
         }
     }
-    public void updateAll(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics) throws IOException {
-        updateUsefulThingsFile(usefulThings);
-        updateConferencesFile(conferences);
-        updateStatisticsFile(statistics);
+    public void saveLast(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics)
+            throws IOException {
+        saveUsefulThingsToFile(usefulThings);
+        saveConferencesToFile(conferences);
+        saveStatisticsToFile(statistics);
     }
-    public void updateUsefulThingsFile(List<UsefulThing> usefulThings) throws IOException {
-        Preconditions.checkNotNull(usefulThings, "Persisted useful things list is empty");
-        File usefulThingsComplete = new File(USEFUL_THINGS_COMPLETE);
+    public void saveUsefulThingsToFile(List<UsefulThing> usefulThings) throws IOException {
+        if(usefulThings == null) {
+            LOG.info("Persisted useful things list is empty");
+            return;
+        }
+        File file = new File(USEFUL_THINGS_FILE);
+        file.createNewFile();
         ObjectMapper mapper = new ObjectMapper();
-        List<UsefulThing> usefulThingsTarget = mapper.readValue(usefulThingsComplete,
-                new TypeReference<List<UsefulThing>>() {});
-        usefulThingsTarget.addAll(usefulThings);
-        mapper.writeValue(usefulThingsComplete, usefulThingsTarget);
+        mapper.writeValue(file, usefulThings);
     }
-    public void updateConferencesFile(List<Conference> conferences) throws IOException {
-        Preconditions.checkNotNull(conferences, "Persisted conferences things list is empty");
-        File conferenceComplete = new File(CONF_COMPLETE);
+    public void saveConferencesToFile(List<Conference> conferences) throws IOException {
+        if(conferences == null) {
+            LOG.info("Persisted conferences list is empty");
+            return;
+        }
+        File conferenceComplete = new File(CONFERENCES_FILE);
         ObjectMapper mapper = new ObjectMapper();
-        List<Conference> conferencesTarget = mapper.readValue(conferenceComplete,
-                new TypeReference<List<Conference>>() {});
-        conferencesTarget.addAll(conferences);
-        mapper.writeValue(conferenceComplete, conferencesTarget);
+        mapper.writeValue(conferenceComplete, conferences);
     }
-    public void updateStatisticsFile(ProjectStatistics source) throws IOException {
-        Preconditions.checkNotNull(source, "Persisted statistics list is empty");
+    public void saveStatisticsToFile(ProjectStatistics source) throws IOException {
+        if(source == null) {
+            LOG.info("Persisted statistics list is empty");
+            return;
+        }
         File statistics = new File(PROJECT_STATISTICS_FILE);
+        statistics.createNewFile();
         ObjectMapper mapper = new ObjectMapper();
-        ProjectStatistics target = mapper.readValue(statistics,
-                ProjectStatistics.class);
-        target.setFemaleGuests(target.getFemaleGuests() + source.getFemaleGuests());
-        target.setMaleGuests(target.getMaleGuests() + source.getMaleGuests());
-        target.setTotalAge(target.getTotalAge() + source.getTotalAge());
-        target.setTotalPodcastsTime(target.getTotalPodcastsTime() + source.getTotalPodcastsTime());
-        target.setLongestPodcast(target.getLongestPodcast() > source.getLongestPodcast() ? target.getLongestPodcast()
-                : source.getLongestPodcast());
-        target.setTotalGuests(target.getTotalGuests() + source.getTotalGuests());
-        target.getProgrammingLanguages().addAll(source.getProgrammingLanguages());
-        mapper.writeValue(statistics, target);
+        if(getClass().getResourceAsStream(PROJECT_STATISTICS_FILE) != null) {
+            source = updateProjectStatistics(source);
+        }
+        mapper.writeValue(statistics, source);
     }
-    public void saveAll(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics) {
+    public void saveAll(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics) throws IOException {
         saveConferencesToFile(conferences);
         saveStatisticsToFile(statistics);
         saveUsefulThingsToFile(usefulThings);
     }
-    public void saveUsefulThingsToFile(List<UsefulThing> usefulThings) {
-        try(FileOutputStream fos = new FileOutputStream(new File(USEFUL_THINGS_FILE))) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writeValue(fos, usefulThings);
-        } catch (IOException e) {
-            LOG.warn(e.getMessage());
-            e.printStackTrace();
-        }
-    }
-    public void saveConferencesToFile(List<Conference> conferences) {
-        try(FileOutputStream fos = new FileOutputStream(new File(CONFERENCES_FILE))) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writeValue(fos, conferences);
-        } catch (IOException e) {
-            LOG.warn(e.getMessage());
-            e.printStackTrace();
-        }
-    }
-    public void saveStatisticsToFile(ProjectStatistics projectStatistics) {
-        try(FileOutputStream fos = new FileOutputStream(new File(PROJECT_STATISTICS_FILE))) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writeValue(fos, projectStatistics);
-        } catch (IOException e) {
-            LOG.warn(e.getMessage());
-            e.printStackTrace();
-        }
-    }
-
     public void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
         Map<Twitter, Integer> sortedCount = sortByComparator(twitterCount);
         try (FileOutputStream fos = new FileOutputStream(new File("creator-and-guests.txt"))) {
@@ -214,5 +172,19 @@ public class FileParser {
         } else {
             return Integer.valueOf(filtered.stream().findFirst().get());
         }
+    }
+    private ProjectStatistics updateProjectStatistics(ProjectStatistics source) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        ProjectStatistics target = mapper.readValue(getClass().getResourceAsStream(PROJECT_STATISTICS_FILE),
+                ProjectStatistics.class);
+        target.setFemaleGuests(target.getFemaleGuests() + source.getFemaleGuests());
+        target.setMaleGuests(target.getMaleGuests() + source.getMaleGuests());
+        target.setTotalAge(target.getTotalAge() + source.getTotalAge());
+        target.setTotalPodcastsTime(target.getTotalPodcastsTime() + source.getTotalPodcastsTime());
+        target.setLongestPodcast(target.getLongestPodcast() > source.getLongestPodcast() ? target.getLongestPodcast()
+                : source.getLongestPodcast());
+        target.setTotalGuests(target.getTotalGuests() + source.getTotalGuests());
+        target.getProgrammingLanguages().addAll(source.getProgrammingLanguages());
+        return target;
     }
 }

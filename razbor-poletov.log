@@ -353,3 +353,20 @@
 [INFO ] 2015-05-20 00:36:29,750 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
 [INFO ] 2015-05-20 00:41:26,435 razborpoletov.reader.parcers.FileParser - Podcasts folder set to: /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/
 [INFO ] 2015-05-20 00:42:04,908 razborpoletov.reader.utils.HtmlUtils - Url http://pilots.razbor-poletov.com/#/useful return error with status 200
+[INFO ] 2015-06-01 19:27:32,892 razborpoletov.reader.App - Hello
+[INFO ] 2015-06-01 20:49:55,741 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-31-episode-85.adoc has no _Полезняшки part
+[INFO ] 2015-06-01 23:02:08,081 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
+[INFO ] 2015-06-01 23:02:09,373 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
+[INFO ] 2015-06-01 23:02:11,073 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
+[INFO ] 2015-06-01 23:02:15,088 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
+[WARN ] 2015-06-01 23:02:17,330 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
+[INFO ] 2015-06-01 23:33:27,455 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
+[INFO ] 2015-06-01 23:33:28,624 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
+[INFO ] 2015-06-01 23:33:30,630 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
+[INFO ] 2015-06-01 23:33:34,908 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
+[WARN ] 2015-06-01 23:33:36,787 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
+[INFO ] 2015-06-01 23:34:50,194 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
+[INFO ] 2015-06-01 23:34:51,403 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
+[INFO ] 2015-06-01 23:34:52,891 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
+[INFO ] 2015-06-01 23:34:57,078 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
+[WARN ] 2015-06-01 23:35:02,906 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
