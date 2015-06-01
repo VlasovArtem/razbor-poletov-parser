@@ -35,6 +35,7 @@
               <classpathPrefix>lib/</classpathPrefix>
             </manifest>
           </archive>
+          <outputDirectory>build/</outputDirectory>
         </configuration>
       </plugin>
       <plugin>

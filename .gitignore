@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 logs/*
+*.log
 !.gitkeep
 node_modules/
 bower_components/
@@ -74,7 +75,7 @@ crashlytics-build.properties.idea
 .mtj.tmp/
 
 # Package Files #
-*.jar
+/*.jar
 *.war
 *.ear
 
