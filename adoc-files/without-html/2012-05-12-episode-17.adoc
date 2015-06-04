@@ -1,0 +1,42 @@
+---
+comments: true
+categories:
+uid: 17
+length: 66343310
+---
+= Episode 17 — Иногда они возвращаются...
+2012-05-12
+:layout: post
+:filename: razbor_17
+
+Все привет! Редакция подкаста «Разбор Полетов» рада представить Вам
+очередной 17-й выпуск, в котором мы расскажем Вам:
+
+* Отчет Алексея по JavaOne Russia и по SpringOne
+* И еще про вот
+http://www.oracle.com/technetwork/java/javase/downloads/jdk-for-mac-readme-1564562.html[это]
+и
+http://www.oracle.com/technetwork/java/javase/downloads/jdk-for-mac-readme-1564562.html[это]
+* Проедемся по микрософту
+http://richardminerich.com/2012/04/what-microsoft-mvp-means-to-me/[[1]]
+http://davybrion.com/blog/2012/04/most-valuable-professionals-give-me-a-break/[[2]]
+http://karenx.com/blog/im-leaving-microsoft/[[3]]
+* Полезняшки
+** Vertx http://vertx.io/[[1]] https://github.com/purplefox/vert.x[[2]]
+** MonjaDB http://www.jumperz.net/index.php?i=2&a=0&b=9[[1]]
+* Жбосс: швидкий як качка
+http://in.relation.to/Bloggers/WhyIsJBossAS7SoFast[[1]]
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+5.  Подкаст на http://habrahabr.ru/post/143726/[Хабре]
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_17.mp3" width="64" height="64"]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_17.mp3[]

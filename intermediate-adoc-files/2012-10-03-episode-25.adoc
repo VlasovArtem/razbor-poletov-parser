@@ -1,0 +1,43 @@
+Внезапный специальный выпуск с рассказом о конференции JavaOne, которая
+проходит в San Francisco сейчас.
+
+* http://yakovfain.com/2012/10/02/javaone-2012-the-keynotes/[проблемы
+кейнотов]
+* ничего не работает
+* запоздалый JavaFX и внезапный JavaScript
+* модуляризация модуляризаторов
+* слоооожно.....
+* девелоперс, девелоперс и их проблемы и как с ними не считаются
+* http://www.kai-waehner.de/blog/2012/10/02/avatar-as-alternative-for-java-server-faces-jsf-and-javafx-javaone-2012/[WTF
+is Avatar ??!!]
+* мастера игры
+
+*p.s.* Запись проходила в боевых условиях на территории, оккупированной
+захватчиками. Поэтому проскакивают клипики
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Наш facebook -
+https://www.facebook.com/razborPoletovPodcast[https://www.facebook.com/RazborPoletovPodcast]
+
+Гости и участники:
+
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/antonarhipov)
+* [@yfain](https://twitter.com/yfain)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* https://plus.google.com/105779776776467952201[Anton Arhipov]
+* https://plus.google.com/116033097136007429330/posts[Yakov Fain]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

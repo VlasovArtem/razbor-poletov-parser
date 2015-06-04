@@ -1,0 +1,57 @@
+---
+comments: true
+categories:
+uid: 18
+length: 40240416
+---
+= Episode 18 — Special: Join the Rebellion
+2012-05-22 10:50
+:layout: post
+:filename: razbor_18
+
+null
+В восемнадцатом выпуске «правильного подкаста для IT-шников» наш
+специальный корреспондент http://gplus.to/aabashev[Абашев Алексей]
+встретился с https://twitter.com/#!/antonarhipov[Антоном Архиповым].
+
+Время: 17 апреля 2012 Место:
+http://www.oracle.com/javaone/ru-en/index.html[JavaOne Russia],
+Российская Академия Наук
+
+Представляем вашему вниманию это импровизированное интервью, в котором
+профессионалы беседуют на общие и специальные темы. Затронуты вопросы о
+работе, о IT в стране профессионала, о становлении эксперта и продуктах
+компании http://zeroturnaround.com/[ZeroTurnaround].
+
+*p.s.* Один из немногих эпизодов, в котором контент побеждает качество.
+Запись велась в полевых условиях.
+
+Наши контакты:
+
+* Официальный сайт http://razbor-poletov.com
+* twitter: [@a_abashev](https://twitter.com/#!/a_abashev)
+[@gamussa](https://twitter.com/#!/gamussa)
+* G+: gplus.to/gAmUssA http://gplus.to/aabashev
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/144328/[Хабре]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_18.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_18.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

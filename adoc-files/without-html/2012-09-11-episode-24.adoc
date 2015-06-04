@@ -1,0 +1,79 @@
+---
+comments: true
+categories:
+uid: 24
+length: 84551612
+---
+= Episode 24 — А ты заполнил классный журнал?
+2012-09-11 12:05
+:layout: post
+:filename: razbor_24
+
+Новый сезон в старом и, надеемся, полюбившимся составе. В сегодняшнем
+выпуске мы обсудим
+
+Тема сочинения - Как провели лето:
+
+____________________________________________________________________________________________________________________________________________________________________
+* чем занимались
+* записал дорожный подкаст http://happypodcast.rpod.ru/s3[Пыльные дороги
+Америки]
+* выступил на JUG
+* провели симпозиум
+* http://www.youtube.com/trainingAtFarata[youtube канал]
+* https://github.com/Farata/EnterpriseWebBook[пишем книгу в стиле
+гитхаб]
+* встреча на http://oracle.com/javaone[JavaOne] в SF (c 30 сентября по 4
+октября)
+* Сильный Java/Spring программист? Понимаешь DI и знаешь все про
+`BeanFactory`. Удаленная работа на eCommerce проекте ждет тебя.
+Подробности на 1 час 23 минуте
+* гость из
+https://plus.google.com/112280655076209917443/posts[предыдущего выпуска]
+выступит на http://www.meetup.com/NJFlex/events/81152502/[встрече
+Princeton JUG]
+____________________________________________________________________________________________________________________________________________________________________
+
+'''''
+
+* Классный журнал
+http://www.trottercashion.com/2012/08/12/how-to-write-good-log-messages.html[Хороший
+лог - читабельный и информативный лог]
+* Контейнер важен?
+** http://blogs.forrester.com/mike_gualtieri/11-07-15-stop_wasting_money_on_weblogic_websphere_and_jboss_application_servers[Где
+деньги, Зин?]
+** http://www.jamesward.com/2012/08/13/containerless-spring-mvc[А нужен
+ли контейнер]
+* Полезняшка -
+http://johnlindquist.com/2012/08/14/ace_jump.html[AceJump]
+* http://www.theserverside.com/feature/Disruptive-forces-in-Java-Is-Scala-the-new-Spring-framework[В
+нашем отечестве пророки не нужны]
+* http://java.dzone.com/articles/named-parameters-java-another[Передай
+имя своего Бога]
+* http://www.sonatype.com/people/2012/08/download-it-all-at-once-a-maven-idea/[Maven
+for not download internetz]
+
+Наши контакты:
+* Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/gamussa[@gamussa]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_24.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_24.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/151284/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

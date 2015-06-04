@@ -1,0 +1,61 @@
+_Приглашенные гости:_
+
+Алексей Федоров про http://javapoint.ru/[JPoint]
+
+Yakov Fain про неконференции
+http://dou.ua/lenta/columns/unconference/[1]
+http://www.meetup.com/UkraineMaeUnconference/[2]
+
+Николай Алименков про http://jeeconf.com/[JEEConf 2014]
+
+'''''
+
+_Конференции_ http://2014.geekout.ee/speakers/[GeekOUT 2014]
+http://www.oracle.com/javaone/index.html[JavaOne 2014]
+
+Неконференции http://www.jcrete.org/[JCrete]
+
+Опросник от RebelLabs http://0t.ee/rlsurvey14
+
+"Глобальное добро" в software development.
+
+'''''
+
+------------------------------------------------------------
+Промо-код RAZBOR_POLETOV. Скидка на JPoint (25%) и JEE (20%)
+------------------------------------------------------------
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+* [@23derevo](https://twitter.com/#!/23derevo)
+* [@yfain](https://twitter.com/#!/yfain)
+* [@xpinjection](https://twitter.com/#!/xpinjection)
+* [@jbaruch](https://twitter.com/#!/jbaruch)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+* https://plus.google.com/+DmitryChurbanov
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

@@ -1,0 +1,55 @@
+---
+comments: true
+categories:
+uid: 12
+length: 87713131
+---
+= Episode 12 — Нет повода не выпить
+2012-03-02
+:layout: post
+:filename: razbor_12
+
+Коллектив редакции подкаста не останавливается на достигнутом и
+представляет вашему вниманию двенадцатый выпуск
+разговорно-болтологического IT-тематического подкаста «Разбор полетов».
+В этом выпуске:
+
+* http://blog.developer-b.com/post/17656356550/three-years-with-groovy[3
+года в колонии-поселении с конфискацией имущества]
+* http://pydanny.blogspot.com/2011/08/github-is-my-resume.html?m=1[усы,
+лапы и хвост - вот мои документы]
+* http://blog.dhananjaynene.com/2012/01/why-osgi-or-why-not-using-it-makes-your-jvm-runtime-unsafe/[нафига
+козе баян]
+* http://www.sparkjava.com/readme.html[Полезняшка]
+* http://ayende.com/blog/153409/do-you-monitor-negative-events?key=9a1bc43b-45b8-40c3-983d-391de284122b[Ваша
+система наполовину работает или наполовину не работает]
+* SWF - это не то что вы подумали
+http://aws.amazon.com/documentation/swf/[[1]]
+http://www.allthingsdistributed.com/2012/02/Amazon-Simple-Workflow-Service.html[[2]]
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_12.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_12.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+

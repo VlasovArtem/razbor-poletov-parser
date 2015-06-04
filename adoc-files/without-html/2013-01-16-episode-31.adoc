@@ -1,0 +1,48 @@
+---
+comments: true
+categories:
+uid: 31
+length: 66443379
+---
+= Episode 31 — Староновогодний Выпуск
+2013-01-16 12:17
+:layout: post
+:filename: razbor_31
+
+* http://simpleprogrammer.com/2012/12/09/the-4-most-important-skills-for-a-software-developer/[Вечные
+ценности]
+* http://venturebeat.com/2012/12/23/developer-stories-of-2012/[Чему
+можно поучиться в 2012 году]
+* http://readwrite.com/2012/12/31/tech-jobs-in-2013-open-source-open-data[На
+кого поучиться в 2013 году Tech Jobs In 2013: Open Source All The Way
+Down]
+* Полезняшка
+** http://lviggiano.github.com/owner/[Хозяин]
+** http://msgpack.org[Как JSON, только с перламутровыми пуговицами]
+* http://gizmodo.com/5972438/its-time-for-the-us-to-go-metric[Сколько
+вешать в граммах?]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/gamussa[@gamussa]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_31.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_31.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

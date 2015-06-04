@@ -1,0 +1,87 @@
+---
+comments: true
+categories:
+uid: 64
+length: 64382198
+---
+= Episode 64 — Будь профессионалом!
+2014-07-28 19:31
+:layout: post
+:filename: razbor_64
+
+image::http://razbor-poletov.com/images/razbor_64_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_64_text.jpg" align="center"]
+
+Конференции:
+
+* http://springone2gx.com[SpringOne2GX]
+* https://www.oracle.com/javaone/index.html[JavaOne]
+** https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=3503[Виктор]
+** https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=1724[Антон]
+** https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=1752[Барух]
+* Треп за Groovy
+** http://gr8conf.us/#/[gr8conf]
+** http://appspot.us4.list-manage.com/subscribe?u=cb8b56e9d6a1cb1696cecc673&id=1a76961630[Groovy
+Weekly]
+** Кому работы на Groovy http://www.groovy.io/jobs/list[1]
+http://www.indeed.com/jobtrends?q=groovy%2C+scala&l=[2]
+* Microservices http://microservices.io/patterns/microservices.html[1]
+http://www.infoq.com/articles/microservices-intro[2]
+http://highscalability.com/blog/2014/4/8/microservices-not-a-free-lunch.html[3]
+* Полезняшки.
+** http://www.mattstine.com/microservices[Список "на почитать" про
+сервисы]
+** Вышел Tower 2
+** https://github.com/vladmihalcea/flexy-pool[Профайлер Connection
+Pool-ов].
+https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing[Размер
+имеет значение]
+* http://philip.greenspun.com/ancient-history/professionalism-for-software-engineers[Будь
+профессионалом],
+https://twitter.com/ValaAfshar/status/492869616272953344[будь]!
+* http://zeroturnaround.com/rebellabs/why-it-rocks-to-finally-understand-java-jit-with-jitwatch/[Разбор
+черной магии JIT]
+
+'''''
+
+_На правах рекламы:_
+
+* Онлайн курс
+http://www.eventbrite.com/e/web-application-development-with-javascript-and-angularjs-starts-sep-6-2014-tickets-12121418489?aff=eorg[Web
+Application Development with JavaScript and AngularJS] на английском.
+Скидка-код *RazborPoletov*
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/dzmitryc[@dzmitryc]
+* https://twitter.com/#!/jbaruch[@jbaruch]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* https://plus.google.com/+AntonArhipov
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+DmitryChurbanov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_64.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_64.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

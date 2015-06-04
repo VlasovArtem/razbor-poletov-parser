@@ -1,0 +1,81 @@
+---
+comments: true
+categories:
+uid: 21
+length: 66799716
+---
+= Episode 21 — Едим свой собачий корм и меняем шило на два шила
+2012-06-10 12:30
+:layout: post
+:filename: razbor_21
+
+++++
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-hh4V2jbWfOM/T91Thn8t7uI/AAAAAAAAIcQ/emGHMq_4hMI/s1600/spring%253Fok%2521.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0" height="350" src="http://3.bp.blogspot.com/-hh4V2jbWfOM/T91Thn8t7uI/AAAAAAAAIcQ/emGHMq_4hMI/s1600/spring%253Fok%2521.jpg" width="350" />
+</a>
+</div>
+++++
+
+Встречайте 21 выпуск подкаста «Разбор Полетов». В предыдущем выпуске мы
+зажали 40 минут подкаста, поэтому восполняем это упущение. В этом
+выпуске:
+
+* По следам наших рекомендаций - монолог
+* https://plus.google.com/117481599451076280717/posts/95Pg2TToXsQ[Как я
+в Твиттер сходил]
+** показывали что-то вроде
+http://www.infoq.com/presentations/Timelines-Twitter[этого]
+* http://paulasmuth.com/blog/a_bug_i_wont_forget/[«Не забывается такое
+никогда»]
+* А давайте вновь проедемся по Play
+** http://raibledesigns.com/rd/entry/upgrading_to_play_2_anorm[Как я
+обновлялся на Play2]
+** http://whilefalse.blogspot.com/2012/03/why-im-moving-away-from-play-framework.html?m=1[Почему
+я свалил с Play]
+* Полезняшки:
+** http://metrics.codahale.com/[Metrics]
+** http://engineering.twitter.com/2012/06/distributed-systems-tracing-with-zipkin.html[Distributed
+Systems Tracing with Zipkin]
+* http://research.google.com/pubs/pub38125.html[F1 - The Fault-Tolerant
+Distributed RDBMS Supporting Googles Ad Business]
+* http://www.enhance-ict.com/2012/06/06/no-benefit-in-migrating-from-spring-to-java-ee/[No
+benefit in migrating from Spring to Java EE]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_21.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_21.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/145957/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

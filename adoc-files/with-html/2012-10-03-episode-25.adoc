@@ -1,0 +1,69 @@
+---
+comments: true
+categories:
+uid: 25
+length: 71199760
+---
+= Episode 25 — Из JavaOne с любовью
+2012-10-03 01:31
+:layout: post
+:filename: razbor_25
+
+null
+Внезапный специальный выпуск с рассказом о конференции JavaOne, которая
+проходит в San Francisco сейчас.
+
+* http://yakovfain.com/2012/10/02/javaone-2012-the-keynotes/[проблемы
+кейнотов]
+* ничего не работает
+* запоздалый JavaFX и внезапный JavaScript
+* модуляризация модуляризаторов
+* слоооожно.....
+* девелоперс, девелоперс и их проблемы и как с ними не считаются
+* http://www.kai-waehner.de/blog/2012/10/02/avatar-as-alternative-for-java-server-faces-jsf-and-javafx-javaone-2012/[WTF
+is Avatar ??!!]
+* мастера игры
+
+*p.s.* Запись проходила в боевых условиях на территории, оккупированной
+захватчиками. Поэтому проскакивают клипики
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Наш facebook -
+https://www.facebook.com/razborPoletovPodcast[https://www.facebook.com/RazborPoletovPodcast]
+
+Гости и участники:
+
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/antonarhipov)
+* [@yfain](https://twitter.com/yfain)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* https://plus.google.com/105779776776467952201[Anton Arhipov]
+* https://plus.google.com/116033097136007429330/posts[Yakov Fain]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_25.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_25.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

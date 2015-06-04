@@ -1,0 +1,81 @@
+---
+comments: true
+categories:
+uid: 50
+length: 71513833
+---
+= Episode 50 — I'm an architect and I don't know what I'm doing
+2013-12-01 17:08
+:layout: post
+:filename: razbor_50
+
+image::http://razbor-poletov.com/images/razbor_50_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_50_text.jpg" align="center"]
+
+Кудо про наклейки и donations!
+
+Спасибо http://d-vision.kz и нашим слушателям!
+
+Новости одной строкой:
+
+* http://www.gradle.org/docs/current/release-notes[Gradle v.1.9]
+* https://plus.google.com/117481599451076280717/posts/BTP38DW5Ugp[резидент
+и контрибьютер подкаста теперь коммитеры в груви]
+* http://openjdk.java.net/projects/jdk8/features[про фичи jdk8]. А если
+ты в NYC, то приходи послушать про них
+http://www.meetup.com/JavaSIG/events/151812822/[из первых уст].
+
+http://hirt.se/blog/?p=444[И про мониторинг вообще поговорить]
+
+Полезняшки:
+
+* http://tryjava8-t20.rhcloud.com/[tryjava8]
+* http://rebaseandsqua.sh/[Rebase and Squash].
+http://blogs.atlassian.com/2013/10/git-team-workflows-merge-or-rebase/[И
+еще по теме]
+* http://jhipster.github.io/[jHipster]
+
+Java-архитекторы, кто эти люди
+
+Как развивался их код
+http://www.willa.me/2013/11/the-six-most-common-species-of-code.html[1]
+http://www.ariel.com.au/jokes/The_Evolution_of_a_Programmer.html[2]
+http://www.willamette.edu/~fruehr/haskell/evolution.html[3]
+
+http://arstechnica.com/information-technology/2013/09/if-my-team-has-low-skill-should-i-reduce-the-difficulty-level-of-my-code/[Стоит
+ли опускать себя в угоду комманде]
+
+http://www.siliconrus.com/2013/10/remote/[Внеклассное чтение]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_50.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_50.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...
+
+http://richardhuante.deviantart.com/art/Sexy-Architect-334903123[Картинка
+найдена в интернете]

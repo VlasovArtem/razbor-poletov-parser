@@ -1,0 +1,56 @@
+---
+comments: true
+categories:
+uid: 1
+length: 100645532
+---
+= Episode 1 – officially on-air
+2011-11-23
+:layout: post
+:filename: razbor_01
+
+Я и коллега http://twitter.com/a_abashev[@a_abashev] представляем вашему
+вниманию официальный первый выпуск «еще одного» разговорного
+IT-тематического подкаста «Разбор Полетов». Подкаст был тепло встречен
+Вами — нашими слушателями (что радует), поэтому мы продолжаем... В этом
+выпуске:
+
+* Мобильный флеш все...
+http://blogs.adobe.com/conversations/2011/11/flash-focus.html[1]
+http://yakovfain.com/2011/11/09/the-rumors-of-flash-players-death-are-greatly-exaggerated/[2]
+* Свободу попугаям — Adobe Announce plans to donate Flex framework
+to ASF
+http://blogs.adobe.com/flex/2011/11/your-questions-about-flex.html[1]
+http://www.riagora.com/2011/11/flex-is-open/[2]
+* Учиться, учиться, учиться — Поддержка версионности и миграция схемы ЬД
+с Flyway http://agile.dzone.com/articles/flyway-15-released-agile-db[1]
+* Превратим программирование в игру — Play 2.0, A web framework for
+a new era http://raibledesigns.com/rd/entry/play_2_0_a_web[1]
+* Кэшируем стандартно — И снова откопали стюардесу
+http://www.javacodegeeks.com/2011/10/new-java-caching-standard-javaxcache.html[1]
+* Кросс-компиляциюв массы
+http://www.2ality.com/2011/11/gwt-and-dart.html[1]
+http://blogs.adobe.com/bparadie/2011/11/19/what-is-falconjs/[2]
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_01.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+
+Наши контакты: twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa] G+:
+http://gplus.to/gAmUssA[gplus.to/gAmUssA] +
+ http://feeds.feedburner.com/razbor-podcast[RSS]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_01.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+

@@ -1,0 +1,50 @@
+* http://www.theregister.co.uk/2013/02/07/home_lab_career_saver/[Почему
+надо сделать лабу]
+* http://blog.enoughtobedanger.us/caching-for-beginners/[Кэширование для
+начинающих]
+* Полезняшка
+** https://github.com/alvins82/java-mini-profiler-core[Java Mini
+Profiler]
+** https://saucelabs.com[SouceLabs]
+** http://squash.io[Squash.io]
+* http://www.javaadvent.com/2012/12/functional-java-collections.html[Функциональные
+коллекции] http://plumbr.eu/blog/selecting-your-collections-library[и не
+только]
+
+*Внимание! Конференции!*
+
+http://javaone.ru[JavaOne Россия]
+
+* Official event hashtag is: #JavaOneRussia
+* Official twitter of the event is: @JavaOneRussia
+
+http://jeeconf.com[JEE Conf] - Конференция Java практиков в Украине
+
+* https://docs.google.com/spreadsheet/viewform?formkey=dHR5NjhBU2M3OVQyX1djV29fY0FSbXc6MA[Call
+for papers open till April, 6]
+* http://jeeconf.com/speakers/[Speakers]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@jbaruch](https://twitter.com/#!/jbaruch)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+* https://plus.google.com/104301617063075159178[gplus.to/jbaruch]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

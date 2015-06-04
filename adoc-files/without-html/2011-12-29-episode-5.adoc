@@ -1,0 +1,48 @@
+---
+comments: true
+categories:
+uid: 5
+length: 79080788
+---
+= Episode 5 — Предновогодний
+2011-12-29
+:layout: post
+:filename: razbor_05
+
+Я и коллега http://twitter.com/a_abashev[@a_abashev] представляем вашему
+вниманию очередной пятый предпраздничный выпуск популярного в узких
+кругах, разговорного IT-тематического подкаста «Разбор Полетов». В этом
+выпуске:
+
+Полезняшка - 5 метров колючей проволоки-скрещиваем ежа и ужа в домашних
+условиях  http://jodd.org/doc/jerry/index.html
+
+Ванга отдыхает - 
+
+* http://gigaom.com/2011/12/19/take-a-look-at-ibms-5-innovations-for-next-five-years/
+* http://radar.oreilly.com/2011/12/api-predictions-2012.html
+
+пятиминутка на покурить: что хорошего за год случилось в Java-мире 
+http://www.java.net/node/877177/results
+
+..... это вы еще остальных не видели - 
+http://mysqltalk.wordpress.com/2011/12/19/you-thought-sql-injection-was-bad-schema-injection-coming-to-a-nosql-site-near-you/
+
+«Умных - к умным, а менэ - к табэ»© Как выбрать себе работу - 
+http://blog.interviewstreet.com/2011/12/assessing-a-company-questions-you-need-to-ask-in-an-interview/
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_05.mp3" width="64" height="64"]
+
+
+
+Колеектив «Разбора полетов» поздравляет всех с наступающими праздниками
+и желает всем IT-успехов в новом году! 
+
+Наши контакты: 
+
+* twitter: http://twitter.com/a_abashev[@a_abashev] http://twitter.com/gamussa[@gamussa] 
+* G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+
+Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_05.mp3[]

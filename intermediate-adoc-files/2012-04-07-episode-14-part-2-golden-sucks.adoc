@@ -1,0 +1,37 @@
+--- layout: post title: "Episode 14 part 2 - Golden Sucks!" date:
+2012-04-07 comments: true ---
+
+Встречайте вторую часть 14-го выпуск подкаста «Разбор полетов».
+Продолжение обсуждения затронутых в прошлом выпуске тем. А именно:
+
+* Если у тебя много КЦ есть, то можешь желтые штаны носить
+http://blogs.msdn.com/b/jw_on_tech/archive/2012/03/13/why-i-left-google.aspx[[1]]
+http://www.nytimes.com/2012/03/14/opinion/why-i-am-leaving-goldman-sachs.html[[2]]
+http://i-business.ru/blogs/18232[[3]]
+* http://java.dzone.com/articles/new-features-forkjoin-java[Вилочки
+остались и осадка не было]
+* Полезняшка
+** https://github.com/goldmansachs[GS on Github]
+** http://sourceforge.net/projects/javaconcurrenta/[Java Concurrent
+Animated]
+* Крылья, ноги и хвосты
+http://highscalability.com/blog/2012/3/12/google-taming-the-long-latency-tail-when-more-machines-equal.html[Google:
+Taming The Long Latency Tail]
+
+[cols="",]
+|=======================================================================
+|http://traffic.libsyn.com/razborpoletov/razbor_14_2.mp3[image:http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[image]]
+
+|Скачать mp3 бесплатно БЕЗ СМС 
+|=======================================================================
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev http://gplus.to/dmitryc[gplus.to/dmitryc]
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Your browser does not support the audio tag.

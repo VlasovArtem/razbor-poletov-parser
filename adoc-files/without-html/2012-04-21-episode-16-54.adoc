@@ -1,0 +1,41 @@
+---
+comments: true
+categories:
+uid: 16
+length: 79972937
+---
+= Episode 16 — ТБ 54м
+2012-04-21
+:layout: post
+:filename: razbor_16
+
+Встречайте очередной 16-й выпуск подкаста «Разбор Полетов» Сегодня в
+выпуске:
+
+* У нас ничего нет, кроме цепей
+http://www.engadget.com/2012/04/12/code-cant-be-stolen/[[1]]
+* Если не можешь запомнить - записывай
+http://www.infoq.com/articles/in-memory-data-grids[[1]]
+* Полезняшки
+http://stackapps.com/questions/3099/stacktrace-for-ipad[[StackTrace for
+iPad]] http://mosh.mit.edu/[[Mosh]]
+* 54 метра http://prog21.dadgum.com/65.html[[1]]
+* Как потратить миллион
+http://www.techdirt.com/blog/innovation/articles/20120409/03412518422/why-netflix-never-implemented-algorithm-that-won-netflix-1-million-challenge.shtml[[1]]
+* Будущее уже здесь
+http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/[[1]]
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_16.mp3" width="64" height="64"]
+
+
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev http://gplus.to/dmitryc[gplus.to/dmitryc]
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_16.mp3[]

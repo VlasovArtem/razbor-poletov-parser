@@ -1,0 +1,66 @@
+Кудо про наклейки и donations!
+
+Спасибо http://d-vision.kz и нашим слушателям!
+
+Новости одной строкой:
+
+* http://www.gradle.org/docs/current/release-notes[Gradle v.1.9]
+* https://plus.google.com/117481599451076280717/posts/BTP38DW5Ugp[резидент
+и контрибьютер подкаста теперь коммитеры в груви]
+* http://openjdk.java.net/projects/jdk8/features[про фичи jdk8]. А если
+ты в NYC, то приходи послушать про них
+http://www.meetup.com/JavaSIG/events/151812822/[из первых уст].
+
+http://hirt.se/blog/?p=444[И про мониторинг вообще поговорить]
+
+Полезняшки:
+
+* http://tryjava8-t20.rhcloud.com/[tryjava8]
+* http://rebaseandsqua.sh/[Rebase and Squash].
+http://blogs.atlassian.com/2013/10/git-team-workflows-merge-or-rebase/[И
+еще по теме]
+* http://jhipster.github.io/[jHipster]
+
+Java-архитекторы, кто эти люди
+
+Как развивался их код
+http://www.willa.me/2013/11/the-six-most-common-species-of-code.html[1]
+http://www.ariel.com.au/jokes/The_Evolution_of_a_Programmer.html[2]
+http://www.willamette.edu/~fruehr/haskell/evolution.html[3]
+
+http://arstechnica.com/information-technology/2013/09/if-my-team-has-low-skill-should-i-reduce-the-difficulty-level-of-my-code/[Стоит
+ли опускать себя в угоду комманде]
+
+http://www.siliconrus.com/2013/10/remote/[Внеклассное чтение]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...
+
+http://richardhuante.deviantart.com/art/Sexy-Architect-334903123[Картинка
+найдена в интернете]

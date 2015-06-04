@@ -1,0 +1,55 @@
+---
+comments: true
+categories:
+uid: 67
+length: 47019112
+---
+= Episode 67 — JCrete Special. Пляжный выпуск
+2014-09-06 11:47
+:layout: post
+:filename: razbor_67
+
+image::http://razbor-poletov.com/images/razbor_67_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_67_text.jpg" align="center"]
+
+* http://www.jcrete.org/[JCrete]
+* http://nighthacking.com/category/jcrete2014/[Nighthacking on JCrete]
+* http://vanillajava.blogspot.com/[Peter Lawrey]
+* http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe/[sun.misc.Unsafe]
+* http://openjdk.java.net/projects/sumatra/[Project Sumatra]
+* http://www.gradle.org/[Gradle]
+* http://asciidoctor.org/[Asciidoctor]
+* https://github.com/asciidoctor/asciidoctor-gradle-plugin[Gradle
+Asciidoctor plugin]
+* https://github.com/pledbrook/lazybones[Lazybones]
+http://habrahabr.ru/post/218205/[1]
+* https://github.com/OpenHFT/Koloboke[Koloboke]
+* http://www.azulsystems.com/jHiccup[jhiccup]
+* http://jokerconf.com/[Конференция Joker в СПб]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/yfain[@yfain]
+* https://twitter.com/#!/23derevo[@23derevo]
+* https://twitter.com/#!/leventov[@leventov]
+* https://twitter.com/#!/JohnWings[@johnwings]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_67.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_67.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

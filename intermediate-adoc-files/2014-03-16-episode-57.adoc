@@ -1,0 +1,49 @@
+* http://razbor-poletov.com/2014/03/episode-56.html#comment-1283786859[Вопрос
+и зала]
+* Про уверенность в себе и технологии
+* http://www.thoughtworks.com/radar/[Что-то маячет на радаре]
+* Полезняшка
+** http://gabrielecirulli.github.io/2048/[2048]
+** https://segment.io/[segment.io]
+** http://www.amazon.com/Version-Control-Example-Eric-Sink/dp/0983507902/[Version
+Control by example]
+** http://www.fossil-scm.org/index.html/doc/tip/www/quickstart.wiki[Fossil]
+** http://blog.jetbrains.com/idea/2014/03/try-chronon-debugger-with-intellij-idea-13-1-eap/[Chronon
+debugger]
+* http://techblog.netflix.com/2014/03/the-netflix-dynamic-scripting-platform.html[The
+Netflix Scripting Platform]
+* http://blog.codacy.com/top-10-faster-code-reviews/[10 правил code
+review]
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[Виктор Гамов-Загудзонский]
+* https://twitter.com/#!/antonarhipov[Антон Архипов-Шпайзман]
+* https://twitter.com/#!/a_abashev[Алексей Шариков Абашев]
+* https://twitter.com/#!/dzmitryc[Дмитрий Чурбанов-Деревянский]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+* https://plus.google.com/+DmitryChurbanov
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

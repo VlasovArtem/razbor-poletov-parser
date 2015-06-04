@@ -1,0 +1,50 @@
+* http://www.teamten.com/lawrence/writings/java-for-everything.html[Java
+для всего]
+* http://vimeo.com/100899133[Go for Java developers]
+* http://www.jamesward.com/2014/12/03/java-doesnt-suck-youre-just-using-it-wrong[И
+вообще, Java вся белая и пушистая]
+* http://paulonjava.blogspot.com/2014/12/osgi-doesnt-suck-youre-just-using-it.html[А
+некоторые думают что OSGi тоже няшка]
+
+Полезняшки:
+
+* https://github.com/mrniko/redisson[Редиссон]
+* https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj[Правильный
+Мёд]
+* AutoValue https://github.com/google/auto/tree/master/value[проект]
+https://docs.google.com/presentation/d/14u_h-lMn7f1rXE1nDiLX0azS3IkgjGl5uxp5jGJ75RE/edit?pli=1#slide=id.g2a5e9c4a8_00[презентация] +
+* https://github.com/google/truth[Truth]
+* http://blog.jetbrains.com/upsource/2014/12/09/jetbrains-upsource-1-0-is-released-available-for-purchase/[Upsource
+1.0]
+
+http://googlecloudplatform.blogspot.com/2015/01/in-coming-weeks-we-will-be-publishing.html[An
+introduction to containers, Kubernetes, and the trajectory of modern
+cloud computing] http://research.google.com/pubs/pub41684.html[Google
+Omega]
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+http://razbor-poletov.com/broadcast.html[Информация о вещании]
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

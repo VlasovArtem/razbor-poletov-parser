@@ -1,0 +1,46 @@
+* Под linux есть жизнь - злоключения и приключения из первых уст
+** http://blog.linuxmint.com/?p=2031[Linux Mint 13]
+** http://sajithdilshan.github.com/blog/blog/2012/08/07/transform-ubuntu-12-dot-04-into-mac-os-x-lion/[Transform
+Ubuntu 12.04 Into Mac OS X Lion]
+
+1.  Алексей раскрывает тему про вагрант
+2.  http://www.codinghorror.com/blog/2012/10/the-future-of-markdown.html[Future
+Of Markdown]
+3.  http://www.forbes.com/sites/forbesleadershipforum/2012/10/25/i-banned-all-internal-e-mails-at-my-company-for-a-week/[забанен
+в email]
+4.  http://blog.chromium.org/2012/08/the-evolution-of-chrome-packaged-apps.html[Пакуй
+свои вещички, HTML5!]
+* Вот https://github.com/adobe/brackets[Brackets], например
+5.  Полезняшка
+* http://www.textasticapp.com[Textastic - редактор для программистов на
+iPad]
+* http://blog.geekli.st/post/34361344887/how-to-crack-the-toughest-coding-interviews-by-gayle[Ломаем
+интервью]
+* http://www.amazon.com/gp/product/B003W09LTQ[офлайновая записная книжка
+в ванной]
+* http://it-sobytie.ru[Не пропусти «событие» в своем городе]
+6.  http://java.dzone.com/articles/10-things-i-never-want-see[Haters
+gonna hate]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/aabashev[Alexey Abashev]
+* http://gplus.to/dmitryc[Dmitry Churbaniv]
+* http://gplus.to/gAmUssA[Viktor Gamov]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

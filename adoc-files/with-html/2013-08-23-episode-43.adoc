@@ -1,0 +1,76 @@
+---
+comments: true
+categories:
+uid: 43
+length: 100296879
+---
+= Episode 43 — Диалоги о JetBrains
+2013-08-23 14:41
+:layout: post
+:filename: razbor_43
+
+++++
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://razbor-poletov.com/images/razbor_43_text.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0" height="350" src="http://razbor-poletov.com/images/razbor_43_text.jpg" width="350" />
+</a>
+</div>
+++++
+
+* Гость выпуска - __Дмитрий Борисович Жемеров__, CTO, Jetbrains
+* Про продукты и плагины
+** Pair Programming https://floobits.com/[1] http://codeinterview.me/[2]
+** Android Studio
+** VCS
+** IDEA
+** https://upsource.jetbrains.com/[UpSource]
+** Google Dart
+** C++ IDE
+** MPS http://mbeddr.wordpress.com/[1]
+** Kotlin http://johnlindquist.com/[1] http://icfpc2013.cloudapp.net/[2]
+** http://www.jetbrains.com/jetbrainsday/[JetBrains Day]
+** Треп за IDE http://www.youtube.com/watch?v=xAP8CSMEwZ8[1]
+* https://plus.google.com/117481599451076280717/posts/AKtJC1bZZnT[вопросы
+слушателей]
+* ИНСАЙДЫ!!!
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@intelliyole](https://twitter.com/intelliyole)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_43.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_43.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

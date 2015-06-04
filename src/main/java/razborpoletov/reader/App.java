@@ -9,10 +9,10 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import razborpoletov.reader.git.GitPuller;
-import razborpoletov.reader.parcers.ConferenceParser;
-import razborpoletov.reader.parcers.FileParser;
-import razborpoletov.reader.parcers.StatisticParser;
-import razborpoletov.reader.parcers.UsefulThingParser;
+import razborpoletov.reader.parsers.ConferenceParser;
+import razborpoletov.reader.parsers.FileParser;
+import razborpoletov.reader.parsers.StatisticParser;
+import razborpoletov.reader.parsers.UsefulThingParser;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,0 +1,36 @@
+--- layout: post title: "Episode 3 — Горький вкус загрузки классов"
+date: 2011-12-16 comments: true ---
+
+Я и коллега представляем вашему вниманию третий выпуск уже ставшего
+популярным в узких кругах, разговорного IT-тематического подкаста
+«Разбор Полетов». В этом выпуске:
+
+*  Новость для разминки —
+http://www.infoq.com/news/2011/12/HP-Open-Source-webOS
+*  Сделай свой гитхаб на Java с преферансом и поэтессами
+http://gitblit.com/
+*  Мы строили строили и наконец получили...
+http://community.jboss.org/wiki/JBossClassLoaderHistory
+*  Вышел ежик из тумана — Описание модульности в Java 8.
+http://mail.openjdk.java.net/pipermail/jigsaw-dev/2011-December/001800.html
+*  Мы с Тамарой пишем парой — Распределенное парное программирование
+http://www.saros-project.org/
+*  Еще одна неделя, еще одно сравнение git с mercurial
+http://blog.cubrid.org/dev-platform/git-vs-mercurial/
+*  Бог учил делиться. Почему вам нужен open-source
+http://tom.preston-werner.com/2011/11/22/open-source-everything.html
+
+[cols="",]
+|=======================================================================
+|http://traffic.libsyn.com/razborpoletov/razbor_03.mp3[image:http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[image]]
+
+|Скачать mp3 бесплатно 
+|=======================================================================
+
+Наши контакты: twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa] G+:
+http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+Подписаться по  +
+ http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Your browser does not support the audio tag.

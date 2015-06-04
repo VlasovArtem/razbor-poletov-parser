@@ -1,0 +1,41 @@
+---
+comments: true
+categories:
+uid: 9
+length: 69039262
+---
+= Episode 9 — Индусоустойчивость
+2012-02-06
+:layout: post
+:filename: razbor_09
+
+Творческий коллектив редакции подкаста «Разбор полетов» представляет
+вашему вниманию очередной девятый выпуск разговорно-болтологического
+IT-тематического подкаста;. В этом выпуске:
+
+* Многабукф
+http://weblogs.java.net/blog/fabriziogiudici/archive/2012/01/04/actors-java
+* Арррр! На абордаж -
+http://www.crashdev.com/2008/01/pirate-ship-as-organizational-model.html
+* Под лежачее приложение - память не течет -
+http://www.plumbr.eu/blog/screencast-how-to-use-plumbr
+* Полезняшка - https://github.com/vesln/issues
+* Ради чего стоит поставить семерку -
+http://niklasschlimm.blogspot.com/2012/01/java-7-how-to-write-really-fast-java.html?spref=tw
+* Сумасшедшая обезьяна для вашего кода -
+http://www.kaczanowscy.pl/tomek/2012-01/first-glance-at-pit-mutation-testing
+* http://code.google.com/p/gag/
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_09.mp3" width="64" height="64"]
+
+
+
+Наши контакты: 
+
+* twitter: http://twitter.com/a_abashev[@a_abashev] http://twitter.com/gamussa[@gamussa] 
+
+* G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+
+Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_09.mp3[]

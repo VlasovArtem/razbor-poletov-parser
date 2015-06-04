@@ -1,0 +1,42 @@
+* Новый логотип. Спасибо http://d-vision.kz/[D-Vision]!
+* Вести с полей (одной строкой)
+** http://www.typesafe.com/platform/getstarted[TypeSafe Platform]
+** http://blog.springsource.org/2013/04/23/introducing-spring-xd/[Spring
+XD]
+* Полезняшка
+** https://github.com/visionmedia/git-extras[git-extras]
+(https://vimeo.com/45506445[demo])
+** http://cloc.sourceforge.net/[CLOC]
+** http://gitignore.io/[gitignore]
+* Берегите женщин, женщин берегитесь
+http://adainitiative.org/2013/04/github-donates-private-repositories-to-women-learning-open-source-software/[1],
+http://www.sharpeytech.com/on-women-and-technology/[2]
+* http://agile.dzone.com/articles/not-using-test-first-youre[И вновь о
+unit-testing]
+** http://www.unitils.org/summary.html[Unitils]
+* http://www.12factor.net/[Фактор-12]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@xpinjection](https://twitter.com/xpinjection)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

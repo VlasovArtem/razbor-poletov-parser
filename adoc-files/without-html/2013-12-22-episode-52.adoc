@@ -1,0 +1,82 @@
+---
+comments: true
+categories:
+uid: 52
+length: 83292261
+---
+= Episode 52 — Главный по IDEA
+2013-12-22 17:03
+:layout: post
+:filename: razbor_52
+
+image::http://razbor-poletov.com/images/razbor_52_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_52_text.jpg" align="center"]
+
+Гость выпуска — mailto:andrey.cheptsov@jetbrains.com[Андрей Чепцов из
+JetBrains]
+
+* http://www.jetbrains.com/idea/whatsnew/[What’s new]
+* http://habrahabr.ru/company/JetBrains/blog/204590/[Что нового в IDEA
+13]
+* http://plugins.jetbrains.com/plugin/7345[Presentation Assistant]
+* http://plugins.jetbrains.com/plugin/7243[IntelliJ Code Golf]
+* http://plugins.jetbrains.com/plugin/4560?pr=idea[Intellij
+Configuration Server Plugin]
+* http://blog.jetbrains.com/idea/2012/10/support-for-spring-batch-in-intellij-idea-12/[Поддержка
+Spring Batch]
+* http://blog.jetbrains.com/idea/2013/12/intellij-idea-personal-licensing-changes/[Изменения
+в лицензировании]
+* http://arhipov.blogspot.com/2012/04/intellijidea-tip-configuration-profiles.html[Использование
+профайлов]
+* https://github.com/razbor-poletov/razbor-poletov.github.com/issues/9[Вопросы
+из зала]
+* http://www.jetbrains.com/objc/features/cpp.html#form[C++ IDE private
+beta]
+
+'''''
+
+_На правах рекламы:_
+
+* Онлайн курс
+http://www.eventbrite.com/e/modern-web-application-development-for-java-programmers-tickets-9775299183[Modern
+Web Application Development for Java Programmers] Скидка $50 код
+*RazborPoletov* .
+https://github.com/yfain/WebDevForJavaProgrammers[Course agenda].
+https://github.com/yfain/WebDevForJavaProgrammers/watchers[Добавляйтесь
+в watchers на GitHub].
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/@dzmitryc[@dzmitryc]
+* https://twitter.com/#!/andrey_cheptsov[@andrey_cheptsov]
+* https://twitter.com/#!/jbaruch[@jbaruch]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+* https://plus.google.com/+DmitryChurbanov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_52.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_52.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

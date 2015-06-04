@@ -1,0 +1,57 @@
+---
+comments: true
+categories:
+uid: 11
+length: 79024006
+---
+= Episode 11 — Кафедра черномазоведения
+2012-02-24
+:layout: post
+:filename: razbor_11
+
+Наш творческий коллектив редакции подкаста не останавливается на
+достигнутом и представляет вашему вниманию одиннацатый выпуск
+разговорно-болтологического IT-тематического подкаста «Разбор полетов».
+В этом выпуске: +
+
+1.  http://avinashsingh.wordpress.com/2007/04/05/a-myth-called-the-indian-programmer/[Кафедра
+черномазоведения]
+http://www.redburda.ru/%D0%BA%D1%83%D0%B4%D0%B0-%D0%BD%D0%B0%D0%B4%D0%BE-%D0%B1%D1%8B%D0%BB%D0%BE-%D0%BF%D0%BE%D0%B9%D1%82%D0%B8-%D1%83%D1%87%D0%B8%D1%82%D1%8C%D1%81%D1%8F[*ориг.*]
+2.  Возьми себе кусочек твиттера https://github.com/twitter/gizzard[[1]]
+http://www.infoq.com/interviews/szegedi-performance-tuning[[2]]
+http://twitter.github.com/effectivescala[[3]]
+3.  http://www.slideshare.net/mraible/comparing-jvm-web-frameworks-jfokus-2012[Яблоки
+с апельсинами] и
+http://paulhammant.com/2012/02/13/client-side-mvc-frameworks-compared/[о
+client side]
+4.  http://habrahabr.ru/blogs/open_source/138294/[Религия проникла в наш
+мозг через слабости сознания] *© Ницше*
+5.  http://highscalability.com/blog/2012/2/13/tumblr-architecture-15-billion-page-views-a-month-and-harder.html[Разбор
+полетов по tumblr]
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_11.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+
+Наши контакты: +
+
+* Официальный сайт —
+http://razbor-poletov.com/[http://razbor-poletov.com]
+* twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+* G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+* Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_11.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+

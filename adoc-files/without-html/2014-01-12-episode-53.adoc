@@ -1,0 +1,89 @@
+---
+comments: true
+categories:
+uid: 53
+length: 82994590
+---
+= Episode 53 — Цейлонский выпуск
+2014-01-12 17:01
+:layout: post
+:filename: razbor_53
+
+image::http://razbor-poletov.com/images/razbor_53_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_53_text.jpg" align="center"]
+
+Итоги года
+http://jaxenter.com/why-java-skills-are-still-golden-for-developers.1-49296.html[1],
+http://code2013.herokuapp.com/[2],
+http://blogs.tedneward.com/2014/01/03/Tech+Predictions+2014.aspx[3].
+
+Про Ceylon http://ceylon-lang.org/blog/2013/11/12/ceylon-1/[1],
+http://blog.jooq.org/2013/12/03/top-10-ceylon-language-features-i-wish-we-had-in-java/[2]
+и бонус от ZT https://github.com/antonarhipov/ceylon-http-server[1],
+http://zeroturnaround.com/rebellabs/the-adventurous-developers-guide-to-jvm-languages-java-scala-groovy-fantom-clojure-ceylon-kotlin-xtend/[2],
+https://github.com/zeroturnaround/jvm-languages-report[3]
+
+Полезняшка
+
+* http://coderwall.com/p/ugb2ow[MicroMongo]
+* Параметризованные jUnit tests
+http://www.javacodegeeks.com/2013/12/parameterized-junit-tests-with-junitparams.html[1]
+http://docs.spockframework.org/en/latest/data_driven_testing.html[2]
+* https://github.com/sindresorhus/quick-look-plugins[Плагины для Quick
+Look]
+* http://designm.ag/inspiration/31-admin-backend-dashboard-templates/[Темы
+для админок]
+
+https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/[Scaling
+Mercurial at Facebook]
+
+http://www.forbes.com/sites/steveblank/2014/01/03/tesla-and-adobe-why-continuous-deployment-may-mean-continuous-customer-disappointment/3/[Continuous
+Deliver = Continuous Disappointment]
+
+http://blog.circleci.com/silence-is-for-the-weak/[Silence, I said!]
+
+'''''
+
+_На правах рекламы:_
+
+* Онлайн курс
+http://www.eventbrite.com/e/modern-web-application-development-for-java-programmers-tickets-9775299183[Modern
+Web Application Development for Java Programmers] Скидка $50 код
+*RazborPoletov* .
+https://github.com/yfain/WebDevForJavaProgrammers[Course agenda].
+https://github.com/yfain/WebDevForJavaProgrammers/watchers[Добавляйтесь
+в watchers на GitHub].
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/@dzmitryc[@dzmitryc]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+* https://plus.google.com/+DmitryChurbanov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_53.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_53.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

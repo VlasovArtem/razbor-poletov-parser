@@ -1,0 +1,37 @@
+В очередном выпуске правильного подкаста главного зачинателя заменил
+другой популярный подкастер!
+
+1.  http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb[LevelDB]
+(for https://github.com/dain/leveldb[Java])
+2.  http://www.ajibanda.com/2012/05/programmers-interview-101-print-100.html[Гномики
+и лампочки]
+3.  http://blog.8thlight.com/uncle-bob/2012/04/20/Why-Is-Estimating-So-Hard.html[Estimating
+is hard]
+4.  Полезняшка http://code.google.com/p/chromedevtools/[Chrome Dev Tools
+for Java]
+5.  http://blog.jgc.org/2012/07/some-things-ive-learnt-about.html[Что я
+узнал о программировании]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/147983/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

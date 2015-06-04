@@ -1,0 +1,48 @@
+Встречайте 21 выпуск подкаста «Разбор Полетов». В предыдущем выпуске мы
+зажали 40 минут подкаста, поэтому восполняем это упущение. В этом
+выпуске:
+
+* По следам наших рекомендаций - монолог
+* https://plus.google.com/117481599451076280717/posts/95Pg2TToXsQ[Как я
+в Твиттер сходил]
+** показывали что-то вроде
+http://www.infoq.com/presentations/Timelines-Twitter[этого]
+* http://paulasmuth.com/blog/a_bug_i_wont_forget/[«Не забывается такое
+никогда»]
+* А давайте вновь проедемся по Play
+** http://raibledesigns.com/rd/entry/upgrading_to_play_2_anorm[Как я
+обновлялся на Play2]
+** http://whilefalse.blogspot.com/2012/03/why-im-moving-away-from-play-framework.html?m=1[Почему
+я свалил с Play]
+* Полезняшки:
+** http://metrics.codahale.com/[Metrics]
+** http://engineering.twitter.com/2012/06/distributed-systems-tracing-with-zipkin.html[Distributed
+Systems Tracing with Zipkin]
+* http://research.google.com/pubs/pub38125.html[F1 - The Fault-Tolerant
+Distributed RDBMS Supporting Googles Ad Business]
+* http://www.enhance-ict.com/2012/06/06/no-benefit-in-migrating-from-spring-to-java-ee/[No
+benefit in migrating from Spring to Java EE]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/145957/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

@@ -1,0 +1,87 @@
+---
+comments: true
+categories:
+uid: 63
+length: 56639161
+---
+= Episode 63 — В Интернетах кто-то неправ
+2014-07-15 00:22
+:layout: post
+:filename: razbor_63
+
+image::http://razbor-poletov.com/images/razbor_63_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_63_text.jpg" align="center"]
+
+http://xkcd.com/386/[Кто-то неправ]
+
+Конференции:
+
+* http://www.cloudbees.com/jenkins/juc-2014[Jenkins User Conference
+Israel (спонсор - ХАМАС и ЦАХАЛ)]
+* http://www.oscon.com/oscon2014[OSCON]:
+http://www.oscon.com/oscon2014/public/schedule/detail/33585[наш человек
+там]
+* http://itiskpfu.timepad.ru/event/127116/[Летняя Школа ИТИС]
+* http://springone2gx.com[SpringOne2GX]
+* https://www.oracle.com/javaone/index.html[JavaOne]
+** https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=3503[Виктор]
+** https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=1724[Антон]
+** https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=1752[Барух]
+* http://www.devoxx.be/[Devoxx]
+* http://uk.geekout.ee/[GeekOut UK]
+* http://javaday.org.ua[JavaDay]
+* http://vimeo.com/99523925[Continuous delivery & zero downtime]
+* Building a Continuous Delivery pipeline with Gradle and Jenkins
+http://www.infoq.com/presentations/cd-gradle-jenkins[1]
+http://www.slideshare.net/SpringCentral/cd-pipeline-gradlejenkins[2]
+* http://www.thoughtworks.com/radar/#/[The new TW Radar]
+* Spring IO Platform 1.0
+https://spring.io/blog/2014/06/26/introducing-the-spring-io-platform[1]
+http://spring.io/blog/2014/06/26/spring-io-platform-1-0-0-released[2]
+* Spring vs JavaEE
+https://twitter.com/jbaruch/status/481214889331929091[1]
+http://www.slideshare.net/reza_rahman/java-ee-and-spring-sidebyside-34320697[2]
+
+http://ejohn.org/blog/write-code-every-day/[Пиши код каждый день]
+
+'''''
+
+_На правах рекламы:_
+
+* Онлайн курс
+http://www.eventbrite.com/e/web-application-development-with-javascript-and-angularjs-starts-sep-6-2014-tickets-12121418489?aff=eorg[Web
+Application Development with JavaScript and AngularJS] на английском.
+Скидка-код *RazborPoletov*
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/dzmitryc[@dzmitryc]
+* https://twitter.com/#!/jbaruch[@jbaruch]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* https://plus.google.com/+AntonArhipov
+* https://plus.google.com/+DmitryChurbanov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_63.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_63.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

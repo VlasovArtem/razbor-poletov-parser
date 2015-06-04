@@ -1,0 +1,40 @@
+* http://www.jcrete.org/[JCrete]
+* http://nighthacking.com/category/jcrete2014/[Nighthacking on JCrete]
+* http://vanillajava.blogspot.com/[Peter Lawrey]
+* http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe/[sun.misc.Unsafe]
+* http://openjdk.java.net/projects/sumatra/[Project Sumatra]
+* http://www.gradle.org/[Gradle]
+* http://asciidoctor.org/[Asciidoctor]
+* https://github.com/asciidoctor/asciidoctor-gradle-plugin[Gradle
+Asciidoctor plugin]
+* https://github.com/pledbrook/lazybones[Lazybones]
+http://habrahabr.ru/post/218205/[1]
+* https://github.com/OpenHFT/Koloboke[Koloboke]
+* http://www.azulsystems.com/jHiccup[jhiccup]
+* http://jokerconf.com/[Конференция Joker в СПб]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@yfain](https://twitter.com/#!/yfain)
+* [@23derevo](https://twitter.com/#!/23derevo)
+* [@leventov](https://twitter.com/#!/leventov)
+* [@johnwings](https://twitter.com/#!/JohnWings)
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

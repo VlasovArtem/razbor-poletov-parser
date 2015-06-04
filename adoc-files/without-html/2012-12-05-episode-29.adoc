@@ -1,0 +1,52 @@
+---
+comments: true
+categories:
+uid: 29
+length: 55177537
+---
+= Episode 29 — Год в Эфире
+2012-12-05 00:22
+:layout: post
+:filename: razbor_29
+
+
+* http://java.dzone.com/articles/why-java-ee-lost-and-spring[Why Java EE Lost and Spring Won]
+* http://www.infoq.com/presentations/Square[Engineering Elegance: The Secrets of Square's Stack]
+** http://square.github.com/tape/[Tape]
+** http://one-jar.sourceforge.net/[One-JAR]
+** http://dropwizard.codahale.com/getting-started/[Dropwizard]
+** https://github.com/blog/542-introducing-resque[Resque]
+** http://www.manning.com/prasanna/[Dependency Injection In Action]
+** http://square.github.com/dagger/[Dagger]
+* Полезняшка
+** http://anti-code.com/devtools-cheatsheet/[Chrome Devtools Cheatsheet]
+* http://techcrunch.com/2012/11/30/instagram-co-founder-mike-kriegers-8-principles-for-building-products-people-want/[Instagram
+Co-Founder Mike Krieger's 8 Principles For Building Products People
+Want]
+
+http://razbor-poletov.com/broadcast/2012-12-02.html[Лог Чатика]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/gamussa[@gamussa]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_29.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_29.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

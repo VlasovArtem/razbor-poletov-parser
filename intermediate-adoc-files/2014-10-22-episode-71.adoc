@@ -1,0 +1,57 @@
+* В полку https://java-champions.java.net[чемпионов] прибыло.
+https://blogs.oracle.com/java/entry/new_java_champions_mario_torre[Наши
+поздравления мистеру Архипову!]
+* Добить JavaOne:
+** https://oracleus.activeevents.com/2014/connect/fileDownload/session/753320BEF30DCDCF22F06D12DB4E302D/CON3565_Robertson-ScienceAndArtOfBackwardsCompatability.pdf[Reflection]
+** https://parleys.com/play/543f977ce4b06e1184ae417f[Do you really get
+your IDE?]
+** JavaOne keynotes:
+*** http://medianetwork.oracle.com/video/player/3818220797001[Intel
+Keynote]
+*** http://medianetwork.oracle.com/video/player/3811045975001[Technical
+Keynote]
+*** http://medianetwork.oracle.com/video/player/3818408543001[Community
+Keynote]
+** http://openjdk.java.net/projects/panama/[Project Panama]
+** http://openjdk.java.net/projects/valhalla/[Project Valhalla]
+* http://www.infoq.com/articles/Kicking-Off-Java-EE-8[Java EE 8 is
+Kicking Off]
+* http://www.oracle.com/technetwork/articles/java/mvc-2280472.html[Why
+another MVC?]
+
+https://www.chrisnewland.com/cpu-pinning-java-threads-with-jstack-and-taskset-380[CPU
+pinning Java threads with stack and task set]
+
+Полезняшки:
+
+* http://takari.io/2014/10/16/incremental-compilation.html[maven
+incremental compilation]
+* http://pantsbuild.github.io/[Штаны]
+* http://readme.io[Readme]
+* http://slackatwork.com/[Шлангуй на работе]
+* https://github.com/andrewgaul/modernizer-maven-plugin[Используй только
+свежее]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

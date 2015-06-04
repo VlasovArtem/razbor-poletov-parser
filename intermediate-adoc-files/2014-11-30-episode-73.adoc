@@ -1,0 +1,58 @@
+Фото пирога было найдено
+https://c2.staticflickr.com/4/3402/5839809283_df8e42f37f_b.jpg[тут]
+
+* https://twitter.com/javaposse/status/533145446945128448[JavaPosse все]
+* https://www.facebook.com/GeekOut.ee[GeekOut 2015: 11-12 июня]
+* https://twitter.com/gvsmirnov/status/538452726662066177[Утечка мозгов
+в Эстонию]
+
+Немного о бабле
+
+* http://www.businessinsider.com/best-tech-skills-resume-ranked-salary-2014-11[О
+стоимости скилов]
+* http://www.oreilly.com/data/free/files/2014-data-science-salary-survey.pdf[Data
+Science Salary Survey]
+* http://radar.oreilly.com/2014/10/resume-driven-development.html[Resume
+Driven Development]
+* https://vk.com/wall-46597293?w=wall-46597293_71[Артефакты встречи
+JUGMSK]
+* http://blog.joda.org/2014/11/no-properties-in-java-language.html[Проперти
+в Java]
+* http://jaxenter.com/java-application-servers-dead-112186.html[Java
+application servers are dead]
+
+Полезняшка
+
+* http://dancres.github.io/Pages/[На почитать о распределенных системах]
+- темы дипломов искать тут!
+* https://speakerdeck.com/matthewmccullough/mac-osx-productivity-tips-for-developers[OSX
+Productivity Tips]
+** http://code.joejag.com/2014/why-zsh.html[Почему ZSH]
+** http://brew.sh[Варим софт]
+** http://caskroom.io[Храним сваренное в бочке]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+http://razbor-poletov.com/broadcast.html[Информация о вещании]
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@jbaruch](https://twitter.com/#!/jbaruch)
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

@@ -1,0 +1,68 @@
+* http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm[Матрица
+(не)компетенций программиста]
+* http://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/[Notes
+on Distributed Systems for Young Bloods]
+* Полезняшки
+** https://github.com/alexruiz/fest-assert-2.x[FEST Fluent Assertions
+2.x]
+** Firefox jsTerm http://paulrouget.com/e/fxterminalv3/[1]
+https://github.com/paulrouget/firefox-jsterm[2]
+* http://habrahabr.ru/company/jelastic/blog/166845/[NoSQL и Big Data –
+обман трудящихся?]
+* http://webreflection.blogspot.com/2013/02/my-personal-github-flow.html[Github
+flow for personal projects]
+
+'''''
+
+*Внимание! Конференции!*
+
+http://html5devconf.com/[HTML5DevConf] - Конференция front-end
+разработчиков в San Francisco, CA
+
+* 2-го Апреля http://html5devconf.com/sessions.html#v_gamov[выступает]
+http://html5devconf.com/speakers.html#v_gamov[Ваш покорный слуга]
+
+http://jeeconf.com[JEE Conf] - Конференция Java практиков в Украине
+
+* https://docs.google.com/spreadsheet/viewform?formkey=dHR5NjhBU2M3OVQyX1djV29fY0FSbXc6MA[Call
+for papers open till April, 6]
+* http://jeeconf.com/speakers/[Speakers]
+
+http://www.oracle.com/javaone/index.html[JavaOne]
+
+* http://www.oracle.com/javaone/call-for-papers/information/index.html[Call
+For Proposal open till April, 12]
+
+http://javaone.ru[JavaOne Россия]
+
+* Official event hashtag is:
+#https://twitter.com/search?q=%23JavaOneRussia[JavaOneRussia]
+* Official twitter of the event is:
+[@JavaOneRussia](https://twitter.com/JavaOneRussia)
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

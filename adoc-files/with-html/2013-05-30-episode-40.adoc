@@ -1,0 +1,66 @@
+---
+comments: true
+categories:
+uid: 40
+length: 50559985
+---
+= Episode 40 — A Short Version
+2013-05-30 14:38
+:layout: post
+:filename: razbor_40
+
+++++
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://razbor-poletov.com/images/razbor_40_text.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0" height="350" src="http://razbor-poletov.com/images/razbor_40_text.jpg" width="350" />
+</a>
+</div>
+++++
+
+* Дима про IO
+* Доверяй, но проверяй
+* http://zeroturnaround.com/labs/the-great-java-application-server-debate-tomcat/[Конкурс
+красоты в зоопарке]
+* http://www.wired.com/wiredenterprise/2013/03/google-borg-twitter-mesos/all/["Киборги,
+они заполоняют"]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@jbaruch](https://twitter.com/#!/jbaruch)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_40.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_40.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

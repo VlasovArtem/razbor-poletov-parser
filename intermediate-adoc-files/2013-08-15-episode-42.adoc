@@ -1,0 +1,36 @@
+* Cпасибо слушателям за помощь!
+* http://habrahabr.ru/post/184008/[Про то как Google погрузился в ...]
+* http://www.infoq.com/news/2013/06/eclipse-github[Они заполоняют]
+* Полезняшки
+** http://www.togglz.org/quickstart.html[Togglz],
+http://martinfowler.com/bliki/FeatureToggle.html[Feature Toggle].
+** http://razbor-poletov.com/2013/04/episode-38.html#comment-942552779[комент
+от слушателя]
+** https://developers.google.com/chrome-developer-tools/docs/tips-and-tricks[Chrome
+DevTools Cheat Sheet]
+* http://habrahabr.ru/company/scrumtrek/blog/185334/[We are russians]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

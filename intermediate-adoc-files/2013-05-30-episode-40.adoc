@@ -1,0 +1,33 @@
+* Дима про IO
+* Доверяй, но проверяй
+* http://zeroturnaround.com/labs/the-great-java-application-server-debate-tomcat/[Конкурс
+красоты в зоопарке]
+* http://www.wired.com/wiredenterprise/2013/03/google-borg-twitter-mesos/all/["Киборги,
+они заполоняют"]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@jbaruch](https://twitter.com/#!/jbaruch)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

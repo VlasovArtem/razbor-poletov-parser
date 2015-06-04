@@ -1,0 +1,40 @@
+---
+comments: true
+categories:
+uid: 47
+length: 45795211
+---
+= Episode 47 — Дневники JavaOne 2013: День 3
+2013-09-26 10:55
+:layout: post
+:filename: razbor_47
+
+image::http://razbor-poletov.com/images/razbor_47_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_47_text.jpg" align="center"]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/andrey_kogun[@andrey_kogun]
+* https://twitter.com/#!/gigabel[@gigabel]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_47.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_47.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

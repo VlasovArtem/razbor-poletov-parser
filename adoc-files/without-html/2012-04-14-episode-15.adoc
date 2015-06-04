@@ -1,0 +1,42 @@
+---
+comments: true
+categories:
+uid: 15
+length: 90836114
+---
+= Episode 15 — Отвечаем на вопросы
+2012-04-14
+:layout: post
+:filename: razbor_15
+
+Не заставляет себя ждать очередной, 15-й выпуск правильного подкаста для
+IT-шников «Разбор полетов». Сегодня в программе:
+
+* "И кое-что задаром" (с)
+http://anykeytocreate.blogspot.com/2012/03/news-flash-player-premium-features.html[[1]]
+* Готовьте ваши паяльники
+http://pixelstech.net/article/index.php?id=1333102933[[1]]
+* Как правильно нарезать
+http://www.deepakgaikwad.net/index.php/2012/03/27/spring-config-file-best-practices.html[[1]]
+* Меня зовут Джон Крамер и у меня есть для вас игра
+http://blog.incubaid.com/2012/03/28/the-game-of-distributed-systems-programming-which-level-are-you/[[1]]
+* Мозги налево, руки направо
+http://www.infoq.com/presentations/Automating-almost-Everything-Using-Git-Gerrit-Hudson-and-Mylyn[[1]]
+* Отряд не заметит потери бойца
+http://arstechnica.com/business/news/2012/04/exclusive-a-behind-the-scenes-look-at-facebook-release-engineering.ars[[1]]
+http://news.ycombinator.com/item?id=3803026[[2]]
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_15.mp3" width="64" height="64"]
+
+
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev http://gplus.to/dmitryc[gplus.to/dmitryc]
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_15.mp3[]

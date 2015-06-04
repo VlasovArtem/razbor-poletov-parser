@@ -1,0 +1,41 @@
+* https://play.google.com/store/apps/details?id=com.shonenfactory.razborpoletov[Приложение
+«Разбор Полетов» для Android].
+https://github.com/rsi2m/RazborPoletov[Гитхаб] для пулл-реквестов
+* https://github.com/google/dagger[Dagger Two].
+https://www.youtube.com/watch?v=oK_XtfXPkqw[Видео]
+* http://www.amazon.com/Dependency-Injection-Dhanji-R-Prasanna/dp/193398855X[Книга
+про DI]
+* «Spring-поторошитель» https://www.youtube.com/watch?v=BmBr5diz8WA[1]
+https://www.youtube.com/watch?v=cou_qomYLNU[2]
+* Полезняшка http://www.jcabi.com/index.html[jacabi] (log,
+VerboseThread, jdbc)
+* http://blog.jooq.org/2014/06/26/stop-unit-testing-database-code/[Перестаньте
+тестировать базу]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@golodnyj](https://twitter.com/#!/golodnyj)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* https://plus.google.com/+DmitryChurbanov
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

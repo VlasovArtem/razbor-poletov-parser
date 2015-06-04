@@ -1,0 +1,94 @@
+---
+comments: true
+categories:
+uid: 58
+length: 91255686
+---
+= Episode 58 — Конференции, анонимные программисты и добро
+2014-03-23 17:44
+:layout: post
+:filename: razbor_58
+
+++++
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://razbor-poletov.com/images/razbor_58_text.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0" height="350" src="http://razbor-poletov.com/images/razbor_58_text.jpg" width="350" />
+</a>
+</div>
+++++
+
+_Приглашенные гости:_
+
+Алексей Федоров про http://javapoint.ru/[JPoint]
+
+Yakov Fain про неконференции
+http://dou.ua/lenta/columns/unconference/[1]
+http://www.meetup.com/UkraineMaeUnconference/[2]
+
+Николай Алименков про http://jeeconf.com/[JEEConf 2014]
+
+'''''
+
+_Конференции_ http://2014.geekout.ee/speakers/[GeekOUT 2014]
+http://www.oracle.com/javaone/index.html[JavaOne 2014]
+
+Неконференции http://www.jcrete.org/[JCrete]
+
+Опросник от RebelLabs http://0t.ee/rlsurvey14
+
+"Глобальное добро" в software development.
+
+'''''
+
+------------------------------------------------------------
+Промо-код RAZBOR_POLETOV. Скидка на JPoint (25%) и JEE (20%)
+------------------------------------------------------------
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+* [@23derevo](https://twitter.com/#!/23derevo)
+* [@yfain](https://twitter.com/#!/yfain)
+* [@xpinjection](https://twitter.com/#!/xpinjection)
+* [@jbaruch](https://twitter.com/#!/jbaruch)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+* https://plus.google.com/+DmitryChurbanov
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_58.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_58.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

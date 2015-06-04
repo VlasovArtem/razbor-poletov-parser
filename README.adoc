@@ -49,4 +49,3 @@ When you parse Useful things be aware of some issues with tags and description p
 from
 github page if it available, if project will have duplicate github pages you will see alert in console.
 ====
-

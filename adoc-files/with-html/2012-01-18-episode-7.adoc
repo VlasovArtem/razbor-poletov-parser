@@ -1,0 +1,56 @@
+---
+comments: true
+categories:
+uid: 7
+length: 90908968
+---
+= Episode 7 — Чем заняться в следующем году
+2012-01-18
+:layout: post
+:filename: razbor_07
+
+После продолжительного новогоднего застоя, c простуженными голосами
+я и коллега http://twitter.com/a_abashev[@a_abashev] представляем вашему
+вниманию очередной седьмой выпуск популярного в узких кругах,
+разговорного IT-тематического подкаста «Разбор Полетов». В этом выпуске:
+
+* Чем заняться в феврале в Питере — http://javaone.ru/javaday/program
+* Google наше все
+http://www.igvita.com/2012/01/05/google-web-toolkit-gwt-closure-nacl-dart-js/
+* Шило в глаз или в попу раз или Капитан О рекоммендует
+http://yanpritzker.com/2006/10/03/five-ways-to-get-insane-productivity-boosts/
+* Надо почаще смотреть на небо
+http://gigaom.com/cloud/10-cloud-startups-to-watch-in-2012/
+* Где тонко, там и рвется https://github.com/igrigorik/bugspots
+* Что такое TDD и как с ним бороться
+http://powersoftwo.agileinstitute.com/2011/11/five-key-ingredients-of-essential-test.html
+* Что то новое в CI
+http://www.rackspace.com/cloud/blog/2012/01/05/rackspace-open-sources-dreadnot/
+
+p.s. Спецкорр подкаста http://twitter.com/a_abashev[@a_abashev]
+разыскивает израильских спецов для записи спецвыпуска на Земле
+обетованной. Подробности в выпуске
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_07.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+
+Наши контакты: twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa] G+:
+http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+Подписаться по  +
+ http://feeds.feedburner.com/razbor-podcast[RSS]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_07.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+

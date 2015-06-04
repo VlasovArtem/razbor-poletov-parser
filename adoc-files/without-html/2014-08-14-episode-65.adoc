@@ -1,0 +1,58 @@
+---
+comments: true
+categories:
+uid: 65
+length: 71697963
+---
+= Episode 65 — Microsoft уже не тот...
+2014-08-14 00:25
+:layout: post
+:filename: razbor_65
+
+image::http://razbor-poletov.com/images/razbor_65_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_65_text.jpg" align="center"]
+
+* https://play.google.com/store/apps/details?id=com.shonenfactory.razborpoletov[Приложение
+«Разбор Полетов» для Android]
+* http://instagram-engineering.tumblr.com/post/89992572022/migrating-aws-fb[Как
+мигрировал Instagram]
+* http://xprogramming.com/articles/refactoring-not-on-the-backlog/[Не
+откладывайте рефакторинг в долгий ящик]
+* http://www.jongleberry.com/semver-has-failed-us.html[Во всем винить
+semver]
+* Полезняшка semver для Java
+https://github.com/jeluard/semantic-versioning[1]
+https://github.com/zafarkhaja/java-semver[2]
+* http://arstechnica.com/information-technology/2014/08/how-microsoft-dragged-its-development-practices-into-the-21st-century/[Microsoft
+уже не тот]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/golodnyj[@golodnyj]
+* https://twitter.com/#!/dzmitryc[@dzmitryc]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+DmitryChurbanov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_65.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_65.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

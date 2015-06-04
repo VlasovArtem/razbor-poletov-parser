@@ -1,0 +1,57 @@
+---
+comments: true
+categories:
+uid: 41
+length: 85142002
+---
+= Episode 41 — Исход из Интерпрайза
+2013-06-16 21:41
+:layout: post
+:filename: razbor_41
+
+image::http://razbor-poletov.com/images/razbor_41_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_41_text.jpg" align="center"]
+
+* http://www.infoq.com/presentations/JVM-Mechanics[Машинариум]
+* http://www.infoq.com/articles/9_Fallacies_Java_Performance[Java не
+тормозит ©]
+* http://www.thingist.com/item/4372/[Братва, не стреляйте в друг друга
+©]
+* http://blog.springsource.org/2013/05/13/reactor-a-foundation-for-asynchronous-applications-on-the-jvm/[Проверь
+реакцию]
+* полезняшка
+** http://jnario.org/ +
+** http://www.hermesjms.com/confluence/display/HJMS/Home[HermesJMS]
+** https://lh6.googleusercontent.com/-yCF8ozFNypQ/UWawXy7vg3I/AAAAAAAAAkM/tXcV3HupLFE/w966-h760-no/BHVicYICMAAdHGv.jpg[SQl
+Joins]
+* http://lifehacker.com/how-to-find-out-if-a-company-is-a-cultural-fit-for-you-510587663[В
+компании мечты]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/jbaruch[@jbaruch]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/sbozhko[@sbozhko]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_41.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_41.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

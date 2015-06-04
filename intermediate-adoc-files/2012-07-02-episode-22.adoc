@@ -1,0 +1,46 @@
+1.  Особый гость
+* https://plus.google.com/104301617063075159178/posts[G+]
+* https://twitter.com/#!/jbaruch[Twitter]
+* http://www.jfrog.com/features.php[Artifactory]
+* https://github.com/jbaruch/maven2gradle[Maven2Gradle]
+2.  Главное одной строкой
+* http://forums.gradle.org/gradle/topics/gradle_1_0_released[Gradle 1.0
+Release]
+* IDEA 12 EAP
+http://blogs.jetbrains.com/idea/2012/06/brand-new-compiler-mode-in-intellij-idea-12-leda/[[1]]
+http://blogs.jetbrains.com/idea/2012/06/android-ui-designer-coming-in-intellij-idea-12/[[2]]
+* http://www.infoq.com/articles/new-groovy-20[Groovy 2.0]
+3.  https://cloud.oracle.com/mycloud/f?p=service:architecture:0[Алексей
+рассказывает про оракловский клауд]
+4.  http://programmers.stackexchange.com/questions/102090/why-isnt-java-used-for-modern-web-application-development[Как
+это сидеть на обочине прогресса]
+5.  http://tbroyer.posterous.com/how-does-gwts-super-dev-mode-work[Что
+это там вдали? Это птица? Это самолет?]
+6.  Полезняшки
+* http://jaxenter.com/java-class-reloader-javeleon-hits-2-0-release-43149.html[Не
+jrebel единым]
+* https://bitbucket.org/dfa/dollar/wiki/Home[Dollar]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/147161/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

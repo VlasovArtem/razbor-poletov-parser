@@ -1,0 +1,44 @@
+---
+comments: true
+categories:
+uid: 8
+length: 92462834
+---
+= Episode 8 — Много смеха и улыбок
+2012-01-30
+:layout: post
+:filename: razbor_08
+
+Творческий коллектив редакции подкаста «Разбор полетов» представляет
+вашему вниманию очередной восьмой выпуск разговорно-болтологического
+IT-тематического подкаста;. В этом выпуске:
+
+* Останови мыло!! Stop SOAP http://stopsoap.com/
+* Если у тебя есть фонтан, заткни его; дай отдохнуть и фонтану
+© К. Прутков. Алгоритм не фонтан
+http://blog.notdot.net/2012/01/Damn-Cool-Algorithms-Fountain-Codes
+* Полезняшка — http://www.latencytop.org/
+* Называйся правильно —
+http://vanillajava.blogspot.com/2012/01/generic-class-names-to-avoid.html
+* Украл — выпил — в тюрьму. Романтика!
+http://gigaom.com/2012/01/07/desantis-startups-crime-boss/
+* «Товарищи призывники! Надо понимать всю глубину наших глубин» © 
+http://stackoverflow.com/questions/1012402/maven2-property-that-indicates-the-parent-directory
+
+p.s. Спецкорр подкаста http://twitter.com/a_abashev[@a_abashev]
+разыскивает израильских спецов для записи спецвыпуска на Земле
+обетованной. Подробности в выпуске
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_08.mp3" width="64" height="64"]
+
+
+
+Наши контакты: 
+
+* twitter: http://twitter.com/a_abashev[@a_abashev] http://twitter.com/gamussa[@gamussa] 
+
+* G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+
+Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_08.mp3[]

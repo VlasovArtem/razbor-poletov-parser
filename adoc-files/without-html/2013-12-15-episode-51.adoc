@@ -1,0 +1,89 @@
+---
+comments: true
+categories:
+uid: 51
+length: 78687707
+---
+= Episode 51 — Spring на нашей улице
+2013-12-15 16:40
+:layout: post
+:filename: razbor_51
+
+image::http://razbor-poletov.com/images/razbor_51_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_51_text.jpg" align="center"]
+
+Кудо про наклейки и donations!
+
+Спасибо http://d-vision.kz и нашим слушателям!
+
+Ответ на Радио-Т про `@Autowired` и на почитать:
+http://www.mkyong.com/unittest/junit-4-vs-testng-comparison/[1] и
+http://picocontainer.codehaus.org/constructor-injection.html[2]
+
+https://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release[Spring
+4]
+
+* http://www.techempower.com/blog/2013/03/26/everything-about-java-8/[Everything
+about Java 8]
+* http://zeroturnaround.com/rebellabs/java-8-revealed-lambdas-default-methods-and-bulk-data-operations/[Разбираем
+фичи по полочкам]
+
+Полезняшки:
+
+* http://brettwooldridge.github.io/HikariCP/[HikariCP] and its
+https://github.com/brettwooldridge/HikariCP/wiki/Correctness[Correctness]
+* http://pondini.org/OSX/Home.html[OSX and TimeMachine Tips]
+
+http://yourstory.com/2013/12/google-compute-engine-better-than-aws/[Чем
+лучше GCE]
+
+* https://github.com/GoogleCloudPlatform[GoogleCloudPlatform на гитхабе]
+* https://cloud.google.com/developers/starterpack/[Starter Pack]
+
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues/8[Темы
+слушателей]
+
+'''''
+
+_На правах рекламы:_
+
+* Онлайн курс
+http://www.eventbrite.com/e/modern-web-application-development-for-java-programmers-tickets-9775299183[Modern
+Web Application Development for Java Programmers] Скидка $50 код
+*RazborPoletov* .
+https://github.com/yfain/WebDevForJavaProgrammers[Course agenda].
+https://github.com/yfain/WebDevForJavaProgrammers/watchers[Добавляйтесь
+в watchers на GitHub].
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/@dzmitryc[@dzmitryc]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_51.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_51.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

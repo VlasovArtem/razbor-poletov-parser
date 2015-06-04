@@ -1,0 +1,34 @@
+--- layout: post title: "Episode 2 — НаScala-ная живопись" date:
+2011-12-06 comments: true ---
+
+Я и коллега http://twitter.com/a_abashev[@a_abashev] представляем вашему
+вниманию второй выпуск уже ставшего популярным в узких кругах,
+разговорного IT-тематического подкаста «Разбор Полетов». В этом выпуске:
+
+* Полезняшка — Stanford Javascript Crypto Library
+http://bitwiseshiftleft.github.com/sjcl/[1]
+* 2012-год Hadoop? А почему бы и нет
+http://www.wired.com/wiredenterprise/2011/11/microsoft-hadoop-dryad/[1]
+http://gigaom.com/cloud/six-reasons-why-2012-could-be-the-year-of-hadoop/[2]
+* Куда катится этот мир
+http://www.digitaltrends.com/gaming/worlds-first-pee-controlled-video-game-opens-in-london-bar/[1]
+* Scala уже не торт. Что-то быстро
+http://blog.joda.org/2011/11/scala-feels-like-ejb-2-and-other.html[1]
+* Интересный игрок http://habrahabr.ru/blogs/java/132890/[1]
+https://openshift.redhat.com/app/[2]
+* Форкай правильно!
+http://zbowling.github.com/blog/2011/11/25/github/[1]
+
+[cols="",]
+|=======================================================================
+|http://traffic.libsyn.com/razborpoletov/razbor_02.mp3[image:http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[image]]
+
+|Скачать mp3 бесплатно 
+|=======================================================================
+
+Наши контакты: twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa] G+:
+http://gplus.to/gAmUssA[gplus.to/gAmUssA] Подписаться по  +
+ http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Your browser does not support the audio tag.

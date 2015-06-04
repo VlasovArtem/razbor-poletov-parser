@@ -1,0 +1,63 @@
+---
+comments: true
+categories:
+uid: 21
+length: 66799716
+---
+= Episode 21 — Едим свой собачий корм и меняем шило на два шила
+2012-06-10 12:30
+:layout: post
+:filename: razbor_21
+
+image::http://3.bp.blogspot.com/-hh4V2jbWfOM/T91Thn8t7uI/AAAAAAAAIcQ/emGHMq_4hMI/s1600/spring%253Fok%2521.jpg[width="350" height="350" link="http://3.bp.blogspot.com/-hh4V2jbWfOM/T91Thn8t7uI/AAAAAAAAIcQ/emGHMq_4hMI/s1600/spring%253Fok%2521.jpg" align="center"]
+
+Встречайте 21 выпуск подкаста «Разбор Полетов». В предыдущем выпуске мы
+зажали 40 минут подкаста, поэтому восполняем это упущение. В этом
+выпуске:
+
+* По следам наших рекомендаций - монолог
+* https://plus.google.com/117481599451076280717/posts/95Pg2TToXsQ[Как я
+в Твиттер сходил]
+** показывали что-то вроде
+http://www.infoq.com/presentations/Timelines-Twitter[этого]
+* http://paulasmuth.com/blog/a_bug_i_wont_forget/[«Не забывается такое
+никогда»]
+* А давайте вновь проедемся по Play
+** http://raibledesigns.com/rd/entry/upgrading_to_play_2_anorm[Как я
+обновлялся на Play2]
+** http://whilefalse.blogspot.com/2012/03/why-im-moving-away-from-play-framework.html?m=1[Почему
+я свалил с Play]
+* Полезняшки:
+** http://metrics.codahale.com/[Metrics]
+** http://engineering.twitter.com/2012/06/distributed-systems-tracing-with-zipkin.html[Distributed
+Systems Tracing with Zipkin]
+* http://research.google.com/pubs/pub38125.html[F1 - The Fault-Tolerant
+Distributed RDBMS Supporting Googles Ad Business]
+* http://www.enhance-ict.com/2012/06/06/no-benefit-in-migrating-from-spring-to-java-ee/[No
+benefit in migrating from Spring to Java EE]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/gamussa[@gamussa]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_21.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_21.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/145957/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

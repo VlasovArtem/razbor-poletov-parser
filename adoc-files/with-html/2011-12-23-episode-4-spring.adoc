@@ -1,0 +1,51 @@
+---
+comments: true
+categories:
+uid: 4
+length: 95901073
+---
+= Episode 4 — Spring-аем глаголы
+2011-12-23
+:layout: post
+:filename: razbor_04
+
+Я и коллега http://twitter.com/a_abashev[@a_abashev] представляем вашему
+вниманию очередной четвертый выпуск популярного в узких кругах,
+разговорного IT-тематического подкаста «Разбор Полетов». В этом выпуске:
+
+*  Спасибо, что живой —
+http://www.infoq.com/news/2011/12/spring31[http://www.infoq.com/news/2011/12/spring31]
+*  Поиск святого грааля продолжается ...
+http://blog.springsource.org/2011/12/15/grails-2-0-released/[http://blog.springsource.org/2011/12/15/grails-2-0-released/]
+*  Полезняшка — распылитель
+https://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates[https://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates]
+*  Дед мороз в новый год дарит подарки тем кто вел себя хорошо ...
+https://www.linux.com/news/featured-blogs/196:zonker/524082:the-10-most-important-open-source-projects-of-2011[https://www.linux.com/news/featured-blogs/196:zonker/524082:the-10-most-important-open-source-projects-of-2011]
+*  ... или плохо
+http://www.readwriteweb.com/archives/7_epic_tech_fails_of_2011.php[http://www.readwriteweb.com/archives/7_epic_tech_fails_of_2011.php]
+*  Хм, интересно что же из этого получится —
+http://www.grobmeier.de/dart-on-chromium-and-dart-meets-scala-17122011.html[http://www.grobmeier.de/dart-on-chromium-and-dart-meets-scala-17122011.html]
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_04.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+
+Наши контакты: twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa] G+:
+http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS] *p.s.*
+простуда добивала весь выпуск, но мы стойко это выдержали ;-) +
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_04.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+

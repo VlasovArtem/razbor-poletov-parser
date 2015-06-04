@@ -1,0 +1,38 @@
+---
+comments: true
+categories:
+uid: 14
+length: 85414883
+---
+= Episode 14 — Новые люди, старые темы
+2012-03-24
+:layout: post
+:filename: razbor_14_1
+
+Встречайте 14-й выпуск подкаста «Разбор полетов». Новый выпуск с новым
+соведущим В этом выпуске:
+
+* Спринг?
+http://www.javacodegeeks.com/2012/03/why-i-will-use-java-ee-instead-of.html[EE!]
+* Уж сколько раз твердили
+http://java.dzone.com/articles/10-commandments-good-source[миру]
+* Полезняшка - http://code.google.com/p/adbcj/[Асинхронный JDBC]
+* http://22ideastreet.com/blog/2010/02/02/guilty-developer-syndrome/[Виновата
+ли я!]
+* http://blog.stackoverflow.com/2012/03/enterprise-vs-consumer-development/[Делай
+для пользователя как для себя]
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_14_1.mp3" width="64" height="64"]
+
+
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev http://gplus.to/dmitryc[gplus.to/dmitryc]
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_14_1.mp3[]

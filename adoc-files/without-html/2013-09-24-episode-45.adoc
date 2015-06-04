@@ -1,0 +1,45 @@
+---
+comments: true
+categories:
+uid: 45
+length: 43924306
+---
+= Episode 45 — Дневники JavaOne 2013: День 1
+2013-09-24 01:33
+:layout: post
+:filename: razbor_45
+
+image::http://razbor-poletov.com/images/razbor_45_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_45_text.jpg" align="center"]
+
+http://www.manning.com/kousen/[Making Java Groovy] Промокод *MLGO13CF*
+
+*p.p.s.* По многочисленным просьбам вернул музыку в конце подкаста.
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/andrey_kogun[@andrey_kogun]
+* https://twitter.com/#!/iNikem[@iNikem]
+* https://twitter.com/DanKalashnikov[@DanKalashnikov]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_45.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_45.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

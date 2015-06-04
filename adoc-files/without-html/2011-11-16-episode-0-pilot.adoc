@@ -1,0 +1,44 @@
+---
+comments: true
+categories:
+uid: 0
+length: 66162440
+---
+= Episode 0 — Pilot
+2011-11-16
+:layout: post
+:filename: razbor_0_pilot
+
+Я и коллега http://twitter.com/a_abashev[@a_abashev] представляем вашему
+вниманию экспериментальный выпуск  «еще одного» IT-тематического
+подкаста «Разбор Полетов» В этом выпуске:
+
+* Прощай Неуловимый Джо — Apache Harmony Finale
+http://www.infoq.com/news/2011/03/apache-harmony[1]
+http://www.infoq.com/news/2011/11/apache-harmony-finale[2]
+* Github пошел по рукам — GitHub Enterprise
+https://github.com/blog/978-introducing-github-enterprise[1]
+* Успеют ли большие игроки вскочить на подножку вагона NoSQL
+http://www.oracle.com/technetwork/database/nosqldb/overview/index.html[1]
+http://nosql.mypopescu.com/post/12156340083/ibm-db2-to-include-nosql-features[2]
+* Перебивка — Интересная штуковина http://blog.mozilla.com/tilt/[Mozilla
+Tilt]
+* Учиться, учиться, учиться — NoSQL from RDBMS perspective
+http://www.wireclub.com/development/TqnkQwQ8CxUYTVT90/read[1]
+http://www.cloudcomputingdevelopment.net/mongodb-vs-rdbms-schema-design/[2]
+* Новые тучки на небосклоне
+http://www.cloudcomputingdevelopment.net/mongodb-vs-rdbms-schema-design/[1]
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_0_pilot.mp3" width="64" height="64"]
+
+
+
+Как связаться: 
+
+* twitter: http://twitter.com/a_abashev[@a_abashev]
+
+* G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+
+http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_0_pilot.mp3[]

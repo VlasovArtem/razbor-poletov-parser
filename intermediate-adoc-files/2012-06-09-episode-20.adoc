@@ -1,0 +1,42 @@
+Представляем Вашему вниманию юбилейный двадцатый выпуск подкаста «Разбор
+Полетов», в котором мы говорим о событиях и технологиях, которые
+взволновали нас на этой неделе, и будут волновать Вас! В сегодняшнем
+выпуске мы поговорим:
+
+1.  http://habrahabr.ru/post/144110/[Начало конца]
+2.  http://tataryn.net/2011/11/java8-lambda-expressions-perhaps-not-as-sexy-as-intended/[I'm
+too sexy for my shirt]
+3.  Полезняшки
+* https://github.com/foursquare/fongo
+* Dependency Injection Styles
+http://cbeams.github.com/distyles/[[slides]]
+https://github.com/cbeams/distyles[[code]]
+* http://www.manning.com/walls4/[Spring in Action]
+4.  http://swizec.com/blog/programmers-are-optimists/swizec/4509[Программисты-оптимисты]
+5.  http://net.tutsplus.com/tutorials/tools-and-tips/3-key-software-principles-you-must-understand/[Эти
+принципы я впитал с молотком матери]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Выпуск уже на http://habrahabr.ru/post/145587/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

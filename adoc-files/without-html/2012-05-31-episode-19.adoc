@@ -1,0 +1,57 @@
+---
+comments: true
+categories:
+uid: 19
+length: 81954432
+---
+= Episode 19 — Разговоры на кухне про кухню
+2012-05-31 18:13
+:layout: post
+:filename: razbor_19
+
+null
+С превеликим удовольствием и радостью представляем Вашему вниманию
+очередной девятнадцатый выпуск подкаста «Разбор Полетов», в котором мы
+говорим о событиях и технологиях, которые взволновали нас на этой
+неделе, и будут волновать Вас! В сегодняшнем выпуске мы поговорим:
+
+* Кухня подкаста
+* http://www.drdobbs.com/jvm/232901227[Google - Oracle]
+* Банки в паутине
+http://www.jamesward.com/2012/04/30/webjars-in-spring-mvc[[1]]
+http://blog.faratasystems.com/2012/05/16/using-webjars-for-assets-management-in-javascript-projects[[2]]
+* А кошак-то на совсем уж большой стал
+http://www.toolsjournal.com/integrations-articles/item/557-apache-roars-with-300-faster-enteprise-edition-of-tomcat-for-cloud[[1]]
+http://blog.webagesolutions.com/archives/636[[2]]
+* Что правильно ложить класть в БД
+http://www.revsys.com/blog/2012/may/01/three-things-you-should-never-put-your-database/[[1]]
+* Полезняшка http://dillinger.io/[dillinger.io]
+* Гугление - убивает
+http://diegobasch.com/a-relevant-tale-how-google-killed-inktomi[[1]]
+
+Наши контакты:
+
+* Официальный сайт — http://razbor-poletov.com
+
+twitter: 
+
+* https://twitter.com/a_abashev[@a_abashev] 
+* https://twitter.com/gamussa[@gamussa]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev
+* link:gplus.to/dmitryc[http://gplus.to/dmitryc]
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Выпуск уже на http://habrahabr.ru/post/145049/[Хабре]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_19.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_19.mp3" width="64" height="64"]
+
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

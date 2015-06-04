@@ -1,0 +1,76 @@
+https://www.youtube.com/watch?v=n7-RetY7fGo[*Gold is best!*]
+
+*Конференции*
+
+* JavaOne 2013. Куда сходить
+** http://www.oracle.com/webapps/token/scheduler13[Sessions Builder]
+** http://arhipov.blogspot.com/2013/06/speaking-at-javaone-sf-2013.html[Jake
+Blues]
+** http://next.javaheadbrain.com/posts/2013/07/09/im-speaking-at-javaone.html[Elwood
+Blues]
+** http://glassfish-party13.eventbrite.com/[GlassFish Party]
+** https://blogs.oracle.com/javaone/entry/codegarten_at_javaone[Code
+Garden]
+
+*Еще конференции:*
+
+* http://javaday.org.ua/[JavaDay Киев]
+* http://xpdays.com.ua[XPdays].
+http://xpinjection.com/2013/08/05/xp-days-ukraine-2013/[Подробней...]
+* http://javaday.lv/[JavaDay Рига]
+* http://jokerconf.com/[Joker]
+
+*Новости одной строкой:*
+
+* релиз JDK 1.7 u40 с
+http://bulenkov.com/2013/06/23/retina-support-in-oracle-jdk-1-7/[поддержкой
+ретины] и
+http://bulenkov.com/2013/09/12/font-rendering-apple-jdk-6-vs-oracle-jdk-1-7-0_40/[почему
+это важно]. А так же http://hirt.se/blog/?p=388[Mission Control] и
+http://hirt.se/blog/?p=370[Flight Recorder]
+* http://mreinhold.org/blog/jdk8-preview[JDK 1.8 Developer Preview]
+* https://blogs.oracle.com/nashorn/entry/javaone_a_year_makes_a[Nashorn
+Fireworks Demo]
+
+*Гавностратс *
+
+*Полезняшки (очень много!!!):*
+
+* http://queues.io[Очереди]
+* https://www.atlassian.com/git/workflows/[Workflows]
+* https://github.com/google/hesokuri[Забэкапь свой гит]
+* https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Правильный
+плагин для AsciiDoc]
+* http://spring.io/[Новое место для Spring]
+* Сервера:
+** http://undertow.io/[Откат]
+** http://www.jboss.org/capedwarf[Коротышка в плаще]
+* http://aws.typepad.com/aws/2013/09/dynamodb-local-for-desktop-development.html[Если
+динамить, то сначала локально]
+* http://markmail.org/message/3o6n5pvywabas5s3[Собрать все лучшее из OSS
+и продавать]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

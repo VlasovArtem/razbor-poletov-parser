@@ -1,0 +1,47 @@
+---
+comments: true
+categories:
+uid: 10
+length: 112804682
+---
+= Episode 10 — Пропустите к юбиляру
+2012-02-16
+:layout: post
+:filename: razbor_10
+
+http://habrastorage.org/storage2/1e7/84a/bb8/1e784abb8a6efa0718f753dcd6e2e601.png[image:http://habrastorage.org/storage2/1e7/84a/bb8/1e784abb8a6efa0718f753dcd6e2e601.png[image]]
+
+Творческий коллектив редакции подкаста «Разбор полетов» представляет
+вашему вниманию микроюбилейный десятый выпуск
+разговорно-болтологического IT-тематического подкаста «Разбор полетов».
+В этом выпуске: +
+
+* Душещипательная история про git и fast-forward
+http://nvie.com/posts/a-successful-git-branching-model/[[1]]
+http://stackoverflow.com/questions/2850369/why-does-git-use-fast-forward-merging-by-default[[2]]
+http://sandofsky.com/blog/git-workflow.html[[3]]
+* http://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html[Крути
+динаму]
+* http://highscalability.com/blog/2012/1/24/the-state-of-nosql-in-2012.html[2012 —
+Конец света для реляционных баз данных]
+* Полезняшка https://github.com/paulp/libscala[libscala]
+* Задел на будущее — Что будет модно в сезоне весная/лето 2012
+http://www.techrepublic.com/blog/10things/10-skills-for-developers-to-focus-on-in-2012/3009[[1]]
+http://m.zdnet.com/blog/service-oriented/java-tops-list-of-software-skills-in-demand-employer-survey/832[[2]]
+http://www.javaworld.com/javaworld/jw-02-2012/120202-fatal-exception.html[[3]]
+
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_10.mp3" width="64" height="64"]
+
+
+
+Наши контакты: 
+
+* Официальный сайт — http://razbor-poletov.com/[http://razbor-poletov.com] 
+
+* twitter: http://twitter.com/a_abashev[@a_abashev] http://twitter.com/gamussa[@gamussa] 
+
+* G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA] http://gplus.to/aabashev
+
+Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_10.mp3[]

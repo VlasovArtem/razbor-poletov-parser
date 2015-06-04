@@ -1,0 +1,58 @@
+---
+comments: true
+categories:
+uid: 43
+length: 100296879
+---
+= Episode 43 — Диалоги о JetBrains
+2013-08-23 14:41
+:layout: post
+:filename: razbor_43
+
+image::http://razbor-poletov.com/images/razbor_43_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_43_text.jpg" align="center"]
+
+* Гость выпуска - __Дмитрий Борисович Жемеров__, CTO, Jetbrains
+* Про продукты и плагины
+** Pair Programming https://floobits.com/[1] http://codeinterview.me/[2]
+** Android Studio
+** VCS
+** IDEA
+** https://upsource.jetbrains.com/[UpSource]
+** Google Dart
+** C++ IDE
+** MPS http://mbeddr.wordpress.com/[1]
+** Kotlin http://johnlindquist.com/[1] http://icfpc2013.cloudapp.net/[2]
+** http://www.jetbrains.com/jetbrainsday/[JetBrains Day]
+** Треп за IDE http://www.youtube.com/watch?v=xAP8CSMEwZ8[1]
+* https://plus.google.com/117481599451076280717/posts/AKtJC1bZZnT[вопросы
+слушателей]
+* ИНСАЙДЫ!!!
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/intelliyole[@intelliyole]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_43.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_43.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

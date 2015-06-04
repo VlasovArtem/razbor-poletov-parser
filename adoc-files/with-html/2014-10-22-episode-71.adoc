@@ -1,0 +1,90 @@
+---
+comments: true
+categories:
+uid: 71
+length: 80170246
+---
+= Episode 71 — Чемпионы и программизм
+2014-10-22 23:33
+:layout: post
+:filename: razbor_71
+
+++++
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://razbor-poletov.com/images/razbor_71_text.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0" height="350" src="http://razbor-poletov.com/images/razbor_71_text.jpg" width="350" />
+</a>
+</div>
+++++
+
+* В полку https://java-champions.java.net[чемпионов] прибыло.
+https://blogs.oracle.com/java/entry/new_java_champions_mario_torre[Наши
+поздравления мистеру Архипову!]
+* Добить JavaOne:
+** https://oracleus.activeevents.com/2014/connect/fileDownload/session/753320BEF30DCDCF22F06D12DB4E302D/CON3565_Robertson-ScienceAndArtOfBackwardsCompatability.pdf[Reflection]
+** https://parleys.com/play/543f977ce4b06e1184ae417f[Do you really get
+your IDE?]
+** JavaOne keynotes:
+*** http://medianetwork.oracle.com/video/player/3818220797001[Intel
+Keynote]
+*** http://medianetwork.oracle.com/video/player/3811045975001[Technical
+Keynote]
+*** http://medianetwork.oracle.com/video/player/3818408543001[Community
+Keynote]
+** http://openjdk.java.net/projects/panama/[Project Panama]
+** http://openjdk.java.net/projects/valhalla/[Project Valhalla]
+* http://www.infoq.com/articles/Kicking-Off-Java-EE-8[Java EE 8 is
+Kicking Off]
+* http://www.oracle.com/technetwork/articles/java/mvc-2280472.html[Why
+another MVC?]
+
+https://www.chrisnewland.com/cpu-pinning-java-threads-with-jstack-and-taskset-380[CPU
+pinning Java threads with stack and task set]
+
+Полезняшки:
+
+* http://takari.io/2014/10/16/incremental-compilation.html[maven
+incremental compilation]
+* http://pantsbuild.github.io/[Штаны]
+* http://readme.io[Readme]
+* http://slackatwork.com/[Шлангуй на работе]
+* https://github.com/andrewgaul/modernizer-maven-plugin[Используй только
+свежее]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_71.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_71.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

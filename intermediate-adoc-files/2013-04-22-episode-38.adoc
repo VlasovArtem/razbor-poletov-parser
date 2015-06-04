@@ -1,0 +1,45 @@
+* Кто-то расскажет про Play
+* http://www.javaworld.com/javaworld/jw-04-2013/130404-16-ways-to-torture-developers.html[16
+правильных способов замучить девелоперов]
+* Полезняшки:
+** Facebook https://github.com/facebook/buck[заопенсорсил]
+http://facebook.github.io/buck/[BUCK] и
+http://google-engtools.blogspot.com/2011/08/build-in-cloud-how-build-system-works.html[Немного
+истории откуда это взялось]. Но почему не
+http://tools.android.com/tech-docs/new-build-system/user-guide[Gradle]?
+** http://logstash.net/
+* http://evan.bottch.com/2010/08/29/projects-are-evil-and-must-be-destroyed/[Проекты
+- это зло]
+* http://www.withouttheloop.com/articles/2013-04-07-unit-tests/[Что же
+все-таки такое юнит-тесты]
+* http://blog.clojurewerkz.org/blog/2013/04/20/how-to-make-your-open-source-project-really-awesome/[Как
+сделать опинсорсный проект еще более охренительным]
+** http://www.jamesward.com/2012/06/15/dynamically-rendering-github-files-in-web-pages[Dynamically
+Rendering GitHub Files in Web Pages]
+** http://asciidoctor.org/[Asciidoctor]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@antonarhipov](https://twitter.com/antonarhipov)
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

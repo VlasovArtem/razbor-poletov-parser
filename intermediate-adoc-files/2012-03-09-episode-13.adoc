@@ -1,0 +1,45 @@
+--- layout: post title: "Episode 13 — Чертова дюжина" date: 2012-03-09
+comments: true ---
+
+Представляет вашему вниманию тринадцатый выпуск
+разговорно-болтологического IT-тематического подкаста «Разбор полетов».
+В этом выпуске:
+
+* Феерическое расставление точек над вопросом лицензий
+http://www.sonatype.com/people/2012/01/how-well-do-you-know-your-open-source-licensing/[[1]]
+http://www.sonatype.com/content/download/757/8384/file/why_you_should_care_about_open_source_licensing.pdf[[2]]
+* Слоны не против http://blog.evernote.com/tech/2012/02/23/whysql/[SQL]
+* Полезняшка http://icedtea.classpath.org/wiki/Thermostat[Термостат] или
+не осилили http://www.opennet.ru/opennews/art.shtml?num=33169[DTrace] ?
+* Уголок client-side programming в подкасте.
+http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more[JS
+in LinkedIn, take 2]
+* Maven?
+http://dan.bodar.com/2012/02/28/crazy-fast-build-times-or-when-10-seconds-starts-to-make-you-nervous/[Страшное
+дело...]
+* REST?
+http://blog.steveklabnik.com/posts/2011-07-03-nobody-understands-rest-or-http[Ты
+делаешь его не правильно]
+
+[cols="",]
+|=======================================================================
+|http://traffic.libsyn.com/razborpoletov/razbor_13.mp3[image:http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[image]]
+
+|Скачать mp3 бесплатно БЕЗ СМС 
+|=======================================================================
+
+Наши контакты:
+
+1.  Официальный сайт — http://razbor-poletov.com
+2.  twitter: http://twitter.com/a_abashev[@a_abashev]
+http://twitter.com/gamussa[@gamussa]
+3.  G+: http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+http://gplus.to/aabashev
+4.  Подписаться по  http://feeds.feedburner.com/razbor-podcast[RSS]
+
+p.s. Скидка 13% на участи в тренинге
+http://www.eventbrite.com/event/3024521425%20[Java, JavaEE] и
+http://www.eventbrite.com/event/3030352867[ExtJs] для слушателей
+подкаста. Код *razbor* Подробности в районе 58-й минуты
+
+Your browser does not support the audio tag.

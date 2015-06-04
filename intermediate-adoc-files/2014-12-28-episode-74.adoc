@@ -1,0 +1,52 @@
+*2014*
+
+* http://next.javaheadbrain.com/posts/2014/12/13/goodbye-farata-hello-hazelcast.html[Превед,
+Hazelcast!]
+* http://www.javaadvent.com/2014/12/the-java-ecosystem-my-top-5-highlights.html[Martijn
+Verburg: Top 5 Java ecosystem highlights in 2014]
+* http://jaxenter.com/best-programming-language-2014-113110.html[Лучший
+ЯП в 2014]
+* http://www.marcobehler.com/2014/12/27/marco-behlers-2014-ultimate-java-developer-library-tool-people-list/[The
+ultimate Java tools/libs/ppl list v2014]
+
+*Полезняшки:*
+
+* https://luckymarmot.com/paw[Офигенный REST client] -
+https://www.youtube.com/watch?v=zbeMDM-zDNI[видео]
+* http://gogs.io/[Self-hosted Git service, written in Go, comes as a
+Docker image]
+* http://beyondgrep.com/[Прикольная грепалка]
+* https://code.google.com/p/psi-probe/[Мониторилка]
+
+*2015*
+
+* http://www.businessinsider.com/enterprise-tech-predictions-for-2015-by-vcs-2014-12?op=1[А
+что дядьки с деньгами думают от технологиях в перспективе 2015 года?]
+* http://www.thoughtworks.com/radar[ThoughtWorks Radar]
+
+'''''
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+http://razbor-poletov.com/broadcast.html[Информация о вещании]
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@gamussa](https://twitter.com/#!/gamussa)
+
+ Your browser does not support the audio tag.
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

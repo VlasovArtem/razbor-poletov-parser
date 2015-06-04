@@ -1,0 +1,77 @@
+---
+comments: true
+categories:
+uid: 72
+length: 83542453
+---
+= Episode 72 — Банда снова в деле!
+2014-11-10 13:47
+:layout: post
+:filename: razbor_72
+
+++++
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://razbor-poletov.com/images/razbor_72_text.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0" height="350" src="http://razbor-poletov.com/images/razbor_72_text.jpg" width="350" />
+</a>
+</div>
+++++
+
+* http://jugmsk.timepad.ru/event/158310/[Носороги на воле и они будут в
+Москве!!!]
+* Новое приложение «Разбор Полетов»
+* http://yandex.ru/yac2014/[Yac]
+* http://www.highload.ru[Highload++]
+** http://www.silkjs.net[SilkJS]
+** https://www.netflix.com/openconnect[Netflix OpenConnect]
+* http://blog.jetbrains.com/idea/2014/11/intellij-idea-14-is-released/[IntelliJ
+IDEA 14]. https://www.jetbrains.com/idea/whatsnew/[Что нового?]
+* http://zeroturnaround.com/blog/jrebel-6-released/[JRebel 6 :)]
+* https://cloud.google.com/container-engine/[Google Container Engine]
+* https://cloud.google.com/tools/cloud-debugger[Google Cloud Debugger]
+* Полезняшки
+** http://githut.info/[GitHut]
+** https://github.com/tripit/slate[Slate]
+** http://coolors.co/[Coolors]
+** http://brackets.io/[Brackets 1.0]
+* http://javatalks.ru/topics/44084[Интерфейсы за и против]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+http://razbor-poletov.com/broadcast.html[Информация о вещании]
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* [@a_abashev](https://twitter.com/#!/a_abashev)
+* [@antonarhipov](https://twitter.com/#!/antonarhipov)
+* [@gamussa](https://twitter.com/#!/gamussa)
+* [@dzmitryc ](https://twitter.com/#!/dzmitryc)
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_72.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_72.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

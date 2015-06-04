@@ -1,0 +1,87 @@
+---
+comments: true
+categories:
+uid: 60
+length: 52014815
+---
+= Episode 60 — Будьте бдительны!
+2014-05-18 16:38
+:layout: post
+:filename: razbor_60
+
+image::http://razbor-poletov.com/images/razbor_60_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_60_text.jpg" align="center"]
+
+* http://jeeconf.com/[JEEConf 2014] - Спрашивайте про стикеры «Разбор
+Полетов»
+* Всякая всячина с DevNation:
+** Docker - по слухам, весь RedHat теперь на нём сидит. Субъективно,
+самая популярная будка в RedHat expo
+** http://rhq.jboss.org/[RHQ]
+** http://mbed.org/[Mbed]
+** http://hawt.io/[Hawt.io] + Fuse/Karaf
+** http://fabric8.io/[Fabric8]
+** http://vertx.io/[Vert.x]
+** http://www.gluster.org/[GlusterFS]
+** Строим аналитику: Elasticsearch +
+https://speakerdeck.com/elasticsearch/using-elasticsearch-logstash-and-kibana-to-create-realtime-dashboards[Kibana]
++ Logstash
+** https://www.shippable.com/[Shippable (CI/CD, Docker)]
+** https://www.datadoghq.com/[Ещё немножко аналитики]
+* Будьте бдительны
+* https://github.com/razbor-poletov/razbor-poletov.github.com/issues/17#issuecomment-35548503[По
+заказу слушателя], первые отзывы о Modern Web Development от Farata
+Systems
+
+'''''
+
+_На правах рекламы:_
+
+* Онлайн курс
+http://www.eventbrite.com/e/modern-web-application-development-for-java-programmers-starts-07272014-tickets-11465653077[Modern
+Web Application Development for Java Programmers] на английском. Скидка
+$50 код *RazborPoletov*
+
+'''''
+
+Полезняшки
+
+* http://www.semanticmerge.com/merge-diff-tool-mac.html
+* http://www.git-tower.com/learn/
+* https://github.com/vovkkk/MarkupViewer
+* http://freeside.co/betamax/
+* http://www.mitchchn.me/2014/os-x-terminal/
+
+*Groovy 2.3* http://glaforge.appspot.com/article/groovy-2-3-0-is-out[1]
+https://github.com/bura/json-benchmarks[2]
+http://groovy.codehaus.org/Groovy+2.3+release+notes[3]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Темы для следующего выпуска -
+https://github.com/razbor-poletov/razbor-poletov.github.com/issues?state=open[https://github.com/razbor-poletov/]
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/#!/antonarhipov[@antonarhipov]
+* https://twitter.com/#!/a_abashev[@a_abashev]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* https://plus.google.com/+AntonArhipov
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_60.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_60.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

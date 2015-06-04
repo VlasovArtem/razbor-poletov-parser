@@ -1,0 +1,46 @@
+---
+comments: true
+categories:
+uid: 6
+length: 72902933
+---
+= Episode 6 — Pirates of Silicon Valley
+2012-01-07
+:layout: post
+:filename: razbor_06
+
+Представляю специальный праздничный выпуск популярного в узких кругах
+IT-тематического разговорного подкаста «Разбор Полетов». В этом выпуске
+много гостей, много разговоров про стартапы и просто за жизнь. В этом
+выпуске:
+
+* возьмите меня в стартап
+http://techcrunch.com/2011/12/25/a-few-tips-for-developers-on-how-to-get-hired-by-a-startup/
+* вопросы слушателей
+https://plus.google.com/117481599451076280717/posts/6G7V9Pcs828
+
+Гости:
+http://swimma2.livejournal.com/[Константин]http://de1ph.livejournal.com/[Илья]
+https://plus.google.com/117972957565780825545/%20[Дима] Наши контакты:
+twitter: http://twitter.com/gamussa[@gamussa] G+:
+http://gplus.to/gAmUssA[gplus.to/gAmUssA] Подписаться по 
+
+++++
+<!-- episode file link goes here-->
+<a href="http://traffic.libsyn.com/razborpoletov/razbor_06.mp3" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: 2em;">
+<img border="0" height="64" src="http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png" width="64"/>
+</a>
+++++
+
+
+
+http://feeds.feedburner.com/razbor-podcast[RSS]
+
+++++
+<!-- player goes here-->
+<audio preload="none">
+<source src="http://traffic.libsyn.com/razborpoletov/razbor_06.mp3" type="audio/mp3" />
+Your browser does not support the audio tag.
+</audio>
+++++
+

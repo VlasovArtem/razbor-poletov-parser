@@ -1,0 +1,69 @@
+---
+comments: true
+categories:
+uid: 32
+length: 108842388
+---
+= Episode 32 — Война миров
+2013-01-27 20:06
+:layout: post
+:filename: razbor_32
+
+image::http://razbor-poletov.com/images/razbor_32_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_32_text.jpg" align="center"]
+
+В этом выпуске к нам наконец-то пришел
+https://twitter.com/dnesteruk[правильный человек из мира *.NET*] и
+воздает нам за «оргии MVP». Заодно обсудили следующие темы:
+
+* http://blog.8thlight.com/ben-voss/2013/01/15/how-to-be-a-great-pair.html[Каждой
+твари - по харе]
+* http://techcrunch.com/2013/01/12/10-reasons-why-2013-will-be-the-year-you-quit-your-job/[ААА,
+мы все умрем]
+* http://owenou.com/2012/01/13/ten-things-you-didnt-know-git-and-github-could-do.html[Многополезняшка]
+* http://blog.springsource.org/2013/01/16/next-stop-spring-framework-4-0/[Next
+Stop: Spring Framework 4.0]
+* http://arhipov.blogspot.com/2012/11/do-you-really-get-your-ide.html[Треп
+за IDE]
+* Внеклассное чтение -
+http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html[High
+Scalability - What if Cars Were Rented Like We Hire Programmers?]
+
+'''''
+
+--------------------------------------------------------------------------------------------
+Внимание!
+
+The 2013 JavaOne Russia Call-for-Papers is open.  Deadline for submissions is February 15th.
+- Feel free to re-tweet: https://twitter.com/gigabel/status/291511211760156672
+- Call-for-Papers English page: http://javaone.ru/homeen
+- Call-for-Papers Russian page: http://javaone.ru
+- Official event hashtag is: #JavaOneRussia
+- Official twitter of the event is: @JavaOneRussia 
+--------------------------------------------------------------------------------------------
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/antonarhipov[@antonarhipov]
+* https://twitter.com/dnesteruk[Гость]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_32.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_32.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

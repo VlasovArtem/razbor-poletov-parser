@@ -1,0 +1,52 @@
+---
+comments: true
+categories:
+uid: 23
+length: 62080623
+---
+= Episode 23 — И ты, Брут!
+2012-07-17 12:07
+:layout: post
+:filename: razbor_23
+
+image::http://3.bp.blogspot.com/-elIsVvTrgyA/UAWOjmspAPI/AAAAAAAAImI/IjCIEy3lpJ0/s400/23588648.jpg[width="350" height="350" link="http://3.bp.blogspot.com/-elIsVvTrgyA/UAWOjmspAPI/AAAAAAAAImI/IjCIEy3lpJ0/s400/23588648.jpg" align="center"]
+
+В очередном выпуске правильного подкаста главного зачинателя заменил
+другой популярный подкастер!
+
+1.  http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb[LevelDB]
+(for https://github.com/dain/leveldb[Java])
+2.  http://www.ajibanda.com/2012/05/programmers-interview-101-print-100.html[Гномики
+и лампочки]
+3.  http://blog.8thlight.com/uncle-bob/2012/04/20/Why-Is-Estimating-So-Hard.html[Estimating
+is hard]
+4.  Полезняшка http://code.google.com/p/chromedevtools/[Chrome Dev Tools
+for Java]
+5.  http://blog.jgc.org/2012/07/some-things-ive-learnt-about.html[Что я
+узнал о программировании]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/gamussa[@gamussa]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_23.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_23.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS] Выпуск
+уже на http://habrahabr.ru/post/147983/[Хабре]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...

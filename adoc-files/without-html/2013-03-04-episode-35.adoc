@@ -1,0 +1,83 @@
+---
+comments: true
+categories:
+uid: 35
+length: 79567884
+---
+= Episode 35 — Client-side I'm sexy and I know it!
+2013-03-04 22:10
+:layout: post
+:filename: razbor_35
+
+image::http://razbor-poletov.com/images/razbor_35_text.jpg[width="350" height="350" link="http://razbor-poletov.com/images/razbor_35_text.jpg" align="center"]
+
+* http://zef.me/4835/dart-web-fragmentation-vs-web-development-fragmentation[Dart:
+Web Fragmentation vs. Web Development Fragmentation]
+* Полезняшки:
+** http://tin.cr/
+** https://github.com/google/tracing-framework[WTF - Web Tracing
+Framework]
+** http://www.jetbrains.com/webstorm/nextversion/index.html[Новый
+WebStorm уже скоро будет здесь]
+* http://news.dartlang.org/2013/02/dart-with-google-web-toolkit.html?m=1[Dart
+with Google Web Toolkit]
+* http://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/[Лучшие
+друзья JavaScript-а]
+* http://wiki.apidesign.org/wiki/Bck2Brwsr[Очень странный зверь]
+* Twitter Flight:
+** http://engineering.twitter.com/2013/01/introducing-flight-web-application.html[1]
+** http://twitter.github.com/flight/[2]
+** http://www.infoq.com/news/2013/02/Twitter-Flight[3]
+** https://github.com/addyosmani/todomvc/tree/gh-pages/dependency-examples/flight[4]
++ http://todomvc.com/dependency-examples/flight/[demo]
+
+*Внимание! Конференции!*
+
+http://javaone.ru[JavaOne Россия]
+
+* Official event hashtag is: #JavaOneRussia
+* Official twitter of the event is: @JavaOneRussia
+
+http://jeeconf.com[JEE Conf] - Конференция Java практиков в Украине
+
+* https://docs.google.com/spreadsheet/viewform?formkey=dHR5NjhBU2M3OVQyX1djV29fY0FSbXc6MA[Call
+for papers open till April, 6]
+* http://jeeconf.com/speakers/[Speakers]
+
+http://html5devconf.com/[HTML5DevConf] - Конференция front-end
+разработчиков в San Francisco, CA -
+http://html5devconf.com/sessions.html#v_gamov[Выступает]
+http://html5devconf.com/speakers.html#v_gamov[Ваш покорный слуга]
+
+Наши контакты:
+
+Официальный сайт — http://razbor-poletov.com
+
+Гости и участники:
+
+twitter:
+
+* https://twitter.com/#!/a_abashev[@a_abashev]
+* https://twitter.com/#!/gamussa[@gamussa]
+* https://twitter.com/yfain[@yfain]
+* https://twitter.com/splix[@splix]
+
+G+:
+
+* http://gplus.to/gAmUssA[gplus.to/gAmUssA]
+* http://gplus.to/aabashev[gplus.to/aabashev]
+* http://gplus.to/dmitryc[gplus.to/dmitryc]
+* https://plus.google.com/116033097136007429330/posts[Yakov Fain]
+
+audio::http://traffic.libsyn.com/razborpoletov/razbor_35.mp3[]
+image::http://2.bp.blogspot.com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3.png[link="http://traffic.libsyn.com/razborpoletov/razbor_35.mp3" width="64" height="64"]
+
+
+Подписаться по http://feeds.feedburner.com/razbor-podcast[RSS]
+
+Музыка ведущим
+http://www.audiobank.fm/single-music/27/111/More-And-Less/[предоставлена]
+и ладно...
+
+http://www.flickr.com/photos/thephotofiend/6808465352/[Фоточка Дарта
+Вейдера в бикини стянута отсюда]
