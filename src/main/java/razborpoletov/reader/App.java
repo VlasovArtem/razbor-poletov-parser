@@ -13,19 +13,51 @@ import razborpoletov.reader.parsers.ConferenceParser;
 import razborpoletov.reader.parsers.FileParser;
 import razborpoletov.reader.parsers.StatisticParser;
 import razborpoletov.reader.parsers.UsefulThingParser;
+import razborpoletov.reader.utils.Constants;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
-import static razborpoletov.reader.utils.Constants.*;
+import static razborpoletov.reader.utils.Constants.LOCAL_GIT_FOLDER_PROP_NAME;
+import static razborpoletov.reader.utils.Constants.PODCASTS_FOLDER_PROP_NAME;
 
 class App {
     private static final Logger LOG = LoggerFactory.getLogger(App.class);
+    private static FileParser fileParser;
+    private static ConferenceParser conferenceParser;
+    private static StatisticParser statisticParser;
+    private static UsefulThingParser usefulThingParser;
+    private static CommandLine commandLine;
+
     public static void main( String[] args ) throws IOException, URISyntaxException, GitAPIException {
+        commandLine = checkCommandLineAttrs(args);
+        PropertiesSelector propertiesSelector = Preconditions.checkNotNull(
+                checkPropertiesSelectorClass(commandLine.getOptionValue("p")),
+                "Properties selector is null");
+        checkPodcastFolder(propertiesSelector);
+        checkGitPull(propertiesSelector);
+
+        fileParser = new FileParser(propertiesSelector);
+        conferenceParser = new ConferenceParser();
+        statisticParser = new StatisticParser();
+        usefulThingParser = new UsefulThingParser();
+
+        if(commandLine.hasOption("a")) {
+            saveAll();
+        } else if(commandLine.hasOption("l")) {
+            saveLast();
+        } else if(commandLine.hasOption("n")) {
+            saveByNumber(Integer.parseInt(commandLine.getOptionValue("n")));
+        }
+    }
+
+    private static CommandLine checkCommandLineAttrs(String[] args) {
         CLIUtils cliUtils = new CLIUtils();
         if(args == null || args.length < 1) {
             cliUtils.printHelp();
@@ -40,7 +72,7 @@ class App {
             cliUtils.printHelp();
             System.exit(0);
         }
-        if(commandLine.hasOption("h")) {
+        if(commandLine.hasOption("h")){
             cliUtils.printHelp();
             System.exit(0);
         }
@@ -53,41 +85,15 @@ class App {
             cliUtils.printHelp();
             System.exit(0);
         }
-        PropertiesSelector propertiesSelector = Preconditions.checkNotNull(
-                checkPropertiesSelectorClass(commandLine.getOptionValue("p")),
-                "Properties selector is null");
-        checkPodcastFolder(propertiesSelector);
-        checkGitPull(propertiesSelector);
-        FileParser fileParser = new FileParser(propertiesSelector);
-        ConferenceParser conferenceParser = new ConferenceParser();
-        StatisticParser statisticParser = new StatisticParser();
-        UsefulThingParser usefulThingParser = new UsefulThingParser();
-        if(commandLine.hasOption("a")) {
-            List<File> podcastFiles = fileParser.getPodcastsFiles();
-            if(commandLine.hasOption("l")) {
-                fileParser.saveLast(
-                        usefulThingParser.parseUsefulThings(podcastFiles, false),
-                        conferenceParser.parseConferences(podcastFiles, false),
-                        statisticParser.parseProjectStatistics(podcastFiles));
-            } else {
-                fileParser.saveAll(
-                        usefulThingParser.parseUsefulThings(podcastFiles, false),
-                        conferenceParser.parseConferences(podcastFiles, false),
-                        statisticParser.parseProjectStatistics(podcastFiles));
-            }
-        } else if(commandLine.hasOption("l")) {
-            saveLast(fileParser, conferenceParser, statisticParser, usefulThingParser, commandLine);
-        } else {
-            save(fileParser, conferenceParser, statisticParser, usefulThingParser, commandLine);
-        }
+        return commandLine;
     }
-
     private static void checkGitPull(PropertiesSelector propertiesSelector) throws IOException, GitAPIException {
         GitPuller gitPuller = new GitPuller(propertiesSelector.getProperty(LOCAL_GIT_FOLDER_PROP_NAME));
         PullResult pullResult = gitPuller.pull();
         if(!pullResult.isSuccessful()) {
             throw new RuntimeException("Git pull execute unsuccessfully");
-        } else if(pullResult.toString().contains("Already up-to-date.")) {
+        } else if(pullResult.toString().contains("Already up-to-date.") || pullResult.toString().contains
+                ("Already-up-to-date.")) {
             LOG.info("All podcasts are parsed");
             System.exit(0);
         }
@@ -118,70 +124,36 @@ class App {
         }
         return propertiesSelector;
     }
-
-    private static boolean checkOptions(CommandLine commandLine, List<String> equals, List<String> notEquals) {
-        if(equals == null && notEquals.stream().allMatch
-                (commandLine::hasOption)) {
-            return false;
-        } else if(notEquals == null && equals.stream().allMatch(commandLine::hasOption)) {
-            return true;
-        }
-        return false;
+    private static void saveAll() throws IOException, URISyntaxException {
+        save(Optional.ofNullable(fileParser.getPodcastsFiles()));
     }
-
-    /**
-     * Update files using different parsers according to command line arguments.
-     * @param fileParser
-     * @param conferenceParser
-     * @param statisticParser
-     * @param usefulThingParser
-     * @param commandLine
-     * @throws IOException
-     * @throws URISyntaxException
-     */
-    private static void saveLast(FileParser fileParser, ConferenceParser conferenceParser, StatisticParser
-            statisticParser, UsefulThingParser usefulThingParser, CommandLine commandLine) throws IOException, URISyntaxException {
-        if(!commandLine.hasOption("l")) {
-            LOG.info("Command line not contains l argument please check code");
-        } else {
-            File lastPodcast = fileParser.getLastPodcastFile();
-            if(checkOptions(commandLine, Arrays.asList("c", "s", "u"), null)) {
-                fileParser.saveLast(
-                        usefulThingParser.parse(lastPodcast),
-                        conferenceParser.parse(lastPodcast),
-                        statisticParser.parseProjectStatistics(Collections.singletonList(lastPodcast)));
-            } else {
-                for (Option option : commandLine.getOptions()) {
-                    if (option.getOpt().equals("c")) {
-                        fileParser.saveConferencesToFile(conferenceParser.parse(lastPodcast));
-                    } else if (option.getOpt().equals("s")) {
-                        fileParser.saveStatisticsToFile(statisticParser.parseProjectStatistics(Collections.singletonList(lastPodcast)));
-                    } else if (option.getOpt().equals("u")) {
-                        fileParser.saveUsefulThingsToFile(usefulThingParser.parse(lastPodcast));
-                    }
-                }
-            }
-        }
+    private static void saveLast() throws IOException, URISyntaxException {
+        save(Optional.ofNullable(Collections.singletonList(fileParser.getLastPodcastFile())));
     }
-
-    private static void save(FileParser fileParser, ConferenceParser conferenceParser, StatisticParser
-            statisticParser, UsefulThingParser usefulThingParser, CommandLine commandLine) throws IOException, URISyntaxException {
-        List<File> files = fileParser.getPodcastsFiles();
-        if(checkOptions(commandLine, Arrays.asList("c", "s", "u"), null)) {
-            fileParser.saveAll(
-                    usefulThingParser.parseUsefulThings(files, false),
-                    conferenceParser.parseConferences(files, false),
-                    statisticParser.parseProjectStatistics(files));
+    private static void saveByNumber(int number) throws IOException, URISyntaxException {
+        if(number <= 0) {
+            throw new RuntimeException("Number of podcast is less or equals to 0");
+        }
+        save(Optional.ofNullable(Collections.singletonList(fileParser.getPodcastByNumber(number))));
+    }
+    private static void save(Optional<List<File>> files) throws IOException, URISyntaxException {
+        Map<String, Optional> map = new HashMap<>();
+        if(commandLine.hasOption("l") || commandLine.hasOption("a")) {
+            map.put(Constants.CONFERENCES_FILE, Optional.ofNullable(conferenceParser.parse(files.get(), false)));
+            map.put(Constants.PROJECT_STATISTICS_FILE, Optional.ofNullable(statisticParser.parseProjectStatistics(files.get())));
+            map.put(Constants.USEFUL_THINGS_FILE, Optional.ofNullable(usefulThingParser.parse(files.get(), false)));
         } else {
             for (Option option : commandLine.getOptions()) {
                 if (option.getOpt().equals("c")) {
-                    fileParser.saveConferencesToFile(conferenceParser.parseConferences(files, false));
+                    map.put(Constants.CONFERENCES_FILE, Optional.ofNullable(conferenceParser.parse(files.get(), false)));
                 } else if (option.getOpt().equals("s")) {
-                    fileParser.saveStatisticsToFile(statisticParser.parseProjectStatistics(files));
+                    map.put(Constants.PROJECT_STATISTICS_FILE, Optional.ofNullable(statisticParser.parseProjectStatistics
+                            (files.get())));
                 } else if (option.getOpt().equals("u")) {
-                    fileParser.saveUsefulThingsToFile(usefulThingParser.parseUsefulThings(files, false));
+                    map.put(Constants.USEFUL_THINGS_FILE, Optional.ofNullable(usefulThingParser.parse(files.get(), false)));
                 }
             }
         }
+        fileParser.save(map);
     }
 }

@@ -24,6 +24,7 @@ public class CLIUtils {
         options.addOption(new Option("c", "conf", false, "Parse conference data"));
         options.addOption(new Option("u", "useful", false, "Parse useful things data"));
         options.addOption(new Option("s", "stat", false, "Parse statistic data"));
+        options.addOption(new Option("n", "num", true, "Parse specific podcast with set number"));
         options.addOption(new Option("p", "prop", true, "Properties file address. If you will not put custom file " +
                 "address program will you default properties file"));
         options.addOption(new Option("h", "help", false, "Show help"));
@@ -58,7 +59,8 @@ public class CLIUtils {
                 options,
                 3,
                 5,
-                "----HELP----",
+                "If you put in one line arguments a and l, l argument will be ignored.\nYou should " +
+                        "always put a, l or n argument.\n----HELP----",
                 true);
         writer.flush();
     }

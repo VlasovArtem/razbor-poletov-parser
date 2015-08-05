@@ -25,11 +25,11 @@ import static razborpoletov.reader.utils.Constants.*;
 /**
  * Created by artemvlasov on 20/05/15.
  */
-public class ConferenceParser {
+public class ConferenceParser{
     private final List<String> ignoredConferenceUrl = Arrays.asList("instagram", "youtube");
     private Set<String> uniqueConferenceUrl = new HashSet<>();
 
-    public List<Conference> parseConferences(List<File> files, boolean asciidocOnly) throws IOException,
+    public List<Conference> parse(List<File> files, boolean asciidocOnly) throws IOException,
             URISyntaxException {
         List<Conference> conferences = new ArrayList<>();
         for (File file : files) {
@@ -67,7 +67,7 @@ public class ConferenceParser {
         }
         return parse(Jsoup.parse(file, "UTF-8"));
     }
-    private List<Conference> parseAsciidoc(File file) throws IOException, URISyntaxException {
+    public List<Conference> parseAsciidoc(File file) throws IOException, URISyntaxException {
         if(AsciidocUtils.parsePartById(file, "_Конференции") == null) {
             return null;
         }

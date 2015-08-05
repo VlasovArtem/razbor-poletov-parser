@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import razborpoletov.reader.entity.UsefulThing;
 import razborpoletov.reader.utils.AsciidocUtils;
 import razborpoletov.reader.utils.MarkdownUtils;
+import razborpoletov.reader.utils.PodcastFileUtils;
 import razborpoletov.reader.utils.UrlUtils;
 
 import java.io.File;
@@ -31,7 +32,7 @@ import static razborpoletov.reader.utils.Constants.*;
 /**
  * Created by artemvlasov on 20/05/15.
  */
-public class UsefulThingParser {
+public class UsefulThingParser implements Parser{
     private static final Logger LOG = LoggerFactory.getLogger(UsefulThingParser.class);
     private List<String> tags;
     private Map<String, List<String>> duplicateTags;
@@ -40,7 +41,7 @@ public class UsefulThingParser {
         localParseTags();
     }
 
-    public List<UsefulThing> parseUsefulThings(List<File> files, boolean asciidocOnly) throws IOException,
+    public List<UsefulThing> parse(List<File> files, boolean asciidocOnly) throws IOException,
             URISyntaxException {
         List<UsefulThing> usefulThings = new ArrayList<>();
         for (File file : files) {
@@ -51,10 +52,10 @@ public class UsefulThingParser {
                     switch (FilenameUtils.getExtension(file.getName())) {
                         case ASCII_DOC:
                             usefulThings.addAll(parse(AsciidocUtils.parsePartById(file, "_Полезняшки").getElementsByTag("a"),
-                                    FileParser.getPodcastId(file)));
+                                    PodcastFileUtils.getPodcastId(file)));
                             break;
                         case MARKDOWN_FORMAT:
-                            usefulThings.addAll(parse(Jsoup.parse(MarkdownUtils.parseToHtml(file)), FileParser
+                            usefulThings.addAll(parse(Jsoup.parse(MarkdownUtils.parseToHtml(file)), PodcastFileUtils
                                     .getPodcastId(file)));
                             break;
                         case HTML:
@@ -73,13 +74,13 @@ public class UsefulThingParser {
         if(matcher.matches()) {
             return parseAsciidoc(file);
         }
-        return parse(Jsoup.parse(file, "UTF-8"), FileParser.getPodcastId(file));
+        return parse(Jsoup.parse(file, "UTF-8"), PodcastFileUtils.getPodcastId(file));
     }
-    private List<UsefulThing> parseAsciidoc(File file) throws IOException, URISyntaxException {
+    public List<UsefulThing> parseAsciidoc(File file) throws IOException, URISyntaxException {
         if(AsciidocUtils.parsePartById(file, "_Полезняшки") == null) {
             return null;
         }
-        return parse(AsciidocUtils.parsePartById(file, "_Полезняшки").getElementsByTag("a"), FileParser.getPodcastId
+        return parse(AsciidocUtils.parsePartById(file, "_Полезняшки").getElementsByTag("a"), PodcastFileUtils.getPodcastId
                 (file));
     }
     private List<UsefulThing> parse(Document document, long podcastId) throws IOException, URISyntaxException {

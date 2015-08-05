@@ -18,14 +18,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
+import java.util.Optional;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -66,11 +65,30 @@ public class FileParser {
             throw new RuntimeException();
         }
     }
-    public void saveLast(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics)
+    public File getPodcastByNumber(int number) {
+        RegexFileFilter filter = new RegexFileFilter(Pattern.compile(".+-" + number + "\\..+"));
+        return FileFilterUtils.filterList(filter, podcastsFiles).stream().findFirst().get();
+    }
+    public void save(Map<String, Optional> objects)
             throws IOException {
-        saveUsefulThingsToFile(usefulThings);
-        saveConferencesToFile(conferences);
-        saveStatisticsToFile(statistics);
+        for (String s : objects.keySet()) {
+            save(objects.get(s), s);
+        }
+    }
+    public void save(Optional<?> optional, String filename) throws IOException {
+        if(!optional.isPresent() && filename == null) {
+            LOG.info(String.format("Persistence data or filename is empty (%s)", optional.get().getClass().getSimpleName()));
+            return;
+        }
+        File file = new File(filename);
+        file.createNewFile();
+        ObjectMapper mapper = new ObjectMapper();
+        if(optional.get() instanceof ProjectStatistics && getClass().getResourceAsStream(PROJECT_STATISTICS_FILE) !=
+                null) {
+            ProjectStatistics projectStatistics = (ProjectStatistics) optional.get();
+            optional = Optional.of(updateProjectStatistics(projectStatistics));
+        }
+        mapper.writeValue(file, optional.get());
     }
     public void saveUsefulThingsToFile(List<UsefulThing> usefulThings) throws IOException {
         if(usefulThings == null) {
@@ -104,11 +122,6 @@ public class FileParser {
         }
         mapper.writeValue(statistics, source);
     }
-    public void saveAll(List<UsefulThing> usefulThings, List<Conference> conferences, ProjectStatistics statistics) throws IOException {
-        saveConferencesToFile(conferences);
-        saveStatisticsToFile(statistics);
-        saveUsefulThingsToFile(usefulThings);
-    }
     public void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
         Map<Twitter, Integer> sortedCount = sortByComparator(twitterCount);
         try (FileOutputStream fos = new FileOutputStream(new File("creator-and-guests.txt"))) {
@@ -124,6 +137,7 @@ public class FileParser {
         }
 
     }
+
     private Map<Twitter, Integer> sortByComparator(Map<Twitter, Integer> unsortedMap) {
         List<Map.Entry<Twitter, Integer>> list =
                 new LinkedList<>(unsortedMap.entrySet());
@@ -134,45 +148,7 @@ public class FileParser {
         }
         return sortedMap;
     }
-    public static long getPodcastId(File file) {
-        String podcastName = file.getName();
-        String[] splited = podcastName.split("-");
-        long podcastId = 0;
-        for(int i = 0; i < splited.length; i++) {
-            if(Objects.equals(splited[i], "episode")) {
-                if(splited[i + 1].contains(".")) {
-                    podcastId = Integer.valueOf(splited[i + 1].split("\\.")[0]);
-                } else {
-                    podcastId = Integer.valueOf(splited[i + 1]);
-                }
 
-            }
-        }
-        if(podcastId < 0) {
-            LOG.info("Podcast id of file {} parsed incorrect", file.getName());
-        }
-        return podcastId;
-    }
-    public static LocalDate getPodcastDate(File file) {
-        int year = getDataByPattern(file.getName(), Pattern.compile("201[0-9]"));
-        int month = getDataByPattern(file.getName(), Pattern.compile("\b0\b|0[1-9]|1[0-2]"));
-        int day = getDataByPattern(file.getName(), Pattern.compile("0[1-9]|[1-2][0-9]|3[0-1]"));
-        if(year == 0 || month == 0 || day == 0) {
-            LOG.info("File {} has no one of the data: year {}, month {}, day {}", file.getName(), year, month, day);
-            return null;
-        }
-        return LocalDate.of(year, month, day);
-    }
-    private static int getDataByPattern(String filename, Pattern pattern) {
-        List<String> splitedFileName = Arrays.asList(filename.split("-"));
-        List<String> filtered = splitedFileName.stream().filter(data -> pattern.matcher(data).matches()).collect
-                (Collectors.toList());
-        if(filtered.isEmpty()) {
-            return 0;
-        } else {
-            return Integer.valueOf(filtered.stream().findFirst().get());
-        }
-    }
     private ProjectStatistics updateProjectStatistics(ProjectStatistics source) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         ProjectStatistics target = mapper.readValue(getClass().getResourceAsStream(PROJECT_STATISTICS_FILE),

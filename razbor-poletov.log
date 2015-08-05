@@ -36,3 +36,16 @@
 [INFO ] 2015-06-05 00:57:22,618 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-21-episode-16-54 has no image tag
 [INFO ] 2015-06-05 00:57:23,497 razborpoletov.reader.converters.AsciidocConverter - File 2012-05-12-episode-17 has no image tag
 [INFO ] 2015-06-05 00:57:23,498 razborpoletov.reader.converters.AsciidocConverter - File 2012-05-12-episode-17 has no image tag
+[INFO ] 2015-06-22 19:48:09,723 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
+[INFO ] 2015-06-22 19:48:10,980 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
+[INFO ] 2015-06-22 19:48:12,673 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
+[INFO ] 2015-06-22 19:48:16,721 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
+[WARN ] 2015-06-22 19:48:18,431 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
+[INFO ] 2015-06-22 20:00:17,733 razborpoletov.reader.App - All podcasts are parsed
+[INFO ] 2015-06-24 20:12:00,670 razborpoletov.reader.parsers.UsefulThingParser - Read timed out
+[INFO ] 2015-06-24 20:12:06,851 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
+[INFO ] 2015-06-24 20:12:14,677 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
+[INFO ] 2015-06-24 20:12:16,737 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
+[INFO ] 2015-06-24 20:13:15,732 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
+[WARN ] 2015-06-24 20:13:23,416 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
+[INFO ] 2015-07-15 16:21:08,747 razborpoletov.reader.utils.UrlUtils - http://kangax.github.io/compat-table/es6/ url has no github links
