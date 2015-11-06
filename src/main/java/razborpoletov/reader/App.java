@@ -18,11 +18,10 @@ import razborpoletov.reader.utils.Constants;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static razborpoletov.reader.utils.Constants.LOCAL_GIT_FOLDER_PROP_NAME;
 import static razborpoletov.reader.utils.Constants.PODCASTS_FOLDER_PROP_NAME;
@@ -41,19 +40,28 @@ class App {
                 checkPropertiesSelectorClass(commandLine.getOptionValue("p")),
                 "Properties selector is null");
         checkPodcastFolder(propertiesSelector);
-        checkGitPull(propertiesSelector);
+        if(!commandLine.hasOption("i")) {
+            checkGitPull(propertiesSelector);
+        }
 
         fileParser = new FileParser(propertiesSelector);
         conferenceParser = new ConferenceParser();
         statisticParser = new StatisticParser();
         usefulThingParser = new UsefulThingParser();
-
         if(commandLine.hasOption("a")) {
             saveAll();
         } else if(commandLine.hasOption("l")) {
             saveLast();
         } else if(commandLine.hasOption("n")) {
             saveByNumber(Integer.parseInt(commandLine.getOptionValue("n")));
+        } else if(commandLine.hasOption("b")) {
+            Pattern pattern = Pattern.compile("[\\d]+");
+            Matcher matcher = pattern.matcher(commandLine.getOptionValue("b"));
+            List<String> podcastNumbers = new ArrayList<>();
+            while(matcher.find()) {
+                podcastNumbers.add(matcher.group());
+            }
+            saveListOfNumber(podcastNumbers);
         }
     }
 
@@ -114,6 +122,12 @@ class App {
         }
     }
 
+    /**
+     * Validator for properties file.
+     * @param filePath Path to the properties file on disk
+     * @return PropertiesSelector class
+     * @throws IOException if file is not exists
+     */
     private static PropertiesSelector checkPropertiesSelectorClass(String filePath) throws IOException {
         PropertiesSelector propertiesSelector = new PropertiesSelector(filePath);
         for(String prop : new String[] {PODCASTS_FOLDER_PROP_NAME, LOCAL_GIT_FOLDER_PROP_NAME}) {
@@ -124,19 +138,44 @@ class App {
         }
         return propertiesSelector;
     }
+
+    /**
+     * Save all podcasts from Razbor Poletov repository files.
+     * @throws IOException if files is not exists
+     * @throws URISyntaxException if error in URI of the link
+     */
     private static void saveAll() throws IOException, URISyntaxException {
-        save(Optional.ofNullable(fileParser.getPodcastsFiles()));
+        save(parser(Optional.ofNullable(fileParser.getPodcastsFiles())));
     }
+
+    /**
+     * Save last podcasts information to file
+     * @throws IOException
+     * @throws URISyntaxException
+     */
     private static void saveLast() throws IOException, URISyntaxException {
-        save(Optional.ofNullable(Collections.singletonList(fileParser.getLastPodcastFile())));
+        save(parser(Optional.ofNullable(Collections.singletonList(fileParser.getLastPodcastFile()))));
     }
+
+    /**
+     * Save specific podcast data
+     * @param number of the podcast
+     * @throws IOException
+     * @throws URISyntaxException
+     */
     private static void saveByNumber(int number) throws IOException, URISyntaxException {
         if(number <= 0) {
             throw new RuntimeException("Number of podcast is less or equals to 0");
         }
-        save(Optional.ofNullable(Collections.singletonList(fileParser.getPodcastByNumber(number))));
+        save(parser(Optional.ofNullable(Collections.singletonList(fileParser.getPodcastByNumber(number)))));
     }
-    private static void save(Optional<List<File>> files) throws IOException, URISyntaxException {
+
+    private static void saveListOfNumber(List<String> podcastNumbers) throws IOException, URISyntaxException {
+        List<File> files = podcastNumbers.stream().map(podcastNumber -> fileParser.getPodcastByNumber(Integer.parseInt(podcastNumber))).collect(Collectors.toList());
+        save(parser(Optional.ofNullable(files)));
+    }
+
+    private static Map<String, Optional> parser(Optional<List<File>> files) throws IOException, URISyntaxException {
         Map<String, Optional> map = new HashMap<>();
         if(commandLine.hasOption("l") || commandLine.hasOption("a")) {
             map.put(Constants.CONFERENCES_FILE, Optional.ofNullable(conferenceParser.parse(files.get(), false)));
@@ -150,10 +189,15 @@ class App {
                     map.put(Constants.PROJECT_STATISTICS_FILE, Optional.ofNullable(statisticParser.parseProjectStatistics
                             (files.get())));
                 } else if (option.getOpt().equals("u")) {
+                    System.out.println(files.get());
                     map.put(Constants.USEFUL_THINGS_FILE, Optional.ofNullable(usefulThingParser.parse(files.get(), false)));
                 }
             }
         }
-        fileParser.save(map);
+        return map;
+    }
+
+    private static void save(Map<String, Optional> data) throws IOException, URISyntaxException {
+        fileParser.save(data);
     }
 }

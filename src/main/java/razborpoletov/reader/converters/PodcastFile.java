@@ -5,9 +5,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import razborpoletov.reader.parsers.FileParser;
 import razborpoletov.reader.parsers.StatisticParser;
 import razborpoletov.reader.utils.MarkdownUtils;
+import razborpoletov.reader.utils.PodcastFileUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -58,7 +58,7 @@ public class PodcastFile {
         StatisticParser parser = new StatisticParser();
         this.originalFile = originalFile;
         mp3FileLength = parser.getFileSize(originalFile);
-        id = FileParser.getPodcastId(originalFile);
+        id = PodcastFileUtils.getPodcastId(originalFile);
         outputFilename = String.format("%s.adoc", FilenameUtils.getBaseName(originalFile
                 .getName()));
         outputFile = String.format("%s%s", INTERMEDIATE_FILES_FOLDER,

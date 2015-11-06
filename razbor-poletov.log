@@ -1,51 +1,38 @@
-[INFO ] 2015-06-05 00:57:11,346 razborpoletov.reader.converters.AsciidocConverter - File 2011-11-16-episode-0-pilot has no image tag
-[INFO ] 2015-06-05 00:57:11,351 razborpoletov.reader.converters.AsciidocConverter - File 2011-11-16-episode-0-pilot has no image tag
-[INFO ] 2015-06-05 00:57:11,760 razborpoletov.reader.converters.AsciidocConverter - File 2011-11-23-episode-1-officially-on-air has no image tag
-[INFO ] 2015-06-05 00:57:11,762 razborpoletov.reader.converters.AsciidocConverter - File 2011-11-23-episode-1-officially-on-air has no image tag
-[INFO ] 2015-06-05 00:57:12,131 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-06-episode-2-scala has no image tag
-[INFO ] 2015-06-05 00:57:12,132 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-06-episode-2-scala has no image tag
-[INFO ] 2015-06-05 00:57:12,789 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-16-episode-3 has no image tag
-[INFO ] 2015-06-05 00:57:12,791 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-16-episode-3 has no image tag
-[INFO ] 2015-06-05 00:57:13,567 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-23-episode-4-spring has no image tag
-[INFO ] 2015-06-05 00:57:13,569 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-23-episode-4-spring has no image tag
-[INFO ] 2015-06-05 00:57:14,271 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-29-episode-5 has no image tag
-[INFO ] 2015-06-05 00:57:14,272 razborpoletov.reader.converters.AsciidocConverter - File 2011-12-29-episode-5 has no image tag
-[INFO ] 2015-06-05 00:57:14,978 razborpoletov.reader.converters.AsciidocConverter - File 2012-01-07-episode-6-pirates-of-silicon-valley has no image tag
-[INFO ] 2015-06-05 00:57:15,028 razborpoletov.reader.converters.AsciidocConverter - File 2012-01-07-episode-6-pirates-of-silicon-valley has no image tag
-[INFO ] 2015-06-05 00:57:15,712 razborpoletov.reader.converters.AsciidocConverter - File 2012-01-18-episode-7 has no image tag
-[INFO ] 2015-06-05 00:57:15,713 razborpoletov.reader.converters.AsciidocConverter - File 2012-01-18-episode-7 has no image tag
-[INFO ] 2015-06-05 00:57:16,411 razborpoletov.reader.converters.AsciidocConverter - File 2012-01-30-episode-8 has no image tag
-[INFO ] 2015-06-05 00:57:16,412 razborpoletov.reader.converters.AsciidocConverter - File 2012-01-30-episode-8 has no image tag
-[INFO ] 2015-06-05 00:57:17,193 razborpoletov.reader.converters.AsciidocConverter - File 2012-02-06-episode-9 has no image tag
-[INFO ] 2015-06-05 00:57:17,193 razborpoletov.reader.converters.AsciidocConverter - File 2012-02-06-episode-9 has no image tag
-[INFO ] 2015-06-05 00:57:18,030 razborpoletov.reader.converters.AsciidocConverter - File 2012-02-16-episode-10 has no image tag
-[INFO ] 2015-06-05 00:57:18,031 razborpoletov.reader.converters.AsciidocConverter - File 2012-02-16-episode-10 has no image tag
-[INFO ] 2015-06-05 00:57:18,814 razborpoletov.reader.converters.AsciidocConverter - File 2012-02-24-episode-11 has no image tag
-[INFO ] 2015-06-05 00:57:18,815 razborpoletov.reader.converters.AsciidocConverter - File 2012-02-24-episode-11 has no image tag
-[INFO ] 2015-06-05 00:57:19,478 razborpoletov.reader.converters.AsciidocConverter - File 2012-03-02-episode-12 has no image tag
-[INFO ] 2015-06-05 00:57:19,478 razborpoletov.reader.converters.AsciidocConverter - File 2012-03-02-episode-12 has no image tag
-[INFO ] 2015-06-05 00:57:19,908 razborpoletov.reader.converters.AsciidocConverter - File 2012-03-09-episode-13 has no image tag
-[INFO ] 2015-06-05 00:57:19,930 razborpoletov.reader.converters.AsciidocConverter - File 2012-03-09-episode-13 has no image tag
-[INFO ] 2015-06-05 00:57:20,590 razborpoletov.reader.converters.AsciidocConverter - File 2012-03-24-episode-14 has no image tag
-[INFO ] 2015-06-05 00:57:20,590 razborpoletov.reader.converters.AsciidocConverter - File 2012-03-24-episode-14 has no image tag
-[INFO ] 2015-06-05 00:57:21,254 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-07-episode-14-part-2-golden-sucks has no image tag
-[INFO ] 2015-06-05 00:57:21,255 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-07-episode-14-part-2-golden-sucks has no image tag
-[INFO ] 2015-06-05 00:57:21,900 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-14-episode-15 has no image tag
-[INFO ] 2015-06-05 00:57:21,900 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-14-episode-15 has no image tag
-[INFO ] 2015-06-05 00:57:22,618 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-21-episode-16-54 has no image tag
-[INFO ] 2015-06-05 00:57:22,618 razborpoletov.reader.converters.AsciidocConverter - File 2012-04-21-episode-16-54 has no image tag
-[INFO ] 2015-06-05 00:57:23,497 razborpoletov.reader.converters.AsciidocConverter - File 2012-05-12-episode-17 has no image tag
-[INFO ] 2015-06-05 00:57:23,498 razborpoletov.reader.converters.AsciidocConverter - File 2012-05-12-episode-17 has no image tag
-[INFO ] 2015-06-22 19:48:09,723 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
-[INFO ] 2015-06-22 19:48:10,980 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
-[INFO ] 2015-06-22 19:48:12,673 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
-[INFO ] 2015-06-22 19:48:16,721 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
-[WARN ] 2015-06-22 19:48:18,431 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
-[INFO ] 2015-06-22 20:00:17,733 razborpoletov.reader.App - All podcasts are parsed
-[INFO ] 2015-06-24 20:12:00,670 razborpoletov.reader.parsers.UsefulThingParser - Read timed out
-[INFO ] 2015-06-24 20:12:06,851 razborpoletov.reader.utils.UrlUtils - http://javalibs.com/charts url has no github links
-[INFO ] 2015-06-24 20:12:14,677 razborpoletov.reader.utils.UrlUtils - http://devrates.com/ url has no github links
-[INFO ] 2015-06-24 20:12:16,737 razborpoletov.reader.utils.UrlUtils - http://www.javadeathmatch.com/ url has no github links
-[INFO ] 2015-06-24 20:13:15,732 razborpoletov.reader.utils.UrlUtils - http://news.dartlang.org/2012/02/method-cascades-in-dart-posted-by-gilad.html url has no github links
-[WARN ] 2015-06-24 20:13:23,416 razborpoletov.reader.utils.UrlUtils - https://developers.google.com/protocol-buffers/docs/proto3 url contains more than one github links: [https://github.com/golang/protobuf, https://github.com/google/protobuf, https://github.com/grpc/grpc-common]
-[INFO ] 2015-07-15 16:21:08,747 razborpoletov.reader.utils.UrlUtils - http://kangax.github.io/compat-table/es6/ url has no github links
+[INFO ] 2015-11-06 21:22:25,877 razborpoletov.reader.utils.UrlUtils - http://emacs.sexy/img/How-to-Learn-Emacs-v2-Large.png url has no github links
+[INFO ] 2015-11-06 21:22:26,271 razborpoletov.reader.parsers.UsefulThingParser - Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml
+[INFO ] 2015-11-06 21:22:32,106 razborpoletov.reader.utils.UrlUtils - http://allegro.tech/testing-server-faults-with-Wiremock.html url has no github links
+[INFO ] 2015-11-06 21:22:34,333 razborpoletov.reader.utils.UrlUtils - http://macradar.ru/software/crax-commander-luchshaya-alternativa-total-commander-dlya-os-x/ url has no github links
+[INFO ] 2015-11-06 21:22:35,141 razborpoletov.reader.parsers.UsefulThingParser - Url http://bytecodeviewer.com/ return error with status 403
+[INFO ] 2015-11-06 21:22:39,196 razborpoletov.reader.utils.UrlUtils - https://msdn.microsoft.com/en-us/library/jj554200.aspx url has no github links
+[INFO ] 2015-11-06 21:22:40,759 razborpoletov.reader.parsers.UsefulThingParser - Url http://vk.com/video-37777824_171268487?list=a4917e6aec935fd4fb&og=1 return error with status 501
+[WARN ] 2015-11-06 21:22:41,501 razborpoletov.reader.utils.UrlUtils - http://binary-repositories-comparison.github.io/ url contains more than one github links: [https://github.com/JFrogDev/artifactory-cli-go, https://github.com/binary-repositories-comparison/binary-repositories-comparison.github.io]
+[INFO ] 2015-11-06 21:22:45,604 razborpoletov.reader.utils.UrlUtils - http://dev.yorhel.nl/ncdu url has no github links
+[INFO ] 2015-11-06 21:22:46,731 razborpoletov.reader.utils.UrlUtils - https://openport.io url has no github links
+[WARN ] 2015-11-06 21:22:54,495 razborpoletov.reader.utils.UrlUtils - http://zeroturnaround.com/rebellabs/5-command-line-tools-you-should-be-using/ url contains more than one github links: [https://github.com/robbyrussell/oh-my-zsh, https://github.com/ericchiang/pup]
+[INFO ] 2015-11-06 21:22:56,286 razborpoletov.reader.utils.UrlUtils - https://asciinema.org/ url has no github links
+[INFO ] 2015-11-06 21:22:57,134 razborpoletov.reader.utils.UrlUtils - http://blog.jetbrains.com/idea/2015/09/intellij-idea-15-eap-improves-debugger-and-git-support/ url has no github links
+[INFO ] 2015-11-06 21:22:57,647 razborpoletov.reader.parsers.UsefulThingParser - Url http://whatthecommit.com/index.txt return error with status 405
+[WARN ] 2015-11-06 21:22:58,683 razborpoletov.reader.utils.UrlUtils - http://gitup.co/ url contains more than one github links: [https://github.com/git-up/GitUp, https://github.com/git-up/GitUp#gitupkit]
+[WARN ] 2015-11-06 21:23:04,542 razborpoletov.reader.utils.UrlUtils - http://beust.com/kobalt/home/index.html url contains more than one github links: [https://github.com/cbeust/kobalt, https://github.com/cbeust/jcommander, https://github.com/cbeust/testng]
+[INFO ] 2015-11-06 21:23:05,484 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-27-episode-93.adoc has no _Полезняшки part
+[INFO ] 2015-11-06 21:23:05,585 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-27-episode-94.adoc has no _Полезняшки part
+[INFO ] 2015-11-06 21:23:05,664 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-28-episode-95.adoc has no _Полезняшки part
+[INFO ] 2015-11-06 21:44:33,872 razborpoletov.reader.utils.UrlUtils - http://emacs.sexy/img/How-to-Learn-Emacs-v2-Large.png url has no github links
+[INFO ] 2015-11-06 21:44:34,306 razborpoletov.reader.parsers.UsefulThingParser - Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml
+[INFO ] 2015-11-06 21:44:39,249 razborpoletov.reader.utils.UrlUtils - http://allegro.tech/testing-server-faults-with-Wiremock.html url has no github links
+[INFO ] 2015-11-06 21:44:42,213 razborpoletov.reader.utils.UrlUtils - http://macradar.ru/software/crax-commander-luchshaya-alternativa-total-commander-dlya-os-x/ url has no github links
+[INFO ] 2015-11-06 21:44:43,162 razborpoletov.reader.parsers.UsefulThingParser - Url http://bytecodeviewer.com/ return error with status 403
+[INFO ] 2015-11-06 21:44:46,177 razborpoletov.reader.utils.UrlUtils - https://msdn.microsoft.com/en-us/library/jj554200.aspx url has no github links
+[INFO ] 2015-11-06 21:44:47,967 razborpoletov.reader.parsers.UsefulThingParser - Url http://vk.com/video-37777824_171268487?list=a4917e6aec935fd4fb&og=1 return error with status 501
+[WARN ] 2015-11-06 21:44:48,674 razborpoletov.reader.utils.UrlUtils - http://binary-repositories-comparison.github.io/ url contains more than one github links: [https://github.com/JFrogDev/artifactory-cli-go, https://github.com/binary-repositories-comparison/binary-repositories-comparison.github.io]
+[INFO ] 2015-11-06 21:44:53,650 razborpoletov.reader.utils.UrlUtils - http://dev.yorhel.nl/ncdu url has no github links
+[INFO ] 2015-11-06 21:44:54,932 razborpoletov.reader.utils.UrlUtils - https://openport.io url has no github links
+[WARN ] 2015-11-06 21:45:03,147 razborpoletov.reader.utils.UrlUtils - http://zeroturnaround.com/rebellabs/5-command-line-tools-you-should-be-using/ url contains more than one github links: [https://github.com/robbyrussell/oh-my-zsh, https://github.com/ericchiang/pup]
+[INFO ] 2015-11-06 21:45:06,342 razborpoletov.reader.utils.UrlUtils - https://asciinema.org/ url has no github links
+[INFO ] 2015-11-06 21:45:07,610 razborpoletov.reader.utils.UrlUtils - http://blog.jetbrains.com/idea/2015/09/intellij-idea-15-eap-improves-debugger-and-git-support/ url has no github links
+[INFO ] 2015-11-06 21:45:09,310 razborpoletov.reader.parsers.UsefulThingParser - Url http://whatthecommit.com/index.txt return error with status 405
+[WARN ] 2015-11-06 21:45:10,138 razborpoletov.reader.utils.UrlUtils - http://gitup.co/ url contains more than one github links: [https://github.com/git-up/GitUp, https://github.com/git-up/GitUp#gitupkit]
+[WARN ] 2015-11-06 21:45:35,198 razborpoletov.reader.utils.UrlUtils - http://beust.com/kobalt/home/index.html url contains more than one github links: [https://github.com/cbeust/kobalt, https://github.com/cbeust/jcommander, https://github.com/cbeust/testng]
+[INFO ] 2015-11-06 21:45:37,080 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-27-episode-93.adoc has no _Полезняшки part
+[INFO ] 2015-11-06 21:45:37,191 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-27-episode-94.adoc has no _Полезняшки part
+[INFO ] 2015-11-06 21:45:37,267 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-28-episode-95.adoc has no _Полезняшки part

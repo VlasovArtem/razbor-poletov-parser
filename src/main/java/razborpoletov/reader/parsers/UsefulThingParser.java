@@ -19,10 +19,7 @@ import razborpoletov.reader.utils.UrlUtils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -51,8 +48,11 @@ public class UsefulThingParser implements Parser{
                 } else {
                     switch (FilenameUtils.getExtension(file.getName())) {
                         case ASCII_DOC:
-                            usefulThings.addAll(parse(AsciidocUtils.parsePartById(file, "_Полезняшки").getElementsByTag("a"),
-                                    PodcastFileUtils.getPodcastId(file)));
+                            Document document = AsciidocUtils.parsePartById(file, "_Полезняшки");
+                            if(Objects.nonNull(document)) {
+                                usefulThings.addAll(parse(document.getElementsByTag("a"),
+                                        PodcastFileUtils.getPodcastId(file)));
+                            }
                             break;
                         case MARKDOWN_FORMAT:
                             usefulThings.addAll(parse(Jsoup.parse(MarkdownUtils.parseToHtml(file)), PodcastFileUtils

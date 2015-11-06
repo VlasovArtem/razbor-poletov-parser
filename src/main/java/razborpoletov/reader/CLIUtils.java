@@ -25,6 +25,8 @@ public class CLIUtils {
         options.addOption(new Option("u", "useful", false, "Parse useful things data"));
         options.addOption(new Option("s", "stat", false, "Parse statistic data"));
         options.addOption(new Option("n", "num", true, "Parse specific podcast with set number"));
+        options.addOption(new Option("b", "batch", true, "Specify list of podcast to parse, divided by comma."));
+        options.addOption(new Option("i", "ignore", false, "Ignore git repository check on update"));
         options.addOption(new Option("p", "prop", true, "Properties file address. If you will not put custom file " +
                 "address program will you default properties file"));
         options.addOption(new Option("h", "help", false, "Show help"));
