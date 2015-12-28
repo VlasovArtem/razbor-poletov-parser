@@ -11,8 +11,8 @@ import java.util.List;
 public class ProjectStatistics {
     private int totalGuests;
     private List<Guest> top5Guests;
-    private long longestPodcast;
-    private long totalPodcastsTime;
+    private long longestPodcastMillis;
+    private long totalPodcastsTimeMillis;
     private List<Guest> topNamedGuests;
     private int maleGuests;
     private int femaleGuests;
@@ -35,20 +35,20 @@ public class ProjectStatistics {
         this.top5Guests = top5Guests;
     }
 
-    public long getLongestPodcast() {
-        return longestPodcast;
+    public long getLongestPodcastMillis() {
+        return longestPodcastMillis;
     }
 
-    public void setLongestPodcast(long longestPodcast) {
-        this.longestPodcast = longestPodcast;
+    public void setLongestPodcastMillis(long longestPodcastMillis) {
+        this.longestPodcastMillis = longestPodcastMillis;
     }
 
-    public long getTotalPodcastsTime() {
-        return totalPodcastsTime;
+    public long getTotalPodcastsTimeMillis() {
+        return totalPodcastsTimeMillis;
     }
 
-    public void setTotalPodcastsTime(long totalPodcastsTime) {
-        this.totalPodcastsTime = totalPodcastsTime;
+    public void setTotalPodcastsTimeMillis(long totalPodcastsTimeMillis) {
+        this.totalPodcastsTimeMillis = totalPodcastsTimeMillis;
     }
 
     public List<Guest> getTopNamedGuests() {

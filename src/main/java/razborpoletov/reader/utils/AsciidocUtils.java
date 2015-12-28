@@ -8,9 +8,11 @@ import org.jsoup.nodes.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.xml.parsers.DocumentBuilder;
 import java.io.File;
 import java.util.*;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Created by artemvlasov on 26/04/15.
@@ -22,9 +24,19 @@ public class AsciidocUtils {
     private static final List<String> DOCUMENT_IDS = Arrays.asList(".?полезняшк.?", ".?конференци.?");
 
 
+    public static StructuredDocument parseDocument(File file) {
+        return asciidoctor.readDocumentStructure(file, new HashMap<>());
+    }
+
     public static Document parseTwitterPart(File file) {
         StructuredDocument document = asciidoctor.readDocumentStructure(file, new HashMap<>());
         ContentPart part = document.getPartById(TWITTER_PART_NAME);
+        if(Objects.isNull(part)) {
+            List<ContentPart> contentParts = document.getParts()
+                    .stream().filter(p -> p.getContent().contains("twitter"))
+                    .collect(Collectors.toList());
+            part = contentParts.get(contentParts.size() - 1);
+        }
         String podcastName = file.getName();
         if(part == null) {
             LOG.info("Document {} has no twitter part", podcastName);

@@ -56,8 +56,9 @@ public class PodcastFile {
 
     public PodcastFile(File originalFile) throws IOException, URISyntaxException {
         StatisticParser parser = new StatisticParser();
+        mp3Url = parser.getUrl(originalFile);
         this.originalFile = originalFile;
-        mp3FileLength = parser.getFileSize(originalFile);
+        mp3FileLength = parser.getFileSize(mp3Url);
         id = PodcastFileUtils.getPodcastId(originalFile);
         outputFilename = String.format("%s.adoc", FilenameUtils.getBaseName(originalFile
                 .getName()));
@@ -74,9 +75,8 @@ public class PodcastFile {
         List<String> basicElement = BasicElement.getBasicElement(originalFile);
         date = BasicElement.getPartContent(basicElement, DATE_PATTERN);
         title = BasicElement.getPartContent(basicElement, TITLE_PATTERN);
-        mp3Filename = parser.getMp3Filename(originalFile);
+        mp3Filename = parser.getMp3Filename(mp3Url);
         this.basicElement = TagsBuilder.basicAsciidocElementBuilder(id, mp3FileLength, title, date, mp3Filename);
-        mp3Url = parser.getUrl(originalFile);
         imgUrl = getImageUrl();
         htmlAudioTag = TagsBuilder.audioTagHtmlBuilder(mp3Url);
         asciidocAudioTag = TagsBuilder.audioTagAsciidocBuilder(mp3Url);

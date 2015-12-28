@@ -28,6 +28,7 @@ import static razborpoletov.reader.utils.Constants.PODCASTS_FOLDER_PROP_NAME;
 
 class App {
     private static final Logger LOG = LoggerFactory.getLogger(App.class);
+    private static final int SIZE_OF_BATCH_OF_PODCAST_NUMBERS = 2;
     private static FileParser fileParser;
     private static ConferenceParser conferenceParser;
     private static StatisticParser statisticParser;
@@ -55,13 +56,37 @@ class App {
         } else if(commandLine.hasOption("n")) {
             saveByNumber(Integer.parseInt(commandLine.getOptionValue("n")));
         } else if(commandLine.hasOption("b")) {
+            String commandLineValue = commandLine.getOptionValue("b");
             Pattern pattern = Pattern.compile("[\\d]+");
-            Matcher matcher = pattern.matcher(commandLine.getOptionValue("b"));
-            List<String> podcastNumbers = new ArrayList<>();
-            while(matcher.find()) {
-                podcastNumbers.add(matcher.group());
+            if(commandLineValue.matches("(\\d+,?\\s?)+") || commandLineValue.matches("\\d+\\s?-\\s?\\d+")) {
+                Matcher matcher = pattern.matcher(commandLineValue);
+                List<String> podcastNumbers = new ArrayList<>();
+                while (matcher.find()) {
+                    podcastNumbers.add(matcher.group());
+                }
+                if(commandLineValue.matches("\\d+\\s?-\\s?\\d+")) {
+                    if(podcastNumbers.size() != 0 && podcastNumbers.size() == SIZE_OF_BATCH_OF_PODCAST_NUMBERS) {
+                        int firstPodcast = Integer.valueOf(podcastNumbers.get(0));
+                        int lastPodcast = Integer.valueOf(podcastNumbers.get(1));
+                        if(firstPodcast > lastPodcast) {
+                            LOG.warn("First podcast number cannot be greater than last podcast");
+                        } else {
+                            podcastNumbers = new ArrayList<>(lastPodcast-firstPodcast);
+                            for(int i = firstPodcast; i <= lastPodcast; i++) {
+                                podcastNumbers.add(String.valueOf(i));
+                            }
+                        }
+                    } else {
+                        LOG.warn("Batch of podcats numbers in format from - to, cannot contains more that two podcats" +
+                                " numbers");
+                    }
+                }
+                if(podcastNumbers.size() != 0) {
+                    saveListOfNumber(podcastNumbers);
+                } else {
+                    LOG.error("Command line args contains invalid data " + commandLineValue);
+                }
             }
-            saveListOfNumber(podcastNumbers);
         }
     }
 

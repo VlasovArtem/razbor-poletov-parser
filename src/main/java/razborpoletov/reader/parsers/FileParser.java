@@ -122,7 +122,7 @@ public class FileParser {
         }
         mapper.writeValue(statistics, source);
     }
-    public void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
+    public static void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
         Map<Twitter, Integer> sortedCount = sortByComparator(twitterCount);
         try (FileOutputStream fos = new FileOutputStream(new File("creator-and-guests.txt"))) {
             StringBuilder builder = new StringBuilder();
@@ -138,7 +138,7 @@ public class FileParser {
 
     }
 
-    private Map<Twitter, Integer> sortByComparator(Map<Twitter, Integer> unsortedMap) {
+    private static Map<Twitter, Integer> sortByComparator(Map<Twitter, Integer> unsortedMap) {
         List<Map.Entry<Twitter, Integer>> list =
                 new LinkedList<>(unsortedMap.entrySet());
         Collections.sort(list, (o1, o2) -> (o1.getValue()).compareTo(o2.getValue()));
@@ -156,9 +156,9 @@ public class FileParser {
         target.setFemaleGuests(target.getFemaleGuests() + source.getFemaleGuests());
         target.setMaleGuests(target.getMaleGuests() + source.getMaleGuests());
         target.setTotalAge(target.getTotalAge() + source.getTotalAge());
-        target.setTotalPodcastsTime(target.getTotalPodcastsTime() + source.getTotalPodcastsTime());
-        target.setLongestPodcast(target.getLongestPodcast() > source.getLongestPodcast() ? target.getLongestPodcast()
-                : source.getLongestPodcast());
+        target.setTotalPodcastsTimeMillis(target.getTotalPodcastsTimeMillis() + source.getTotalPodcastsTimeMillis());
+        target.setLongestPodcastMillis(target.getLongestPodcastMillis() > source.getLongestPodcastMillis() ? target.getLongestPodcastMillis()
+                : source.getLongestPodcastMillis());
         target.setTotalGuests(target.getTotalGuests() + source.getTotalGuests());
         target.getProgrammingLanguages().addAll(source.getProgrammingLanguages());
         return target;
