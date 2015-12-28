@@ -210,7 +210,7 @@ public class UsefulThingParser implements Parser{
                         .limit(5)
                         .collect(Collectors.toList());
             } else {
-                LOG.warn("{} url not contains html body");
+                LOG.warn("{} url not contains html body", url);
             }
 
         }

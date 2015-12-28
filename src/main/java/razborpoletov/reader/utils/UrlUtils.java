@@ -77,10 +77,12 @@ public class UrlUtils {
         String description = null;
         URLConnection huc = getURL(url).openConnection();
         Document document = Jsoup.parse(huc.getInputStream(), null, url.toString());
-        Elements elements = document.getElementsByClass("repository-description");
+        Elements elements = document.getElementsByClass("js-details-container");
         if (elements.size() != 0) {
             description = elements.stream().findFirst().get().textNodes().stream().findFirst().get().getWholeText()
                     .trim();
+        } else {
+            LOG.warn("Description for the github link {} is not found", url);
         }
         return description;
     }

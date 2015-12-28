@@ -41,6 +41,7 @@ class App {
         }
         String podcastFolder = commandLine.getOptionValue("p");
         checkPodcastFolder(podcastFolder);
+        checkGitPull(podcastFolder);
         fileParser = new FileParser(podcastFolder);
         conferenceParser = new ConferenceParser();
         statisticParser = new StatisticParser();
@@ -83,6 +84,8 @@ class App {
                     LOG.error("Command line args contains invalid data " + commandLineValue);
                 }
             }
+        } else {
+            saveAll();
         }
     }
 
