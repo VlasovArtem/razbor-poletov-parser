@@ -27,9 +27,9 @@ public class CLIUtils {
         options.addOption(new Option("n", "num", true, "Parse specific podcast with set number"));
         options.addOption(new Option("b", "batch", true, "Specify list of podcast to parse, divided by comma."));
         options.addOption(new Option("i", "ignore", false, "Ignore git repository check on update"));
-        options.addOption(new Option("p", "prop", true, "Properties file address. If you will not put custom file " +
-                "address program will you default properties file"));
+        options.addOption(new Option("p", "prop", true, "Razbor Poletov local git folder"));
         options.addOption(new Option("h", "help", false, "Show help"));
+        options.addOption(new Option("i", "ignore", false, "Ignore check git repository on up to date"));
     }
 
     public CLIUtils(String[] args) {
@@ -61,8 +61,10 @@ public class CLIUtils {
                 options,
                 3,
                 5,
-                "If you put in one line arguments a and l, l argument will be ignored.\nYou should " +
-                        "always put a, l or n argument.\n----HELP----",
+                "If you put in one line arguments a and l, l argument will be ignored." +
+                        "\nYou should always put a, l or n argument." +
+                        "\nPlease use i if you want parse content if git repository is already up to date" +
+                        "\n----HELP----",
                 true);
         writer.flush();
     }

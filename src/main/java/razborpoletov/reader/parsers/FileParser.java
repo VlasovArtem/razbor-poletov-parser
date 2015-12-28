@@ -12,19 +12,14 @@ import razborpoletov.reader.entity.Conference;
 import razborpoletov.reader.entity.ProjectStatistics;
 import razborpoletov.reader.entity.Twitter;
 import razborpoletov.reader.entity.UsefulThing;
+import razborpoletov.reader.utils.PodcastFolderUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -34,30 +29,27 @@ import static razborpoletov.reader.utils.Constants.*;
  * Created by artemvlasov on 20/04/15.
  */
 public class FileParser {
-    private PropertiesSelector propertiesSelector;
     private final static Logger LOG = LoggerFactory.getLogger(FileParser.class);
     private List<File> podcastsFiles;
 
-    public FileParser(PropertiesSelector propertiesSelector) throws IOException {
-        this.propertiesSelector = Preconditions.checkNotNull(propertiesSelector, "Properties selector cannot be null");
-        podcastsFiles = Arrays.asList(Preconditions.checkNotNull(new File(propertiesSelector.getProperty
-                        (PODCASTS_FOLDER_PROP_NAME)).listFiles(), "Folder file list is empty"))
-                .stream()
-                .filter(file -> Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName()))
-                .collect(Collectors.toList());
+    public FileParser(String postsFolder) throws IOException {
+        podcastsFiles = PodcastFolderUtils.collectPostsFolderPath(postsFolder);
     }
 
-    public List<File> getPodcastsFiles() throws IOException, URISyntaxException {
+    public List<File> getPodcastsFiles() {
         return podcastsFiles;
     }
 
-    public List<File> getPodcastAsciidocFiles() {
-        RegexFileFilter filter = new RegexFileFilter(Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?"));
-        return FileFilterUtils.filterList(filter, podcastsFiles);
-    }
-    public File getLastPodcastFile() throws IOException, URISyntaxException {
+    /**
+     * Find last podcast file throw Runtime Exception if the file of the last podcast is not a asciidoc file (check
+     * extension of the file)
+     *
+     * @return Last podcast file
+     */
+    public File getLastPodcastFile() {
         File file = podcastsFiles.get(podcastsFiles.size() - 1);
-        if(Pattern.matches(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?", file.getName())) {
+        String asciidocFilePattern = ".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?";
+        if (Pattern.matches(asciidocFilePattern, file.getName())) {
             return file;
         } else {
             LOG.warn("Last podcast file is not asciidoc format, file format: {}", FilenameUtils.getExtension(file
@@ -65,33 +57,61 @@ public class FileParser {
             throw new RuntimeException();
         }
     }
+
+    /**
+     * Find podcast by number of the episode.
+     * @param number number of the episode
+     * @return find file
+     */
     public File getPodcastByNumber(int number) {
         RegexFileFilter filter = new RegexFileFilter(Pattern.compile(".+-" + number + "\\..+"));
-        return FileFilterUtils.filterList(filter, podcastsFiles).stream().findFirst().get();
+        List<File> filteredFiles = FileFilterUtils.filterList(filter, podcastsFiles);
+        if (!filteredFiles.isEmpty()) {
+            return filteredFiles.get(0);
+        }
+        return null;
     }
-    public void save(Map<String, Optional> objects)
-            throws IOException {
+
+    /**
+     * Save object to the provided file
+     * @param objects Map of the objects
+     */
+    public void save(Map<String, Optional> objects) {
         for (String s : objects.keySet()) {
             save(objects.get(s), s);
         }
     }
-    public void save(Optional<?> optional, String filename) throws IOException {
-        if(!optional.isPresent() && filename == null) {
+
+    /**
+     * Save provided object to the file
+     * @param optional Object
+     * @param filename filename of the file into which object will be saved.
+     */
+    public void save(Optional<?> optional, String filename) {
+        if (!optional.isPresent() && filename == null) {
             LOG.info(String.format("Persistence data or filename is empty (%s)", optional.get().getClass().getSimpleName()));
             return;
         }
         File file = new File(filename);
-        file.createNewFile();
-        ObjectMapper mapper = new ObjectMapper();
-        if(optional.get() instanceof ProjectStatistics && getClass().getResourceAsStream(PROJECT_STATISTICS_FILE) !=
-                null) {
-            ProjectStatistics projectStatistics = (ProjectStatistics) optional.get();
-            optional = Optional.of(updateProjectStatistics(projectStatistics));
+        try {
+            if(!file.exists()) {
+                file.createNewFile();
+            }
+            ObjectMapper mapper = new ObjectMapper();
+            if (optional.get() instanceof ProjectStatistics && getClass().getResourceAsStream(PROJECT_STATISTICS_FILE) !=
+                    null) {
+                ProjectStatistics projectStatistics = (ProjectStatistics) optional.get();
+                optional = Optional.of(updateProjectStatistics(projectStatistics));
+            }
+            mapper.writeValue(file, optional.get());
+        } catch (IOException e) {
+            LOG.warn(e.getMessage());
+            e.printStackTrace();
         }
-        mapper.writeValue(file, optional.get());
     }
+
     public void saveUsefulThingsToFile(List<UsefulThing> usefulThings) throws IOException {
-        if(usefulThings == null) {
+        if (usefulThings == null) {
             LOG.info("Persisted useful things list is empty");
             return;
         }
@@ -100,8 +120,9 @@ public class FileParser {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(file, usefulThings);
     }
+
     public void saveConferencesToFile(List<Conference> conferences) throws IOException {
-        if(conferences == null) {
+        if (conferences == null) {
             LOG.info("Persisted conferences list is empty");
             return;
         }
@@ -109,19 +130,21 @@ public class FileParser {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(conferenceComplete, conferences);
     }
+
     public void saveStatisticsToFile(ProjectStatistics source) throws IOException {
-        if(source == null) {
+        if (source == null) {
             LOG.info("Persisted statistics list is empty");
             return;
         }
         File statistics = new File(PROJECT_STATISTICS_FILE);
         statistics.createNewFile();
         ObjectMapper mapper = new ObjectMapper();
-        if(getClass().getResourceAsStream(PROJECT_STATISTICS_FILE) != null) {
+        if (getClass().getResourceAsStream(PROJECT_STATISTICS_FILE) != null) {
             source = updateProjectStatistics(source);
         }
         mapper.writeValue(statistics, source);
     }
+
     public static void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
         Map<Twitter, Integer> sortedCount = sortByComparator(twitterCount);
         try (FileOutputStream fos = new FileOutputStream(new File("creator-and-guests.txt"))) {
