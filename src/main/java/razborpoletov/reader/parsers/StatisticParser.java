@@ -3,7 +3,6 @@ package razborpoletov.reader.parsers;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.asciidoctor.ast.ContentPart;
@@ -13,10 +12,11 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import razborpoletov.reader.entity.Guest;
 import razborpoletov.reader.entity.ProjectStatistics;
-import razborpoletov.reader.entity.Twitter;
 import razborpoletov.reader.utils.AsciidocUtils;
 import razborpoletov.reader.utils.MarkdownUtils;
+import razborpoletov.reader.utils.PodcastFileUtils;
 import razborpoletov.reader.utils.UrlUtils;
 
 import java.io.*;
@@ -36,7 +36,7 @@ import static razborpoletov.reader.utils.Constants.*;
  */
 public class StatisticParser {
     private ProjectStatistics projectStatistics;
-    private Map<Twitter, Integer> twitterCount = new HashMap<>();
+    private Map<Guest, Integer> twitterCount = new HashMap<>();
     private final static Logger LOG = LoggerFactory.getLogger(StatisticParser.class);
 
     public StatisticParser() {
@@ -44,23 +44,37 @@ public class StatisticParser {
     }
 
     public ProjectStatistics parseProjectStatistics(List<File> files) throws IOException, URISyntaxException {
-        findTotalGuests(files);
+        parseGuestStatistics(files);
         findPodcastData(files);
         return projectStatistics;
     }
 
-    public Map<Twitter, Integer> fileParserTwitter(List<File> files) throws IOException {
+    /**
+     * Parse information from twitter account. Name, bio, img, location, amount of appearance in episodes.
+     * @param files List of files that associated with each podcast episode
+     * @return map that contains key guest object, that contains useful information and value that matches total
+     * appearance in podcast (one per episode).
+     * @throws IOException
+     */
+    public Map<Guest, Integer> fileParserTwitterAccountInformation(List<File> files) throws IOException {
         for (File file : files) {
-            List<Twitter> twitters = parseTwitter(getHtmlDocument(file));
-            if (Objects.isNull(twitters)) {
+            List<Guest> guests = parseTwitter(getHtmlDocument(file));
+            if (Objects.isNull(guests)) {
                 LOG.info("File {} twitter parsing is unsuccessful", file);
             } else {
-                countTwitter(twitters);
+                countTwitter(guests, PodcastFileUtils.getPodcastId(file));
             }
         }
         return twitterCount;
     }
 
+    /**
+     * Find mp3 filename from url
+     * @param url url of the audio file from podcast file
+     * @return name of the mp3 file
+     * @throws IOException
+     * @throws URISyntaxException
+     */
     public String getMp3Filename(String url) throws IOException, URISyntaxException {
         if (Objects.nonNull(url)) {
             Pattern pattern = Pattern.compile("\\w+.mp3");
@@ -72,7 +86,14 @@ public class StatisticParser {
         return null;
     }
 
-    public int getFileSize(String stringUrl) throws IOException, URISyntaxException {
+    /**
+     * Find mp3 file length by provided url
+     * @param stringUrl url of the mp3 file
+     * @return length of the file or return -1
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+    public int getMP3FileLenght(String stringUrl) throws IOException, URISyntaxException {
         if (Objects.nonNull(stringUrl)) {
             URL url = new URL(stringUrl);
             HttpURLConnection conn = null;
@@ -92,16 +113,33 @@ public class StatisticParser {
         return -1;
     }
 
-    private void findTotalGuests(List<File> files) throws IOException {
-        Map<Twitter, Integer> count = fileParserTwitter(files);
+    /**
+     * Parse guest statistics for podcast file.
+     * @param files
+     * @throws IOException
+     */
+    private void parseGuestStatistics (List<File> files) throws IOException {
+        Map<Guest, Integer> count = fileParserTwitterAccountInformation(files);
         FileParser.saveTwitterCountToFile(twitterCount);
+        projectStatistics.setTop5Podcasters(twitterCount.entrySet().stream()
+                .sorted(Comparator.comparingInt(Map.Entry::getValue))
+                .skip(twitterCount.size() - 5)
+                .map(guestIntegerEntry -> guestIntegerEntry.getKey().getName())
+                .collect(Collectors.toList()));
         projectStatistics.setTotalGuests(count.size());
     }
 
-    private void findPodcastData(List<File> files) throws IOException, URISyntaxException {
+    /**
+     * Parse statistic of ea
+     * @param files
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+    private void findPodcastData (List<File> files) throws IOException, URISyntaxException {
         long totalTime = 0;
         long longest = 0;
         for (File file : files) {
+            LOG.info("Parse {} statistic", file.getName());
             String url = getUrl(file);
             long time = getPocastMp3FileLengthInMillis(url, file);
             totalTime += time;
@@ -154,25 +192,16 @@ public class StatisticParser {
         return document;
     }
 
-    private List<Twitter> parseTwitter(Document document) {
+    private List<Guest> parseTwitter(Document document) {
         if (Objects.nonNull(document)) {
             Elements elements = document.getElementsByTag("a");
             List<Element> filteredElements = elements.stream()
                     .filter(element -> element.attr("href").contains("twitter.com") &&
                             element.textNodes().stream()
                                     .allMatch(node -> node.getWholeText().contains("@")))
+                    .distinct()
                     .collect(Collectors.toList());
-            File file = new File("parsed_twitter.txt");
-            if(file.exists()) {
-                filteredElements.stream().forEach(element -> {
-                    try {
-                        FileUtils.writeLines(file, Collections.singletonList(element.attr("href")), true);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-            }
-            List<Twitter> twitters = new ArrayList<>(filteredElements.size());
+            List<Guest> guests = new ArrayList<>(filteredElements.size());
             for (Element el : filteredElements) {
                 String account = el.textNodes().stream().findFirst().get().getWholeText();
                 String accountUrl = el.attributes().get("href");
@@ -187,23 +216,66 @@ public class StatisticParser {
                 if (accountUrl != null && !accountUrl.contains("https")) {
                     accountUrl = accountUrl.replace("http", "https");
                 }
-                twitters.add(new Twitter(StringUtils.endsWith(account, " ") ?
-                        account.substring(0, account.length() - 1) :
-                        account, accountUrl));
+                account = StringUtils.endsWith(account, " ") ? account.substring(0, account.length() - 1) : account;
+                final String finalAccountUrl = accountUrl;
+                Guest guest = twitterCount.entrySet().stream()
+                        .filter(tie -> tie.getKey().getTwitterAccountUrl().equals(finalAccountUrl))
+                        .map(tie -> {
+                            if (Objects.nonNull(tie))
+                                return tie.getKey();
+                            else
+                                return null;
+                        })
+                        .findFirst()
+                        .orElse(null);
+                if (Objects.isNull(guest)) {
+                    guest = new Guest(account, accountUrl);
+                    try {
+                        Document twitterWebPage = Jsoup.connect(accountUrl).get();
+                        Elements imgElements = twitterWebPage.getElementsByClass("ProfileAvatar-image");
+                        Element imgElement = imgElements.first();
+                        if (Objects.nonNull(imgElement)) {
+                            guest.setTwitterImgUrl(imgElement.attr("src"));
+                            guest.setName(imgElement.attr("alt"));
+                        }
+                        Element profileHeaderCard = twitterWebPage.getElementsByClass("ProfileHeaderCard").first();
+                        if(Objects.nonNull(profileHeaderCard)) {
+                            Element name = profileHeaderCard.select(".ProfileHeaderCard-name > .ProfileHeaderCard-nameLink").first();
+                            if(Objects.nonNull(name) && !guest.getName().equals(name.text())) {
+                                guest.setName(name.text());
+                            }
+                            Element bio = profileHeaderCard.select(".ProfileHeaderCard-bio").first();
+                            if(Objects.nonNull(bio)) {
+                                guest.setBio(bio.text());
+                            }
+                            Element location = profileHeaderCard.select(".ProfileHeaderCard-location > " +
+                                    ".ProfileHeaderCard-locationText").first();
+                            if(Objects.nonNull(location)) {
+                                guest.setLocation(location.text());
+                            }
+                        } else {
+                            LOG.info("Profile header in twitter {} not found", accountUrl);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                guests.add(guest);
             }
-            twitters = twitters.stream().distinct().collect(Collectors.toList());
-            return twitters;
+            guests = guests.stream().distinct().collect(Collectors.toList());
+            return guests;
         }
         return null;
     }
 
-    private void countTwitter(List<Twitter> twitters) {
-        if (Objects.nonNull(twitters)) {
-            for (Twitter twitter : twitters) {
-                if (!twitterCount.containsKey(twitter)) {
-                    twitterCount.put(twitter, 1);
+    private void countTwitter(List<Guest> guests, long podcastId) {
+        if (Objects.nonNull(guests)) {
+            for (Guest guest : guests) {
+                if (!twitterCount.containsKey(guest)) {
+                    guest.setEpisodeNumberOfTheFirstAppearance(podcastId);
+                    twitterCount.put(guest, 1);
                 } else {
-                    twitterCount.put(twitter, twitterCount.get(twitter) + 1);
+                    twitterCount.put(guest, twitterCount.get(guest) + 1);
                 }
             }
         }

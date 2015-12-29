@@ -169,7 +169,7 @@ public class AsciidocConverter {
 //    private static void saveBasicElementToFile(File podcastFile, File asciidocFile) throws IOException,
 //            URISyntaxException {
 //        StatisticParser parser = new StatisticParser();
-//        long length = parser.getFileSize(podcastFile);
+//        long length = parser.getMP3FileLenght(podcastFile);
 //        LocalDate ld = FileParser.getPodcastDate(podcastFile);
 //        String convertedBasicElement = findBasicElementAsciidoc(asciidocFile);
 //        long podcastId = FileParser.getPodcastId(podcastFile);

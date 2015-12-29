@@ -58,7 +58,7 @@ public class PodcastFile {
         StatisticParser parser = new StatisticParser();
         mp3Url = parser.getUrl(originalFile);
         this.originalFile = originalFile;
-        mp3FileLength = parser.getFileSize(mp3Url);
+        mp3FileLength = parser.getMP3FileLenght(mp3Url);
         id = PodcastFileUtils.getPodcastId(originalFile);
         outputFilename = String.format("%s.adoc", FilenameUtils.getBaseName(originalFile
                 .getName()));

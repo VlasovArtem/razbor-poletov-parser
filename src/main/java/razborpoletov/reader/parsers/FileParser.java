@@ -1,16 +1,14 @@
 package razborpoletov.reader.parsers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Preconditions;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.RegexFileFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import razborpoletov.reader.PropertiesSelector;
 import razborpoletov.reader.entity.Conference;
+import razborpoletov.reader.entity.Guest;
 import razborpoletov.reader.entity.ProjectStatistics;
-import razborpoletov.reader.entity.Twitter;
 import razborpoletov.reader.entity.UsefulThing;
 import razborpoletov.reader.utils.PodcastFolderUtils;
 
@@ -18,10 +16,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.*;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import static razborpoletov.reader.utils.Constants.*;
 
@@ -60,6 +56,7 @@ public class FileParser {
 
     /**
      * Find podcast by number of the episode.
+     *
      * @param number number of the episode
      * @return find file
      */
@@ -74,6 +71,7 @@ public class FileParser {
 
     /**
      * Save object to the provided file
+     *
      * @param objects Map of the objects
      */
     public void save(Map<String, Optional> objects) {
@@ -84,6 +82,7 @@ public class FileParser {
 
     /**
      * Save provided object to the file
+     *
      * @param optional Object
      * @param filename filename of the file into which object will be saved.
      */
@@ -94,7 +93,7 @@ public class FileParser {
         }
         File file = new File(filename);
         try {
-            if(!file.exists()) {
+            if (!file.exists()) {
                 file.createNewFile();
             }
             ObjectMapper mapper = new ObjectMapper();
@@ -145,28 +144,37 @@ public class FileParser {
         mapper.writeValue(statistics, source);
     }
 
-    public static void saveTwitterCountToFile(Map<Twitter, Integer> twitterCount) throws IOException {
-        Map<Twitter, Integer> sortedCount = sortByComparator(twitterCount);
+    public static void saveTwitterCountToFile(Map<Guest, Integer> twitterCount) throws IOException {
+        Map<Guest, Integer> sortedCount = sortByComparator(twitterCount);
         try (FileOutputStream fos = new FileOutputStream(new File("creator-and-guests.txt"))) {
-            StringBuilder builder = new StringBuilder();
-            for (Map.Entry<Twitter, Integer> entry : sortedCount.entrySet()) {
-                String line = String.format("Twitter: %s, Nickname: %s, count: %d\n", entry.getKey().getAccountUrl(),
-                        entry.getKey().getAccount(), entry.getValue());
-                fos.write(line.getBytes());
+            for (Map.Entry<Guest, Integer> entry : sortedCount.entrySet()) {
+                StringBuilder content = new StringBuilder();
+                content.append("------------------------").append("\n")
+                        .append("Twitter: ").append(entry.getKey().getTwitterAccountUrl()).append("\n")
+                        .append("Nickname: ").append(entry.getKey().getTwitterAccount()).append("\n")
+                        .append("Name: ").append(entry.getKey().getName()).append("\n")
+                        .append("Img: ").append(entry.getKey().getTwitterImgUrl()).append("\n")
+                        .append("Location: ").append(entry.getKey().getLocation()).append("\n")
+                        .append("Bio: ").append(entry.getKey().getBio()).append("\n")
+                        .append("First Appearance (episode #): ").append(entry.getKey().getEpisodeNumberOfTheFirstAppearance()).append("\n")
+                        .append("Total entries: ").append(entry.getValue()).append("\n");
+                fos.write(content.toString().getBytes());
             }
-            fos.write(String.format("Total users: %d", sortedCount.size()).getBytes());
+
+            fos.write(String.format("-----------------------------------------------------\nTotal users: %d",
+                    sortedCount.size()).getBytes());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
     }
 
-    private static Map<Twitter, Integer> sortByComparator(Map<Twitter, Integer> unsortedMap) {
-        List<Map.Entry<Twitter, Integer>> list =
+    private static Map<Guest, Integer> sortByComparator(Map<Guest, Integer> unsortedMap) {
+        List<Map.Entry<Guest, Integer>> list =
                 new LinkedList<>(unsortedMap.entrySet());
         Collections.sort(list, (o1, o2) -> (o1.getValue()).compareTo(o2.getValue()));
-        Map<Twitter, Integer> sortedMap = new LinkedHashMap<>();
-        for (Map.Entry<Twitter, Integer> entry : list) {
+        Map<Guest, Integer> sortedMap = new LinkedHashMap<>();
+        for (Map.Entry<Guest, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
         return sortedMap;

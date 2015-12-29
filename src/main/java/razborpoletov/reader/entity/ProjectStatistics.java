@@ -10,10 +10,9 @@ import java.util.List;
 @JsonAutoDetect
 public class ProjectStatistics {
     private int totalGuests;
-    private List<Guest> top5Guests;
+    private List<String> top5Podcasters;
     private long longestPodcastMillis;
     private long totalPodcastsTimeMillis;
-    private List<Guest> topNamedGuests;
     private int maleGuests;
     private int femaleGuests;
     private List<String> programmingLanguages;
@@ -27,12 +26,12 @@ public class ProjectStatistics {
         this.totalGuests = totalGuests;
     }
 
-    public List<Guest> getTop5Guests() {
-        return top5Guests;
+    public List<String> getTop5Podcasters() {
+        return top5Podcasters;
     }
 
-    public void setTop5Guests(List<Guest> top5Guests) {
-        this.top5Guests = top5Guests;
+    public void setTop5Podcasters(List<String> top5Podcasters) {
+        this.top5Podcasters = top5Podcasters;
     }
 
     public long getLongestPodcastMillis() {
@@ -49,14 +48,6 @@ public class ProjectStatistics {
 
     public void setTotalPodcastsTimeMillis(long totalPodcastsTimeMillis) {
         this.totalPodcastsTimeMillis = totalPodcastsTimeMillis;
-    }
-
-    public List<Guest> getTopNamedGuests() {
-        return topNamedGuests;
-    }
-
-    public void setTopNamedGuests(List<Guest> topNamedGuests) {
-        this.topNamedGuests = topNamedGuests;
     }
 
     public int getMaleGuests() {

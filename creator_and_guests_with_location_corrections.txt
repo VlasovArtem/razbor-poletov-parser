@@ -220,7 +220,7 @@ Nickname: @andrey_kogun
 Name: Andrey Kogun
 Img: https://pbs.twimg.com/profile_images/528217184602832897/WQ685YlY_400x400.png
 Location: Russia
-Bio: 
+Bio:
 First Appearance (episode #): 45
 Total entries: 4
 ------------------------
@@ -256,7 +256,7 @@ Nickname: @tolkv
 Name: Толкачёв Кирилл
 Img: https://pbs.twimg.com/profile_images/527856067313532928/8d_f7QNl_400x400.jpeg
 Location: Moscow, Russia
-Bio: 
+Bio:
 First Appearance (episode #): 76
 Total entries: 19
 ------------------------
