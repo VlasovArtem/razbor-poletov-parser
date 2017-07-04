@@ -30,47 +30,6 @@ public class FileUtils {
         this.objectMapper = objectMapper;
     }
 
-
-//    /**
-//     * Save object to the provided file
-//     *
-//     * @param objects Map of the objects
-//     */
-//    public void save(Map<String, Optional> objects) {
-//        for (String s : objects.keySet()) {
-//            save(objects.get(s), s);
-//        }
-//    }
-//
-//    /**
-//     * Save provided object to the file
-//     *
-//     * @param optional Object
-//     * @param filename filename of the file into which object will be saved.
-//     */
-//    public void save(Optional<?> optional, String filename) {
-//        if (!optional.isPresent() && filename == null) {
-//            LOGGER.info(String.format("Persistence data or filename is empty (%s)", optional.get().getClass().getSimpleName()));
-//            return;
-//        }
-//        File file = new File(filename);
-//        try {
-//            if (!file.exists()) {
-//                file.createNewFile();
-//            }
-//            ObjectMapper mapper = new ObjectMapper();
-//            if (optional.get() instanceof ProjectStatistics && getClass().getResourceAsStream(Constants.PROJECT_STATISTICS_FILE) !=
-//                    null) {
-//                ProjectStatistics projectStatistics = (ProjectStatistics) optional.get();
-//                optional = Optional.of(updateProjectStatistics(projectStatistics));
-//            }
-//            mapper.writeValue(file, optional.get());
-//        } catch (IOException e) {
-//            LOGGER.warn(e.getMessage());
-//            e.printStackTrace();
-//        }
-//    }
-
     public void saveUsefulThingsToFile(List<UsefulThing> usefulThings) throws IOException {
         if (usefulThings == null) {
             LOGGER.info("Persisted useful things list is empty");
