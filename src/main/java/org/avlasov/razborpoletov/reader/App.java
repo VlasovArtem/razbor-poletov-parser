@@ -16,12 +16,14 @@ import org.avlasov.razborpoletov.reader.parser.data.ConferenceParser;
 import org.avlasov.razborpoletov.reader.parser.data.FileParser;
 import org.avlasov.razborpoletov.reader.parser.data.UsefulThingParser;
 import org.avlasov.razborpoletov.reader.parser.statistic.StatisticParser;
+import org.avlasov.razborpoletov.reader.service.PodcastLinkService;
 import org.avlasov.razborpoletov.reader.service.UserStatisticService;
 import org.avlasov.razborpoletov.reader.utils.CLIUtils;
 import org.avlasov.razborpoletov.reader.utils.FileUtils;
 import org.avlasov.razborpoletov.reader.utils.PodcastFolderUtils;
 import org.eclipse.jgit.api.PullResult;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.File;
@@ -41,25 +43,28 @@ class App {
     private static final Logger LOGGER = LogManager.getLogger(App.class);
     private static final int MIN_SIZE_OF_A_PODCAST_NUMBER_SIZE = 2;
     private CommandLine commandLine;
-    private final FileParser fileParser;
     private final AnnotationConfigApplicationContext applicationContext;
+    private final FileParser fileParser;
     private final FileUtils fileUtils;
 
-    public App(AnnotationConfigApplicationContext applicationContext, String[] args) throws IOException, URISyntaxException {
-        this.applicationContext = applicationContext;
-        this.commandLine = getCommandLine(args);
-        fileParser = applicationContext.getBean(FileParser.class, commandLine.getOptionValue("g"), applicationContext.getBean(PodcastFolderUtils.class));
+    public App(String[] args) throws IOException, URISyntaxException {
+        DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
+        defaultListableBeanFactory.registerSingleton("commandLine", getCommandLine(args));
+        applicationContext = new AnnotationConfigApplicationContext(defaultListableBeanFactory);
+        applicationContext.register(AppConfig.class);
+        applicationContext.refresh();
+        fileParser = applicationContext.getBean(FileParser.class);
         fileUtils = applicationContext.getBean(FileUtils.class);
     }
 
     public static void main(String[] args) throws IOException, URISyntaxException, GitAPIException {
-        App app = new App(new AnnotationConfigApplicationContext(AppConfig.class), args);
+        App app = new App(args);
         app.validateData();
         app.parseData();
     }
 
     private CommandLine getCommandLine(String[] args) {
-        CLIUtils cliUtils = applicationContext.getBean(CLIUtils.class, new Object[]{args});
+        CLIUtils cliUtils = new CLIUtils(args);
         try {
             commandLine = cliUtils.createCommandLine();
         } catch (ParseException e) {
@@ -73,12 +78,14 @@ class App {
             cliUtils.printHelp();
             System.exit(0);
         }
-        try {
-            CreatorsGuestsArg.valueOf(commandLine.getOptionValue("cg").toUpperCase());
-        } catch (IllegalArgumentException e) {
-            LOGGER.error("cg argument value is not valid");
-            cliUtils.printHelp();
-            System.exit(0);
+        if (commandLine.hasOption("cg")) {
+            try {
+                CreatorsGuestsArg.valueOf(commandLine.getOptionValue("cg").toUpperCase());
+            } catch (IllegalArgumentException e) {
+                LOGGER.error("cg argument value is not valid");
+                cliUtils.printHelp();
+                System.exit(0);
+            }
         }
         return commandLine;
     }
@@ -214,6 +221,12 @@ class App {
                 .collect(Collectors.toList()));
     }
 
+    private void parsePodcastLinksData(List<File> files) {
+        Boolean append = Boolean.valueOf(commandLine.getOptionValue("k"));
+        PodcastLinkService bean = applicationContext.getBean(PodcastLinkService.class);
+        bean.savePodcastLinksToJson(bean.parsePodcastLinks(files), append);
+    }
+
     private List<Conference> parseConferences(List<File> files) throws IOException, URISyntaxException {
         ConferenceParser conferenceParser = applicationContext.getBean(ConferenceParser.class);
         return conferenceParser.parse(files, false);
@@ -258,6 +271,8 @@ class App {
                     saveProjectStatistics(parseProjectStatistics(files));
                 } else if (option.getOpt().equals("u")) {
                     saveUsefulThings(parseUsefulThings(files));
+                } else if (option.getOpt().equals("k")) {
+                    parsePodcastLinksData(files);
                 }
             }
         }
