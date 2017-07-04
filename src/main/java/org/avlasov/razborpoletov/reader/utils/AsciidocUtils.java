@@ -1,0 +1,114 @@
+package org.avlasov.razborpoletov.reader.utils;
+
+import org.asciidoctor.Asciidoctor;
+import org.asciidoctor.ast.ContentPart;
+import org.asciidoctor.ast.StructuredDocument;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Collector;
+import org.jsoup.select.Elements;
+import org.jsoup.select.Evaluator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+/**
+ * Created by artemvlasov on 26/04/15.
+ */
+public class AsciidocUtils {
+    private static final Asciidoctor asciidoctor = Asciidoctor.Factory.create();
+    private static final Logger LOG = LoggerFactory.getLogger(AsciidocUtils.class);
+    private static final String[] TWITTER_PART_NAME = new String[] {"_twitter", "_Гости_и_участники"};
+    private static final List<String> DOCUMENT_IDS = Arrays.asList(".?полезняшк.?", ".?конференци.?");
+
+
+    public static StructuredDocument parseDocument(File file) {
+        return asciidoctor.readDocumentStructure(file, new HashMap<>());
+    }
+
+    public static List<Document> parseTwitterPart(File file) {
+        StructuredDocument document = asciidoctor.readDocumentStructure(file, new HashMap<>());
+        return document
+                .getParts()
+                .stream()
+                .filter(p -> p.getContent().contains("twitter"))
+                .map(contentPart -> Jsoup.parse(contentPart.getContent()))
+                .collect(Collectors.toList());
+    }
+
+    public static Optional<Element> parsePartById(File file, String partId) {
+        if(Objects.isNull(partId)) {
+            throw new NullPointerException("part id cannot be null");
+        }
+        Optional<String> id = DOCUMENT_IDS.stream()
+                .filter(docId -> matchText(docId, partId))
+                .findFirst();
+        if (id.isPresent()) {
+            String patternId = id.orElseThrow(() -> new IllegalArgumentException("Incorrect part id"));
+            List<ContentPart> parts = asciidoctor.readDocumentStructure(file, new HashMap<>()).getParts();
+            Optional<ContentPart> contentPart = parts.stream()
+                    .filter(filePart -> Objects.nonNull(filePart.getId()) &&
+                            matchText(patternId, filePart.getId()))
+                    .findFirst();
+            if (contentPart.isPresent()) {
+                return Optional.ofNullable(Jsoup.parse(contentPart.get().getContent()));
+            } else {
+                Optional<Element> requiredDocumentPart = parts
+                        .stream()
+                        .map(data -> findContentPartWithId(data, patternId))
+                        .filter(Objects::nonNull)
+                        .findFirst();
+                if (!requiredDocumentPart.isPresent())
+                    LOG.info("Document {} has no {} part", file.getName(), partId);
+                return requiredDocumentPart;
+            }
+        }
+        return Optional.empty();
+    }
+
+    private static boolean matchText(String pattern, String text) {
+        return Objects.nonNull(pattern) &&
+                Objects.nonNull(text) &&
+                Pattern.compile(pattern, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE).matcher(text).matches();
+    }
+
+    private static Element findContentPartWithId(ContentPart contentPart, String patternId) {
+        Document parse = Jsoup.parse(contentPart.getContent());
+        Elements data = Collector.collect(new MatchesId(patternId), parse);
+        if (!data.isEmpty()) {
+            Element element = data.get(0);
+            if (element.tag().getName().matches("h[1-6]")) {
+                return element.parent();
+            }
+            return element;
+        }
+        return null;
+    }
+
+    private final static class MatchesId extends Evaluator {
+        private String patternId;
+
+        public MatchesId(String patternId) {
+            this.patternId = patternId;
+        }
+
+        @Override
+        public boolean matches(Element root, Element element) {
+            return matchText(patternId, element.id());
+        }
+
+        @Override
+        public String toString() {
+            return String.format("#%s", patternId);
+        }
+    }
+
+
+
+
+}
