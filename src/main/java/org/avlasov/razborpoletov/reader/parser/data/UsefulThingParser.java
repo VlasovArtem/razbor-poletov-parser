@@ -4,8 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.avlasov.razborpoletov.reader.utils.Constants;
-import org.avlasov.razborpoletov.reader.utils.UrlUtils;
+import org.avlasov.razborpoletov.reader.entity.info.UsefulThing;
+import org.avlasov.razborpoletov.reader.utils.*;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,10 +13,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.avlasov.razborpoletov.reader.entity.info.UsefulThing;
-import org.avlasov.razborpoletov.reader.utils.AsciidocUtils;
-import org.avlasov.razborpoletov.reader.utils.MarkdownUtils;
-import org.avlasov.razborpoletov.reader.utils.PodcastFileUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -44,27 +40,29 @@ public class UsefulThingParser implements Parser {
             URISyntaxException {
         List<UsefulThing> usefulThings = new ArrayList<>();
         for (File file : files) {
-            if(Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName())) {
-                if(asciidocOnly) {
-                    usefulThings.addAll(parseAsciidoc(file));
-                } else {
-                    switch (FilenameUtils.getExtension(file.getName())) {
-                        case Constants.ASCII_DOC:
-                            AsciidocUtils.parsePartById(file, "Полезняшки")
-                                    .ifPresent(document1 ->
-                                            usefulThings.addAll(
-                                                    parse(document1.getElementsByTag("a"), PodcastFileUtils.getPodcastId(file))));
-                            break;
-                        case Constants.MARKDOWN_FORMAT:
-                            Document parse = Jsoup.parse(MarkdownUtils.parseToHtml(file));
-                            long podcastId = PodcastFileUtils.getPodcastId(file);
-                            if (Objects.nonNull(parse) && podcastId > 0) {
-                                usefulThings.addAll(parse(parse, podcastId));
-                            }
-                            break;
-                        case Constants.HTML:
-                            usefulThings.addAll(parse(file));
-                            break;
+            Integer podcastId = PodcastFileUtils.getPodcastId(file).orElse(-999);
+            if (podcastId >= 0) {
+                if (Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName())) {
+                    if (asciidocOnly) {
+                        usefulThings.addAll(parseAsciidoc(file));
+                    } else {
+                        switch (FilenameUtils.getExtension(file.getName())) {
+                            case Constants.ASCII_DOC:
+                                AsciidocUtils.parsePartById(file, "Полезняшки")
+                                        .ifPresent(document1 ->
+                                                usefulThings.addAll(
+                                                        parse(document1.getElementsByTag("a"), podcastId)));
+                                break;
+                            case Constants.MARKDOWN_FORMAT:
+                                Document parse = Jsoup.parse(MarkdownUtils.parseToHtml(file));
+                                if (Objects.nonNull(parse)) {
+                                    usefulThings.addAll(parse(parse, podcastId));
+                                }
+                                break;
+                            case Constants.HTML:
+                                usefulThings.addAll(parse(file));
+                                break;
+                        }
                     }
                 }
             }
@@ -78,48 +76,56 @@ public class UsefulThingParser implements Parser {
         if(matcher.matches()) {
             return parseAsciidoc(file);
         }
-        return parse(Jsoup.parse(file, "UTF-8"), PodcastFileUtils.getPodcastId(file));
+        return parse(Jsoup.parse(file, "UTF-8"), PodcastFileUtils.getPodcastId(file).orElse(-999));
     }
+
     public List<UsefulThing> parseAsciidoc(File file) throws IOException, URISyntaxException {
         return AsciidocUtils.parsePartById(file, "_Полезняшки")
                 .map(conferenceDocument -> parse(conferenceDocument.getElementsByTag("a"), PodcastFileUtils.getPodcastId
-                        (file)))
+                        (file).orElse(-999)))
                 .orElse(Collections.emptyList());
     }
+
     private List<UsefulThing> parse(Document document, long podcastId) throws IOException, URISyntaxException {
-        String html = document.html();
-        Elements elements = null;
-        if(html.contains("Полезняшка") || html.contains("Полезняшки")) {
-            for(Element element : document.getElementsByTag("li")) {
-                if(element.text().contains("Полезняшка") || element.text().contains("Полезняшки")) {
-                    elements = element.getElementsByTag("a");
+        if (Objects.nonNull(document) && podcastId >= 0) {
+            String html = document.html();
+            Elements elements = null;
+            if (html.contains("Полезняшка") || html.contains("Полезняшки")) {
+                for (Element element : document.getElementsByTag("li")) {
+                    if (element.text().contains("Полезняшка") || element.text().contains("Полезняшки")) {
+                        elements = element.getElementsByTag("a");
+                    }
                 }
             }
+            return parse(elements, podcastId);
         }
-        return elements != null ? parse(elements, podcastId) : Collections.emptyList();
+        return Collections.emptyList();
     }
 
     private List<UsefulThing> parse(Elements elements, long podcastId) {
-        List<UsefulThing> usefulStuffs = new ArrayList<>();
-        for(Element element : elements) {
-            String url = element.attributes().get("href");
-            int responseCode;
-            responseCode = UrlUtils.checkUrlStatus(url);
-            if("http://razbor-poletov.com".equals(url)) {
-                return usefulStuffs;
-            }
-            if(!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(responseCode)) && !url.contains("razbor-poletov")) {
-                try {
-                    usefulStuffs.add(setUsefulThingContent(url, podcastId));
-                } catch (IOException | URISyntaxException e) {
-                    e.printStackTrace();
-                    LOG.info(e.getMessage());
+        if (Objects.nonNull(elements) && podcastId >= 0) {
+            List<UsefulThing> usefulStuffs = new ArrayList<>();
+            for (Element element : elements) {
+                String url = element.attributes().get("href");
+                int responseCode;
+                responseCode = UrlUtils.checkUrlStatus(url);
+                if ("http://razbor-poletov.com".equals(url)) {
+                    return usefulStuffs;
                 }
-            } else {
-                LOG.info("Url {} return error with status {}", url, responseCode);
+                if (!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(responseCode)) && !url.contains("razbor-poletov")) {
+                    try {
+                        usefulStuffs.add(setUsefulThingContent(url, podcastId));
+                    } catch (IOException | URISyntaxException e) {
+                        e.printStackTrace();
+                        LOG.info(e.getMessage());
+                    }
+                } else {
+                    LOG.info("Url {} return error with status {}", url, responseCode);
+                }
             }
+            return usefulStuffs;
         }
-        return usefulStuffs;
+        return Collections.emptyList();
     }
 
     /**
@@ -137,7 +143,6 @@ public class UsefulThingParser implements Parser {
     /**
      * Set data to entity UsefulThing name, ulr, tags and description. If url is not github url it will create name
      * from the url and get description of the project from github.
-     * @param usefulThing
      * @param url
      * @throws IOException
      * @throws URISyntaxException

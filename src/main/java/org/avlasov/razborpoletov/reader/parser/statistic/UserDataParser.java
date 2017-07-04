@@ -46,14 +46,16 @@ public class UserDataParser {
     private List<User> parserTwitterAccountInformation(List<File> files) {
         try {
             for (File file : files) {
-                int podcastId = PodcastFileUtils.getPodcastId(file);
-                LOGGER.info("Start parsing {}", file.getName());
-                List<User> users = parseTwitter(getHtmlDocument(file), podcastId);
-                if (Objects.isNull(users)) {
-                    LOGGER.info("File {} twitter parsing is unsuccessful", file);
-                } else {
-                    LOGGER.info("New twitter accounts found in podcast {}", users.stream().map(User::getTwitterAccount).collect(Collectors.joining(", ")));
-                    countTwitter(users, podcastId);
+                Optional<Integer> podcastId = PodcastFileUtils.getPodcastId(file);
+                if (podcastId.isPresent()) {
+                    LOGGER.info("Start parsing {}", file.getName());
+                    List<User> users = parseTwitter(getHtmlDocument(file), podcastId.get());
+                    if (Objects.isNull(users)) {
+                        LOGGER.info("File {} twitter parsing is unsuccessful", file);
+                    } else {
+                        LOGGER.info("New twitter accounts found in podcast {}", users.stream().map(User::getTwitterAccount).collect(Collectors.joining(", ")));
+                        countTwitter(users, podcastId.get());
+                    }
                 }
             }
             return users.stream().unordered().sorted().collect(Collectors.toList());
