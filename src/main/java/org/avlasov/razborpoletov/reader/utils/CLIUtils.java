@@ -1,17 +1,12 @@
 package org.avlasov.razborpoletov.reader.utils;
 
 import org.apache.commons.cli.*;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import java.io.PrintWriter;
 
 /**
  * Created by artemvlasov on 21/05/15.
  */
-@Component
-@Scope(scopeName = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class CLIUtils {
     private Options options;
     private String[] args;
@@ -23,6 +18,7 @@ public class CLIUtils {
         options.addOption(Option.builder("c").longOpt("conferences").desc("Parse conference data").build());
         options.addOption(Option.builder("u").longOpt("useful").desc("Parse useful things data").build());
         options.addOption(Option.builder("cg").longOpt("creators-guests").desc("Parse creators and guests from twitter accounts in podcast description, Possible values: all or update.").hasArg(true).numberOfArgs(1).build());
+        options.addOption(Option.builder("k").longOpt("links").desc("Parse links of the archive podcasts. This argument contains one arguments append - update or not to update existing file. true or 1 otherwise false. Use with batch, number or last otherwise it will parse all data.").hasArg(true).numberOfArgs(1).build());
         options.addOption(Option.builder("s").longOpt("statistic").desc("Parse statistic data").build());
         options.addOption(Option.builder("n").longOpt("number").desc("Parse specific podcast with set number").hasArg(true).numberOfArgs(1).build());
         options.addOption(Option.builder("b").longOpt("batch").desc("Specify list of podcast to parse, divided by comma or hypen. Example: 1,2 or 1-5").hasArg(true).build());
