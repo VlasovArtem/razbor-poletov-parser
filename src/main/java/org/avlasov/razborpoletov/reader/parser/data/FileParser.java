@@ -1,5 +1,6 @@
 package org.avlasov.razborpoletov.reader.parser.data;
 
+import org.apache.commons.cli.CommandLine;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.RegexFileFilter;
@@ -20,7 +21,6 @@ import java.util.regex.Pattern;
  * Created by artemvlasov on 20/04/15.
  */
 @Component
-@Scope(scopeName = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class FileParser {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(FileParser.class);
@@ -28,9 +28,9 @@ public class FileParser {
     private List<File> podcastsFiles;
 
     @Autowired
-    public FileParser(String postsFolder, PodcastFolderUtils podcastFolderUtils) throws IOException {
+    public FileParser(CommandLine commandLine, PodcastFolderUtils podcastFolderUtils) throws IOException {
         this.podcastFolderUtils = podcastFolderUtils;
-        podcastsFiles = this.podcastFolderUtils.collectPostsFolderPath(postsFolder);
+        podcastsFiles = this.podcastFolderUtils.collectPostsFolderPath(commandLine.getOptionValue("g"));
     }
 
     public List<File> getPodcastsFiles() {
