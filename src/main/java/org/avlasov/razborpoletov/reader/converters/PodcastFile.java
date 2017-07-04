@@ -65,7 +65,7 @@ public class PodcastFile {
         mp3Url = this.parser.getUrl(originalFile);
         this.originalFile = originalFile;
         mp3FileLength = this.parser.getMP3FileLenght(mp3Url);
-        id = PodcastFileUtils.getPodcastId(originalFile);
+        id = PodcastFileUtils.getPodcastId(originalFile).get();
         outputFilename = String.format("%s.adoc", FilenameUtils.getBaseName(originalFile
                 .getName()));
         outputFile = String.format("%s%s", INTERMEDIATE_FILES_FOLDER,
@@ -97,70 +97,6 @@ public class PodcastFile {
         }
     }
 
-    public File getOriginalFile() {
-        return originalFile;
-    }
-
-    public File getIntermediateConvertedFile() {
-        return intermediateConvertedFile;
-    }
-
-    public File getConvertedFileWithoutHtml() {
-        return convertedFileWithoutHtml;
-    }
-
-    public File getConvertedFileWithHtml() {
-        return convertedFileWithHtml;
-    }
-
-    public String getBasicElement() {
-        return basicElement;
-    }
-
-    public String getHtmlAudioTag() {
-        return htmlAudioTag;
-    }
-
-    public String getAsciidocAudioTag() {
-        return asciidocAudioTag;
-    }
-
-    public String getHtmlDonwloadTag() {
-        return htmlDonwloadTag;
-    }
-
-    public String getAsciidocDonwloadTag() {
-        return asciidocDonwloadTag;
-    }
-
-    public String getHtmlImageTag() {
-        return htmlImageTag;
-    }
-
-    public String getAsciidocImageTag() {
-        return asciidocImageTag;
-    }
-
-    public String getAsciidocWithoutHtml() {
-        return asciidocWithoutHtml;
-    }
-
-    public void setAsciidocWithoutHtml(String asciidocWithoutHtml) {
-        this.asciidocWithoutHtml = asciidocWithoutHtml;
-    }
-
-    public String getAsciidocWithHtml() {
-        return asciidocWithHtml;
-    }
-
-    public void setAsciidocWithHtml(String asciidocWithHtml) {
-        this.asciidocWithHtml = asciidocWithHtml;
-    }
-
-    public String getOutputFile() {
-        return outputFile;
-    }
-
     private static class BasicElement {
         private static List<String> getBasicElement(File file) throws IOException {
             List<String> basicElementParts = new ArrayList<>();
@@ -183,21 +119,21 @@ public class PodcastFile {
             return basicElementParts;
         }
         private static String getPartContent(List<String> basicElementParts, String pattern) {
-            String part = basicElementParts
+            Optional<String> partOptional = basicElementParts
                     .stream()
                     .filter(p -> Pattern.compile(pattern).matcher(p).matches())
-                    .findFirst()
-                    .get();
-            if(part == null) {
-                part = "none";
-            } else if(TITLE_PATTERN.equals(pattern)) {
-                part = part.split(" ", 2)[1].replaceAll("\"", "");
-            } else if(DATE_PATTERN.equals(pattern)) {
-                part = part.split(" ", 2)[1];
+                    .findFirst();
+            if (partOptional.isPresent()) {
+                if(TITLE_PATTERN.equals(pattern)) {
+                    return partOptional.get().split(" ", 2)[1].replaceAll("\"", "");
+                } else if(DATE_PATTERN.equals(pattern)) {
+                    return partOptional.get().split(" ", 2)[1];
+                } else {
+                    return "undefined";
+                }
             } else {
-                part = "undefined";
+                return "none";
             }
-            return part;
         }
     }
     private String getImageUrl() throws IOException {
