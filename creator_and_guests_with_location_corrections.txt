@@ -275,8 +275,8 @@ Name: Dmitry Churbanov
 Img: https://pbs.twimg.com/profile_images/1046800575/me-2010-05-25_400x400.jpeg
 Location: Bay Area, California, USA
 Bio: Happy husband, father and Googler
-First Appearance (episode #): 48
-Total entries: 29
+First Appearance (episode #): 6
+Total entries: 50
 ------------------------
 Twitter: https://twitter.com/antonarhipov
 Nickname: @antonarhipov

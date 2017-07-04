@@ -217,3 +217,1095 @@
 [INFO ] 2015-12-29 14:29:05,994 razborpoletov.reader.parsers.StatisticParser - Parse 2015-12-06-episode-97.adoc statistic
 [INFO ] 2015-12-29 14:29:52,095 razborpoletov.reader.parsers.StatisticParser - Parse 2015-12-19-episode-98.adoc statistic
 [INFO ] 2015-12-29 14:30:07,961 razborpoletov.reader.parsers.StatisticParser - Parse 2015-12-27-episode-99.adoc statistic
+[INFO ] 2016-01-04 10:49:08,717 razborpoletov.reader.parsers.StatisticParser - Parse 2011-11-16-episode-0-pilot.html statistic
+[WARN ] 2016-02-29 11:29:45,621 razborpoletov.reader.App - Properties file is not exists
+[WARN ] 2016-02-29 11:30:43,336 razborpoletov.reader.App - Properties file is not exists
+[WARN ] 2016-02-29 11:32:22,225 razborpoletov.reader.App - Properties file is not exists
+[WARN ] 2016-02-29 11:33:36,305 razborpoletov.reader.App - Properties file is not exists
+[INFO ] 2016-02-29 11:34:13,812 razborpoletov.reader.App - All podcasts are parsed
+[INFO ] 2016-02-29 11:35:03,043 razborpoletov.reader.utils.UrlUtils - http://www.sortd.com/ url has no github links
+[INFO ] 2016-02-29 11:35:04,119 razborpoletov.reader.utils.UrlUtils - https://www.hashtagtodo.com/index.html url has no github links
+[WARN ] 2016-02-29 11:35:09,752 razborpoletov.reader.utils.UrlUtils - http://radar.oreilly.com/2015/10/swarm-v-fleet-v-kubernetes-v-mesos.html url contains more than one github links: [https://github.com/docker/swarm, https://github.com/coreos/fleet]
+[WARN ] 2016-02-29 11:35:15,914 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/zeroturnaround/configo/releases/tag/v0.1.0 is not found
+[WARN ] 2016-02-29 11:35:16,347 razborpoletov.reader.parsers.UsefulThingParser - https://github.com/zeroturnaround/configo/releases/tag/v0.1.0 url not contains html body
+[INFO ] 2016-02-29 11:35:21,541 razborpoletov.reader.parsers.UsefulThingParser - Url https://rnorth.org/24/junit-integration-testing-with-docker-and-testcontainers return error with status 403
+[INFO ] 2016-02-29 11:35:23,841 razborpoletov.reader.utils.UrlUtils - http://javaby.github.io/awesome-kotlin/ url has no github links
+[INFO ] 2016-02-29 11:35:31,406 razborpoletov.reader.utils.AsciidocUtils - Document 2016-02-24-episode-103.adoc has no _Полезняшки part
+[INFO ] 2016-06-17 12:01:44,183 razborpoletov.reader.utils.UrlUtils - http://www.annotatiomania.com/ url has no github links
+[INFO ] 2016-06-17 12:01:47,061 razborpoletov.reader.utils.UrlUtils - https://beta.docker.com/ url has no github links
+[INFO ] 2016-06-17 12:01:47,959 razborpoletov.reader.utils.UrlUtils - http://pissed.pro/index.html url has no github links
+[INFO ] 2016-06-17 12:02:53,915 razborpoletov.reader.parsers.UsefulThingParser - Url http://mcst.ru/ return error with status 403
+[INFO ] 2016-06-17 12:02:55,301 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=PUNJ_tkq2hk&feature=youtu.be url has no github links
+[WARN ] 2016-06-17 12:03:00,580 razborpoletov.reader.utils.UrlUtils - http://concourse.ci/ url contains more than one github links: [https://github.com/concourse/concourse, https://github.com/orgs/concourse]
+[INFO ] 2016-06-17 12:03:01,519 razborpoletov.reader.parsers.UsefulThingParser - Url http://www.microservicesweekly.com/ return error with status 405
+[INFO ] 2016-06-17 12:03:06,346 razborpoletov.reader.utils.AsciidocUtils - Document 2016-04-24-episode-108.adoc has no _Полезняшки part
+[INFO ] 2016-06-17 12:03:10,229 razborpoletov.reader.utils.UrlUtils - http://codepipes.com/presentations/spock-vs-junit.pdf url has no github links
+[INFO ] 2016-06-17 12:03:10,609 razborpoletov.reader.parsers.UsefulThingParser - Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml
+[INFO ] 2016-06-17 12:03:11,381 razborpoletov.reader.utils.UrlUtils - http://blog.jetbrains.com/kotlin/2016/03/kotlin-educational-plugin/ url has no github links
+[WARN ] 2016-06-17 12:03:13,372 razborpoletov.reader.utils.UrlUtils - sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[INFO ] 2016-06-17 12:03:13,372 razborpoletov.reader.parsers.UsefulThingParser - Url https://www.clammr.com/ return error with status 0
+[WARN ] 2016-06-17 12:03:15,430 razborpoletov.reader.utils.UrlUtils - http://mikepilone.blogspot.ru/2016/04/distributed-task-coordination-with.html url contains more than one github links: [https://github.com/Netflix/eureka, https://github.com/coreos/etcd]
+[INFO ] 2016-06-17 12:18:35,587 razborpoletov.reader.utils.UrlUtils - http://www.annotatiomania.com/ url has no github links
+[INFO ] 2016-06-17 12:18:37,669 razborpoletov.reader.utils.UrlUtils - https://beta.docker.com/ url has no github links
+[INFO ] 2016-06-17 12:18:39,115 razborpoletov.reader.utils.UrlUtils - http://pissed.pro/index.html url has no github links
+[INFO ] 2016-06-17 12:20:03,810 razborpoletov.reader.parsers.UsefulThingParser - Url http://mcst.ru/ return error with status 403
+[INFO ] 2016-06-17 12:20:04,584 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=PUNJ_tkq2hk&feature=youtu.be url has no github links
+[WARN ] 2016-06-17 12:20:10,769 razborpoletov.reader.utils.UrlUtils - http://concourse.ci/ url contains more than one github links: [https://github.com/concourse/concourse, https://github.com/orgs/concourse]
+[INFO ] 2016-06-17 12:20:11,307 razborpoletov.reader.parsers.UsefulThingParser - Url http://www.microservicesweekly.com/ return error with status 405
+[INFO ] 2016-06-17 12:20:16,828 razborpoletov.reader.utils.AsciidocUtils - Document 2016-04-24-episode-108.adoc has no _Полезняшки part
+[INFO ] 2016-06-17 12:20:22,495 razborpoletov.reader.utils.UrlUtils - http://codepipes.com/presentations/spock-vs-junit.pdf url has no github links
+[INFO ] 2016-06-17 12:20:23,276 razborpoletov.reader.parsers.UsefulThingParser - Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml
+[INFO ] 2016-06-17 12:20:24,056 razborpoletov.reader.utils.UrlUtils - http://blog.jetbrains.com/kotlin/2016/03/kotlin-educational-plugin/ url has no github links
+[WARN ] 2016-06-17 12:20:25,469 razborpoletov.reader.utils.UrlUtils - sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[INFO ] 2016-06-17 12:20:25,469 razborpoletov.reader.parsers.UsefulThingParser - Url https://www.clammr.com/ return error with status 0
+[WARN ] 2016-06-17 12:20:27,494 razborpoletov.reader.utils.UrlUtils - http://mikepilone.blogspot.ru/2016/04/distributed-task-coordination-with.html url contains more than one github links: [https://github.com/Netflix/eureka, https://github.com/coreos/etcd]
+[INFO ] 2016-06-17 12:25:13,165 razborpoletov.reader.utils.UrlUtils - http://www.annotatiomania.com/ url has no github links
+[INFO ] 2016-06-17 12:25:16,091 razborpoletov.reader.utils.UrlUtils - https://beta.docker.com/ url has no github links
+[INFO ] 2016-06-17 12:25:17,360 razborpoletov.reader.utils.UrlUtils - http://pissed.pro/index.html url has no github links
+[INFO ] 2016-06-17 12:26:22,962 razborpoletov.reader.parsers.UsefulThingParser - Url http://mcst.ru/ return error with status 403
+[INFO ] 2016-06-17 12:26:23,811 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=PUNJ_tkq2hk&feature=youtu.be url has no github links
+[WARN ] 2016-06-17 12:26:28,124 razborpoletov.reader.utils.UrlUtils - http://concourse.ci/ url contains more than one github links: [https://github.com/concourse/concourse, https://github.com/orgs/concourse]
+[INFO ] 2016-06-17 12:26:29,044 razborpoletov.reader.parsers.UsefulThingParser - Url http://www.microservicesweekly.com/ return error with status 405
+[INFO ] 2016-06-17 12:26:33,156 razborpoletov.reader.utils.AsciidocUtils - Document 2016-04-24-episode-108.adoc has no _Полезняшки part
+[INFO ] 2016-06-17 12:26:44,966 razborpoletov.reader.utils.UrlUtils - http://codepipes.com/presentations/spock-vs-junit.pdf url has no github links
+[INFO ] 2016-06-17 12:26:45,724 razborpoletov.reader.parsers.UsefulThingParser - Unhandled content type. Must be text/*, application/xml, or application/xhtml+xml
+[INFO ] 2016-06-17 12:26:46,468 razborpoletov.reader.utils.UrlUtils - http://blog.jetbrains.com/kotlin/2016/03/kotlin-educational-plugin/ url has no github links
+[WARN ] 2016-06-17 12:26:48,000 razborpoletov.reader.utils.UrlUtils - sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[INFO ] 2016-06-17 12:26:48,000 razborpoletov.reader.parsers.UsefulThingParser - Url https://www.clammr.com/ return error with status 0
+[WARN ] 2016-06-17 12:26:49,121 razborpoletov.reader.utils.UrlUtils - http://mikepilone.blogspot.ru/2016/04/distributed-task-coordination-with.html url contains more than one github links: [https://github.com/Netflix/eureka, https://github.com/coreos/etcd]
+[WARN ] 2016-06-17 12:26:50,937 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/integrations/gitkraken is not found
+[WARN ] 2016-06-17 12:26:51,340 razborpoletov.reader.parsers.UsefulThingParser - https://github.com/integrations/gitkraken url not contains html body
+[INFO ] 2016-06-17 12:26:53,822 razborpoletov.reader.utils.UrlUtils - https://www.alfredapp.com/blog/announcements/alfred-3-is-here/ url has no github links
+[INFO ] 2016-06-17 12:27:55,532 razborpoletov.reader.parsers.UsefulThingParser - Url http://ostagram.ru/static_pages/lenta?client_id=7551&locale=ru return error with status 504
+[INFO ] 2016-06-17 12:27:56,344 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2016-11-06 22:18:37,822 razborpoletov.reader.parsers.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2016-11-06 22:18:38,186 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2016-11-06 22:18:38,697 razborpoletov.reader.parsers.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2016-11-06 22:18:41,214 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2016-11-06 22:18:44,071 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2016-11-06 22:18:45,282 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2016-11-06 22:18:48,343 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2016-11-06 22:18:51,645 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2016-11-06 22:18:57,312 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2016-11-06 22:18:58,987 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2016-11-06 22:19:01,533 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[INFO ] 2016-11-06 22:19:03,465 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920037545.do url has no github links
+[WARN ] 2016-11-06 22:19:05,378 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2016-11-06 22:19:05,795 razborpoletov.reader.parsers.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2016-11-06 22:19:06,162 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2016-11-06 22:19:07,075 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2016-11-06 22:19:09,221 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2016-11-06 22:19:11,662 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2016-11-06 22:19:13,289 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2016-11-06 22:19:15,124 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2016-11-06 22:20:31,252 razborpoletov.reader.parsers.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2016-11-06 22:20:31,623 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2016-11-06 22:20:32,067 razborpoletov.reader.parsers.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2016-11-06 22:20:34,617 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2016-11-06 22:20:36,781 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2016-11-06 22:20:37,932 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2016-11-06 22:20:40,996 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2016-11-06 22:20:43,467 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2016-11-06 22:20:48,476 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2016-11-06 22:20:50,141 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2016-11-06 22:20:52,543 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[INFO ] 2016-11-06 22:20:54,140 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920037545.do url has no github links
+[WARN ] 2016-11-06 22:20:55,944 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2016-11-06 22:20:56,353 razborpoletov.reader.parsers.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2016-11-06 22:20:56,512 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2016-11-06 22:20:57,523 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2016-11-06 22:20:59,470 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2016-11-06 22:21:01,961 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2016-11-06 22:21:03,350 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2016-11-06 22:21:04,745 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2016-11-06 22:21:07,302 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2016-11-06 22:21:10,236 razborpoletov.reader.parsers.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2016-11-06 22:21:10,429 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2016-11-06 22:21:10,489 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2016-11-06 22:21:16,655 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-23 11:21:36,707 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 11:38:52,261 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 11:40:08,958 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 11:42:07,015 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 11:42:55,436 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 11:43:00,924 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:43:10,469 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-23 11:43:11,074 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-23 11:43:11,713 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-23 11:43:15,955 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-23 11:43:19,386 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-23 11:43:20,477 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-23 11:43:22,830 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-23 11:43:24,966 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-23 11:43:30,662 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-23 11:43:32,856 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-23 11:43:36,251 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-23 11:43:38,050 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-23 11:43:39,611 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-23 11:43:40,150 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-23 11:43:40,541 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-23 11:43:41,816 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-23 11:43:45,240 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-23 11:43:47,886 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-23 11:43:49,204 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-23 11:43:51,331 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-23 11:43:53,072 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-23 11:43:56,123 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-23 11:43:56,324 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:43:56,389 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 11:44:01,142 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-23 11:44:07,915 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-23 11:44:10,221 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-23 11:44:10,946 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-23 11:44:13,693 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-23 11:44:14,582 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-23 11:44:19,607 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-23 11:44:19,609 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-23 11:44:20,168 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-23 11:44:21,736 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-23 11:44:23,772 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-23 11:44:28,454 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 11:44:28,925 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-23 11:44:30,034 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-23 11:44:31,070 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:32,077 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-23 11:44:32,685 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-23 11:44:35,986 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-23 11:44:37,042 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:37,088 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:37,165 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:37,219 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:37,532 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-23 11:44:38,016 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:38,076 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:38,122 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:38,185 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:38,269 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:38,333 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 11:44:38,392 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:40:17,837 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 20:40:22,105 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:40:32,411 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-23 20:40:33,083 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-23 20:40:33,701 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-23 20:40:38,178 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-23 20:40:42,058 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-23 20:40:43,194 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-23 20:40:46,340 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-23 20:40:49,065 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-23 20:40:54,083 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-23 20:40:56,524 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-23 20:41:01,525 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-23 20:41:03,625 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-23 20:41:05,299 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-23 20:41:05,876 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-23 20:41:07,219 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-23 20:41:08,417 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-23 20:41:12,482 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-23 20:41:15,684 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-23 20:41:17,803 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-23 20:41:19,566 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-23 20:41:21,387 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-23 20:41:24,522 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-23 20:41:24,715 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:41:24,761 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 20:41:29,409 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-23 20:41:36,624 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-23 20:41:39,254 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-23 20:41:40,232 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-23 20:41:42,811 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-23 20:41:43,679 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-23 20:41:48,489 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-23 20:41:48,489 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-23 20:41:49,090 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-23 20:41:50,694 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-23 20:41:53,110 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-23 20:42:00,026 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 20:42:00,348 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-23 20:42:01,723 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-23 20:42:02,735 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:03,818 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-23 20:42:04,415 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-23 20:42:07,662 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-23 20:42:08,748 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:08,799 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:08,871 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:08,921 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,131 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-23 20:42:09,597 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,649 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,694 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,740 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,787 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,828 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:42:09,883 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:46:27,150 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 20:46:31,074 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:46:39,940 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-23 20:46:40,402 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-23 20:46:41,239 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-23 20:46:46,261 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-23 20:46:51,009 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-23 20:46:52,204 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-23 20:46:53,857 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-23 20:46:56,038 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-23 20:47:01,567 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-23 20:47:04,155 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-23 20:47:17,482 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-23 20:47:19,598 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-23 20:47:21,200 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-23 20:47:21,745 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-23 20:47:22,013 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-23 20:47:23,419 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-23 20:47:27,181 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-23 20:47:30,063 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-23 20:47:31,929 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-23 20:47:32,995 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-23 20:47:34,708 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-23 20:47:47,961 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-23 20:47:48,328 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:47:48,383 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 20:47:52,914 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-23 20:48:00,205 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-23 20:48:02,323 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-23 20:48:03,422 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-23 20:48:04,876 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-23 20:48:05,923 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-23 20:48:10,302 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-23 20:48:10,302 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-23 20:48:10,720 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-23 20:48:12,455 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-23 20:48:14,825 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-23 20:48:19,504 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 20:48:19,992 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-23 20:48:21,283 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-23 20:48:22,373 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:23,323 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-23 20:48:24,331 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-23 20:48:27,951 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-23 20:48:29,051 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,090 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,150 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,194 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,415 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-23 20:48:29,832 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,887 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,935 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:29,981 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:30,019 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:30,065 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:48:30,113 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:53:17,460 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-23 20:53:21,874 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:53:31,555 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-23 20:53:32,105 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-23 20:53:32,968 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-23 20:53:37,962 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-23 20:53:42,112 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-23 20:53:43,561 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-23 20:53:45,142 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-23 20:53:47,219 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-23 20:53:52,592 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-23 20:53:55,134 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-23 20:53:58,615 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-23 20:54:00,653 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-23 20:54:02,045 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-23 20:54:02,537 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-23 20:54:02,825 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-23 20:54:03,907 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-23 20:54:07,568 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-23 20:54:10,662 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-23 20:54:12,398 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-23 20:54:14,853 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-23 20:54:16,815 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-23 20:54:20,730 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-23 20:54:21,092 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:54:21,139 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 20:54:26,594 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-23 20:54:32,878 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-23 20:54:35,329 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-23 20:54:36,557 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-23 20:54:38,033 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-23 20:54:38,950 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-23 20:54:43,844 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-23 20:54:43,845 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-23 20:54:44,251 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-23 20:54:45,812 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-23 20:54:48,982 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-23 20:54:54,677 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Полезняшки part
+[WARN ] 2017-06-23 20:54:55,286 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-23 20:54:56,546 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-23 20:54:57,665 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:54:58,568 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-23 20:54:59,158 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-23 20:55:02,232 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-23 20:55:03,267 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:03,303 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:03,353 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:03,395 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:03,853 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-23 20:55:04,276 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:04,330 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:04,376 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:04,423 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:04,467 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:04,520 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Полезняшки part
+[INFO ] 2017-06-23 20:55:04,564 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,678 razborpoletov.reader.utils.AsciidocUtils - Document 2016-07-15-episode-113.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,731 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-06-episode-114.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,788 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-19-episode-115.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,832 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-03-episode-116.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,866 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,907 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,959 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-05-episode-119.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:04,997 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-17-episode-120.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,049 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-30-episode-121.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,084 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,154 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-18-episode-123.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,198 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,242 razborpoletov.reader.utils.AsciidocUtils - Document 2017-01-22-episode-125.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,291 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-11-episode-126.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,329 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,362 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,412 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,455 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,507 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-29-episode-131.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,549 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,614 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,656 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,700 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,746 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Конференции part
+[INFO ] 2017-06-23 20:55:05,785 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:56:04,266 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-24 15:56:09,241 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:56:19,507 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-24 15:56:19,985 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-24 15:56:20,625 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-24 15:56:29,040 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-24 15:56:32,912 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-24 15:56:34,425 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-24 15:56:37,271 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-24 15:56:40,030 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-24 15:56:45,392 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-24 15:56:48,091 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-24 15:56:52,304 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-24 15:56:54,262 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-24 15:56:55,835 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-24 15:56:56,327 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-24 15:56:56,671 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-24 15:56:58,130 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-24 15:57:02,058 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-24 15:57:04,611 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-24 15:57:06,070 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-24 15:57:08,490 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-24 15:57:10,258 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-24 15:57:13,568 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-24 15:57:13,798 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:13,871 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2017-06-24 15:57:18,542 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-24 15:57:24,779 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-24 15:57:27,257 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-24 15:57:28,039 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-24 15:57:29,507 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-24 15:57:30,473 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-24 15:57:34,419 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-24 15:57:34,419 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-24 15:57:34,874 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-24 15:57:36,478 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-24 15:57:38,852 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-24 15:57:43,817 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Полезняшки part
+[WARN ] 2017-06-24 15:57:44,328 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-24 15:57:45,610 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-24 15:57:46,646 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:47,756 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-24 15:57:48,402 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-24 15:57:51,573 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-24 15:57:52,544 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:52,602 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:52,697 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:52,755 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,226 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-24 15:57:53,593 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,656 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,718 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,772 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,822 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,869 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 15:57:53,919 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,059 razborpoletov.reader.utils.AsciidocUtils - Document 2016-07-15-episode-113.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,128 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-06-episode-114.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,193 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-19-episode-115.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,239 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-03-episode-116.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,279 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,333 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,394 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-05-episode-119.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,452 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-17-episode-120.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,510 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-30-episode-121.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,553 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,614 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-18-episode-123.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,660 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,712 razborpoletov.reader.utils.AsciidocUtils - Document 2017-01-22-episode-125.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,772 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-11-episode-126.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,824 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,863 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,933 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:54,991 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,062 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-29-episode-131.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,115 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,223 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,281 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,331 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,389 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Конференции part
+[INFO ] 2017-06-24 15:57:55,434 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:11:53,221 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-24 16:11:57,327 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:12:06,849 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-24 16:12:07,408 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-24 16:12:08,350 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-24 16:12:12,821 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-24 16:12:16,735 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-24 16:12:18,211 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-24 16:12:21,051 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-24 16:12:23,849 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-24 16:12:29,683 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-24 16:12:32,085 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-24 16:12:35,392 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-24 16:12:37,506 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-24 16:12:38,828 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-24 16:12:39,365 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-24 16:12:39,656 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-24 16:12:40,719 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-24 16:12:44,575 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-24 16:12:47,041 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-24 16:12:48,675 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-24 16:12:50,202 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-24 16:12:52,192 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-24 16:12:55,678 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-24 16:12:55,876 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:12:55,931 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Полезняшки part
+[WARN ] 2017-06-24 16:13:00,478 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-24 16:13:08,809 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-24 16:13:10,880 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-24 16:13:13,980 razborpoletov.reader.parser.UsefulThingParser - Read timed out
+[INFO ] 2017-06-24 16:13:54,626 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-24 16:13:56,091 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-24 16:13:56,999 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-24 16:14:02,006 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-24 16:14:02,007 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-24 16:14:02,363 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-24 16:14:05,015 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-24 16:14:07,638 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-24 16:14:12,708 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Полезняшки part
+[WARN ] 2017-06-24 16:14:13,282 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-24 16:14:14,466 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-24 16:14:15,501 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:16,567 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-24 16:14:17,278 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-24 16:14:20,679 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-24 16:14:21,869 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:21,907 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:21,961 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,001 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,178 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-24 16:14:22,559 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,621 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,670 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,722 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,769 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,814 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Полезняшки part
+[INFO ] 2017-06-24 16:14:22,856 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:22,982 razborpoletov.reader.utils.AsciidocUtils - Document 2016-07-15-episode-113.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,034 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-06-episode-114.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,101 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-19-episode-115.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,158 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-03-episode-116.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,200 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,246 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,298 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-05-episode-119.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,336 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-17-episode-120.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,391 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-30-episode-121.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,435 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,497 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-18-episode-123.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,548 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,602 razborpoletov.reader.utils.AsciidocUtils - Document 2017-01-22-episode-125.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,658 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-11-episode-126.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,700 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,736 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,788 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,836 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,896 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-29-episode-131.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:23,942 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:24,024 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:24,063 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:24,109 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:24,159 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Конференции part
+[INFO ] 2017-06-24 16:14:24,196 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Конференции part
+[INFO ] 2017-06-24 17:44:37,598 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no Полезняшки part
+[INFO ] 2017-06-24 17:44:40,005 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 18:37:28,114 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no Полезняшки part
+[INFO ] 2017-06-24 18:37:28,304 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 18:58:09,416 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 18:58:28,893 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 19:02:22,991 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 19:12:17,662 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 19:23:15,084 razborpoletov.reader.utils.UrlUtils - https://try.crashlytics.com url has no github links
+[INFO ] 2017-06-24 19:23:20,704 razborpoletov.reader.utils.UrlUtils - https://twitter.com/intellijidea/status/862961379329888256 url has no github links
+[INFO ] 2017-06-24 19:23:23,091 razborpoletov.reader.utils.UrlUtils - https://twitter.com/gAmUssA/status/859697461639733248 url has no github links
+[INFO ] 2017-06-24 19:23:25,027 razborpoletov.reader.utils.UrlUtils - https://twitter.com/ApacheGroovy/status/861924721453084672 url has no github links
+[WARN ] 2017-06-24 19:23:26,764 razborpoletov.reader.utils.UrlUtils - https://www.testcontainers.org url contains more than one github links: [https://github.com/testcontainers/testcontainers-java-examples, https://github.com/streamsets/datacollector, https://github.com/testcontainers/testcontainers-java]
+[WARN ] 2017-06-24 19:23:29,720 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/shrinkwrap is not found
+[INFO ] 2017-06-24 19:23:32,206 razborpoletov.reader.utils.UrlUtils - http://seleniumcamp.com/talk/testng-vs-junit-5-battle url has no github links
+[INFO ] 2017-06-24 19:23:34,212 razborpoletov.reader.parser.UsefulThingParser - Url https://isitonaws.com return error with status 403
+[INFO ] 2017-06-24 19:23:34,845 razborpoletov.reader.utils.UrlUtils - https://www.getpostman.com url has no github links
+[INFO ] 2017-06-24 19:23:35,559 razborpoletov.reader.utils.UrlUtils - https://insights.stackoverflow.com/trends url has no github links
+[INFO ] 2017-06-24 19:23:37,008 razborpoletov.reader.utils.UrlUtils - https://twitter.com/gAmUssA/status/854016716229283840 url has no github links
+[INFO ] 2017-06-24 19:23:37,928 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 19:24:17,204 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-24 19:24:21,404 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:24:30,846 razborpoletov.reader.parser.UsefulThingParser - Url http://my-netdata.io/ return error with status 403
+[WARN ] 2017-06-24 19:24:31,408 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/twitter/diffy/blob/master/README.md is not found
+[INFO ] 2017-06-24 19:24:32,068 razborpoletov.reader.parser.UsefulThingParser - Url http://requestdiff.com/ return error with status 403
+[INFO ] 2017-06-24 19:24:36,559 razborpoletov.reader.utils.UrlUtils - https://www.crowdsupply.com/ugl/ultimate-hacking-keyboard url has no github links
+[INFO ] 2017-06-24 19:24:41,046 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/post/246490/ url has no github links
+[INFO ] 2017-06-24 19:24:42,304 razborpoletov.reader.utils.UrlUtils - http://geektimes.ru/p/264734/ url has no github links
+[INFO ] 2017-06-24 19:24:45,229 razborpoletov.reader.utils.UrlUtils - https://www.pluralsight.com/courses/hazelcast-getting-started url has no github links
+[INFO ] 2017-06-24 19:24:47,921 razborpoletov.reader.utils.UrlUtils - http://shop.oreilly.com/product/0636920050872.do url has no github links
+[INFO ] 2017-06-24 19:24:54,166 razborpoletov.reader.utils.UrlUtils - http://www.lcpsoft.com/ url has no github links
+[WARN ] 2017-06-24 19:24:56,428 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/spotify/helios/blob/master/docs/helios_solo.md is not found
+[WARN ] 2017-06-24 19:24:59,784 razborpoletov.reader.utils.UrlUtils - https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/ url contains more than one github links: [https://github.com/spotify/moob, https://github.com/spotify/lingon, https://github.com/spotify/helios, https://github.com/spotify/duck, https://github.com/openstack/pyghmi]
+[WARN ] 2017-06-24 19:25:02,012 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/danveloper/learningratpack-code is not found
+[WARN ] 2017-06-24 19:25:03,376 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/linkedin/ambry/wiki is not found
+[WARN ] 2017-06-24 19:25:03,912 razborpoletov.reader.parser.UsefulThingParser - https://github.com/linkedin/ambry/wiki url not contains html body
+[INFO ] 2017-06-24 19:25:04,455 razborpoletov.reader.utils.UrlUtils - http://graphwalker.github.io/ url has no github links
+[INFO ] 2017-06-24 19:25:05,520 razborpoletov.reader.utils.UrlUtils - https://www.google.com/chromecast/ url has no github links
+[WARN ] 2017-06-24 19:25:08,779 razborpoletov.reader.utils.UrlUtils - Description for the github link https://github.com/tombujok/hazelcast-rxjava is not found
+[INFO ] 2017-06-24 19:25:11,513 razborpoletov.reader.utils.UrlUtils - https://dzone.com/articles/how-to-take-thread-dumps-7-options url has no github links
+[INFO ] 2017-06-24 19:25:14,167 razborpoletov.reader.utils.UrlUtils - http://www.java9countdown.xyz/ url has no github links
+[WARN ] 2017-06-24 19:25:16,754 razborpoletov.reader.utils.UrlUtils - https://blogs.oracle.com/OracleCoherence/entry/coherencerx_reactive_extensions_for_oracle url contains more than one github links: [https://github.com/ReactiveX/RxJava, https://github.com/coherence-community/coherence-rx]
+[INFO ] 2017-06-24 19:25:18,809 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=f4uXBpP_xxY&feature=share url has no github links
+[INFO ] 2017-06-24 19:25:22,329 razborpoletov.reader.parser.UsefulThingParser - Url https://www.netflix.com/title/80057281 return error with status 405
+[INFO ] 2017-06-24 19:25:22,707 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:25:22,775 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no Полезняшки part
+[WARN ] 2017-06-24 19:25:29,637 razborpoletov.reader.utils.UrlUtils - https://www.sitepoint.com/ultimate-guide-to-java-9 url contains more than one github links: [https://github.com/CodeFX-org/demo-java-9, https://github.com/reactive-streams/reactive-streams-jvm]
+[INFO ] 2017-06-24 19:25:35,328 razborpoletov.reader.parser.UsefulThingParser - Read timed out
+[INFO ] 2017-06-24 19:25:37,720 razborpoletov.reader.utils.UrlUtils - http://mactracker.ca url has no github links
+[INFO ] 2017-06-24 19:25:40,299 razborpoletov.reader.utils.UrlUtils - https://eshop.macsales.com/shop/Thunderbolt/Dock/OWC/Thunderbolt2-Dock/ url has no github links
+[INFO ] 2017-06-24 19:25:41,130 razborpoletov.reader.parser.UsefulThingParser - Url http://thewirecutter.com/reviews/best-thunderbolt-dock/ return error with status 403
+[INFO ] 2017-06-24 19:25:42,573 razborpoletov.reader.utils.UrlUtils - https://manytricks.com/moom/ url has no github links
+[INFO ] 2017-06-24 19:25:43,549 razborpoletov.reader.parser.UsefulThingParser - Url https://www.spectacleapp.com/ return error with status 403
+[WARN ] 2017-06-24 19:25:47,757 razborpoletov.reader.utils.UrlUtils - xn—​h1affdobp.xn—​p1ai
+[INFO ] 2017-06-24 19:25:47,757 razborpoletov.reader.parser.UsefulThingParser - Url http://xn—​h1affdobp.xn—​p1ai return error with status 0
+[INFO ] 2017-06-24 19:25:48,087 razborpoletov.reader.parser.UsefulThingParser - Url https://www.amazon.com/Pro-NET-Performance-Applications-Professional/dp/1430244585 return error with status 405
+[INFO ] 2017-06-24 19:25:49,630 razborpoletov.reader.utils.UrlUtils - https://blogs.msdn.microsoft.com/maoni/ url has no github links
+[INFO ] 2017-06-24 19:25:52,206 razborpoletov.reader.utils.UrlUtils - https://www.jetbrains.com/rider/ url has no github links
+[INFO ] 2017-06-24 19:25:56,952 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no Полезняшки part
+[WARN ] 2017-06-24 19:25:57,442 razborpoletov.reader.utils.UrlUtils - http://scalalaz.ru url contains more than one github links: [https://github.com/scalacenter/sprees, https://github.com/limansky/beanpuree, https://github.com/fommil/drone-dynamic-agents, https://github.com/MasseGuillaume/hands-on-scala-native, https://github.com/scalameta/scalameta, https://github.com/scala-android/sbt-android, https://github.com/typelevel/scala, https://github.com/finagle/finch, https://github.com/typesafehub/lightbend-emoji, https://github.com/sbt/sbt, https://github.com/scala-native/scala-native, https://github.com/pomadchin/geotrellis-gis-on-scala, https://github.com/alexandru/effects], https://github.com/ScalaWilliam/akka-stream-kafka-template.g8, https://github.com/s22s/avro2spark, https://github.com/scala/scala, https://github.com/typesafehub/typesafe-emojr, https://github.com/lampepfl/dotty, https://github.com/janstenpickle/extruder, https://github.com/reactors-io/reactors, https://github.com/fomkin/korolev, https://github.com/luben/sctags, https://github.com/scala/bug, https://github.com/bmc/classutil, https://github.com/tpolecat/tut, https://github.com/effects4s/effects4s, https://github.com/typelevel/general, https://github.com/fomkin/levsha, https://github.com/RBMHTechnology/eventuate]
+[INFO ] 2017-06-24 19:25:58,813 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=__PLkxx6Yko url has no github links
+[INFO ] 2017-06-24 19:26:00,055 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:01,214 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/azure-in-plain-english url has no github links
+[INFO ] 2017-06-24 19:26:01,951 razborpoletov.reader.utils.UrlUtils - https://www.expeditedssl.com/aws-in-plain-english url has no github links
+[INFO ] 2017-06-24 19:26:05,871 razborpoletov.reader.utils.UrlUtils - https://www.youtube.com/watch?v=Vlb_Is-rRTQ url has no github links
+[INFO ] 2017-06-24 19:26:07,045 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:07,083 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:07,138 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:07,180 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:07,355 razborpoletov.reader.utils.UrlUtils - http://blog.jevsejev.io/2017/02/19/java-libraries-you-cannot-miss-in-2017/?utm_source=ycombinator url has no github links
+[INFO ] 2017-06-24 19:26:07,741 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:07,798 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:08,751 razborpoletov.reader.utils.UrlUtils - https://try.crashlytics.com url has no github links
+[INFO ] 2017-06-24 19:26:10,374 razborpoletov.reader.utils.UrlUtils - https://twitter.com/intellijidea/status/862961379329888256 url has no github links
+[INFO ] 2017-06-24 19:26:11,836 razborpoletov.reader.utils.UrlUtils - https://twitter.com/gAmUssA/status/859697461639733248 url has no github links
+[INFO ] 2017-06-24 19:26:13,124 razborpoletov.reader.utils.UrlUtils - https://twitter.com/ApacheGroovy/status/861924721453084672 url has no github links
+[WARN ] 2017-06-24 19:26:14,518 razborpoletov.reader.utils.UrlUtils - https://www.testcontainers.org url contains more than one github links: [https://github.com/testcontainers/testcontainers-java-examples, https://github.com/streamsets/datacollector, https://github.com/testcontainers/testcontainers-java]
+[WARN ] 2017-06-24 19:26:17,410 razborpoletov.reader.utils.UrlUtils - Description element for link https://github.com/shrinkwrap is not found
+[INFO ] 2017-06-24 19:26:19,744 razborpoletov.reader.utils.UrlUtils - http://seleniumcamp.com/talk/testng-vs-junit-5-battle url has no github links
+[INFO ] 2017-06-24 19:26:21,937 razborpoletov.reader.parser.UsefulThingParser - Url https://isitonaws.com return error with status 403
+[INFO ] 2017-06-24 19:26:22,409 razborpoletov.reader.utils.UrlUtils - https://www.getpostman.com url has no github links
+[INFO ] 2017-06-24 19:26:22,974 razborpoletov.reader.utils.UrlUtils - https://insights.stackoverflow.com/trends url has no github links
+[INFO ] 2017-06-24 19:26:24,596 razborpoletov.reader.utils.UrlUtils - https://twitter.com/gAmUssA/status/854016716229283840 url has no github links
+[INFO ] 2017-06-24 19:26:25,528 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:25,596 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no Полезняшки part
+[INFO ] 2017-06-24 19:26:25,646 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no Полезняшки part
+[INFO ] 2017-06-24 21:19:28,345 razborpoletov.reader.utils.AsciidocUtils - Document 2015-02-08-episode-77.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:28,767 razborpoletov.reader.utils.AsciidocUtils - Document 2015-03-29-episode-81.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:28,905 razborpoletov.reader.utils.AsciidocUtils - Document 2015-04-12-episode-82.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:28,991 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-03-episode-83.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,111 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-17-episode-84.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,200 razborpoletov.reader.utils.AsciidocUtils - Document 2015-05-31-episode-85.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,287 razborpoletov.reader.utils.AsciidocUtils - Document 2015-06-21-episode-86.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,392 razborpoletov.reader.utils.AsciidocUtils - Document 2015-07-16-episode-87.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,581 razborpoletov.reader.utils.AsciidocUtils - Document 2015-08-14-episode-89.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,705 razborpoletov.reader.utils.AsciidocUtils - Document 2015-08-30-episode-90.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,798 razborpoletov.reader.utils.AsciidocUtils - Document 2015-09-25-episode-91.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,902 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-11-episode-92.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:29,978 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-27-episode-93.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,062 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-27-episode-94.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,131 razborpoletov.reader.utils.AsciidocUtils - Document 2015-10-28-episode-95.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,213 razborpoletov.reader.utils.AsciidocUtils - Document 2015-11-05-episode-96.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,287 razborpoletov.reader.utils.AsciidocUtils - Document 2015-12-06-episode-97.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,366 razborpoletov.reader.utils.AsciidocUtils - Document 2015-12-19-episode-98.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,446 razborpoletov.reader.utils.AsciidocUtils - Document 2015-12-27-episode-99.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,515 razborpoletov.reader.utils.AsciidocUtils - Document 2016-01-18-episode-100.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,597 razborpoletov.reader.utils.AsciidocUtils - Document 2016-01-26-episode-101.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,670 razborpoletov.reader.utils.AsciidocUtils - Document 2016-02-04-episode-102.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,749 razborpoletov.reader.utils.AsciidocUtils - Document 2016-02-24-episode-103.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,825 razborpoletov.reader.utils.AsciidocUtils - Document 2016-02-28-episode-104.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:30,893 razborpoletov.reader.utils.AsciidocUtils - Document 2016-03-10-episode-105.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,003 razborpoletov.reader.utils.AsciidocUtils - Document 2016-03-26-episode-106.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,090 razborpoletov.reader.utils.AsciidocUtils - Document 2016-04-09-episode-107.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,166 razborpoletov.reader.utils.AsciidocUtils - Document 2016-04-24-episode-108.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,254 razborpoletov.reader.utils.AsciidocUtils - Document 2016-05-10-episode-109.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,349 razborpoletov.reader.utils.AsciidocUtils - Document 2016-05-27-episode-110.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,429 razborpoletov.reader.utils.AsciidocUtils - Document 2016-06-11-episode-111.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,807 razborpoletov.reader.utils.AsciidocUtils - Document 2016-07-15-episode-113.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:31,976 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-06-episode-114.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,131 razborpoletov.reader.utils.AsciidocUtils - Document 2016-08-19-episode-115.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,260 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-03-episode-116.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,367 razborpoletov.reader.utils.AsciidocUtils - Document 2016-09-21-episode-117.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,453 razborpoletov.reader.utils.AsciidocUtils - Document 2016-10-24-episode-118.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,603 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-05-episode-119.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,687 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-17-episode-120.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,908 razborpoletov.reader.utils.AsciidocUtils - Document 2016-11-30-episode-121.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:32,983 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-06-episode-122.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,077 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-18-episode-123.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,150 razborpoletov.reader.utils.AsciidocUtils - Document 2016-12-31-episode-124.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,214 razborpoletov.reader.utils.AsciidocUtils - Document 2017-01-22-episode-125.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,278 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-11-episode-126.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,325 razborpoletov.reader.utils.AsciidocUtils - Document 2017-02-24-episode-127.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,389 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-06-episode-128.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,493 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-11-episode-129.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,563 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-25-episode-130.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,658 razborpoletov.reader.utils.AsciidocUtils - Document 2017-03-29-episode-131.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,710 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-11-episode-132.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,812 razborpoletov.reader.utils.AsciidocUtils - Document 2017-04-23-episode-133.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,896 razborpoletov.reader.utils.AsciidocUtils - Document 2017-05-14-episode-134.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:33,951 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-135.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:34,018 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-136.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:34,113 razborpoletov.reader.utils.AsciidocUtils - Document 2017-06-19-episode-137.adoc has no _Конференции part
+[INFO ] 2017-06-24 21:19:34,946 razborpoletov.reader.utils.PodcastFileUtils - Podcast id of file 2011-11-16-episode-0-pilot.html parsed incorrect
+[INFO ] 2017-06-24 21:19:35,459 razborpoletov.reader.utils.PodcastFileUtils - Podcast id of file 2011-11-23-episode-1-officially-on-air.html parsed incorrect
+[INFO ] 2017-06-24 21:19:35,462 razborpoletov.reader.utils.PodcastFileUtils - Podcast id of file 2011-12-06-episode-2-scala.html parsed incorrect
+[INFO ] 2017-06-24 21:19:35,468 razborpoletov.reader.utils.PodcastFileUtils - Podcast id of file 2011-12-23-episode-4-spring.html parsed incorrect
+[INFO ] 2017-06-24 21:19:36,050 razborpoletov.reader.utils.PodcastFileUtils - Podcast id of file 2012-01-07-episode-6-pirates-of-silicon-valley.html parsed incorrect
+[INFO ] 2017-06-24 21:19:36,062 razborpoletov.reader.utils.PodcastFileUtils - Podcast id of file 2012-04-07-episode-14-part-2-golden-sucks.html parsed incorrect
+[INFO ] 2017-06-24 21:20:06,639 razborpoletov.reader.parser.StatisticParser - Parse 2011-11-16-episode-0-pilot.html statistic
+[INFO ] 2017-06-24 21:22:58,091 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-24 21:23:44,212 razborpoletov.reader.parser.StatisticParser - Parse 2011-12-16-episode-3.html statistic
+[INFO ] 2017-06-24 21:24:50,870 razborpoletov.reader.parser.StatisticParser - Parse 2011-12-29-episode-5.html statistic
+[INFO ] 2017-06-24 21:26:00,036 razborpoletov.reader.parser.StatisticParser - Parse 2012-01-18-episode-7.html statistic
+[INFO ] 2017-06-24 21:27:07,649 razborpoletov.reader.parser.StatisticParser - Parse 2012-01-30-episode-8.html statistic
+[INFO ] 2017-06-24 21:28:19,981 razborpoletov.reader.parser.StatisticParser - Parse 2012-02-06-episode-9.html statistic
+[INFO ] 2017-06-24 21:29:10,145 razborpoletov.reader.parser.StatisticParser - Parse 2012-02-16-episode-10.html statistic
+[INFO ] 2017-06-24 21:29:33,120 razborpoletov.reader.parser.StatisticParser - Parse 2012-02-24-episode-11.html statistic
+[INFO ] 2017-06-24 21:29:57,760 razborpoletov.reader.parser.StatisticParser - Parse 2012-03-02-episode-12.html statistic
+[INFO ] 2017-06-24 21:31:02,429 razborpoletov.reader.parser.StatisticParser - Parse 2012-03-09-episode-13.html statistic
+[INFO ] 2017-06-24 21:32:11,958 razborpoletov.reader.parser.StatisticParser - Parse 2012-03-24-episode-14.html statistic
+[INFO ] 2017-06-24 21:33:13,636 razborpoletov.reader.parser.StatisticParser - Parse 2012-04-14-episode-15.html statistic
+[INFO ] 2017-06-24 21:34:31,644 razborpoletov.reader.parser.StatisticParser - Parse 2012-05-12-episode-17.html statistic
+[INFO ] 2017-06-24 21:35:19,240 razborpoletov.reader.parser.StatisticParser - Parse 2012-05-22-episode-18.markdown statistic
+[INFO ] 2017-06-24 21:35:50,773 razborpoletov.reader.parser.StatisticParser - Parse 2012-05-31-episode-19.markdown statistic
+[INFO ] 2017-06-24 21:36:47,123 razborpoletov.reader.parser.StatisticParser - Parse 2012-06-09-episode-20.markdown statistic
+[INFO ] 2017-06-24 21:38:36,144 razborpoletov.reader.parser.StatisticParser - Parse 2012-06-10-episode-21.markdown statistic
+[INFO ] 2017-06-24 21:39:48,429 razborpoletov.reader.parser.StatisticParser - Parse 2012-07-02-episode-22.markdown statistic
+[INFO ] 2017-06-24 21:40:33,568 razborpoletov.reader.parser.StatisticParser - Parse 2012-07-17-episode-23.markdown statistic
+[INFO ] 2017-06-24 21:41:37,483 razborpoletov.reader.parser.StatisticParser - Parse 2012-09-11-episode-24.markdown statistic
+[INFO ] 2017-06-24 21:42:44,120 razborpoletov.reader.parser.StatisticParser - Parse 2012-10-03-episode-25.markdown statistic
+[INFO ] 2017-06-24 21:43:37,559 razborpoletov.reader.parser.StatisticParser - Parse 2012-10-04-episode-26.markdown statistic
+[INFO ] 2017-06-24 21:44:25,551 razborpoletov.reader.parser.StatisticParser - Parse 2012-10-23-episode-27.markdown statistic
+[INFO ] 2017-06-24 21:45:44,286 razborpoletov.reader.parser.StatisticParser - Parse 2012-11-18-episode-28.markdown statistic
+[INFO ] 2017-06-24 21:46:46,125 razborpoletov.reader.parser.StatisticParser - Parse 2012-12-05-episode-29.markdown statistic
+[INFO ] 2017-06-24 21:47:34,555 razborpoletov.reader.parser.StatisticParser - Parse 2012-12-22-episode-30.markdown statistic
+[INFO ] 2017-06-24 21:47:57,530 razborpoletov.reader.parser.StatisticParser - Parse 2013-01-16-episode-31.markdown statistic
+[INFO ] 2017-06-24 21:49:59,487 razborpoletov.reader.parser.StatisticParser - Parse 2013-01-27-episode-32.markdown statistic
+[INFO ] 2017-06-24 21:51:15,097 razborpoletov.reader.parser.StatisticParser - Parse 2013-02-20-episode-34.markdown statistic
+[INFO ] 2017-06-24 21:52:00,968 razborpoletov.reader.parser.StatisticParser - Parse 2013-03-04-episode-35.markdown statistic
+[INFO ] 2017-06-24 21:52:59,182 razborpoletov.reader.parser.StatisticParser - Parse 2013-03-28-episode-36.markdown statistic
+[INFO ] 2017-06-24 21:53:46,208 razborpoletov.reader.parser.StatisticParser - Parse 2013-03-31-episode-37.markdown statistic
+[INFO ] 2017-06-24 21:54:09,612 razborpoletov.reader.parser.StatisticParser - Parse 2013-04-22-episode-38.markdown statistic
+[INFO ] 2017-06-24 21:55:00,717 razborpoletov.reader.parser.StatisticParser - Parse 2013-05-14-episode-39.markdown statistic
+[INFO ] 2017-06-24 21:56:04,278 razborpoletov.reader.parser.StatisticParser - Parse 2013-05-30-episode-40.markdown statistic
+[INFO ] 2017-06-24 21:56:44,312 razborpoletov.reader.parser.StatisticParser - Parse 2013-06-16-episode-41.markdown statistic
+[INFO ] 2017-06-24 21:57:10,523 razborpoletov.reader.parser.StatisticParser - Parse 2013-08-15-episode-42.markdown statistic
+[INFO ] 2017-06-24 21:57:50,199 razborpoletov.reader.parser.StatisticParser - Parse 2013-08-23-episode-43.markdown statistic
+[INFO ] 2017-06-24 21:59:09,146 razborpoletov.reader.parser.StatisticParser - Parse 2013-09-16-episode-44.markdown statistic
+[INFO ] 2017-06-24 22:00:15,230 razborpoletov.reader.parser.StatisticParser - Parse 2013-09-24-episode-45.markdown statistic
+[INFO ] 2017-06-24 22:00:47,040 razborpoletov.reader.parser.StatisticParser - Parse 2013-09-25-episode-46.markdown statistic
+[INFO ] 2017-06-24 22:01:14,080 razborpoletov.reader.parser.StatisticParser - Parse 2013-09-26-episode-47.markdown statistic
+[INFO ] 2017-06-24 22:01:48,463 razborpoletov.reader.parser.StatisticParser - Parse 2013-11-08-episode-48.markdown statistic
+[INFO ] 2017-06-24 22:03:15,248 razborpoletov.reader.parser.StatisticParser - Parse 2013-11-17-episode-49.markdown statistic
+[INFO ] 2017-06-24 22:04:15,277 razborpoletov.reader.parser.StatisticParser - Parse 2013-12-01-episode-50.markdown statistic
+[INFO ] 2017-06-24 22:05:45,726 razborpoletov.reader.parser.StatisticParser - Parse 2013-12-15-episode-51.markdown statistic
+[INFO ] 2017-06-24 22:06:47,610 razborpoletov.reader.parser.StatisticParser - Parse 2013-12-22-episode-52.markdown statistic
+[INFO ] 2017-06-24 22:08:07,914 razborpoletov.reader.parser.StatisticParser - Parse 2014-01-12-episode-53.markdown statistic
+[INFO ] 2017-06-24 22:09:08,237 razborpoletov.reader.parser.StatisticParser - Parse 2012-04-21-episode-16-54.html statistic
+[INFO ] 2017-06-24 22:10:26,800 razborpoletov.reader.parser.StatisticParser - Parse 2014-02-16-episode-55.markdown statistic
+[INFO ] 2017-06-24 22:12:15,168 razborpoletov.reader.parser.StatisticParser - Parse 2014-03-02-episode-56.markdown statistic
+[INFO ] 2017-06-24 22:13:50,242 razborpoletov.reader.parser.StatisticParser - Parse 2014-03-16-episode-57.markdown statistic
+[INFO ] 2017-06-24 22:15:33,386 razborpoletov.reader.parser.StatisticParser - Parse 2014-03-23-episode-58.markdown statistic
+[INFO ] 2017-06-24 22:17:57,100 razborpoletov.reader.parser.StatisticParser - Parse 2014-04-06-episode-59.markdown statistic
+[INFO ] 2017-06-24 22:18:59,619 razborpoletov.reader.parser.StatisticParser - Parse 2014-05-18-episode-60.markdown statistic
+[INFO ] 2017-06-24 22:19:37,396 razborpoletov.reader.parser.StatisticParser - Parse 2014-06-08-episode-61.markdown statistic
+[INFO ] 2017-06-24 22:20:34,652 razborpoletov.reader.parser.StatisticParser - Parse 2014-06-22-episode-62.markdown statistic
+[INFO ] 2017-06-24 22:21:20,872 razborpoletov.reader.parser.StatisticParser - Parse 2014-07-15-episode-63.markdown statistic
+[INFO ] 2017-06-24 22:22:02,083 razborpoletov.reader.parser.StatisticParser - Parse 2014-07-28-episode-64.markdown statistic
+[INFO ] 2017-06-24 22:22:51,868 razborpoletov.reader.parser.StatisticParser - Parse 2014-08-14-episode-65.markdown statistic
+[INFO ] 2017-06-24 22:23:43,146 razborpoletov.reader.parser.StatisticParser - Parse 2014-08-27-episode-66.markdown statistic
+[INFO ] 2017-06-24 22:24:16,668 razborpoletov.reader.parser.StatisticParser - Parse 2014-09-06-episode-67.markdown statistic
+[INFO ] 2017-06-24 22:24:57,505 razborpoletov.reader.parser.StatisticParser - Parse 2014-09-14-episode-68.markdown statistic
+[INFO ] 2017-06-24 22:26:40,556 razborpoletov.reader.parser.StatisticParser - Parse 2014-09-30-episode-69.markdown statistic
+[INFO ] 2017-06-24 22:27:14,111 razborpoletov.reader.parser.StatisticParser - Parse 2014-10-01-episode-70.markdown statistic
+[INFO ] 2017-06-24 22:28:19,732 razborpoletov.reader.parser.StatisticParser - Parse 2014-10-22-episode-71.markdown statistic
+[INFO ] 2017-06-24 22:29:55,789 razborpoletov.reader.parser.StatisticParser - Parse 2014-11-10-episode-72.markdown statistic
+[INFO ] 2017-06-24 22:32:01,270 razborpoletov.reader.parser.StatisticParser - Parse 2014-11-30-episode-73.markdown statistic
+[INFO ] 2017-06-24 22:32:20,682 razborpoletov.reader.parser.StatisticParser - Parse 2014-12-28-episode-74.markdown statistic
+[INFO ] 2017-06-24 22:33:39,002 razborpoletov.reader.parser.StatisticParser - Parse 2015-01-11-episode-75.markdown statistic
+[INFO ] 2017-06-24 22:34:50,886 razborpoletov.reader.parser.StatisticParser - Parse 2015-01-25-episode-76.markdown statistic
+[INFO ] 2017-06-24 22:36:06,011 razborpoletov.reader.parser.StatisticParser - Parse 2015-02-08-episode-77.adoc statistic
+[INFO ] 2017-06-24 22:37:35,168 razborpoletov.reader.parser.StatisticParser - Parse 2015-02-22-episode-78.adoc statistic
+[INFO ] 2017-06-24 22:39:32,617 razborpoletov.reader.parser.StatisticParser - Parse 2015-03-08-episode-79.adoc statistic
+[INFO ] 2017-06-24 22:40:53,284 razborpoletov.reader.parser.StatisticParser - Parse 2015-03-16-episode-80.adoc statistic
+[INFO ] 2017-06-24 22:41:07,939 razborpoletov.reader.parser.StatisticParser - Parse 2015-03-29-episode-81.adoc statistic
+[INFO ] 2017-06-24 22:42:25,036 razborpoletov.reader.parser.StatisticParser - Parse 2015-04-12-episode-82.adoc statistic
+[INFO ] 2017-06-24 22:43:16,128 razborpoletov.reader.parser.StatisticParser - Parse 2015-05-03-episode-83.adoc statistic
+[INFO ] 2017-06-24 22:43:41,828 razborpoletov.reader.parser.StatisticParser - Parse 2015-05-17-episode-84.adoc statistic
+[INFO ] 2017-06-24 22:45:30,483 razborpoletov.reader.parser.StatisticParser - Parse 2015-05-31-episode-85.adoc statistic
+[INFO ] 2017-06-24 22:46:25,025 razborpoletov.reader.parser.StatisticParser - Parse 2015-06-21-episode-86.adoc statistic
+[INFO ] 2017-06-24 22:47:45,643 razborpoletov.reader.parser.StatisticParser - Parse 2015-07-16-episode-87.adoc statistic
+[INFO ] 2017-06-24 22:48:44,604 razborpoletov.reader.parser.StatisticParser - Parse 2015-07-30-episode-88.adoc statistic
+[INFO ] 2017-06-24 22:49:39,928 razborpoletov.reader.parser.StatisticParser - Parse 2015-08-14-episode-89.adoc statistic
+[INFO ] 2017-06-24 22:50:25,630 razborpoletov.reader.parser.StatisticParser - Parse 2015-08-30-episode-90.adoc statistic
+[INFO ] 2017-06-24 22:55:07,074 razborpoletov.reader.parser.StatisticParser - Parse 2015-09-25-episode-91.adoc statistic
+[INFO ] 2017-06-24 22:57:02,537 razborpoletov.reader.parser.StatisticParser - Parse 2015-10-11-episode-92.adoc statistic
+[INFO ] 2017-06-24 22:57:30,056 razborpoletov.reader.parser.StatisticParser - Parse 2015-10-27-episode-93.adoc statistic
+[INFO ] 2017-06-24 22:58:35,132 razborpoletov.reader.parser.StatisticParser - Parse 2015-10-27-episode-94.adoc statistic
+[INFO ] 2017-06-24 22:59:13,018 razborpoletov.reader.parser.StatisticParser - Parse 2015-10-28-episode-95.adoc statistic
+[INFO ] 2017-06-24 22:59:29,729 razborpoletov.reader.parser.StatisticParser - Parse 2015-11-05-episode-96.adoc statistic
+[INFO ] 2017-06-24 23:00:47,064 razborpoletov.reader.parser.StatisticParser - Parse 2015-12-06-episode-97.adoc statistic
+[INFO ] 2017-06-24 23:02:27,683 razborpoletov.reader.parser.StatisticParser - Parse 2015-12-19-episode-98.adoc statistic
+[INFO ] 2017-06-24 23:04:36,892 razborpoletov.reader.parser.StatisticParser - Parse 2015-12-27-episode-99.adoc statistic
+[INFO ] 2017-06-24 23:05:55,223 razborpoletov.reader.parser.StatisticParser - Parse 2016-01-18-episode-100.adoc statistic
+[INFO ] 2017-06-24 23:07:20,914 razborpoletov.reader.parser.StatisticParser - Parse 2016-01-26-episode-101.adoc statistic
+[INFO ] 2017-06-24 23:08:24,580 razborpoletov.reader.parser.StatisticParser - Parse 2016-02-04-episode-102.adoc statistic
+[INFO ] 2017-06-24 23:09:18,021 razborpoletov.reader.parser.StatisticParser - Parse 2016-02-24-episode-103.adoc statistic
+[INFO ] 2017-06-24 23:09:29,464 razborpoletov.reader.parser.StatisticParser - Parse 2016-02-28-episode-104.adoc statistic
+[INFO ] 2017-06-24 23:10:10,723 razborpoletov.reader.parser.StatisticParser - Parse 2016-03-10-episode-105.adoc statistic
+[INFO ] 2017-06-24 23:12:24,676 razborpoletov.reader.parser.StatisticParser - Parse 2016-03-26-episode-106.adoc statistic
+[INFO ] 2017-06-24 23:14:13,693 razborpoletov.reader.parser.StatisticParser - Parse 2016-04-09-episode-107.adoc statistic
+[INFO ] 2017-06-24 23:14:37,365 razborpoletov.reader.parser.StatisticParser - Parse 2016-04-24-episode-108.adoc statistic
+[INFO ] 2017-06-24 23:14:57,861 razborpoletov.reader.parser.StatisticParser - Parse 2016-05-10-episode-109.adoc statistic
+[INFO ] 2017-06-24 23:16:25,728 razborpoletov.reader.parser.StatisticParser - Parse 2016-05-27-episode-110.adoc statistic
+[INFO ] 2017-06-24 23:17:32,096 razborpoletov.reader.parser.StatisticParser - Parse 2016-06-11-episode-111.adoc statistic
+[INFO ] 2017-06-24 23:18:39,728 razborpoletov.reader.parser.StatisticParser - Parse 2016-06-19-episode-112.adoc statistic
+[INFO ] 2017-06-24 23:19:13,071 razborpoletov.reader.parser.StatisticParser - Parse 2016-07-15-episode-113.adoc statistic
+[INFO ] 2017-06-24 23:20:38,624 razborpoletov.reader.parser.StatisticParser - Parse 2016-08-06-episode-114.adoc statistic
+[INFO ] 2017-06-24 23:21:47,182 razborpoletov.reader.parser.StatisticParser - Parse 2016-08-19-episode-115.adoc statistic
+[INFO ] 2017-06-24 23:22:07,732 razborpoletov.reader.parser.StatisticParser - Parse 2016-09-03-episode-116.adoc statistic
+[INFO ] 2017-06-24 23:22:31,469 razborpoletov.reader.parser.StatisticParser - Parse 2016-09-21-episode-117.adoc statistic
+[INFO ] 2017-06-24 23:22:48,974 razborpoletov.reader.parser.StatisticParser - Parse 2016-10-24-episode-118.adoc statistic
+[INFO ] 2017-06-24 23:23:18,818 razborpoletov.reader.parser.StatisticParser - Parse 2016-11-05-episode-119.adoc statistic
+[INFO ] 2017-06-24 23:23:56,456 razborpoletov.reader.parser.StatisticParser - Parse 2016-11-17-episode-120.adoc statistic
+[INFO ] 2017-06-24 23:24:45,596 razborpoletov.reader.parser.StatisticParser - Parse 2016-11-30-episode-121.adoc statistic
+[INFO ] 2017-06-24 23:25:02,565 razborpoletov.reader.parser.StatisticParser - Parse 2016-12-06-episode-122.adoc statistic
+[INFO ] 2017-06-24 23:25:09,410 razborpoletov.reader.parser.StatisticParser - Parse 2016-12-18-episode-123.adoc statistic
+[INFO ] 2017-06-24 23:25:28,640 razborpoletov.reader.parser.StatisticParser - Parse 2016-12-31-episode-124.adoc statistic
+[INFO ] 2017-06-24 23:25:50,226 razborpoletov.reader.parser.StatisticParser - Parse 2017-01-22-episode-125.adoc statistic
+[INFO ] 2017-06-24 23:27:32,049 razborpoletov.reader.parser.StatisticParser - Parse 2017-02-11-episode-126.adoc statistic
+[INFO ] 2017-06-24 23:27:51,042 razborpoletov.reader.parser.StatisticParser - Parse 2017-02-24-episode-127.adoc statistic
+[INFO ] 2017-06-24 23:28:12,010 razborpoletov.reader.parser.StatisticParser - Parse 2017-03-06-episode-128.adoc statistic
+[INFO ] 2017-06-24 23:28:19,936 razborpoletov.reader.parser.StatisticParser - Parse 2017-03-11-episode-129.adoc statistic
+[INFO ] 2017-06-24 23:28:55,295 razborpoletov.reader.parser.StatisticParser - Parse 2017-03-25-episode-130.adoc statistic
+[INFO ] 2017-06-24 23:29:30,890 razborpoletov.reader.parser.StatisticParser - Parse 2017-03-29-episode-131.adoc statistic
+[INFO ] 2017-06-24 23:30:06,300 razborpoletov.reader.parser.StatisticParser - Parse 2017-04-11-episode-132.adoc statistic
+[INFO ] 2017-06-24 23:30:23,268 razborpoletov.reader.parser.StatisticParser - Parse 2017-04-23-episode-133.adoc statistic
+[INFO ] 2017-06-24 23:31:06,205 razborpoletov.reader.parser.StatisticParser - Parse 2017-05-14-episode-134.adoc statistic
+[INFO ] 2017-06-24 23:31:42,500 razborpoletov.reader.parser.StatisticParser - Parse 2017-06-19-episode-135.adoc statistic
+[INFO ] 2017-06-24 23:31:53,745 razborpoletov.reader.parser.StatisticParser - Parse 2017-06-19-episode-136.adoc statistic
+[INFO ] 2017-06-24 23:32:01,661 razborpoletov.reader.parser.StatisticParser - Parse 2017-06-19-episode-137.adoc statistic
+[INFO ] 2017-06-25 17:29:51,106 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:30:10,436 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:30:42,863 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:30:51,185 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:31:40,600 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:31:51,900 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:32:06,532 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:33:41,505 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:36:47,843 razborpoletov.reader.parser.StatisticParser - Guest hydrobiont first appearance was in episode 137.
+[INFO ] 2017-06-25 17:36:47,843 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 137.
+[INFO ] 2017-06-25 17:45:32,478 razborpoletov.reader.parser.StatisticParser - Guest hydrobiont first appearance was in episode 137.
+[INFO ] 2017-06-25 17:45:32,479 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 137.
+[INFO ] 2017-06-25 17:47:56,730 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:47:58,249 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 17:47:58,249 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 17:47:58,859 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 17:48:00,017 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 17:48:00,017 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 17:48:01,025 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 17:48:01,025 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 17:48:01,953 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 17:48:02,488 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 17:48:03,156 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 17:48:03,744 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 17:48:04,296 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 17:48:05,833 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 17:48:05,833 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 17:48:05,834 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 17:48:06,378 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 17:48:06,940 razborpoletov.reader.parser.StatisticParser - Guest Andrey Cheptsov first appearance was in episode 52.
+[INFO ] 2017-06-25 17:48:07,474 razborpoletov.reader.parser.StatisticParser - Guest Alexey Fyodorov first appearance was in episode 58.
+[INFO ] 2017-06-25 17:48:08,517 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 61.
+[INFO ] 2017-06-25 17:48:08,517 razborpoletov.reader.parser.StatisticParser - Guest Alexander Babaev first appearance was in episode 61.
+[INFO ] 2017-06-25 17:48:09,797 razborpoletov.reader.parser.StatisticParser - Guest Roman Leventov first appearance was in episode 67.
+[INFO ] 2017-06-25 17:48:09,797 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 67.
+[INFO ] 2017-06-25 17:48:10,335 razborpoletov.reader.parser.StatisticParser - Guest Толкачёв Кирилл first appearance was in episode 76.
+[INFO ] 2017-06-25 17:48:15,830 razborpoletov.reader.parser.StatisticParser - Guest Red Hat first appearance was in episode 79.
+[INFO ] 2017-06-25 17:48:15,830 razborpoletov.reader.parser.StatisticParser - Guest ligolnik first appearance was in episode 79.
+[INFO ] 2017-06-25 17:48:16,753 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Shipilëv first appearance was in episode 81.
+[INFO ] 2017-06-25 17:48:17,474 razborpoletov.reader.parser.StatisticParser - Guest holyslon first appearance was in episode 83.
+[INFO ] 2017-06-25 17:48:19,135 razborpoletov.reader.parser.StatisticParser - Guest Sergei Egorov first appearance was in episode 89.
+[INFO ] 2017-06-25 17:48:19,135 razborpoletov.reader.parser.StatisticParser - Guest Tarasov Aleksandr first appearance was in episode 89.
+[INFO ] 2017-06-25 17:48:20,186 razborpoletov.reader.parser.StatisticParser - Guest Andrey Platov first appearance was in episode 90.
+[INFO ] 2017-06-25 17:48:20,186 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 90.
+[INFO ] 2017-06-25 17:48:20,783 razborpoletov.reader.parser.StatisticParser - Guest Nikita Prokopov first appearance was in episode 92.
+[INFO ] 2017-06-25 17:48:21,425 razborpoletov.reader.parser.StatisticParser - Guest Yuriy Artamonov first appearance was in episode 93.
+[WARN ] 2017-06-25 17:48:22,262 razborpoletov.reader.parser.StatisticParser - HTTP error fetching URL
+[INFO ] 2017-06-25 17:48:23,216 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Isakova first appearance was in episode 94.
+[INFO ] 2017-06-25 17:50:46,999 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:50:48,625 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 17:50:48,673 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 17:50:49,201 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 17:50:50,172 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 17:50:50,185 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 17:50:51,178 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 17:50:51,191 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 17:50:51,769 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 17:50:52,254 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 17:50:52,701 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 17:50:53,173 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 17:50:53,541 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 17:50:55,208 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 17:50:55,220 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 17:50:55,232 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 17:50:55,655 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 17:50:56,213 razborpoletov.reader.parser.StatisticParser - Guest Andrey Cheptsov first appearance was in episode 52.
+[INFO ] 2017-06-25 17:50:56,783 razborpoletov.reader.parser.StatisticParser - Guest Alexey Fyodorov first appearance was in episode 58.
+[INFO ] 2017-06-25 17:50:57,776 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 61.
+[INFO ] 2017-06-25 17:50:57,788 razborpoletov.reader.parser.StatisticParser - Guest Alexander Babaev first appearance was in episode 61.
+[INFO ] 2017-06-25 17:50:58,792 razborpoletov.reader.parser.StatisticParser - Guest Roman Leventov first appearance was in episode 67.
+[INFO ] 2017-06-25 17:50:58,804 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 67.
+[INFO ] 2017-06-25 17:50:59,337 razborpoletov.reader.parser.StatisticParser - Guest Толкачёв Кирилл first appearance was in episode 76.
+[INFO ] 2017-06-25 17:51:06,007 razborpoletov.reader.parser.StatisticParser - Guest Red Hat first appearance was in episode 79.
+[INFO ] 2017-06-25 17:51:06,039 razborpoletov.reader.parser.StatisticParser - Guest ligolnik first appearance was in episode 79.
+[INFO ] 2017-06-25 17:51:06,704 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Shipilëv first appearance was in episode 81.
+[INFO ] 2017-06-25 17:51:07,512 razborpoletov.reader.parser.StatisticParser - Guest holyslon first appearance was in episode 83.
+[INFO ] 2017-06-25 17:51:09,135 razborpoletov.reader.parser.StatisticParser - Guest Sergei Egorov first appearance was in episode 89.
+[INFO ] 2017-06-25 17:51:09,171 razborpoletov.reader.parser.StatisticParser - Guest Tarasov Aleksandr first appearance was in episode 89.
+[INFO ] 2017-06-25 17:51:10,278 razborpoletov.reader.parser.StatisticParser - Guest Andrey Platov first appearance was in episode 90.
+[INFO ] 2017-06-25 17:51:10,310 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 90.
+[INFO ] 2017-06-25 17:51:11,051 razborpoletov.reader.parser.StatisticParser - Guest Nikita Prokopov first appearance was in episode 92.
+[INFO ] 2017-06-25 17:51:11,744 razborpoletov.reader.parser.StatisticParser - Guest Yuriy Artamonov first appearance was in episode 93.
+[WARN ] 2017-06-25 17:51:12,309 razborpoletov.reader.parser.StatisticParser - HTTP error fetching URL
+[INFO ] 2017-06-25 17:51:13,070 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Isakova first appearance was in episode 94.
+[INFO ] 2017-06-25 17:57:23,793 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 17:57:25,329 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 17:57:25,329 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 17:57:26,039 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 17:57:27,195 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 17:57:27,195 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 17:57:28,255 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 17:57:28,255 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 17:57:28,718 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 17:57:29,237 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 17:57:29,721 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 17:57:30,244 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 17:57:30,751 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 17:57:32,286 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 17:57:32,286 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 17:57:32,286 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 17:57:32,730 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 17:57:33,342 razborpoletov.reader.parser.StatisticParser - Guest Andrey Cheptsov first appearance was in episode 52.
+[INFO ] 2017-06-25 17:57:33,917 razborpoletov.reader.parser.StatisticParser - Guest Alexey Fyodorov first appearance was in episode 58.
+[INFO ] 2017-06-25 17:57:34,999 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 61.
+[INFO ] 2017-06-25 17:57:34,999 razborpoletov.reader.parser.StatisticParser - Guest Alexander Babaev first appearance was in episode 61.
+[INFO ] 2017-06-25 17:57:36,211 razborpoletov.reader.parser.StatisticParser - Guest Roman Leventov first appearance was in episode 67.
+[INFO ] 2017-06-25 17:57:36,212 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 67.
+[INFO ] 2017-06-25 17:57:36,752 razborpoletov.reader.parser.StatisticParser - Guest Толкачёв Кирилл first appearance was in episode 76.
+[INFO ] 2017-06-25 17:57:42,143 razborpoletov.reader.parser.StatisticParser - Guest Red Hat first appearance was in episode 79.
+[INFO ] 2017-06-25 17:57:42,143 razborpoletov.reader.parser.StatisticParser - Guest ligolnik first appearance was in episode 79.
+[INFO ] 2017-06-25 17:57:42,747 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Shipilëv first appearance was in episode 81.
+[INFO ] 2017-06-25 17:57:43,335 razborpoletov.reader.parser.StatisticParser - Guest holyslon first appearance was in episode 83.
+[INFO ] 2017-06-25 17:57:44,799 razborpoletov.reader.parser.StatisticParser - Guest Sergei Egorov first appearance was in episode 89.
+[INFO ] 2017-06-25 17:57:44,799 razborpoletov.reader.parser.StatisticParser - Guest Tarasov Aleksandr first appearance was in episode 89.
+[INFO ] 2017-06-25 17:57:45,953 razborpoletov.reader.parser.StatisticParser - Guest Andrey Platov first appearance was in episode 90.
+[INFO ] 2017-06-25 17:57:45,953 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 90.
+[INFO ] 2017-06-25 17:57:46,547 razborpoletov.reader.parser.StatisticParser - Guest Nikita Prokopov first appearance was in episode 92.
+[INFO ] 2017-06-25 17:57:47,060 razborpoletov.reader.parser.StatisticParser - Guest Yuriy Artamonov first appearance was in episode 93.
+[WARN ] 2017-06-25 17:57:47,763 razborpoletov.reader.parser.StatisticParser - HTTP error fetching URL
+[INFO ] 2017-06-25 17:57:48,836 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Isakova first appearance was in episode 94.
+[INFO ] 2017-06-25 17:57:48,836 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 94.
+[INFO ] 2017-06-25 17:57:48,836 razborpoletov.reader.parser.StatisticParser - Guest Oleg Šelajev first appearance was in episode 94.
+[WARN ] 2017-06-25 17:57:49,041 razborpoletov.reader.parser.StatisticParser - HTTP error fetching URL
+[INFO ] 2017-06-25 17:57:49,972 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 103.
+[INFO ] 2017-06-25 17:57:50,681 razborpoletov.reader.parser.StatisticParser - Guest Yegor Bugayenko first appearance was in episode 105.
+[INFO ] 2017-06-25 17:57:51,346 razborpoletov.reader.parser.StatisticParser - Guest Остроумова first appearance was in episode 107.
+[INFO ] 2017-06-25 17:57:52,581 razborpoletov.reader.parser.StatisticParser - Guest Julia Kramarenko first appearance was in episode 109.
+[INFO ] 2017-06-25 17:57:52,582 razborpoletov.reader.parser.StatisticParser - Guest Evgeny Borisov first appearance was in episode 109.
+[INFO ] 2017-06-25 17:57:53,250 razborpoletov.reader.parser.StatisticParser - Guest Ilya Ryzhenkov first appearance was in episode 110.
+[INFO ] 2017-06-25 17:57:55,646 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 111.
+[INFO ] 2017-06-25 17:57:55,646 razborpoletov.reader.parser.StatisticParser - Guest Nikita Lipsky first appearance was in episode 111.
+[INFO ] 2017-06-25 17:57:55,646 razborpoletov.reader.parser.StatisticParser - Guest Anton Keks first appearance was in episode 111.
+[INFO ] 2017-06-25 17:57:55,646 razborpoletov.reader.parser.StatisticParser - Guest Rocksy first appearance was in episode 111.
+[INFO ] 2017-06-25 17:57:56,365 razborpoletov.reader.parser.StatisticParser - Guest Tagir Valeev first appearance was in episode 113.
+[INFO ] 2017-06-25 17:57:57,300 razborpoletov.reader.parser.StatisticParser - Guest Oleg Anastasyev first appearance was in episode 118.
+[INFO ] 2017-06-25 17:57:58,561 razborpoletov.reader.parser.StatisticParser - Guest Sasha Goldshtein first appearance was in episode 121.
+[INFO ] 2017-06-25 17:57:58,561 razborpoletov.reader.parser.StatisticParser - Guest Andrey Akinshin first appearance was in episode 121.
+[INFO ] 2017-06-25 17:57:59,864 razborpoletov.reader.parser.StatisticParser - Guest Igal Tabachnik first appearance was in episode 123.
+[INFO ] 2017-06-25 17:57:59,864 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Fomkin first appearance was in episode 123.
+[INFO ] 2017-06-25 17:58:00,336 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 124.
+[INFO ] 2017-06-25 18:06:39,304 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 18:06:41,722 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 18:06:41,723 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 18:06:42,349 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 18:06:43,661 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 18:06:43,661 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 18:06:44,685 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 18:06:44,685 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 18:06:45,401 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 18:06:45,835 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 18:06:46,349 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 18:06:46,805 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 18:06:47,221 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 18:06:48,935 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 18:06:48,935 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:06:48,935 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:06:49,488 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 18:06:50,023 razborpoletov.reader.parser.StatisticParser - Guest Andrey Cheptsov first appearance was in episode 52.
+[INFO ] 2017-06-25 18:06:50,490 razborpoletov.reader.parser.StatisticParser - Guest Alexey Fyodorov first appearance was in episode 58.
+[INFO ] 2017-06-25 18:06:51,762 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 61.
+[INFO ] 2017-06-25 18:06:51,763 razborpoletov.reader.parser.StatisticParser - Guest Alexander Babaev first appearance was in episode 61.
+[INFO ] 2017-06-25 18:06:52,899 razborpoletov.reader.parser.StatisticParser - Guest Roman Leventov first appearance was in episode 67.
+[INFO ] 2017-06-25 18:06:52,899 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 67.
+[INFO ] 2017-06-25 18:06:53,491 razborpoletov.reader.parser.StatisticParser - Guest Толкачёв Кирилл first appearance was in episode 76.
+[INFO ] 2017-06-25 18:07:21,357 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 18:07:23,423 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 18:07:23,423 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 18:07:24,082 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 18:07:25,247 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 18:07:25,247 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 18:07:26,479 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 18:07:26,479 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 18:07:26,996 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 18:07:27,503 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 18:07:28,054 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 18:07:28,529 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 18:07:29,098 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 18:07:30,818 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 18:07:30,818 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:07:30,818 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:07:31,415 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 18:07:32,016 razborpoletov.reader.parser.StatisticParser - Guest Andrey Cheptsov first appearance was in episode 52.
+[INFO ] 2017-06-25 18:07:32,558 razborpoletov.reader.parser.StatisticParser - Guest Alexey Fyodorov first appearance was in episode 58.
+[INFO ] 2017-06-25 18:07:33,814 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 61.
+[INFO ] 2017-06-25 18:07:33,814 razborpoletov.reader.parser.StatisticParser - Guest Alexander Babaev first appearance was in episode 61.
+[INFO ] 2017-06-25 18:07:34,990 razborpoletov.reader.parser.StatisticParser - Guest Roman Leventov first appearance was in episode 67.
+[INFO ] 2017-06-25 18:07:34,990 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 67.
+[INFO ] 2017-06-25 18:07:35,585 razborpoletov.reader.parser.StatisticParser - Guest Толкачёв Кирилл first appearance was in episode 76.
+[INFO ] 2017-06-25 18:07:40,979 razborpoletov.reader.parser.StatisticParser - Guest Red Hat first appearance was in episode 79.
+[INFO ] 2017-06-25 18:07:40,979 razborpoletov.reader.parser.StatisticParser - Guest ligolnik first appearance was in episode 79.
+[INFO ] 2017-06-25 18:07:41,743 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Shipilëv first appearance was in episode 81.
+[INFO ] 2017-06-25 18:07:42,471 razborpoletov.reader.parser.StatisticParser - Guest holyslon first appearance was in episode 83.
+[INFO ] 2017-06-25 18:07:44,287 razborpoletov.reader.parser.StatisticParser - Guest Sergei Egorov first appearance was in episode 89.
+[INFO ] 2017-06-25 18:07:44,287 razborpoletov.reader.parser.StatisticParser - Guest Tarasov Aleksandr first appearance was in episode 89.
+[INFO ] 2017-06-25 18:07:45,524 razborpoletov.reader.parser.StatisticParser - Guest Andrey Platov first appearance was in episode 90.
+[INFO ] 2017-06-25 18:07:45,524 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 90.
+[INFO ] 2017-06-25 18:07:46,152 razborpoletov.reader.parser.StatisticParser - Guest Nikita Prokopov first appearance was in episode 92.
+[INFO ] 2017-06-25 18:07:46,740 razborpoletov.reader.parser.StatisticParser - Guest Yuriy Artamonov first appearance was in episode 93.
+[INFO ] 2017-06-25 18:07:48,621 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Isakova first appearance was in episode 94.
+[INFO ] 2017-06-25 18:07:48,621 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 94.
+[INFO ] 2017-06-25 18:07:48,621 razborpoletov.reader.parser.StatisticParser - Guest Oleg Šelajev first appearance was in episode 94.
+[INFO ] 2017-06-25 18:07:49,892 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 103.
+[INFO ] 2017-06-25 18:07:50,552 razborpoletov.reader.parser.StatisticParser - Guest Yegor Bugayenko first appearance was in episode 105.
+[INFO ] 2017-06-25 18:07:51,184 razborpoletov.reader.parser.StatisticParser - Guest Остроумова first appearance was in episode 107.
+[INFO ] 2017-06-25 18:07:52,231 razborpoletov.reader.parser.StatisticParser - Guest Julia Kramarenko first appearance was in episode 109.
+[INFO ] 2017-06-25 18:07:52,232 razborpoletov.reader.parser.StatisticParser - Guest Evgeny Borisov first appearance was in episode 109.
+[INFO ] 2017-06-25 18:07:52,822 razborpoletov.reader.parser.StatisticParser - Guest Ilya Ryzhenkov first appearance was in episode 110.
+[INFO ] 2017-06-25 18:07:55,058 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 111.
+[INFO ] 2017-06-25 18:07:55,059 razborpoletov.reader.parser.StatisticParser - Guest Nikita Lipsky first appearance was in episode 111.
+[INFO ] 2017-06-25 18:07:55,059 razborpoletov.reader.parser.StatisticParser - Guest Anton Keks first appearance was in episode 111.
+[INFO ] 2017-06-25 18:07:55,059 razborpoletov.reader.parser.StatisticParser - Guest Rocksy first appearance was in episode 111.
+[INFO ] 2017-06-25 18:07:55,754 razborpoletov.reader.parser.StatisticParser - Guest Tagir Valeev first appearance was in episode 113.
+[INFO ] 2017-06-25 18:10:06,545 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 18:10:08,695 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 18:10:08,695 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 18:10:09,369 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 18:10:10,440 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 18:10:10,440 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 18:10:11,555 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 18:10:11,555 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 18:10:12,181 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 18:10:12,750 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 18:10:13,292 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 18:10:13,928 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 18:10:14,507 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 18:10:16,810 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 18:10:16,810 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:10:16,810 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:10:17,447 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 18:11:19,935 razborpoletov.reader.App - We cannot find several files with provided podcast numbers
+[INFO ] 2017-06-25 18:11:21,882 razborpoletov.reader.parser.StatisticParser - Guest Alexey Abashev first appearance was in episode 3.
+[INFO ] 2017-06-25 18:11:21,882 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 3.
+[INFO ] 2017-06-25 18:11:22,589 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Churbanov first appearance was in episode 19.
+[INFO ] 2017-06-25 18:11:23,688 razborpoletov.reader.parser.StatisticParser - Guest Anton Arhipov first appearance was in episode 25.
+[INFO ] 2017-06-25 18:11:23,688 razborpoletov.reader.parser.StatisticParser - Guest Yakov Fain first appearance was in episode 25.
+[INFO ] 2017-06-25 18:11:24,800 razborpoletov.reader.parser.StatisticParser - Guest Alexander Belokrylov first appearance was in episode 26.
+[INFO ] 2017-06-25 18:11:24,800 razborpoletov.reader.parser.StatisticParser - Guest Baruch Sadogursky first appearance was in episode 26.
+[INFO ] 2017-06-25 18:11:25,362 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 35.
+[INFO ] 2017-06-25 18:11:25,800 razborpoletov.reader.parser.StatisticParser - Guest JavaOneRussia first appearance was in episode 36.
+[INFO ] 2017-06-25 18:11:26,389 razborpoletov.reader.parser.StatisticParser - Guest Mikalai Alimenkou first appearance was in episode 39.
+[INFO ] 2017-06-25 18:11:26,924 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Bozhko first appearance was in episode 41.
+[INFO ] 2017-06-25 18:11:27,526 razborpoletov.reader.parser.StatisticParser - Guest Dmitry Jemerov first appearance was in episode 43.
+[INFO ] 2017-06-25 18:11:29,154 razborpoletov.reader.parser.StatisticParser - Guest Andrey first appearance was in episode 45.
+[INFO ] 2017-06-25 18:11:29,154 razborpoletov.reader.parser.StatisticParser - Guest Nikita Salnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:11:29,154 razborpoletov.reader.parser.StatisticParser - Guest Denis Kalashnikov first appearance was in episode 45.
+[INFO ] 2017-06-25 18:11:29,670 razborpoletov.reader.parser.StatisticParser - Guest umputun first appearance was in episode 48.
+[INFO ] 2017-06-25 18:11:30,224 razborpoletov.reader.parser.StatisticParser - Guest Andrey Cheptsov first appearance was in episode 52.
+[INFO ] 2017-06-25 18:11:30,703 razborpoletov.reader.parser.StatisticParser - Guest Alexey Fyodorov first appearance was in episode 58.
+[INFO ] 2017-06-25 18:11:31,610 razborpoletov.reader.parser.StatisticParser - Guest golodnyj first appearance was in episode 61.
+[INFO ] 2017-06-25 18:11:31,611 razborpoletov.reader.parser.StatisticParser - Guest Alexander Babaev first appearance was in episode 61.
+[INFO ] 2017-06-25 18:11:32,731 razborpoletov.reader.parser.StatisticParser - Guest Roman Leventov first appearance was in episode 67.
+[INFO ] 2017-06-25 18:11:32,732 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 67.
+[INFO ] 2017-06-25 18:11:33,305 razborpoletov.reader.parser.StatisticParser - Guest Толкачёв Кирилл first appearance was in episode 76.
+[INFO ] 2017-06-25 18:11:39,562 razborpoletov.reader.parser.StatisticParser - Guest Red Hat first appearance was in episode 79.
+[INFO ] 2017-06-25 18:11:39,563 razborpoletov.reader.parser.StatisticParser - Guest ligolnik first appearance was in episode 79.
+[INFO ] 2017-06-25 18:11:40,198 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Shipilëv first appearance was in episode 81.
+[INFO ] 2017-06-25 18:11:40,898 razborpoletov.reader.parser.StatisticParser - Guest holyslon first appearance was in episode 83.
+[INFO ] 2017-06-25 18:11:42,531 razborpoletov.reader.parser.StatisticParser - Guest Sergei Egorov first appearance was in episode 89.
+[INFO ] 2017-06-25 18:11:42,531 razborpoletov.reader.parser.StatisticParser - Guest Tarasov Aleksandr first appearance was in episode 89.
+[INFO ] 2017-06-25 18:11:43,781 razborpoletov.reader.parser.StatisticParser - Guest Andrey Platov first appearance was in episode 90.
+[INFO ] 2017-06-25 18:11:43,782 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 90.
+[INFO ] 2017-06-25 18:11:44,446 razborpoletov.reader.parser.StatisticParser - Guest Nikita Prokopov first appearance was in episode 92.
+[INFO ] 2017-06-25 18:11:45,093 razborpoletov.reader.parser.StatisticParser - Guest Yuriy Artamonov first appearance was in episode 93.
+[WARN ] 2017-06-25 18:11:45,713 razborpoletov.reader.utils.TwitterUtils - Twitter URL https://twitter.com/bofhe is not valid.
+[INFO ] 2017-06-25 18:11:46,884 razborpoletov.reader.parser.StatisticParser - Guest Svetlana Isakova first appearance was in episode 94.
+[INFO ] 2017-06-25 18:11:46,884 razborpoletov.reader.parser.StatisticParser - Guest Andrii Rodionov first appearance was in episode 94.
+[INFO ] 2017-06-25 18:11:46,884 razborpoletov.reader.parser.StatisticParser - Guest Oleg Šelajev first appearance was in episode 94.
+[WARN ] 2017-06-25 18:11:47,141 razborpoletov.reader.utils.TwitterUtils - Twitter URL https://twitter.com/bofhe is not valid.
+[INFO ] 2017-06-25 18:11:48,108 razborpoletov.reader.parser.StatisticParser - Guest Viktor Gamov first appearance was in episode 103.
+[INFO ] 2017-06-25 18:11:48,751 razborpoletov.reader.parser.StatisticParser - Guest Yegor Bugayenko first appearance was in episode 105.
+[INFO ] 2017-06-25 18:11:49,544 razborpoletov.reader.parser.StatisticParser - Guest Остроумова first appearance was in episode 107.
+[INFO ] 2017-06-25 18:11:50,962 razborpoletov.reader.parser.StatisticParser - Guest Julia Kramarenko first appearance was in episode 109.
+[INFO ] 2017-06-25 18:11:50,962 razborpoletov.reader.parser.StatisticParser - Guest Evgeny Borisov first appearance was in episode 109.
+[INFO ] 2017-06-25 18:11:51,625 razborpoletov.reader.parser.StatisticParser - Guest Ilya Ryzhenkov first appearance was in episode 110.
+[INFO ] 2017-06-25 18:11:54,193 razborpoletov.reader.parser.StatisticParser - Guest Ivan Krylov first appearance was in episode 111.
+[INFO ] 2017-06-25 18:11:54,193 razborpoletov.reader.parser.StatisticParser - Guest Nikita Lipsky first appearance was in episode 111.
+[INFO ] 2017-06-25 18:11:54,193 razborpoletov.reader.parser.StatisticParser - Guest Anton Keks first appearance was in episode 111.
+[INFO ] 2017-06-25 18:11:54,193 razborpoletov.reader.parser.StatisticParser - Guest Rocksy first appearance was in episode 111.
+[INFO ] 2017-06-25 18:11:54,899 razborpoletov.reader.parser.StatisticParser - Guest Tagir Valeev first appearance was in episode 113.
+[INFO ] 2017-06-25 18:11:55,749 razborpoletov.reader.parser.StatisticParser - Guest Oleg Anastasyev first appearance was in episode 118.
+[INFO ] 2017-06-25 18:11:57,087 razborpoletov.reader.parser.StatisticParser - Guest Sasha Goldshtein first appearance was in episode 121.
+[INFO ] 2017-06-25 18:11:57,087 razborpoletov.reader.parser.StatisticParser - Guest Andrey Akinshin first appearance was in episode 121.
+[INFO ] 2017-06-25 18:11:58,223 razborpoletov.reader.parser.StatisticParser - Guest Igal Tabachnik first appearance was in episode 123.
+[INFO ] 2017-06-25 18:11:58,223 razborpoletov.reader.parser.StatisticParser - Guest Aleksey Fomkin first appearance was in episode 123.
+[INFO ] 2017-06-25 18:11:58,706 razborpoletov.reader.parser.StatisticParser - Guest Igor Artamonov first appearance was in episode 124.
+[INFO ] 2017-06-25 18:11:59,671 razborpoletov.reader.parser.StatisticParser - Guest Maxim Dorofeev first appearance was in episode 136.
+[INFO ] 2017-06-25 18:12:00,219 razborpoletov.reader.parser.StatisticParser - Guest hydrobiont first appearance was in episode 137.
+[INFO ] 2017-06-25 18:12:00,232 razborpoletov.reader.parser.StatisticParser - Parse 2011-12-16-episode-3.html statistic
+[INFO ] 2017-06-25 18:12:00,235 razborpoletov.reader.parser.StatisticParser - File /Users/artemvlasov/git/razbor-poletov.github.com/source/_posts/2011-12-16-episode-3.html has no audio tag

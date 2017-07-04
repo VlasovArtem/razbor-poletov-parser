@@ -18,7 +18,7 @@ registration page]
 
 Faculty Guest registration does not include lunch or the Collectible
 Conference Bag, but does provide Full Conference Access for all 3 days -
-June 10-12. Your guests can choose from our 125+ breakout sessions,
+June 10-12. Your users can choose from our 125+ breakout sessions,
 general sessions, industry keynotes, and Power Panels and of course
 attend the Expo Floor. The New York event, which is going to be our
 biggest ever, now includes Big Data Expo, DevOps Summit, WebRTC Summit,
