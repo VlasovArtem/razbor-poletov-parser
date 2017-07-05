@@ -96,16 +96,7 @@ public class PodcastLinkServiceImpl implements PodcastLinkService {
         if (Objects.nonNull(podcastLinks) && !podcastLinks.isEmpty()) {
             try {
                 File file = new File(podcastLinksJsonName);
-                if (append && file.exists()) {
-                    List<PodcastLink> existingLinks = objectMapper.readValue(file, objectMapper.getTypeFactory().constructCollectionType(List.class, PodcastLink.class));
-                    objectMapper.writeValue(file, Stream.concat(existingLinks
-                            .stream()
-                            .filter(podcastLink ->
-                                    !podcastLinks.contains(podcastLink)), podcastLinks.stream())
-                            .collect(Collectors.toList()));
-                } else {
-                    objectMapper.writeValue(file, podcastLinks);
-                }
+                objectMapper.writeValue(file, prepareLinksForSave(podcastLinks, append));
                 return Optional.of(file);
             } catch (IOException e) {
                 throw new PodcastLinksServiceException(e);
@@ -125,5 +116,22 @@ public class PodcastLinkServiceImpl implements PodcastLinkService {
     @Override
     public Optional<File> savePodcastLinksToJson(PodcastLink podcastLink, boolean append) {
         return savePodcastLinksToJson(Collections.singletonList(podcastLink), append);
+    }
+
+    @Override
+    public List<PodcastLink> prepareLinksForSave(List<PodcastLink> newPodcastLinks, boolean updateRequired) {
+        try {
+            if (updateRequired) {
+                List<PodcastLink> existingLinks = objectMapper.readValue(new File(podcastLinksJsonName), objectMapper.getTypeFactory().constructCollectionType(List.class, PodcastLink.class));
+                return Stream.concat(existingLinks
+                        .stream()
+                        .filter(podcastLink ->
+                                !newPodcastLinks.contains(podcastLink)), newPodcastLinks.stream())
+                        .collect(Collectors.toList());
+            }
+            return newPodcastLinks;
+        } catch (IOException e) {
+            throw new PodcastLinksServiceException(e);
+        }
     }
 }

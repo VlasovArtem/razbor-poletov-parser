@@ -13,6 +13,14 @@ public class PodcastLink {
         this.link = link;
     }
 
+    public int getPodcastNumber() {
+        return podcastNumber;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

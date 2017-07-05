@@ -20,6 +20,10 @@
         <commons.io.version>2.5</commons.io.version>
         <apache.loggin.version>2.8.2</apache.loggin.version>
         <commons.logging.version>1.2</commons.logging.version>
+        <powermock.version>1.7.0RC4</powermock.version>
+        <hamcrest.version>1.3</hamcrest.version>
+        <mockito.all.version>2.0.2-beta</mockito.all.version>
+        <mockito.core.version>2.8.47</mockito.core.version>
     </properties>
 
     <dependencyManagement>
@@ -42,10 +46,46 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--test-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <version>${powermock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>${powermock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-core</artifactId>
+            <version>${powermock.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.all.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.core.version}</version>
             <scope>test</scope>
         </dependency>
 

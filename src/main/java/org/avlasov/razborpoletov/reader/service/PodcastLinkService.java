@@ -19,4 +19,5 @@ public interface PodcastLinkService {
     Optional<File> savePodcastLinksToJson(List<PodcastLink> podcastLinks, boolean append);
     Optional<File> savePodcastLinksToJson(PodcastLink podcastLink, boolean append);
 
+    List<PodcastLink> prepareLinksForSave(List<PodcastLink> newPodcastLinks, boolean updateRequired);
 }

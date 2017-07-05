@@ -48,12 +48,13 @@ public class LinkParser {
                     .collect(Collectors.toList());
         } catch (IOException e) {
             LOGGER.error("HTML could not be parsed from 'http://razbor-poletov.com/blog/archives/'");
+            LOGGER.error(e.getMessage());
             return Collections.emptyList();
         }
     }
 
     public List<PodcastLink> parseAllPodcastLinks() {
-        return parsePodcastLinks(null);
+        return parsePodcastLinks((int[]) null);
     }
 
     private Function<Integer, PodcastLink> parseLink(Document document) {
