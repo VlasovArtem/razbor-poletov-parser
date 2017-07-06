@@ -61,17 +61,31 @@ public class LinkParser {
         return podcastNumber -> {
             Element elementById = document.getElementById("blog-archives");
             if (Objects.nonNull(elementById)) {
-                Optional<String> link = elementById
+                List<String> collect = elementById
                         .getElementsByTag("article")
                         .stream()
                         .map(element ->
                                 element.getElementsByTag("a").stream()
                                         .map(data -> data.attr("href"))
-                                        .filter(hrefLink -> hrefLink.matches(String.format("/\\d{4}/\\d{2}/episode(-)?%s.*\\.html", podcastNumber)))
+                                        .filter(hrefLink -> hrefLink.matches(String.format("/\\d{4}/\\d{2}/episode(-)?%s(-\\w+)*\\.html", podcastNumber)))
                                         .findFirst()
                                         .orElse(""))
                         .filter(s -> !s.isEmpty())
-                        .findFirst();
+                        .collect(Collectors.toList());
+                Optional<String> link = Optional.empty();
+                if (collect.size() > 1) {
+                    Optional<String> first = collect
+                            .stream()
+                            .filter(linkData -> linkData.matches(String.format("/\\d{4}/\\d{2}/episode(-)?%s\\.html", podcastNumber)))
+                            .findFirst();
+                    if (!first.isPresent()) {
+                        link = collect.stream().findFirst();
+                    } else {
+                        link = first;
+                    }
+                } else if (!collect.isEmpty()) {
+                    link = Optional.ofNullable(collect.get(0));
+                }
                 if (link.isPresent()) {
                     return new PodcastLink(podcastNumber, String.format("http://razbor-poletov.com%s", link.get()));
                 } else {

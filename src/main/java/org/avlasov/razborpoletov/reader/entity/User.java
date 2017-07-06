@@ -1,7 +1,7 @@
 package org.avlasov.razborpoletov.reader.entity;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by artemvlasov on 20/04/15.
@@ -18,7 +18,7 @@ public class User implements Comparable {
     private String location;
     private String bio;
     private int totalAppearance;
-    private List<Integer> appearanceEpisodeNumbers;
+    private Set<Integer> appearanceEpisodeNumbers;
 
     private User() {
     }
@@ -31,7 +31,7 @@ public class User implements Comparable {
         this.location = location;
         this.bio = bio;
         this.episodeNumberOfTheFirstAppearance = episodeNumberOfTheFirstAppearance;
-        appearanceEpisodeNumbers = new ArrayList<>();
+        appearanceEpisodeNumbers = new HashSet<>();
         appearanceEpisodeNumbers.add(episodeNumberOfTheFirstAppearance);
         totalAppearance = 1;
     }
