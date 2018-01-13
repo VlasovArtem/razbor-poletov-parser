@@ -1,0 +1,177 @@
+[
+  {
+    "link": "https://vimeo.com/221399691",
+    "name": "Functional web applications with Spring and Kotlin",
+    "tags": [
+      "Spring",
+      "Video",
+      "Kotlin"
+    ],
+    "checked": true,
+    "podcastId": 138,
+    "description": "Functional web applications with Spring and Kotlin - Sebastien Deleuze"
+  },
+  {
+    "link": "https://2017.geekout.ee/videos",
+    "name": "GeekOut 2017 Videos",
+    "tags": [
+      "Video",
+      "Java",
+      "Java 9",
+      "Spring",
+      "Kotlin"
+    ],
+    "checked": true,
+    "podcastId": 138,
+    "description": "GeekOut 2017 Videos"
+  },
+  {
+    "link": "https://habrahabr.ru/company/spbifmo/blog/301098",
+    "name": "Как устроена трансляция ACP ICPC",
+    "tags": [],
+    "checked": true,
+    "podcastId": 138,
+    "description": "Международная олимпиада ACM ICPC – крупнейшее мероприятие среди командных студенческих соревнований по программированию в мире."
+  },
+  {
+    "link": "http://testcontainers.org",
+    "name": "Testcontainers",
+    "tags": [
+      "Java",
+      "JUnit",
+      "Java 8"
+    ],
+    "checked": true,
+    "podcastId": 140,
+    "description": "TestContainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases."
+  },
+  {
+    "link": "https://github.com/TNG/ArchUnit",
+    "name": "ArchUnit",
+    "tags": [
+      "Java"
+    ],
+    "checked": true,
+    "podcastId": 140,
+    "description": "A Java architecture test library, to specify and assert architecture rules in plain Java"
+  },
+  {
+    "link": "https://blog.takipi.com/java-bullshifier-generate-massive-random-code-bases/",
+    "name": "Java Bullshifier",
+    "tags": [
+      "Java",
+      "Article"
+    ],
+    "checked": true,
+    "podcastId": 140,
+    "description": "Java Bullshifier - Generate Massive Random Code Bases"
+  },
+  {
+    "link": "https://blog.jetbrains.com/kotlin/2016/03/kotlin-educational-plugin/",
+    "name": "Kotlin Educational Plugin",
+    "tags": [
+      "Java",
+      "Jet Brains",
+      "Intellij IDEA"
+
+    ],
+    "checked": true,
+    "podcastId": 140,
+    "description": "We always said that Kotlin is really easy to learn."
+  },
+  {
+    "link": "https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar",
+    "name": "Nyan Progress Bar",
+    "tags": [
+      "IDE",
+      "Intellij IDEA",
+      "Plugin"
+    ],
+    "checked": true,
+    "podcastId": 141,
+    "description": "Nyan Progress Bar"
+  },
+  {
+    "link": "https://plugins.jetbrains.com/plugin/1003-key-promoter",
+    "name": "Key promoter",
+    "tags": [
+      "IDE",
+      "Intellij IDEA",
+      "Plugin"
+    ],
+    "checked": true,
+    "podcastId": 141,
+    "description": "Shows to user how easy he can make same action using only keyboard"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=Z2F-wZKbG8M",
+    "name": "CI Pipelines for Modern DevOps",
+    "tags": [
+      "Video",
+      "DevOps"
+    ],
+    "checked": true,
+    "podcastId": 141,
+    "description": "The Frog and The Butler: CI Pipelines for Modern DevOps"
+  },
+  {
+    "link": "https://vimeo.com/javazone",
+    "name": "JavaZone",
+    "tags": [
+      "Java",
+      "Video"
+    ],
+    "checked": true,
+    "podcastId": 142,
+    "description": "JavaZone is one of the world's biggest community driven conferences."
+  },
+  {
+    "link": "https://www.sublimetext.com/blog/articles/sublime-text-3-point-0",
+    "name": "Sublime Text 3.0",
+    "tags": [],
+    "checked": true,
+    "podcastId": 142,
+    "description": "Sublime Text 3.0"
+  },
+  {
+    "link": "https://github.com/junit-team/junit5/releases",
+    "name": "JUnit 5",
+    "tags": ["Java", "JUnit 5"],
+    "checked": true,
+    "podcastId": 142,
+    "description": "A programmer-oriented testing framework for Java."
+  },
+  {
+    "link": "https://insomnia.rest",
+    "name": "Insomnia",
+    "tags": [
+      "Open source",
+      "REST"
+    ],
+    "checked": true,
+    "podcastId": 151,
+    "description": "The most intuitive cross-platform REST API Client"
+  },
+  {
+    "link": "https://t.me/AwesomeKafka_ru",
+    "name": "Telegram Apache Kafka",
+    "tags": [
+      "Telegram",
+      "Apache Kafka",
+      "Apache"
+    ],
+    "checked": true,
+    "podcastId": 151,
+    "description": "Здесь топят за Кафку (Apache Kafka)"
+  },
+  {
+    "link": "https://t.me/tradeoffs",
+    "name": "Telegram Алексей Федеров",
+    "tags": [
+      "Telegram"
+    ],
+    "checked": true,
+    "podcastId": 151,
+    "description": "Конференции глазами инженера"
+  }
+]
