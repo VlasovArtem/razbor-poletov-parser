@@ -1,75 +1,69 @@
 package org.avlasov.razborpoletov.reader.parser.data;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.avlasov.razborpoletov.reader.entity.info.Conference;
+import org.avlasov.razborpoletov.reader.utils.AsciidocUtils;
 import org.avlasov.razborpoletov.reader.utils.Constants;
+import org.avlasov.razborpoletov.reader.utils.MarkdownUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
-import org.avlasov.razborpoletov.reader.utils.AsciidocUtils;
-import org.avlasov.razborpoletov.reader.utils.MarkdownUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.*;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Created by artemvlasov on 20/05/15.
  */
 @Component
-public class ConferenceParser {
+public class ConferenceParser implements Parser<Conference> {
+
+    private final static Logger LOGGER = LogManager.getLogger(ConferenceParser.class);
     private final List<String> ignoredConferenceUrl = Arrays.asList("instagram", "youtube");
     private Set<String> uniqueConferenceUrl = new HashSet<>();
 
-    public List<Conference> parse(List<File> files, boolean asciidocOnly) throws IOException,
-            URISyntaxException {
-        List<Conference> conferences = new ArrayList<>();
-        for (File file : files) {
-            if(Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName())) {
-                if(asciidocOnly) {
-                    conferences.addAll(parseAsciidoc(file));
-                } else {
-                    List<Conference> parsedConferences = new ArrayList<>();
-                    switch (FilenameUtils.getExtension(file.getName())) {
-                        case Constants.ASCII_DOC:
-                            AsciidocUtils.parsePartById(file, "_Конференции")
-                                    .ifPresent(conferencesDocument -> parse(conferencesDocument.getElementsByTag("a")));
-                            break;
-                        case Constants.MARKDOWN_FORMAT:
-                            parsedConferences = parse(Jsoup.parse(MarkdownUtils.parseToHtml(file)));
-                            break;
-                        case Constants.HTML:
-                            parsedConferences = parse(file);
-                            break;
-                    }
-                    if(parsedConferences != null) {
-                        conferences.addAll(parsedConferences);
-                    }
-                }
-            }
-        }
+    @Override
+    public List<Conference> parse(List<File> files) {
+        List<Conference> conferences = Optional.ofNullable(files)
+                .orElseGet(Collections::emptyList)
+                .stream()
+                .flatMap(file -> {
+                    List<Conference> parse = parse(file);
+                    LOGGER.info("{} conferences was parsed from file {}.", parse.size(), file.getName());
+                    return parse.stream();
+                })
+                .collect(Collectors.toList());
+        LOGGER.info("{} conferences was parsed from all {} files.", conferences.size(), files.size());
         return conferences;
     }
 
-    public List<Conference> parse(File file) throws IOException, URISyntaxException {
-        Pattern pattern = Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?");
-        Matcher matcher = pattern.matcher(file.getName());
-        if(matcher.matches()) {
-            return parseAsciidoc(file);
+    public List<Conference> parse(File file) {
+        if (Pattern.matches(PODCAST_FILE_PATTERN, file.getName())) {
+            try {
+                switch (FilenameUtils.getExtension(file.getName())) {
+                    case Constants.ASCII_DOC:
+                        return AsciidocUtils.parsePartById(file, "_Конференции")
+                                .map(conferencesDocument -> parse(conferencesDocument.getElementsByTag("a")))
+                                .orElseGet(Collections::emptyList);
+                    case Constants.MARKDOWN_FORMAT:
+                        return parse(Jsoup.parse(MarkdownUtils.parseToHtml(file)));
+                    case Constants.HTML:
+                        return parse(Jsoup.parse(file, "UTF-8"));
+                }
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage());
+                throw new RuntimeException(e);
+            }
         }
-        return parse(Jsoup.parse(file, "UTF-8"));
-    }
-
-    private List<Conference> parseAsciidoc(File file) throws IOException, URISyntaxException {
-        return AsciidocUtils.parsePartById(file, "_Конференции")
-                .map(conferenceDocument -> parse(conferenceDocument.getElementsByTag("a")))
-                .orElse(Collections.emptyList());
+        return Collections.emptyList();
     }
 
     private List<Conference> parse(Document document) {
@@ -78,7 +72,7 @@ public class ConferenceParser {
 
     private List<Conference> parse(Elements elements) {
         List<Conference> conferences = new ArrayList<>();
-        for(Element element : elements) {
+        for (Element element : elements) {
             Conference conference = new Conference();
             Optional<TextNode> first = element.textNodes().stream().findFirst();
             if (first.isPresent()) {

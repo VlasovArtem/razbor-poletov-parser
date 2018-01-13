@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.avlasov.razborpoletov.reader.entity.info.UsefulThing;
 import org.avlasov.razborpoletov.reader.utils.*;
 import org.jsoup.Connection;
@@ -11,15 +13,12 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.*;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -27,8 +26,9 @@ import java.util.stream.Collectors;
  * Created by artemvlasov on 20/05/15.
  */
 @Component
-public class UsefulThingParser implements Parser {
-    private static final Logger LOG = LoggerFactory.getLogger(UsefulThingParser.class);
+public class UsefulThingParser implements Parser<UsefulThing> {
+
+    private final static Logger LOGGER = LogManager.getLogger(UsefulThingParser.class);
     private List<String> tags;
     private Map<String, List<String>> duplicateTags;
 
@@ -36,57 +36,49 @@ public class UsefulThingParser implements Parser {
         localParseTags();
     }
 
-    public List<UsefulThing> parse(List<File> files, boolean asciidocOnly) throws IOException,
-            URISyntaxException {
-        List<UsefulThing> usefulThings = new ArrayList<>();
-        for (File file : files) {
-            Integer podcastId = PodcastFileUtils.getPodcastId(file).orElse(-999);
-            if (podcastId >= 0) {
-                if (Pattern.matches("20([0-9]{2}-){3}episode-[0-9].+", file.getName())) {
-                    if (asciidocOnly) {
-                        usefulThings.addAll(parseAsciidoc(file));
-                    } else {
-                        switch (FilenameUtils.getExtension(file.getName())) {
-                            case Constants.ASCII_DOC:
-                                AsciidocUtils.parsePartById(file, "Полезняшки")
-                                        .ifPresent(document1 ->
-                                                usefulThings.addAll(
-                                                        parse(document1.getElementsByTag("a"), podcastId)));
-                                break;
-                            case Constants.MARKDOWN_FORMAT:
-                                Document parse = Jsoup.parse(MarkdownUtils.parseToHtml(file));
-                                if (Objects.nonNull(parse)) {
-                                    usefulThings.addAll(parse(parse, podcastId));
-                                }
-                                break;
-                            case Constants.HTML:
-                                usefulThings.addAll(parse(file));
-                                break;
+    @Override
+    public List<UsefulThing> parse(List<File> files) {
+        List<UsefulThing> allUsefulThings = Optional.ofNullable(files)
+                .orElseGet(Collections::emptyList)
+                .stream()
+                .flatMap(file -> {
+                    List<UsefulThing> usefulThings = parse(file);
+                    LOGGER.info("{} useful things was parsed from file {}.", usefulThings.size(), file.getName());
+                    return usefulThings.stream();
+                })
+                .collect(Collectors.toList());
+        LOGGER.info("{} useful things was parsed from files {}.", allUsefulThings.size(), files.size());
+        return allUsefulThings;
+    }
+
+    @Override
+    public List<UsefulThing> parse(File file) {
+        try {
+            Integer podcastId = PodcastFileUtils.getPodcastNumber(file).orElse(-999);
+            if (Pattern.matches(PODCAST_FILE_PATTERN, file.getName())) {
+                LOGGER.info("Start collecting useful things for the podcast {}.", podcastId);
+                switch (FilenameUtils.getExtension(file.getName())) {
+                    case Constants.ASCII_DOC:
+                        return AsciidocUtils.parsePartById(file, "Полезняшки")
+                                .map(doc -> parse(doc.getElementsByTag("a"), podcastId))
+                                .orElseGet(Collections::emptyList);
+                    case Constants.MARKDOWN_FORMAT:
+                        Document parse = Jsoup.parse(MarkdownUtils.parseToHtml(file));
+                        if (Objects.nonNull(parse)) {
+                            return parse(parse, podcastId);
                         }
-                    }
+                    case Constants.HTML:
+                        return parse(Jsoup.parse(file, "UTF-8"), podcastId);
                 }
             }
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            throw new RuntimeException(e);
         }
-        return usefulThings;
+        return Collections.emptyList();
     }
 
-    public List<UsefulThing> parse(File file) throws IOException, URISyntaxException {
-        Pattern pattern = Pattern.compile(".+(?=(a*(sc)?i*(doc)?d?))\\.a*(sc)?i*(doc)?d?");
-        Matcher matcher = pattern.matcher(file.getName());
-        if(matcher.matches()) {
-            return parseAsciidoc(file);
-        }
-        return parse(Jsoup.parse(file, "UTF-8"), PodcastFileUtils.getPodcastId(file).orElse(-999));
-    }
-
-    public List<UsefulThing> parseAsciidoc(File file) throws IOException, URISyntaxException {
-        return AsciidocUtils.parsePartById(file, "_Полезняшки")
-                .map(conferenceDocument -> parse(conferenceDocument.getElementsByTag("a"), PodcastFileUtils.getPodcastId
-                        (file).orElse(-999)))
-                .orElse(Collections.emptyList());
-    }
-
-    private List<UsefulThing> parse(Document document, long podcastId) throws IOException, URISyntaxException {
+    private List<UsefulThing> parse(Document document, long podcastId) {
         if (Objects.nonNull(document) && podcastId >= 0) {
             String html = document.html();
             Elements elements = null;
@@ -117,10 +109,9 @@ public class UsefulThingParser implements Parser {
                         usefulStuffs.add(setUsefulThingContent(url, podcastId));
                     } catch (IOException | URISyntaxException e) {
                         e.printStackTrace();
-                        LOG.info(e.getMessage());
                     }
                 } else {
-                    LOG.info("Url {} return error with status {}", url, responseCode);
+                    LOGGER.info("Url {} return error with status {}", url, responseCode);
                 }
             }
             return usefulStuffs;
@@ -147,8 +138,7 @@ public class UsefulThingParser implements Parser {
      * @throws IOException
      * @throws URISyntaxException
      */
-    private UsefulThing setUsefulThingContent(String url, long podcastId) throws IOException,
-            URISyntaxException {
+    private UsefulThing setUsefulThingContent(String url, long podcastId) throws IOException, URISyntaxException {
         String description = null;
         String name = null;
         if(url.contains("github")) {
@@ -177,7 +167,7 @@ public class UsefulThingParser implements Parser {
                     description = UrlUtils.getGithubDescription(githubUrl);
                 }
             } catch (IOException | URISyntaxException | UnsupportedOperationException e ) {
-                LOG.warn(e.getMessage());
+                LOGGER.warn(e.getMessage());
             }
 
         }
@@ -191,9 +181,8 @@ public class UsefulThingParser implements Parser {
      * @param url
      * @return List of tags
      * @throws IOException
-     * @throws URISyntaxException
      */
-    private List<String> parseTags(String url) throws IOException, URISyntaxException {
+    private List<String> parseTags(String url) throws IOException {
         List<String> tags = null;
         if(!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(UrlUtils.checkUrlStatus(url)))) {
             Connection connection = Jsoup.connect(url);
@@ -214,7 +203,7 @@ public class UsefulThingParser implements Parser {
                         .limit(5)
                         .collect(Collectors.toList());
             } else {
-                LOG.warn("{} url not contains html body", url);
+                LOGGER.warn("{} url not contains html body", url);
             }
 
         }

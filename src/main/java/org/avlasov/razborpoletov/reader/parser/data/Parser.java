@@ -1,16 +1,16 @@
 package org.avlasov.razborpoletov.reader.parser.data;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.List;
 
 /**
  * Created by artemvlasov on 12/06/15.
  */
-public interface Parser {
-    List<?> parse(List<File> files, boolean asciidocOnly) throws IOException,
-            URISyntaxException;
-    List<?> parse(File file) throws IOException, URISyntaxException;
-    List<?> parseAsciidoc(File file) throws IOException, URISyntaxException;
+public interface Parser<T> {
+
+    String PODCAST_FILE_PATTERN = "20([0-9]{2}-){3}episode-[0-9].+";
+
+    List<T> parse(List<File> files);
+    List<T> parse(File file);
+
 }

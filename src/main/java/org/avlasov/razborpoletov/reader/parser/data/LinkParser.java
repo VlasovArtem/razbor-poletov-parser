@@ -5,46 +5,77 @@ import org.apache.logging.log4j.Logger;
 import org.avlasov.razborpoletov.reader.entity.PodcastLink;
 import org.avlasov.razborpoletov.reader.exception.PodcastLinkParseException;
 import org.avlasov.razborpoletov.reader.utils.PodcastFileUtils;
+import org.avlasov.razborpoletov.reader.utils.PodcastFolderUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Created by artemvlasov on 04/07/2017.
  */
 @Component
-public class LinkParser {
+public class LinkParser implements Parser<PodcastLink> {
 
     private static final Logger LOGGER = LogManager.getLogger(LinkParser.class);
-    private FileParser fileParser;
+    private PodcastFolderUtils podcastFolderUtils;
 
     @Autowired
-    public LinkParser(FileParser fileParser) {
-        this.fileParser = fileParser;
+    public LinkParser(PodcastFolderUtils podcastFolderUtils) {
+        this.podcastFolderUtils = podcastFolderUtils;
     }
 
-    public Optional<PodcastLink> parsePodcastLink(int podcastNumber) {
-        return parsePodcastLinks(new int[] {podcastNumber}).stream().findFirst();
+    public List<PodcastLink> parseAllPodcastLinks() {
+        return parsePodcastLinks((int[]) null);
+    }
+
+    @Override
+    public List<PodcastLink> parse(List<File> files) {
+        int[] podcastsIdArray = PodcastFileUtils.getPodcastsIdArray(files);
+        if (Objects.nonNull(podcastsIdArray) && podcastsIdArray.length > 0) {
+            return parsePodcastLinks(podcastsIdArray);
+        } else {
+            LOGGER.warn("Podcast array is empty or null. Empty list will be returned.");
+        }
+        return Collections.emptyList();
+    }
+
+    @Override
+    public List<PodcastLink> parse(File file) {
+        Optional<Integer> podcastNumber = PodcastFileUtils.getPodcastNumber(file);
+        if (podcastNumber.isPresent()) {
+            return podcastNumber
+                    .map(this::parsePodcastLink)
+                    .filter(Optional::isPresent)
+                    .map(link -> Collections.singletonList(link.get()))
+                    .orElseGet(Collections::emptyList);
+        } else {
+            LOGGER.warn("Podcast number for the file {} is not found.");
+        }
+        return Collections.emptyList();
     }
 
     public List<PodcastLink> parsePodcastLinks(int... podcastNumbers) {
         try {
             Document document = Jsoup.connect("http://razbor-poletov.com/blog/archives/").get();
             if (Objects.isNull(podcastNumbers) || podcastNumbers.length == 0) {
-                podcastNumbers = PodcastFileUtils.getPodcastsIdArray(fileParser.getPodcastsFiles());
+                podcastNumbers = PodcastFileUtils.getPodcastsIdArray(podcastFolderUtils.getAllPodcastFiles());
             }
+            LOGGER.info("Start parsing podcast links from the podcast numbers: {}.", IntStream.of(podcastNumbers).mapToObj(String::valueOf).collect(Collectors.joining(", ")));
             return Arrays
                     .stream(podcastNumbers)
                     .boxed()
                     .map(parseLink(document))
                     .filter(Objects::nonNull)
+                    .sorted(Comparator.comparingInt(PodcastLink::getPodcastNumber))
                     .collect(Collectors.toList());
         } catch (IOException e) {
             LOGGER.error("HTML could not be parsed from 'http://razbor-poletov.com/blog/archives/'");
@@ -53,8 +84,8 @@ public class LinkParser {
         }
     }
 
-    public List<PodcastLink> parseAllPodcastLinks() {
-        return parsePodcastLinks((int[]) null);
+    public Optional<PodcastLink> parsePodcastLink(int podcastNumber) {
+        return parsePodcastLinks(podcastNumber).stream().findFirst();
     }
 
     private Function<Integer, PodcastLink> parseLink(Document document) {
