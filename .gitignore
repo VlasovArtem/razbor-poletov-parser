@@ -86,9 +86,10 @@ hs_err_pid*
 .classpath
 .project
 .settings/
+
+build/
+twitter.properties
 target/
 
 #JSON
 /*.json
-
-build/
