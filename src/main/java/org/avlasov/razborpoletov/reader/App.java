@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import org.avlasov.razborpoletov.reader.cli.ParserCommandLine;
 import org.avlasov.razborpoletov.reader.git.GitPuller;
 import org.avlasov.razborpoletov.reader.service.data.ServiceData;
-import org.avlasov.razborpoletov.reader.service.data.impl.ConferenceServiceDataImpl;
 import org.avlasov.razborpoletov.reader.service.data.impl.LinkServiceDataImpl;
 import org.avlasov.razborpoletov.reader.service.data.impl.UsefulThingsServiceDataImpl;
 import org.avlasov.razborpoletov.reader.service.data.impl.UserServiceDataImpl;
@@ -106,9 +105,6 @@ public class App {
     private void proceedData(List<File> files) {
         List<Consumer<List<File>>> consumers = new ArrayList<>();
         boolean saveAll = commandLine.hasOption(LAST) || commandLine.hasOption(ALL);
-        if (commandLine.hasOption(CONFERENCES) || saveAll) {
-            consumers.add(proceedData(ConferenceServiceDataImpl.class));
-        }
         if (commandLine.hasOption(USEFUL) || saveAll) {
             consumers.add(proceedData(UsefulThingsServiceDataImpl.class));
         }

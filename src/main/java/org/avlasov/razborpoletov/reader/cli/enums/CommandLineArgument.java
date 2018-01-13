@@ -5,7 +5,7 @@ package org.avlasov.razborpoletov.reader.cli.enums;
  **/
 public enum CommandLineArgument {
 
-    ALL("a"), LAST("l"), CONFERENCES("c"), USEFUL("u"), CREATORS_GUESTS("cg"), LINKS("k"), STATISTIC("s"), NUMBER("n"), BATCH("b"), IGNORE_GIT("i"), GIT_FOLDER("g"), HELP("h");
+    ALL("a"), LAST("l"), USEFUL("u"), CREATORS_GUESTS("c"), LINKS("k"), STATISTIC("s"), NUMBER("n"), BATCH("b"), IGNORE_GIT("i"), GIT_FOLDER("g"), HELP("h");
 
     private String option;
 

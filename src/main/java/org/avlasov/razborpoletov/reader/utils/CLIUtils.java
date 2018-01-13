@@ -3,6 +3,7 @@ package org.avlasov.razborpoletov.reader.utils;
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.avlasov.razborpoletov.reader.cli.enums.CommandLineArgument;
 import org.avlasov.razborpoletov.reader.enums.CreatorsGuestsArgument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -29,9 +30,8 @@ public class CLIUtils {
         options = new Options();
         options.addOption(Option.builder("a").longOpt("all").desc("Parse all data from all podcast files").build());
         options.addOption(Option.builder("l").longOpt("last").desc("Parse all data from last podcast file").build());
-        options.addOption(Option.builder("c").longOpt("conferences").desc("Parse conference data").build());
         options.addOption(Option.builder("u").longOpt("useful").desc("Parse useful things data").build());
-        options.addOption(Option.builder("cg").longOpt("creators-guests").desc("Parse creators and guests from twitter accounts in podcast description, Possible values: all or update.").hasArg(true).numberOfArgs(1).build());
+        options.addOption(Option.builder("c").longOpt("creators-guests").desc("Parse creators and guests from twitter accounts in podcast description, Possible values: all or update.").hasArg(true).numberOfArgs(1).build());
         options.addOption(Option.builder("k").longOpt("links").desc("Parse links of the archive podcasts. This argument contains one arguments append - update or not to update existing file. true or 1 otherwise false. Use with batch, number or last otherwise it will parse all data.").build());
         options.addOption(Option.builder("s").longOpt("statistic").desc("Parse statistic data").build());
         options.addOption(Option.builder("n").longOpt("number").desc("Parse specific podcast with set number").hasArg(true).numberOfArgs(1).build());
@@ -50,8 +50,8 @@ public class CLIUtils {
                 printHelp();
                 System.exit(0);
             }
-            if (commandLine.hasOption("cg")) {
-                    CreatorsGuestsArgument.valueOf(commandLine.getOptionValue("cg").toUpperCase());
+            if (commandLine.hasOption(CommandLineArgument.CREATORS_GUESTS.getOption())) {
+                CreatorsGuestsArgument.valueOf(commandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS.getOption()).toUpperCase());
             }
             return commandLine;
         } catch (ParseException e) {

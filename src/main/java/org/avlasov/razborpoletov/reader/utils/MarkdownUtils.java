@@ -10,7 +10,6 @@ import java.io.IOException;
  */
 public class MarkdownUtils {
     public static String parseToHtml(File file) throws IOException {
-        String html = new Markdown4jProcessor().process(file);
-        return html;
+        return new Markdown4jProcessor().process(file);
     }
 }
