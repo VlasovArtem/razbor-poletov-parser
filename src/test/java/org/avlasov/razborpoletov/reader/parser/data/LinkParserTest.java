@@ -5,6 +5,7 @@ import org.avlasov.razborpoletov.reader.entity.PodcastLink;
 import org.avlasov.razborpoletov.reader.exception.PodcastLinkParseException;
 import org.avlasov.razborpoletov.reader.matchers.PodcastLinkMatcher;
 import org.avlasov.razborpoletov.reader.utils.PodcastFileUtils;
+import org.avlasov.razborpoletov.reader.utils.PodcastFolderUtils;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.hamcrest.core.IsCollectionContaining;
@@ -38,7 +39,7 @@ public class LinkParserTest extends PowerMockitoTestCase {
     @Mock
     private Connection connectionMock;
     @Mock(answer = Answers.RETURNS_DEEP_STUBS)
-    private FileParser fileParser;
+    private PodcastFolderUtils podcastFolderUtils;
     @InjectMocks
     private LinkParser linkParser;
 
@@ -48,7 +49,7 @@ public class LinkParserTest extends PowerMockitoTestCase {
         mockStatic(Jsoup.class);
         when(Jsoup.connect(Mockito.anyString())).thenReturn(connectionMock);
         when(connectionMock.get()).thenReturn(document);
-        when(fileParser.getPodcastsFiles()).thenReturn(Collections.singletonList(new File("")));
+        when(podcastFolderUtils.getAllPodcastFiles()).thenReturn(Collections.singletonList(new File("")));
         mockStatic(PodcastFileUtils.class);
     }
 
@@ -74,7 +75,7 @@ public class LinkParserTest extends PowerMockitoTestCase {
 
     @Test
     public void parsePodcastLinks_WithEmptyArrayOfPodcastNumbers_ReturnCollection() throws Exception {
-        when(PodcastFileUtils.getPodcastsIdArray(Mockito.any(List.class))).thenReturn(new int[]{30, 125});
+        when(PodcastFileUtils.getPodcastsIdArray(Mockito.anyListOf(File.class))).thenReturn(new int[]{30, 125});
         List<PodcastLink> podcastLinks = linkParser.parsePodcastLinks((int[]) null);
         assertThat(podcastLinks, IsCollectionWithSize.hasSize(2));
         assertThat(podcastLinks, IsCollectionContaining.hasItem(new PodcastLink(30, "http://razbor-poletov.com/2012/12/episode-30.html")));
@@ -82,7 +83,7 @@ public class LinkParserTest extends PowerMockitoTestCase {
 
     @Test
     public void parsePodcastLinks_WithArrayOfPodcastNumbersThatContainsNotExistingNumber_ReturnCollection() throws Exception {
-        when(PodcastFileUtils.getPodcastsIdArray(Mockito.any(List.class))).thenReturn(new int[]{30, 125, 140});
+        when(PodcastFileUtils.getPodcastsIdArray(Mockito.anyListOf(File.class))).thenReturn(new int[]{30, 125, 140});
         List<PodcastLink> podcastLinks = linkParser.parsePodcastLinks((int[]) null);
         assertThat(podcastLinks, IsCollectionWithSize.hasSize(2));
         assertThat(podcastLinks, IsCollectionContaining.hasItem(new PodcastLink(30, "http://razbor-poletov.com/2012/12/episode-30.html")));
@@ -113,4 +114,38 @@ public class LinkParserTest extends PowerMockitoTestCase {
         assertThat(podcastLinks, IsCollectionContaining.hasItem(new PodcastLink(30, "http://razbor-poletov.com/2012/12/episode-30.html")));
     }
 
+    @Test
+    public void parse_WithFileCollection_ReturnPodcastLinkCollection() {
+        when(PodcastFileUtils.getPodcastsIdArray(Mockito.anyListOf(File.class))).thenReturn(new int[]{30, 125});
+        List<PodcastLink> podcastLinks = linkParser.parse(Collections.singletonList(new File("test")));
+        assertThat(podcastLinks, IsCollectionWithSize.hasSize(2));
+    }
+
+    @Test
+    public void parse_WithNullPodcastArray_ReturnEmptyCollection() {
+        when(PodcastFileUtils.getPodcastsIdArray(Mockito.anyListOf(File.class))).thenReturn(null);
+        List<PodcastLink> podcastLinks = linkParser.parse(Collections.singletonList(new File("test")));
+        assertThat(podcastLinks, IsEmptyCollection.empty());
+    }
+
+    @Test
+    public void parse_WithEmptyPodcastArray_ReturnEmptyCollection() {
+        when(PodcastFileUtils.getPodcastsIdArray(Mockito.anyListOf(File.class))).thenReturn(new int []{});
+        List<PodcastLink> podcastLinks = linkParser.parse(Collections.singletonList(new File("test")));
+        assertThat(podcastLinks, IsEmptyCollection.empty());
+    }
+
+    @Test
+    public void parse_WithFile_ReturnPodcastLinkCollection() {
+        when(PodcastFileUtils.getPodcastNumber(Mockito.any(File.class))).thenReturn(Optional.of(30));
+        List<PodcastLink> podcastLinks = linkParser.parse(new File("test"));
+        assertThat(podcastLinks, IsCollectionWithSize.hasSize(1));
+    }
+
+    @Test
+    public void parse_WithEmptyPodcastNumber_ReturnEmptyCollection() {
+        when(PodcastFileUtils.getPodcastNumber(Mockito.any(File.class))).thenReturn(Optional.empty());
+        List<PodcastLink> podcastLinks = linkParser.parse(new File("test"));
+        assertThat(podcastLinks, IsEmptyCollection.empty());
+    }
 }
