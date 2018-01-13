@@ -95,16 +95,4 @@ public class FileUtils {
         return target;
     }
 
-    public boolean saveTwitterCountInJsonToFile(List<User> users) {
-        File file = new File("creators-and-guests.json");
-        try {
-            file.delete();
-            file.createNewFile();
-            objectMapper.writeValue(file, users);
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 }

@@ -27,7 +27,7 @@ public class PodcastFileUtils {
         return LocalDate.of(year, month, day);
     }
 
-    public static Optional<Integer> getPodcastId(File file) {
+    public static Optional<Integer> getPodcastNumber(File file) {
         if (Objects.nonNull(file)) {
             Pattern compile = Pattern.compile("(?!.*(episode))\\d+(?=(-\\w+)*\\.\\w+)");
             Matcher matcher = compile.matcher(file.getName());
@@ -44,7 +44,7 @@ public class PodcastFileUtils {
         if (Objects.nonNull(files)) {
             return files
                     .stream()
-                    .map(PodcastFileUtils::getPodcastId)
+                    .map(PodcastFileUtils::getPodcastNumber)
                     .filter(Optional::isPresent)
                     .map(Optional::get)
                     .collect(Collectors.toList());
