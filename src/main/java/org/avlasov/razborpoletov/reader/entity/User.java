@@ -1,15 +1,14 @@
 package org.avlasov.razborpoletov.reader.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by artemvlasov on 20/04/15.
  */
 public class User implements Comparable {
 
-    public final static User EMPTY_USER = new User();
-
+    private long twitterId;
     private String twitterAccount;
     private String twitterAccountUrl;
     private String name;
@@ -20,48 +19,81 @@ public class User implements Comparable {
     private int totalAppearance;
     private Set<Integer> appearanceEpisodeNumbers;
 
-    private User() {
+    public User() {
     }
 
-    public User(String twitterAccount, String twitterAccountUrl, String name, String twitterImgUrl, String location, String bio, int episodeNumberOfTheFirstAppearance) {
+    private User(long twitterId, String twitterAccount, String twitterAccountUrl, String name, String twitterImgUrl, long episodeNumberOfTheFirstAppearance, String location, String bio, int totalAppearance, Set<Integer> appearanceEpisodeNumbers) {
+        this.twitterId = twitterId;
         this.twitterAccount = twitterAccount;
         this.twitterAccountUrl = twitterAccountUrl;
         this.name = name;
         this.twitterImgUrl = twitterImgUrl;
+        this.episodeNumberOfTheFirstAppearance = episodeNumberOfTheFirstAppearance;
         this.location = location;
         this.bio = bio;
-        this.episodeNumberOfTheFirstAppearance = episodeNumberOfTheFirstAppearance;
-        appearanceEpisodeNumbers = new HashSet<>();
-        appearanceEpisodeNumbers.add(episodeNumberOfTheFirstAppearance);
-        totalAppearance = 1;
+        this.totalAppearance = totalAppearance;
+        this.appearanceEpisodeNumbers = appearanceEpisodeNumbers;
     }
 
-    public void addAppearance() {
-        totalAppearance++;
+    public static UserBuilder builder() {
+        return new UserBuilder();
     }
 
-    public void addEpisodeNumber(int number) {
-        appearanceEpisodeNumbers.add(number);
+    public static UserBuilder builder(User source) {
+        return new UserBuilder(source);
     }
 
-    public boolean isRequiredGuest(String accountURL) {
-        return twitterAccountUrl.equals(accountURL);
+    public Set<Integer> getAppearanceEpisodeNumbers() {
+        return appearanceEpisodeNumbers;
+    }
+
+    public long getTwitterId() {
+        return twitterId;
+    }
+
+    public String getTwitterAccount() {
+        return twitterAccount;
+    }
+
+    public String getTwitterAccountUrl() {
+        return twitterAccountUrl;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTwitterImgUrl() {
+        return twitterImgUrl;
+    }
+
+    public long getEpisodeNumberOfTheFirstAppearance() {
+        return episodeNumberOfTheFirstAppearance;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public int getTotalAppearance() {
+        return totalAppearance;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
-
         User user = (User) o;
-
-        return twitterAccountUrl != null ? twitterAccountUrl.toLowerCase().equals(user.twitterAccountUrl.toLowerCase()) : user.twitterAccountUrl == null;
-
+        return twitterId == user.twitterId;
     }
 
     @Override
     public int hashCode() {
-        return twitterAccountUrl != null ? twitterAccountUrl.hashCode() : 0;
+        return Objects.hash(twitterId);
     }
 
     @Override
@@ -85,7 +117,92 @@ public class User implements Comparable {
         return Integer.compare(((User) o).totalAppearance, totalAppearance);
     }
 
-    public String getTwitterAccount() {
-        return twitterAccount;
+    public static class UserBuilder {
+
+        private String twitterAccount;
+        private String twitterAccountUrl;
+        private String name;
+        private String twitterImgUrl;
+        private String location;
+        private String bio;
+        private Set<Integer> appearanceEpisodeNumbers;
+        private long twitterId;
+
+        public UserBuilder() {
+        }
+
+        public UserBuilder(User source) {
+            twitterAccount = source.twitterAccount;
+            twitterAccountUrl = source.twitterAccountUrl;
+            name = source.name;
+            twitterImgUrl = source.twitterImgUrl;
+            location = source.location;
+            bio = source.bio;
+            appearanceEpisodeNumbers = new HashSet<>(source.appearanceEpisodeNumbers);
+            twitterId = source.twitterId;
+        }
+
+        public UserBuilder twitterId(long twitterId) {
+            this.twitterId = twitterId;
+            return this;
+        }
+
+        public UserBuilder twitterAccount(String twitterAccount) {
+            this.twitterAccount = twitterAccount;
+            return this;
+        }
+
+        public UserBuilder twitterAccountUrl(String twitterAccountUrl) {
+            this.twitterAccountUrl = twitterAccountUrl;
+            return this;
+        }
+
+        public UserBuilder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public UserBuilder twitterImgUrl(String twitterImgUrl) {
+            this.twitterImgUrl = twitterImgUrl;
+            return this;
+        }
+
+        public UserBuilder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        public UserBuilder bio(String bio) {
+            this.bio = bio;
+            return this;
+        }
+
+        public UserBuilder episodes(Set<Integer> episodes) {
+            this.appearanceEpisodeNumbers = episodes;
+            return this;
+        }
+
+        public UserBuilder addEpisode(int episode) {
+            if (Objects.isNull(appearanceEpisodeNumbers)) {
+                appearanceEpisodeNumbers = new HashSet<>();
+            }
+            appearanceEpisodeNumbers.add(episode);
+            return this;
+        }
+
+        public User build() {
+            Set<Integer> episodes = Optional.ofNullable(appearanceEpisodeNumbers)
+                    .orElseGet(Collections::emptySet)
+                    .stream()
+                    .sorted()
+                    .collect(Collectors.toCollection(LinkedHashSet::new));
+            int firstEpisode = episodes
+                    .stream()
+                    .mapToInt(Integer::intValue)
+                    .min()
+                    .getAsInt();
+            return new User(twitterId, twitterAccount, twitterAccountUrl, name, twitterImgUrl, firstEpisode, location, bio, episodes.size(), episodes);
+        }
     }
+
 }

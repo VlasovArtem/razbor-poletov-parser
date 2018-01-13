@@ -3,7 +3,7 @@ package org.avlasov.razborpoletov.reader.entity;
 /**
  * Created by artemvlasov on 04/07/2017.
  */
-public class PodcastLink {
+public class PodcastLink implements Comparable<PodcastLink> {
 
     private int podcastNumber;
     private String link;
@@ -34,5 +34,10 @@ public class PodcastLink {
     @Override
     public int hashCode() {
         return podcastNumber;
+    }
+
+    @Override
+    public int compareTo(PodcastLink o) {
+        return Integer.compare(this.podcastNumber, o.podcastNumber);
     }
 }
