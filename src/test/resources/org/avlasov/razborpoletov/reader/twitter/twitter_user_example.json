@@ -1,0 +1,182 @@
+{
+  "id": 24692013,
+  "id_str": "24692013",
+  "name": "Viktor Gamov",
+  "screen_name": "gAmUssA",
+  "location": "New York City Area, USA",
+  "profile_location": null,
+  "description": "Solutions Architect @ConfluentInc Co-founder @razbor_poletov Co-author of @EnterpriseWebBk Stupidity is my own, retweet is not endorsement",
+  "url": "https:\/\/t.co\/j1JhC3AlP9",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "https:\/\/t.co\/j1JhC3AlP9",
+          "expanded_url": "http:\/\/gamov.io",
+          "display_url": "gamov.io",
+          "indices": [
+            0,
+            23
+          ]
+        }
+      ]
+    },
+    "description": {
+      "urls": []
+    }
+  },
+  "protected": false,
+  "followers_count": 3671,
+  "friends_count": 1209,
+  "listed_count": 237,
+  "created_at": "Mon Mar 16 13:43:01 +0000 2009",
+  "favourites_count": 1999,
+  "utc_offset": -18000,
+  "time_zone": "Eastern Time (US & Canada)",
+  "geo_enabled": true,
+  "verified": false,
+  "statuses_count": 17729,
+  "lang": "en",
+  "status": {
+    "created_at": "Wed Jan 03 03:53:12 +0000 2018",
+    "id": 948401835789967360,
+    "id_str": "948401835789967360",
+    "text": "RT @exocert: @gwenshap @apachekafka It is cloud-agnostic. Run it on the cloud you want or on-prem. Store the data locally, or on a cloud in\u2026",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "exocert",
+          "name": "I\u00f1igo Gonz\u00e1lez",
+          "id": 4861741,
+          "id_str": "4861741",
+          "indices": [
+            3,
+            11
+          ]
+        },
+        {
+          "screen_name": "gwenshap",
+          "name": "Gwen (Chen) Shapira",
+          "id": 9462812,
+          "id_str": "9462812",
+          "indices": [
+            13,
+            22
+          ]
+        },
+        {
+          "screen_name": "apachekafka",
+          "name": "Apache Kafka",
+          "id": 1287555762,
+          "id_str": "1287555762",
+          "indices": [
+            23,
+            35
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "\u003ca href=\"http:\/\/tapbots.com\/tweetbot\" rel=\"nofollow\"\u003eTweetbot for i\u039fS\u003c\/a\u003e",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Tue Jan 02 23:14:39 +0000 2018",
+      "id": 948331734642429952,
+      "id_str": "948331734642429952",
+      "text": "@gwenshap @apachekafka It is cloud-agnostic. Run it on the cloud you want or on-prem. Store the data locally, or on\u2026 https:\/\/t.co\/FIkByaiGgc",
+      "truncated": true,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "gwenshap",
+            "name": "Gwen (Chen) Shapira",
+            "id": 9462812,
+            "id_str": "9462812",
+            "indices": [
+              0,
+              9
+            ]
+          },
+          {
+            "screen_name": "apachekafka",
+            "name": "Apache Kafka",
+            "id": 1287555762,
+            "id_str": "1287555762",
+            "indices": [
+              10,
+              22
+            ]
+          }
+        ],
+        "urls": [
+          {
+            "url": "https:\/\/t.co\/FIkByaiGgc",
+            "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/948331734642429952",
+            "display_url": "twitter.com\/i\/web\/status\/9\u2026",
+            "indices": [
+              117,
+              140
+            ]
+          }
+        ]
+      },
+      "source": "\u003ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e",
+      "in_reply_to_status_id": 948321661433991168,
+      "in_reply_to_status_id_str": "948321661433991168",
+      "in_reply_to_user_id": 9462812,
+      "in_reply_to_user_id_str": "9462812",
+      "in_reply_to_screen_name": "gwenshap",
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 4,
+      "favorite_count": 2,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 4,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  "contributors_enabled": false,
+  "is_translator": false,
+  "is_translation_enabled": false,
+  "profile_background_color": "3E484A",
+  "profile_background_image_url": "http:\/\/pbs.twimg.com\/profile_background_images\/435340865574539264\/tuW7-060.jpeg",
+  "profile_background_image_url_https": "https:\/\/pbs.twimg.com\/profile_background_images\/435340865574539264\/tuW7-060.jpeg",
+  "profile_background_tile": false,
+  "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/905970991586840576\/fNwLgaLb_normal.jpg",
+  "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/905970991586840576\/fNwLgaLb_normal.jpg",
+  "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/24692013\/1507680205",
+  "profile_link_color": "547D9C",
+  "profile_sidebar_border_color": "F5F5F5",
+  "profile_sidebar_fill_color": "FFFFFF",
+  "profile_text_color": "000000",
+  "profile_use_background_image": false,
+  "has_extended_profile": true,
+  "default_profile": false,
+  "default_profile_image": false,
+  "following": null,
+  "follow_request_sent": null,
+  "notifications": null,
+  "translator_type": "none"
+}
