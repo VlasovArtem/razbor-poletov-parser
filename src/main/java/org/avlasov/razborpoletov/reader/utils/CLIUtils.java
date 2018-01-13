@@ -1,24 +1,38 @@
 package org.avlasov.razborpoletov.reader.utils;
 
 import org.apache.commons.cli.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.avlasov.razborpoletov.reader.enums.CreatorsGuestsArgument;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.PrintWriter;
 
 /**
  * Created by artemvlasov on 21/05/15.
  */
+@Component
+@Profile("commandLine")
 public class CLIUtils {
-    private Options options;
-    private String[] args;
 
-    private CLIUtils() {
+    private final static Logger LOGGER = LogManager.getLogger(CLIUtils.class);
+    private Options options;
+    private ApplicationArguments arguments;
+
+    @Autowired
+    public CLIUtils(@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") ApplicationArguments arguments) {
+        this.arguments = arguments;
         options = new Options();
         options.addOption(Option.builder("a").longOpt("all").desc("Parse all data from all podcast files").build());
         options.addOption(Option.builder("l").longOpt("last").desc("Parse all data from last podcast file").build());
         options.addOption(Option.builder("c").longOpt("conferences").desc("Parse conference data").build());
         options.addOption(Option.builder("u").longOpt("useful").desc("Parse useful things data").build());
         options.addOption(Option.builder("cg").longOpt("creators-guests").desc("Parse creators and guests from twitter accounts in podcast description, Possible values: all or update.").hasArg(true).numberOfArgs(1).build());
-        options.addOption(Option.builder("k").longOpt("links").desc("Parse links of the archive podcasts. This argument contains one arguments append - update or not to update existing file. true or 1 otherwise false. Use with batch, number or last otherwise it will parse all data.").hasArg(true).numberOfArgs(1).build());
+        options.addOption(Option.builder("k").longOpt("links").desc("Parse links of the archive podcasts. This argument contains one arguments append - update or not to update existing file. true or 1 otherwise false. Use with batch, number or last otherwise it will parse all data.").build());
         options.addOption(Option.builder("s").longOpt("statistic").desc("Parse statistic data").build());
         options.addOption(Option.builder("n").longOpt("number").desc("Parse specific podcast with set number").hasArg(true).numberOfArgs(1).build());
         options.addOption(Option.builder("b").longOpt("batch").desc("Specify list of podcast to parse, divided by comma or hypen. Example: 1,2 or 1-5").hasArg(true).build());
@@ -27,20 +41,27 @@ public class CLIUtils {
         options.addOption(Option.builder("h").longOpt("help").desc("Show help").build());
     }
 
-    public CLIUtils(String[] args) {
-        this();
-        this.args = args;
-        if(args == null || args.length < 1) {
+    public CommandLine createCommandLine() {
+        try {
+            CommandLineParser parser = new DefaultParser();
+            CommandLine commandLine = parser.parse(options, arguments.getSourceArgs());
+            if (!new File(commandLine.getOptionValue("g")).exists()) {
+                LOGGER.warn("Properties file is not exists");
+                printHelp();
+                System.exit(0);
+            }
+            if (commandLine.hasOption("cg")) {
+                    CreatorsGuestsArgument.valueOf(commandLine.getOptionValue("cg").toUpperCase());
+            }
+            return commandLine;
+        } catch (ParseException e) {
+            LOGGER.error(e);
             printHelp();
-            System.exit(0);
+            throw new RuntimeException(e);
         }
     }
 
-    public CommandLine createCommandLine() throws ParseException {
-        CommandLineParser parser = new DefaultParser();
-        return parser.parse(options, args);
-    }
-    public void printHelp() {
+    private void printHelp() {
         final String commandLineSyntax = "java -jar RazborPoletovReader-1.0-SNAPSHOT.jar";
         final PrintWriter writer = new PrintWriter(System.out);
         final HelpFormatter helpFormatter = new HelpFormatter();
