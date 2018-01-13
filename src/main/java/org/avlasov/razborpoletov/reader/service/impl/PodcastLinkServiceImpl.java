@@ -64,7 +64,7 @@ public class PodcastLinkServiceImpl implements PodcastLinkService {
     @Override
     public Optional<PodcastLink> parsePodcastLink(File file) {
         if (Objects.nonNull(file)) {
-            Optional<Integer> podcastId = PodcastFileUtils.getPodcastId(file);
+            Optional<Integer> podcastId = PodcastFileUtils.getPodcastNumber(file);
             if (podcastId.isPresent()) {
                 return linkParser.parsePodcastLink(podcastId.get());
             }
