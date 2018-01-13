@@ -48,4 +48,9 @@ Files with content will be create in folder where you execute jar file. +
 When you parse Useful things be aware of some issues with tags and description parsing. This parser get description
 from
 github page if it available, if project will have duplicate github pages you will see alert in console.
+Adding Twitter API configuration. Add twitter.properties to the class path with next properties:
+* *ConsumerKey* (Consumer Key (API Key))
+* *ConsumerSecret* (Consumer Secret (API Secret))
 ====
+
+
