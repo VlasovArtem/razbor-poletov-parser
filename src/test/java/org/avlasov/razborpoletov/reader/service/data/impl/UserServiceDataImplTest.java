@@ -3,7 +3,6 @@ package org.avlasov.razborpoletov.reader.service.data.impl;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import org.apache.commons.cli.Option;
 import org.avlasov.razborpoletov.reader.PowerMockitoTestCase;
 import org.avlasov.razborpoletov.reader.cli.ParserCommandLine;
 import org.avlasov.razborpoletov.reader.cli.enums.CommandLineArgument;
@@ -44,8 +43,6 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
     private ParserCommandLine parserCommandLine;
     @Mock
     private UserParser userParser;
-    @Mock
-    private Option option;
     private UserServiceDataImpl userServiceData;
 
     @Before
@@ -57,8 +54,7 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
         when(PodcastFileUtils.getPodcastNumber(Mockito.any(File.class))).thenReturn(Optional.of(160));
         when(folderUtils.getLastPodcastFile()).thenReturn(mockFile);
         when(folderUtils.getPodcastsFiles(Mockito.anyInt(), Mockito.anyInt())).thenReturn(files);
-        when(parserCommandLine.getOption(CommandLineArgument.CREATORS_GUESTS)).thenReturn(Optional.of(option));
-        when(option.getValue()).thenReturn("UPDATE");
+        when(parserCommandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS)).thenReturn("UPDATE");
         when(userParser.parse(Mockito.anyListOf(File.class))).thenReturn(getList(getNewUser().build(),
                 getNewDataExistingTwitterId().build()));
         when(mockFile.exists()).thenReturn(true);
@@ -82,7 +78,7 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
 
     @Test
     public void parse_WithInvalueCreatorsGuestArgument_ReturnLiftOfUsers() {
-        when(option.getValue()).thenReturn("INVALID");
+        when(parserCommandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS)).thenReturn("INVALID");
         List<User> users = userServiceData.parse(Collections.singletonList(new File("test")));
         assertThat(users, IsCollectionWithSize.hasSize(2));
     }
@@ -97,8 +93,7 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
     @Test
     public void parse_WithCreatorsGuestsArgumentAll_ReturnUserCollection() {
         when(folderUtils.getAllPodcastFiles()).thenReturn(Collections.singletonList(mockFile));
-        when(parserCommandLine.getOption(CommandLineArgument.CREATORS_GUESTS)).thenReturn(Optional.of(option));
-        when(option.getValue()).thenReturn("ALL");
+        when(parserCommandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS)).thenReturn("ALL");
         List<User> parse = userServiceData.parse(Collections.emptyList());
         assertThat(parse, IsCollectionWithSize.hasSize(2));
     }

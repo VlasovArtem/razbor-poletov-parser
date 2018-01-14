@@ -66,15 +66,12 @@ public class UserServiceDataImpl extends ExtendableServiceDataAbstract<User, Use
      * @return {@link CreatorsGuestsArgument#ALL} if command line argument contains all text, otherwise {@link false}
      */
     private CreatorsGuestsArgument getCreatorsGuestsArgument() {
-        return parserCommandLine.getOption(CommandLineArgument.CREATORS_GUESTS)
-                .map(option -> {
-                    try {
-                        return CreatorsGuestsArgument.valueOf(option.getValue().toUpperCase());
-                    } catch (IllegalArgumentException e) {
-                        return CreatorsGuestsArgument.UPDATE;
-                    }
-                })
-                .orElse(CreatorsGuestsArgument.UPDATE);
+        String optionValue = parserCommandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS);
+        try {
+            return CreatorsGuestsArgument.valueOf(optionValue.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            return CreatorsGuestsArgument.UPDATE;
+        }
     }
 
     @Override
