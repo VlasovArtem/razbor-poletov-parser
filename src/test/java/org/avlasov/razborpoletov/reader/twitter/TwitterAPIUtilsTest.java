@@ -10,6 +10,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.modules.junit4.PowerMockRunnerDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
@@ -46,7 +47,7 @@ public class TwitterAPIUtilsTest {
     @Test
     public void getAccessToken_WithValidResponse_ReturnTwitterAccessToken() throws Exception {
         whenNew(RestTemplate.class).withNoArguments().thenReturn(restTemplate);
-        when(restTemplate.getForEntity(Mockito.anyString(), Mockito.eq(TwitterAccessToken.class))).thenReturn(new ResponseEntity<>(new TwitterAccessToken("test", "test"), HttpStatus.FOUND));
+        when(restTemplate.postForEntity(Mockito.anyString(), Mockito.any(HttpEntity.class), Mockito.eq(TwitterAccessToken.class))).thenReturn(new ResponseEntity<>(new TwitterAccessToken("test", "test"), HttpStatus.FOUND));
         TwitterAccessToken accessToken = twitterAPIUtils.getAccessToken();
         assertNotNull(accessToken);
         assertEquals("test", accessToken.getAccessToken());
