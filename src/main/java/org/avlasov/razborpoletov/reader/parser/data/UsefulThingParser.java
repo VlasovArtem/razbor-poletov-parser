@@ -2,6 +2,7 @@ package org.avlasov.razborpoletov.reader.parser.data;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -19,6 +20,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -55,7 +58,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
     public List<UsefulThing> parse(File file) {
         try {
             Integer podcastId = PodcastFileUtils.getPodcastNumber(file).orElse(-999);
-            if (Pattern.matches(PODCAST_FILE_PATTERN, file.getName())) {
+             if (Pattern.matches(PODCAST_FILE_PATTERN, file.getName()) && podcastId >= 0) {
                 LOGGER.info("Start collecting useful things for the podcast {}.", podcastId);
                 switch (FilenameUtils.getExtension(file.getName())) {
                     case Constants.ASCII_DOC:
@@ -63,10 +66,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
                                 .map(doc -> parse(doc.getElementsByTag("a"), podcastId))
                                 .orElseGet(Collections::emptyList);
                     case Constants.MARKDOWN_FORMAT:
-                        Document parse = Jsoup.parse(MarkdownUtils.parseToHtml(file));
-                        if (Objects.nonNull(parse)) {
-                            return parse(parse, podcastId);
-                        }
+                        return parse(Jsoup.parse(MarkdownUtils.parseToHtml(file)), podcastId);
                     case Constants.HTML:
                         return parse(Jsoup.parse(file, "UTF-8"), podcastId);
                 }
@@ -79,7 +79,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
     }
 
     private List<UsefulThing> parse(Document document, long podcastId) {
-        if (Objects.nonNull(document) && podcastId >= 0) {
+        if (Objects.nonNull(document)) {
             String html = document.html();
             Elements elements = null;
             if (html.contains("Полезняшка") || html.contains("Полезняшки")) {
@@ -96,44 +96,47 @@ public class UsefulThingParser implements Parser<UsefulThing> {
 
     private List<UsefulThing> parse(Elements elements, long podcastId) {
         if (Objects.nonNull(elements) && podcastId >= 0) {
-            List<UsefulThing> usefulStuffs = new ArrayList<>();
+            List<UsefulThing> usefulThings = new ArrayList<>();
             for (Element element : elements) {
                 String url = element.attributes().get("href");
-                int responseCode;
-                responseCode = UrlUtils.checkUrlStatus(url);
+                int responseCode = UrlUtils.checkUrlStatus(url);
                 if ("http://razbor-poletov.com".equals(url)) {
-                    return usefulStuffs;
+                    return usefulThings;
                 }
-                if (!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(responseCode)) && !url.contains("razbor-poletov")) {
+                if (!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(responseCode))
+                        && !url.contains("razbor-poletov")) {
                     try {
-                        usefulStuffs.add(setUsefulThingContent(url, podcastId));
+                        usefulThings.add(setUsefulThingContent(url, podcastId));
                     } catch (IOException | URISyntaxException e) {
-                        e.printStackTrace();
+                        LOGGER.error(e);
                     }
                 } else {
                     LOGGER.info("Url {} return error with status {}", url, responseCode);
                 }
             }
-            return usefulStuffs;
+            return usefulThings;
         }
         return Collections.emptyList();
     }
 
     /**
      * Parse popular tags from the file in classpath
+     *
      * @throws IOException
      */
     private void localParseTags() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
+        TypeFactory typeFactory = objectMapper.getTypeFactory();
         duplicateTags = objectMapper.readValue(getClass().getResourceAsStream(Constants.DUPLICATE_TAGS),
-                new TypeReference<Map<String, List<String>>>() {});
+                typeFactory.constructMapType(Map.class, typeFactory.constructType(String.class), typeFactory.constructCollectionLikeType(List.class, String.class)));
         tags = objectMapper.readValue(getClass().getResourceAsStream(Constants.TAGS),
-                new TypeReference<List<String>>() {});
+                typeFactory.constructCollectionLikeType(List.class, String.class));
     }
 
     /**
      * Set data to entity UsefulThing name, ulr, tags and description. If url is not github url it will create name
      * from the url and get description of the project from github.
+     *
      * @param url
      * @throws IOException
      * @throws URISyntaxException
@@ -141,8 +144,8 @@ public class UsefulThingParser implements Parser<UsefulThing> {
     private UsefulThing setUsefulThingContent(String url, long podcastId) throws IOException, URISyntaxException {
         String description = null;
         String name = null;
-        if(url.contains("github")) {
-            if(url.lastIndexOf("/") != url.length() - 1 && !url.substring(url.lastIndexOf
+        if (url.contains("github")) {
+            if (url.lastIndexOf("/") != url.length() - 1 && !url.substring(url.lastIndexOf
                     ("/"), url.length()).contains("github")) {
                 String substringName = url.substring(url.lastIndexOf("/") + 1, url.length());
                 if (substringName.length() != 0) {
@@ -151,7 +154,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
                 }
             }
         }
-        if(name == null) {
+        if (name == null) {
             if (url.contains("http") || url.contains("https") || url.contains("www")) {
                 if (url.contains("www.")) {
                     name = url.substring(url.indexOf("www.") + "www.".length())
@@ -163,10 +166,10 @@ public class UsefulThingParser implements Parser<UsefulThing> {
             }
             try {
                 String githubUrl = UrlUtils.findGithubLink(url);
-                if(githubUrl != null) {
+                if (githubUrl != null) {
                     description = UrlUtils.getGithubDescription(githubUrl);
                 }
-            } catch (IOException | URISyntaxException | UnsupportedOperationException e ) {
+            } catch (IOException | URISyntaxException | UnsupportedOperationException e) {
                 LOGGER.warn(e.getMessage());
             }
 
@@ -178,35 +181,56 @@ public class UsefulThingParser implements Parser<UsefulThing> {
      * Parse tags from the web site content. Method check status of the link if it's available. If link is github
      * link, it will get special part of HTML, that contains useful information about link.
      * This method will return top 5 common tags.
+     *
      * @param url
      * @return List of tags
      * @throws IOException
      */
     private List<String> parseTags(String url) throws IOException {
-        List<String> tags = null;
-        if(!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(UrlUtils.checkUrlStatus(url)))) {
+        List<String> tags = Collections.emptyList();
+        if (!Pattern.matches("(^(4|5)([0-9]{2})$)|0", String.valueOf(UrlUtils.checkUrlStatus(url)))) {
             Connection connection = Jsoup.connect(url);
             Document document = connection.get();
-            final Element element = Pattern.compile("https?://github.com/.+/.+").matcher(url).matches() ? document
-                    .getElementById("readme") : document.body();
-            if(element != null) {
+            final Element element = Pattern.compile("https?://github.com/.+/.+").matcher(url).matches()
+                    ? document.getElementById("readme")
+                    : document.body();
+            if (element != null) {
                 tags = this.tags.stream()
                         .filter(tag ->
-                                element.getElementsMatchingOwnText(Pattern.compile("^(" + tag + ")$", Pattern
-                                        .CASE_INSENSITIVE | Pattern.MULTILINE)).size() > 0 || (duplicateTags.containsKey(tag) &&
-                                        duplicateTags
-                                                .get(tag).stream().anyMatch(dt -> element.getElementsMatchingOwnText(Pattern.compile
-                                                (dt, Pattern.CASE_INSENSITIVE)).size() > 0)))
+                                filterTag()
+                                        .or(filterDuplicateTags())
+                                        .test(tag, element))
                         .distinct()
-                        .sorted(Comparator.comparing(tag -> -element.getElementsMatchingOwnText(Pattern.compile("^(" + tag + ")$", Pattern
-                                .CASE_INSENSITIVE | Pattern.MULTILINE)).size()))
+                        .sorted(Comparator.comparing(tag ->
+                                -element.getElementsMatchingOwnText(Pattern.compile("^(" + tag + ")$", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE)).size()))
                         .limit(5)
                         .collect(Collectors.toList());
             } else {
                 LOGGER.warn("{} url not contains html body", url);
             }
-
         }
         return tags;
     }
+
+    /**
+     * Filter tag by matching element by pattern '^(tag)$' with flags {@link Pattern#CASE_INSENSITIVE} and {@link Pattern#MULTILINE}
+     *
+     * @return {@link true} if Element contains tag, otherwise {@link false}
+     */
+    private BiPredicate<String, Element> filterTag() {
+        return (tag, element) -> element.getElementsMatchingOwnText(Pattern.compile("^(" + tag + ")$", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE)).size() > 0;
+    }
+
+    /**
+     * Filter tag by duplicate tag, that is matching element own text
+     *
+     * @return {@link true} if one of duplicate tags is matches elements own text, otherwise {@link fasle}
+     */
+    private BiPredicate<String, Element> filterDuplicateTags() {
+        return (tag, element) ->
+                duplicateTags.getOrDefault(tag, Collections.emptyList())
+                        .stream()
+                        .anyMatch(dt -> element.getElementsMatchingOwnText(Pattern.compile(dt, Pattern.CASE_INSENSITIVE)).size() > 0);
+    }
+
 }
