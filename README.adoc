@@ -53,4 +53,14 @@ Adding Twitter API configuration. Add twitter.properties to the class path with 
 * *ConsumerSecret* (Consumer Secret (API Secret))
 ====
 
+==== Developer NOTES
+* Please beware, when you testing static class (utilities classes) with *final static* methods, please ref to AsciidocUtils.java (org.avlasov.razborpoletov.reader.utils). You should use next code like in the next example
+[source,java]
+----
+Whitebox.setInternalState(AsciidocUtils.class, "asciidoctor", asciidoctor);<1>
+----
+<1> Test need to set new instance of class, that should not be verified as singleton
+--
+* When you try to invoke final method on mock class, you need to add class to **@PrepareForTest**
+* To test any inner classes you can use **org.powermock.reflect.Whitebox**
 

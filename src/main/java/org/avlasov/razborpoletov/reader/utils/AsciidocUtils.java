@@ -21,9 +21,9 @@ import java.util.stream.Collectors;
  * Created by artemvlasov on 26/04/15.
  */
 public class AsciidocUtils {
+
     private static final Asciidoctor asciidoctor = Asciidoctor.Factory.create();
     private static final Logger LOG = LoggerFactory.getLogger(AsciidocUtils.class);
-    private static final String[] TWITTER_PART_NAME = new String[] {"_twitter", "_Гости_и_участники"};
     private static final List<String> DOCUMENT_IDS = Arrays.asList(".?полезняшк.?", ".?конференци.?");
 
 
@@ -42,33 +42,28 @@ public class AsciidocUtils {
     }
 
     public static Optional<Element> parsePartById(File file, String partId) {
-        if(Objects.isNull(partId)) {
-            throw new NullPointerException("part id cannot be null");
-        }
-        Optional<String> id = DOCUMENT_IDS.stream()
+        Objects.requireNonNull(partId, "part id cannot be null");
+        String id = DOCUMENT_IDS.stream()
                 .filter(docId -> matchText(docId, partId))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Incorrect part id"));
+        List<ContentPart> parts = asciidoctor.readDocumentStructure(file, new HashMap<>()).getParts();
+        Optional<ContentPart> contentPart = parts.stream()
+                .filter(cp -> Objects.nonNull(cp.getId()) &&
+                        matchText(id, cp.getId()))
                 .findFirst();
-        if (id.isPresent()) {
-            String patternId = id.orElseThrow(() -> new IllegalArgumentException("Incorrect part id"));
-            List<ContentPart> parts = asciidoctor.readDocumentStructure(file, new HashMap<>()).getParts();
-            Optional<ContentPart> contentPart = parts.stream()
-                    .filter(filePart -> Objects.nonNull(filePart.getId()) &&
-                            matchText(patternId, filePart.getId()))
+        if (contentPart.isPresent()) {
+            return Optional.ofNullable(Jsoup.parse(contentPart.get().getContent()));
+        } else {
+            Optional<Element> requiredDocumentPart = parts
+                    .stream()
+                    .map(data -> findContentPartWithId(data, id))
+                    .filter(Objects::nonNull)
                     .findFirst();
-            if (contentPart.isPresent()) {
-                return Optional.ofNullable(Jsoup.parse(contentPart.get().getContent()));
-            } else {
-                Optional<Element> requiredDocumentPart = parts
-                        .stream()
-                        .map(data -> findContentPartWithId(data, patternId))
-                        .filter(Objects::nonNull)
-                        .findFirst();
-                if (!requiredDocumentPart.isPresent())
-                    LOG.info("Document {} has no {} part", file.getName(), partId);
-                return requiredDocumentPart;
-            }
+            if (!requiredDocumentPart.isPresent())
+                LOG.info("Document {} has no {} part", file.getName(), partId);
+            return requiredDocumentPart;
         }
-        return Optional.empty();
     }
 
     private static boolean matchText(String pattern, String text) {
@@ -93,7 +88,7 @@ public class AsciidocUtils {
     private final static class MatchesId extends Evaluator {
         private String patternId;
 
-        public MatchesId(String patternId) {
+        MatchesId(String patternId) {
             this.patternId = patternId;
         }
 
@@ -107,8 +102,6 @@ public class AsciidocUtils {
             return String.format("#%s", patternId);
         }
     }
-
-
 
 
 }
