@@ -100,7 +100,7 @@ public class UserParser implements Parser<User> {
             } catch (Exception ex) {
                 LOGGER.warn(ex.getMessage());
                 LOGGER.warn("Original image is not found for twitter with id {}. Image will be empty.", twitterid);
-            }
+                return "";}
         }
         return imageURL;
     }
@@ -114,6 +114,7 @@ public class UserParser implements Parser<User> {
                         .stream()
                         .map(mapTwitterLink())
                         .map(getTwitterNameFromUrl())
+                        .filter(Objects::nonNull)
                         .map(String::toLowerCase)
                         .distinct()
                         .collect(Collectors.toList());
@@ -133,7 +134,6 @@ public class UserParser implements Parser<User> {
                     return episodes;
                 }));
             } catch (IOException e) {
-                e.printStackTrace();
                 LOGGER.error(e.getMessage());
             }
         }
@@ -142,10 +142,7 @@ public class UserParser implements Parser<User> {
     private Function<String, String> getTwitterNameFromUrl() {
         return twitterUrl -> {
             String[] twitterData = twitterUrl.split("/");
-            if (twitterData.length > 1) {
-                return twitterData[twitterData.length - 1];
-            }
-            return null;
+            return twitterData[twitterData.length - 1];
         };
     }
 
