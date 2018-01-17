@@ -2,18 +2,11 @@ package org.avlasov.razborpoletov.reader.utils;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Objects;
+import java.net.*;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,18 +16,19 @@ import java.util.stream.Collectors;
  * Created by artemvlasov on 20/05/15.
  */
 public class UrlUtils {
+
     private static final Logger LOG = LoggerFactory.getLogger(UrlUtils.class);
 
     /**
      * Search for the github link on the non github urls.
-     * @param url
-     * @return
-     * @throws IOException
-     * @throws URISyntaxException
+     * @param url url
+     * @return github link
+     * @throws IOException exception
+     * @throws URISyntaxException exception
      */
     public static String findGithubLink(String url) throws IOException, URISyntaxException {
         URLConnection huc = getURL(url).openConnection();
-        Document document = Jsoup.parse(huc.getInputStream(), null, url.toString());
+        Document document = Jsoup.parse(huc.getInputStream(), null, url);
         Pattern pattern = Pattern.compile("(?:https?://github.com(/([^/])+){2})");
         Set<String> githubUniqueUrl = document.getElementsByTag("a").stream()
                 .filter(element -> element.attr("href").matches("https?://github.com.+"))
@@ -67,50 +61,15 @@ public class UrlUtils {
     }
 
     /**
-     * Get description of the project form the github page.
-     * @param url
-     * @return
-     * @throws IOException
-     * @throws URISyntaxException
-     */
-    public static String getGithubDescription(@javax.validation.constraints.Pattern(regexp = "https?://github.com/" +
-            ".+/.+", message = "Incorrect github url") String url) throws IOException, URISyntaxException {
-        String description = null;
-        URLConnection huc = getURL(url).openConnection();
-        Document document = Jsoup.parse(huc.getInputStream(), null, url);
-        if(Objects.nonNull(document)) {
-            Elements descriptionElement = document.getElementsByClass("repository-meta-content");
-            if(Objects.nonNull(descriptionElement) && descriptionElement.size() != 0) {
-                Elements about = descriptionElement.first().getElementsByAttributeValue("itemprop", "about");
-                if (about.size() != 0) {
-                    description = about.stream().findFirst().get().textNodes().stream().findFirst().get().getWholeText()
-                            .trim();
-                } else {
-                    LOG.warn("Description for the github link {} is not found", url);
-                }
-            } else {
-                LOG.warn("Description element for link {} is not found", url);
-            }
-
-        } else {
-            LOG.warn("Could parse Document object from github link {}", url);
-        }
-        return description;
-    }
-
-    /**
      * Check status of the url.
-     * @param url
+     * @param url url
      * @return Responce code of the url
-     * @throws URISyntaxException
-     * @throws IOException
      */
     public static int checkUrlStatus(String url) {
         URL connectionUrl;
         try {
             connectionUrl = getURL(url);
         } catch (URISyntaxException | MalformedURLException e) {
-            e.printStackTrace();
             LOG.warn(e.getMessage());
             return 0;
         }
@@ -131,10 +90,10 @@ public class UrlUtils {
 
     /**
      * Return valid url to get content from this url
-     * @param url
+     * @param url url
      * @return URL in correct format for execution
-     * @throws URISyntaxException
-     * @throws MalformedURLException
+     * @throws URISyntaxException exception
+     * @throws MalformedURLException exception
      */
     public static URL getURL(String url) throws URISyntaxException, MalformedURLException {
         URI uri = new URI(Constants.PROTOCOLS.stream().anyMatch(url::contains) ? url :
