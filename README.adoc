@@ -63,4 +63,5 @@ Whitebox.setInternalState(AsciidocUtils.class, "asciidoctor", asciidoctor);<1>
 --
 * When you try to invoke final method on mock class, you need to add class to **@PrepareForTest**
 * To test any inner classes you can use **org.powermock.reflect.Whitebox**
+* When create SetUp method for test, do not forget about class initialization.
 

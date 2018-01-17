@@ -9,6 +9,4 @@ import org.powermock.modules.junit4.PowerMockRunner;
  */
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"javax.management.*"})
-public abstract class PowerMockitoTestCase {
-
-}
+public abstract class PowerMockitoTestCase {}
