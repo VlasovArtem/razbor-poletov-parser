@@ -5,6 +5,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.RegexFileFilter;
 import org.apache.commons.lang3.StringUtils;
+import org.avlasov.razborpoletov.reader.cli.enums.CommandLineArgument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +32,12 @@ public class PodcastFolderUtils {
 
     static {
         PODCAST_POST_FOLDER_APPENDER = "source" + File.separator + "_posts" + File.separator;
-        podcastFolderPattern = ".+" + PODCAST_POST_FOLDER_APPENDER;
+        podcastFolderPattern = ".+" + PODCAST_POST_FOLDER_APPENDER + "?";
     }
 
     @Autowired
     public PodcastFolderUtils(CommandLine commandLine) {
-        podcastsFiles = collectFilesFromPodcastFolder(commandLine.getOptionValue("g"));
+        podcastsFiles = collectFilesFromPodcastFolder(commandLine.getOptionValue(CommandLineArgument.GIT_FOLDER.getOption()));
     }
 
     public List<File> getAllPodcastFiles() {
@@ -65,21 +66,22 @@ public class PodcastFolderUtils {
      * Get Podcasts files by numbers 'from' to 'to'
      *
      * @param from from number
-     * @param to to number
+     * @param to   to number
      * @return filtered podcasts
      */
     public List<File> getPodcastsFiles(int from, int to) {
-        if (from > to) {
+        if (from <= to) {
             return getPodcastFiles(IntStream.rangeClosed(from, to)
                     .toArray());
         }
-        String message = "'from' number cannot be greater, than 'to' number";
+        String message = String.format("'from' %d number cannot be greater, than 'to' %d number", from, to);
         LOGGER.error(message);
         throw new IllegalArgumentException(message);
     }
 
     /**
      * Get Podcast fileds by podcast numbers
+     *
      * @param podcastNumbers Podcast numbers
      * @return files filtered by podcast numbers
      */
@@ -88,6 +90,7 @@ public class PodcastFolderUtils {
             return IntStream.of(podcastNumbers)
                     .distinct()
                     .mapToObj(this::getPodcastByNumber)
+                    .filter(Objects::nonNull)
                     .collect(Collectors.toList());
         }
         return Collections.emptyList();
@@ -122,57 +125,16 @@ public class PodcastFolderUtils {
     }
 
     /**
-     * Return podcast post folder
-     *
-     * @param podcastFolderPath Podcast folder path provided by user of the API
-     * @return string
-     */
-    public String getPodcastPostsFolder(String podcastFolderPath) {
-        return StringUtils.endsWith(podcastFolderPath, "/") ?
-                podcastFolderPath + PODCAST_POST_FOLDER_APPENDER :
-                podcastFolderPath + "/" + PODCAST_POST_FOLDER_APPENDER;
-    }
-
-    /**
      * Check Podcast folder and Podcast post folder is exist and contains information
      *
      * @param podcastFolderPath Podcast folder path provided by user of the API
      */
-    public boolean checkPodcastFolder(String podcastFolderPath) {
+    public void checkPodcastFolder(String podcastFolderPath) {
         Objects.requireNonNull(podcastFolderPath, "Podcast folder path cannot be null");
         File podcastFolder = new File(podcastFolderPath);
-        if (!podcastFolder.exists()) {
-            throw new RuntimeException("Folder with provided path is not exists");
-        } else if (podcastFolder.isDirectory()) {
-            String postsFolderPath = getPodcastPostsFolder(podcastFolderPath);
-            if (!checkPodcastPostsFolder(postsFolderPath)) {
-                throw new RuntimeException("Posts folder does not exists or posts folder is empty");
-            }
+        if (!podcastFolder.exists() || !podcastFolder.isDirectory()) {
+            throw new RuntimeException("Folder with provided path is not exists or it is not directory");
         }
-        return true;
-    }
-
-    /**
-     * Check folder that contains podcast posts (episodes) folder. Folder should exists and contains list of files.
-     *
-     * @param folderPath path of the folder
-     * @return return true if folderPath content and folder them self contain correct information, otherwise return
-     * false.
-     */
-    public boolean checkPodcastPostsFolder(String folderPath) {
-        if (Objects.isNull(folderPath)) {
-            return false;
-        }
-        if (!folderPath.matches(podcastFolderPattern)) {
-            File podcastPostsFolder = new File(folderPath);
-            if (!podcastPostsFolder.exists()
-                    || (podcastPostsFolder.isDirectory()
-                    && Objects.nonNull(podcastPostsFolder.listFiles())
-                    && collectFilesFromPodcastFolder(folderPath).size() == 0)) {
-                return false;
-            }
-        }
-        return true;
     }
 
     /**
@@ -182,21 +144,34 @@ public class PodcastFolderUtils {
      *                          podcast path.
      * @return list of the file
      */
-    public List<File> collectFilesFromPodcastFolder(String podcastFolderPath) {
-        if (checkPodcastFolder(podcastFolderPath)) {
-            File postsFolder;
-            if (podcastFolderPath.matches(podcastFolderPattern)) {
-                postsFolder = new File(podcastFolderPath);
-            } else {
-                postsFolder = new File(getPodcastPostsFolder(podcastFolderPath));
-            }
-            File[] postsFiles = postsFolder.listFiles();
-            if (Objects.nonNull(postsFiles))
-                return Arrays.stream(postsFiles)
-                        .filter(file -> Pattern.matches(podcastPostFilePattern, file.getName()))
-                        .sorted(Comparator.comparingInt(file -> PodcastFileUtils.getPodcastNumber(file).orElse(-999)))
-                        .collect(Collectors.toList());
+    private List<File> collectFilesFromPodcastFolder(String podcastFolderPath) {
+        checkPodcastFolder(podcastFolderPath);
+        File postsFolder;
+        if (podcastFolderPath.matches(podcastFolderPattern)) {
+            postsFolder = new File(podcastFolderPath);
+        } else {
+            postsFolder = new File(getPodcastPostsFolder(podcastFolderPath));
         }
-        return Collections.emptyList();
+        File[] postsFiles = postsFolder.listFiles();
+        if (Objects.nonNull(postsFiles) && postsFiles.length > 0)
+            return Arrays.stream(postsFiles)
+                    .filter(file -> Pattern.matches(podcastPostFilePattern, file.getName()))
+                    .sorted(Comparator.comparingInt(file -> PodcastFileUtils.getPodcastNumber(file).orElse(-999)))
+                    .collect(Collectors.toList());
+        else
+            throw new RuntimeException("Podcast post folder is empty");
     }
+
+    /**
+     * Return podcast post folder
+     *
+     * @param podcastFolderPath Podcast folder path provided by user of the API
+     * @return string
+     */
+    private String getPodcastPostsFolder(String podcastFolderPath) {
+        return StringUtils.endsWith(podcastFolderPath, "/") ?
+                podcastFolderPath + PODCAST_POST_FOLDER_APPENDER :
+                podcastFolderPath + "/" + PODCAST_POST_FOLDER_APPENDER;
+    }
+
 }
