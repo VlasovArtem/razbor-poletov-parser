@@ -12,7 +12,6 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
  */
 @Configuration
 @ComponentScan(basePackages = "org.avlasov")
-@PropertySource("classpath:twitter.properties")
 public class AppConfig {
 
     @Bean

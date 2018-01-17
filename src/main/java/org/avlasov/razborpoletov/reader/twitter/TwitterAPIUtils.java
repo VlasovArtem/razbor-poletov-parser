@@ -2,6 +2,7 @@ package org.avlasov.razborpoletov.reader.twitter;
 
 import org.avlasov.razborpoletov.reader.exception.TwitterAPIInvalidCredentialsException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -18,6 +19,7 @@ import java.util.Objects;
  * Created By artemvlasov on 03/01/2018
  **/
 @Component
+@PropertySource("classpath:twitter.properties")
 public class TwitterAPIUtils {
 
     @Value("${ConsumerKey}")
