@@ -1,6 +1,9 @@
 package org.avlasov.razborpoletov.reader.utils;
 
 import org.avlasov.razborpoletov.reader.PowerMockitoTestCase;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Answers;
@@ -8,17 +11,20 @@ import org.mockito.Mock;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.powermock.api.mockito.PowerMockito.when;
-import static org.powermock.api.mockito.PowerMockito.whenNew;
+import static org.junit.Assert.assertNull;
+import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
+import static org.powermock.api.mockito.PowerMockito.*;
 
 /**
  * Created By artemvlasov on 17/01/2018
  **/
-@PrepareForTest({UrlUtils.class})
+@PrepareForTest({UrlUtils.class, Jsoup.class})
 public class UrlUtilsTest extends PowerMockitoTestCase {
 
     @Mock
@@ -27,6 +33,8 @@ public class UrlUtilsTest extends PowerMockitoTestCase {
     private URL url;
     @Mock(answer = Answers.RETURNS_DEEP_STUBS)
     private HttpURLConnection urlConnection;
+    @Mock(answer = Answers.RETURNS_DEEP_STUBS)
+    private Document document;
 
     @Before
     public void setUp() throws Exception {
@@ -36,12 +44,43 @@ public class UrlUtilsTest extends PowerMockitoTestCase {
         when(urlConnection.getResponseCode()).thenReturn(200);
     }
 
-    @Test
-    public void findGithubLink() {
+    @Before
+    public void setUpFindGithubLinks() throws Exception {
+        mockStatic(Jsoup.class);
+        when(Jsoup.parse(any(InputStream.class), anyString(), anyString())).thenReturn(document);
+        when(document.getElementsByTag(anyString())).thenReturn(new Elements(document));
+        when(document.attr(anyString())).thenReturn("https://github.com/test/test");
     }
 
     @Test
-    public void getGithubDescription() {
+    public void findGithubLink_WithValidData_ReturnLink() throws Exception {
+        assertNotNull(UrlUtils.findGithubLink("test"));
+    }
+
+    @Test
+    public void findGithubLink_WithWithHttpGithubLink_ReturnLink() throws Exception {
+        when(document.attr(anyString())).thenReturn("http://github.com/test/test");
+        assertNotNull(UrlUtils.findGithubLink("test"));
+    }
+
+    @Test
+    public void findGithubLink_WithNotMatchingUrl_ReturnNull() throws Exception {
+        when(document.attr(anyString())).thenReturn("https://test.com");
+        assertNull(UrlUtils.findGithubLink("test"));
+    }
+
+    @Test
+    public void findGithubLink_WithInvalidStatus_ReturnNull() throws Exception {
+        when(urlConnection.getResponseCode()).thenReturn(400);
+        assertNull(UrlUtils.findGithubLink("test"));
+    }
+
+    @Test
+    public void findGithubLink_WithMultipleGithubLinks_ReturnNull() throws Exception {
+        Document mock = mock(Document.class);
+        when(mock.attr(anyString())).thenReturn("https://github.com/test/test2");
+        when(document.getElementsByTag(anyString())).thenReturn(new Elements(document, mock));
+        assertNull(UrlUtils.findGithubLink("test"));
     }
 
     @Test

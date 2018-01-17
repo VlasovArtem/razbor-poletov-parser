@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.*;
+import java.util.Objects;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,7 +39,7 @@ public class UrlUtils {
                     final Matcher m = pattern.matcher(uniqueUrl);
                     return m.find() ? m.group(0) : null;
                 })
-                .filter(uniqueUrl -> uniqueUrl != null)
+                .filter(Objects::nonNull)
                 .map(uniqueUrl -> {
                     if (Pattern.compile("(?=http://).+").matcher(uniqueUrl).find()) {
                         return uniqueUrl.replaceFirst("http://", "https://");
@@ -55,7 +56,10 @@ public class UrlUtils {
                 (githubUniqueUrl.stream().findFirst().get())))) {
             LOG.warn("{} url github link is not available: {}", url, githubUniqueUrl.stream().findFirst().get());
         } else {
-            return githubUniqueUrl.stream().findFirst().get();
+            return githubUniqueUrl
+                    .stream()
+                    .findFirst()
+                    .get();
         }
         return null;
     }
