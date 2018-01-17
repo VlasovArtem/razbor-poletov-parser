@@ -14,6 +14,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
@@ -59,12 +60,30 @@ public class TwitterAPITest {
     }
 
     @Test
-    public void getTwitterUser_WithScreenNameClientError_ReturnEmptyOptional() throws IOException {
+    public void getTwitterUser_WithScreenNameClientError_ReturnEmptyOptional() {
         ResponseEntity<TwitterUser> tResponseEntity = new ResponseEntity<>(new TwitterUser(), HttpStatus.NOT_FOUND);
         when(restTemplate.exchange(any(URI.class), any(HttpMethod.class), any(HttpEntity.class), eq(TwitterUser.class)))
                 .thenReturn(tResponseEntity);
         Optional<TwitterUser> user = twitterAPI.getTwitterUser("test");
         assertFalse(user.isPresent());
+    }
+
+    @Test
+    public void getTwitterUser_WithRestTemplateThrowError_ReturnOptionalEmpty() {
+        when(restTemplate.exchange(any(URI.class), any(HttpMethod.class), any(HttpEntity.class), eq(TwitterUser.class)))
+                .thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
+        Optional<TwitterUser> user = twitterAPI.getTwitterUser("test");
+        assertFalse(user.isPresent());
+    }
+
+    @Test
+    public void getTwitterUser_WithValidId_ReturnTwitterUserOptional() throws Exception {
+        ResponseEntity<TwitterUser> tResponseEntity = new ResponseEntity<>(getTwitterUser(), HttpStatus.FOUND);
+        when(restTemplate.exchange(any(URI.class), any(HttpMethod.class), any(HttpEntity.class), eq(TwitterUser.class)))
+                .thenReturn(tResponseEntity);
+        Optional<TwitterUser> user = twitterAPI.getTwitterUser(1562);
+        assertTrue(user.isPresent());
+        assertEquals("gAmUssA", user.get().getScreenName());
     }
 
     private TwitterUser getTwitterUser() throws IOException {
