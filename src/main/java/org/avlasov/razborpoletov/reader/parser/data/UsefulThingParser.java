@@ -1,6 +1,5 @@
 package org.avlasov.razborpoletov.reader.parser.data;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.apache.commons.io.FilenameUtils;
@@ -23,7 +22,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.function.BiPredicate;
-import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -176,7 +174,14 @@ public class UsefulThingParser implements Parser<UsefulThing> {
                     .map(GithubProject::getDescription)
                     .orElse("");
         }
-        return new UsefulThing(url, StringUtils.capitalize(name), parseTags(url), false, podcastId, description);
+        return UsefulThing.builder()
+                .link(url)
+                .name(StringUtils.capitalize(name))
+                .tags(parseTags(url))
+                .checked(false)
+                .podcastId(podcastId)
+                .description(description)
+                .build();
     }
 
     /**
@@ -226,7 +231,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
     /**
      * Filter tag by duplicate tag, that is matching element own text
      *
-     * @return {@link true} if one of duplicate tags is matches elements own text, otherwise {@link fasle}
+     * @return {@link true} if one of duplicate tags is matches elements own text, otherwise {@link false}
      */
     private BiPredicate<String, Element> filterDuplicateTags() {
         return (tag, element) ->
