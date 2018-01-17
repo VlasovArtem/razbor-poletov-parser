@@ -1,5 +1,7 @@
 package org.avlasov.razborpoletov.reader.entity;
 
+import java.util.Objects;
+
 /**
  * Created by artemvlasov on 04/07/2017.
  */
@@ -33,7 +35,7 @@ public class PodcastLink implements Comparable<PodcastLink> {
 
     @Override
     public int hashCode() {
-        return podcastNumber;
+        return Objects.hash(podcastNumber);
     }
 
     @Override

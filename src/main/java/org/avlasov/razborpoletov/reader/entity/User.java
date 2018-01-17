@@ -200,7 +200,7 @@ public class User implements Comparable {
                     .stream()
                     .mapToInt(Integer::intValue)
                     .min()
-                    .getAsInt();
+                    .orElse(-1);
             return new User(twitterId, twitterAccount, twitterAccountUrl, name, twitterImgUrl, firstEpisode, location, bio, episodes.size(), episodes);
         }
     }
