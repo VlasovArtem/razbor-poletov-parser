@@ -5,10 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.avlasov.razborpoletov.reader.github.entity.GithubProject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
@@ -38,6 +35,16 @@ public class GithubAPI {
         tokenHeaders.add("Authorization", githubAPIToken);
     }
 
+    /**
+     * Get github project with owner name and project
+     *
+     * @param owner owner
+     * @param project project
+     * @return {@link Optional#empty()} if {@param owner} is empty or null,
+     * or {@param project} is empty or null,
+     * or response from github is not {@link HttpStatus#is2xxSuccessful()},
+     * otherwise {@link Optional<GithubProject>}
+     */
     public Optional<GithubProject> getGithubProject(String owner, String project) {
         if (Objects.toString(owner, "").isEmpty() || Objects.toString(project, "").isEmpty()) {
             LOGGER.warn("Owner or project argument is empty");
@@ -54,6 +61,15 @@ public class GithubAPI {
         return Optional.of(githubProject.getBody());
     }
 
+    /**
+     * Get github project from github url
+     *
+     * @param githubUrl github url
+     * @return {@link Optional#empty()} if {@param githubUrl} is null
+     * or is not match pattern 'https?://github.com/.+/.+'
+     * or {@link URL} throw exception
+     * otherwise {@link Optional<GithubProject>}
+     */
     public Optional<GithubProject> getGithubProject(String githubUrl) {
         String githubPattern = "https?://github.com/.+/.+";
         if (Objects.isNull(githubUrl)) {
