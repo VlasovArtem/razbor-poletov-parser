@@ -46,9 +46,10 @@ public class CLIUtils {
             CommandLineParser parser = new DefaultParser();
             CommandLine commandLine = parser.parse(options, arguments.getSourceArgs());
             if (!new File(commandLine.getOptionValue("g")).exists()) {
-                LOGGER.warn("Properties file is not exists");
+                String message = "Properties file is not exists";
+                LOGGER.warn(message);
                 printHelp();
-                System.exit(0);
+                throw new RuntimeException(message);
             }
             if (commandLine.hasOption(CommandLineArgument.CREATORS_GUESTS.getOption())) {
                 CreatorsGuestsArgument.valueOf(commandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS.getOption()).toUpperCase());
