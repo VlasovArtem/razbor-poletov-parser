@@ -54,7 +54,7 @@ public class TwitterAPIUtilsTest {
     }
 
     @Test(expected = TwitterAPIInvalidCredentialsException.class)
-    public void getAccessToken_WithEmptyCustomerKey_ThrowException() throws NoSuchFieldException, IllegalAccessException {
+    public void getAccessToken_WithEmptyCustomerKey_ThrowException() throws Exception {
         TwitterAPIUtils twitterAPIUtils = new TwitterAPIUtils();
         Field consumerSecret = twitterAPIUtils.getClass().getDeclaredField("consumerSecret");
         consumerSecret.setAccessible(true);
@@ -63,7 +63,7 @@ public class TwitterAPIUtilsTest {
     }
 
     @Test(expected = TwitterAPIInvalidCredentialsException.class)
-    public void getAccessToken_WithEmptyCustomerSecret_ThrowException() throws NoSuchFieldException, IllegalAccessException {
+    public void getAccessToken_WithEmptyCustomerSecret_ThrowException() throws Exception {
         TwitterAPIUtils twitterAPIUtils = new TwitterAPIUtils();
         Field consumerKey = twitterAPIUtils.getClass().getDeclaredField("consumerKey");
         consumerKey.setAccessible(true);
@@ -71,4 +71,10 @@ public class TwitterAPIUtilsTest {
         twitterAPIUtils.getAccessToken();
     }
 
+    @Test(expected = RuntimeException.class)
+    public void getAccessToken_WithErrorResponse_ThrownException() throws Exception {
+        whenNew(RestTemplate.class).withNoArguments().thenReturn(restTemplate);
+        when(restTemplate.postForEntity(Mockito.anyString(), Mockito.any(HttpEntity.class), Mockito.eq(TwitterAccessToken.class))).thenReturn(new ResponseEntity<>(new TwitterAccessToken("test", "test"), HttpStatus.NOT_FOUND));
+        twitterAPIUtils.getAccessToken();
+    }
 }
