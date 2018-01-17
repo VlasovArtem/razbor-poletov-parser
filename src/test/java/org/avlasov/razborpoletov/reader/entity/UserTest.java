@@ -11,6 +11,11 @@ import static org.junit.Assert.*;
 public class UserTest {
 
     @Test
+    public void defaultConstructor() {
+        new User();
+    }
+
+    @Test
     public void builder() {
         assertNotNull(getBuilder());
     }
