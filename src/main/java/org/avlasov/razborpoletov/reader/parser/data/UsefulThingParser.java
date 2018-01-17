@@ -8,6 +8,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.avlasov.razborpoletov.reader.entity.info.UsefulThing;
+import org.avlasov.razborpoletov.reader.github.GithubAPI;
+import org.avlasov.razborpoletov.reader.github.entity.GithubProject;
 import org.avlasov.razborpoletov.reader.utils.*;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -34,8 +36,10 @@ public class UsefulThingParser implements Parser<UsefulThing> {
     private final static Logger LOGGER = LogManager.getLogger(UsefulThingParser.class);
     private List<String> tags;
     private Map<String, List<String>> duplicateTags;
+    private GithubAPI githubAPI;
 
-    public UsefulThingParser() throws IOException {
+    public UsefulThingParser(GithubAPI githubAPI) throws IOException {
+        this.githubAPI = githubAPI;
         localParseTags();
     }
 
@@ -58,7 +62,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
     public List<UsefulThing> parse(File file) {
         try {
             Integer podcastId = PodcastFileUtils.getPodcastNumber(file).orElse(-999);
-             if (Pattern.matches(PODCAST_FILE_PATTERN, file.getName()) && podcastId >= 0) {
+            if (Pattern.matches(PODCAST_FILE_PATTERN, file.getName()) && podcastId >= 0) {
                 LOGGER.info("Start collecting useful things for the podcast {}.", podcastId);
                 switch (FilenameUtils.getExtension(file.getName())) {
                     case Constants.ASCII_DOC:
@@ -108,7 +112,7 @@ public class UsefulThingParser implements Parser<UsefulThing> {
                     try {
                         usefulThings.add(setUsefulThingContent(url, podcastId));
                     } catch (IOException | URISyntaxException e) {
-                        LOGGER.error(e);
+                        LOGGER.error(e.getMessage());
                     }
                 } else {
                     LOGGER.info("Url {} return error with status {}", url, responseCode);
@@ -150,7 +154,9 @@ public class UsefulThingParser implements Parser<UsefulThing> {
                 String substringName = url.substring(url.lastIndexOf("/") + 1, url.length());
                 if (substringName.length() != 0) {
                     name = substringName;
-                    description = UrlUtils.getGithubDescription(url);
+                    description = githubAPI.getGithubProject(url)
+                            .map(GithubProject::getDescription)
+                            .orElse("");
                 }
             }
         }
@@ -164,15 +170,11 @@ public class UsefulThingParser implements Parser<UsefulThing> {
                             .split("\\.")[0];
                 }
             }
-            try {
-                String githubUrl = UrlUtils.findGithubLink(url);
-                if (githubUrl != null) {
-                    description = UrlUtils.getGithubDescription(githubUrl);
-                }
-            } catch (IOException | URISyntaxException | UnsupportedOperationException e) {
-                LOGGER.warn(e.getMessage());
-            }
-
+            description = Optional.ofNullable(UrlUtils.findGithubLink(url))
+                    .map(githubUrl -> githubAPI.getGithubProject(githubUrl).orElse(null))
+                    .filter(Objects::nonNull)
+                    .map(GithubProject::getDescription)
+                    .orElse("");
         }
         return new UsefulThing(url, StringUtils.capitalize(name), parseTags(url), false, podcastId, description);
     }

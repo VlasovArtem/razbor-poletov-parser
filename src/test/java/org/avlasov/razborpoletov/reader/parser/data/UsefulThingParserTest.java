@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.apache.commons.io.FilenameUtils;
 import org.avlasov.razborpoletov.reader.PowerMockitoTestCase;
 import org.avlasov.razborpoletov.reader.entity.info.UsefulThing;
+import org.avlasov.razborpoletov.reader.github.GithubAPI;
+import org.avlasov.razborpoletov.reader.github.entity.GithubProject;
 import org.avlasov.razborpoletov.reader.utils.*;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.collection.IsEmptyCollection;
@@ -50,6 +52,8 @@ public class UsefulThingParserTest extends PowerMockitoTestCase {
     private File file;
     @Mock
     private Document documentMock;
+    @Mock
+    private GithubAPI githubAPI;
     private UsefulThingParser usefulThingParser;
 
     @Before
@@ -65,7 +69,9 @@ public class UsefulThingParserTest extends PowerMockitoTestCase {
                 any(InputStream.class),
                 eq(typeFactory.constructCollectionLikeType(List.class, String.class))))
                 .thenReturn(getTags());
-        usefulThingParser = PowerMockito.spy(new UsefulThingParser());
+        when(githubAPI.getGithubProject(anyString()))
+                .thenReturn(Optional.of(GithubProject.builder().description("Test Description").build()));
+        usefulThingParser = PowerMockito.spy(new UsefulThingParser(githubAPI));
     }
 
     @Before
@@ -73,7 +79,6 @@ public class UsefulThingParserTest extends PowerMockitoTestCase {
         mockStatic(PodcastFileUtils.class, FilenameUtils.class, AsciidocUtils.class, UrlUtils.class, Jsoup.class);
         when(PodcastFileUtils.getPodcastNumber(any(File.class))).thenReturn(of(5));
         when(UrlUtils.checkUrlStatus(anyString())).thenReturn(200);
-        when(UrlUtils.getGithubDescription(anyString())).thenReturn("Test Description");
         when(UrlUtils.findGithubLink(anyString())).thenReturn("http://github.com/Test/Hello");
     }
 
@@ -135,27 +140,9 @@ public class UsefulThingParserTest extends PowerMockitoTestCase {
     }
 
     @Test
-    public void parse_WithAsciiDocAndUrlUtilsThrowException_ReturnUsefulThingsCollectionWithNullDescription() throws Exception {
-        setFileConfiguration(Constants.ASCII_DOC);
-        when(element.attributes().get(Mockito.anyString())).thenReturn("http://www.test.com");
-        when(UrlUtils.getGithubDescription(anyString())).thenThrow(new IOException());
-        List<UsefulThing> data = usefulThingParser.parse(Collections.singletonList(file));
-        assertThat(data, IsCollectionWithSize.hasSize(1));
-        assertEquals(data.get(0).getDescription(), null);
-    }
-
-    @Test
     public void parse_WithExcludedUrl_ReturnEmptyUsefulThings() throws Exception {
         setFileConfiguration(Constants.ASCII_DOC);
         when(element.attributes().get(Mockito.anyString())).thenReturn("http://razbor-poletov.com");
-        List<UsefulThing> data = usefulThingParser.parse(Collections.singletonList(file));
-        assertThat(data, IsEmptyCollection.empty());
-    }
-
-    @Test
-    public void parse_WithGetGithubDescriptionThrownException_ReturnEmptyCollection() throws Exception {
-        setFileConfiguration(Constants.ASCII_DOC);
-        when(UrlUtils.getGithubDescription(anyString())).thenThrow(new IOException());
         List<UsefulThing> data = usefulThingParser.parse(Collections.singletonList(file));
         assertThat(data, IsEmptyCollection.empty());
     }
@@ -173,6 +160,15 @@ public class UsefulThingParserTest extends PowerMockitoTestCase {
         setFileConfiguration(Constants.ASCII_DOC);
         when(element.getElementsByTag(eq("a"))).thenReturn(null);
         List<UsefulThing> data = usefulThingParser.parse(Collections.singletonList(file));
+        assertThat(data, IsEmptyCollection.empty());
+    }
+
+    @Test
+    public void parse_WithUrlUtilsThrowException_ReturnEmptyCollection() throws Exception {
+        setFileConfiguration(Constants.ASCII_DOC);
+        when(element.attributes().get(Mockito.anyString())).thenReturn("http://www.test.com");
+        when(UrlUtils.findGithubLink(anyString())).thenThrow(new IOException());
+        List<UsefulThing> data = usefulThingParser.parse(file);
         assertThat(data, IsEmptyCollection.empty());
     }
 
