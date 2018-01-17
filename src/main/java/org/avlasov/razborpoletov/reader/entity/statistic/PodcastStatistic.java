@@ -12,4 +12,12 @@ public class PodcastStatistic {
         this.longestPodcast = longestPodcast;
         this.totalPodcastsTime = totalPodcastsTime;
     }
+
+    public long getLongestPodcast() {
+        return longestPodcast;
+    }
+
+    public long getTotalPodcastsTime() {
+        return totalPodcastsTime;
+    }
 }
