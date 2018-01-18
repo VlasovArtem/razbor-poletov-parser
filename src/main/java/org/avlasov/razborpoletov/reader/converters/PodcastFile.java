@@ -30,6 +30,7 @@ import java.util.regex.Pattern;
 @Component
 @Scope(scopeName = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class PodcastFile {
+
     private final static String INTERMEDIATE_FILES_FOLDER = "./intermediate-adoc-files/";
     private final static String COMPLETE_FILES_WITHOUT_HTML_FOLDER = "./adoc-files/without-html/";
     private final static String COMPLETE_FILES_WITH_HTML_FOLDER = "./adoc-files/with-html/";
@@ -98,6 +99,7 @@ public class PodcastFile {
     }
 
     private static class BasicElement {
+
         private static List<String> getBasicElement(File file) throws IOException {
             List<String> basicElementParts = new ArrayList<>();
             try(BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -118,6 +120,7 @@ public class PodcastFile {
             }
             return basicElementParts;
         }
+
         private static String getPartContent(List<String> basicElementParts, String pattern) {
             Optional<String> partOptional = basicElementParts
                     .stream()
@@ -136,6 +139,7 @@ public class PodcastFile {
             }
         }
     }
+
     private String getImageUrl() throws IOException {
         Document document = null;
         FilenameUtils.getExtension(originalFile.getAbsolutePath());
@@ -157,4 +161,5 @@ public class PodcastFile {
         }
         return null;
     }
+
 }
