@@ -105,15 +105,10 @@ public class LinkParser implements Parser<PodcastLink> {
                         .collect(Collectors.toList());
                 Optional<String> link = Optional.empty();
                 if (collect.size() > 1) {
-                    Optional<String> first = collect
+                    link = collect
                             .stream()
                             .filter(linkData -> linkData.matches(String.format("/\\d{4}/\\d{2}/episode(-)?%s\\.html", podcastNumber)))
                             .findFirst();
-                    if (!first.isPresent()) {
-                        link = collect.stream().findFirst();
-                    } else {
-                        link = first;
-                    }
                 } else if (!collect.isEmpty()) {
                     link = Optional.ofNullable(collect.get(0));
                 }
