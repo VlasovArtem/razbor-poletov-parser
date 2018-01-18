@@ -3,6 +3,7 @@ package org.avlasov.razborpoletov.reader.service.data.impl;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import org.apache.commons.io.FileUtils;
 import org.avlasov.razborpoletov.reader.PowerMockitoTestCase;
 import org.avlasov.razborpoletov.reader.cli.ParserCommandLine;
 import org.avlasov.razborpoletov.reader.cli.enums.CommandLineArgument;
@@ -20,17 +21,19 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.*;
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.powermock.api.mockito.PowerMockito.*;
 
 /**
  * Created By artemvlasov on 06/01/2018
  **/
-@PrepareForTest(value = { UserServiceDataImpl.class, PodcastFileUtils.class, PodcastFolderUtils.class })
+@PrepareForTest(value = { UserServiceDataImpl.class, PodcastFileUtils.class, PodcastFolderUtils.class, FileUtils.class})
 public class UserServiceDataImplTest extends PowerMockitoTestCase {
 
     @Mock
@@ -57,6 +60,8 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
         when(parserCommandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS)).thenReturn("UPDATE");
         when(userParser.parse(Mockito.anyListOf(File.class))).thenReturn(getList(getNewUser().build(),
                 getNewDataExistingTwitterId().build()));
+        when(userParser.parse(Mockito.any(File.class))).thenReturn(getList(getNewUser().build(),
+                getNewDataExistingTwitterId().build()));
         when(mockFile.exists()).thenReturn(true);
         when(objectMapper.getTypeFactory()).thenReturn(TypeFactory.defaultInstance());
         doNothing().when(objectMapper).writeValue(any(File.class), any());
@@ -77,7 +82,15 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
     }
 
     @Test
-    public void parse_WithInvalueCreatorsGuestArgument_ReturnLiftOfUsers() {
+    public void parse_WithAllUsersParsingRequired_ReturnListOfUsers() {
+        when(mockFile.exists()).thenReturn(false);
+        UserServiceDataImpl userServiceData = new UserServiceDataImpl(userParser, this.objectMapper, parserCommandLine, folderUtils);
+        List<User> users = userServiceData.parse(Collections.singletonList(new File("test")));
+        assertThat(users, IsCollectionWithSize.hasSize(2));
+    }
+
+    @Test
+    public void parse_WithInvalidCreatorsGuestArgument_ReturnLiftOfUsers() {
         when(parserCommandLine.getOptionValue(CommandLineArgument.CREATORS_GUESTS)).thenReturn("INVALID");
         List<User> users = userServiceData.parse(Collections.singletonList(new File("test")));
         assertThat(users, IsCollectionWithSize.hasSize(2));
@@ -115,6 +128,12 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
     }
 
     @Test
+    public void parse_WithFile_ReturnListOfUsers() {
+        List<User> parse = userServiceData.parse(new File("test"));
+        assertThat(parse, IsCollectionWithSize.hasSize(2));
+    }
+
+    @Test
     public void saveJsonData_WithValidData_ReturnFile() {
         File file = userServiceData.saveJsonData(getList(getNewDataExistingTwitterId().build()));
         assertNotNull(file);
@@ -138,7 +157,22 @@ public class UserServiceDataImplTest extends PowerMockitoTestCase {
         userServiceData.saveJsonData(getList(getNewDataExistingTwitterId().build()));
     }
 
+    @Test
+    public void saveStringData_WithValidaData_ReturnFile() throws Exception {
+        mockStatic(FileUtils.class);
+        doNothing().when(FileUtils.class);
+        FileUtils.writeStringToFile(any(File.class), anyString(), Mockito.eq(Charset.defaultCharset()));
+        File file = userServiceData.saveStringData(getList(getJsonData().build()));
+        assertNotNull(file);
+    }
 
+    @Test(expected = RuntimeException.class)
+    public void saveStringData_WithFileUtilsThrowException_ExceptionThrown() throws Exception {
+        mockStatic(FileUtils.class);
+        doThrow(new IOException()).when(FileUtils.class);
+        FileUtils.writeStringToFile(any(File.class), anyString(), Mockito.eq(Charset.defaultCharset()));
+        userServiceData.saveStringData(getList(getJsonData().build()));
+    }
 
     private User.UserBuilder getJsonData() {
         return User.builder()
