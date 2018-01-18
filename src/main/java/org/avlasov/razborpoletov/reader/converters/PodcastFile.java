@@ -18,7 +18,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -61,7 +60,8 @@ public class PodcastFile {
     private final PodcastStatisticParser parser;
 
     @Autowired
-    public PodcastFile(File originalFile, PodcastStatisticParser parser) throws IOException, URISyntaxException {
+    public PodcastFile(@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") File originalFile,
+                       PodcastStatisticParser parser) throws IOException {
         this.parser = parser;
         mp3Url = this.parser.getUrl(originalFile);
         this.originalFile = originalFile;
@@ -131,18 +131,14 @@ public class PodcastFile {
                     return partOptional.get().split(" ", 2)[1].replaceAll("\"", "");
                 } else if(DATE_PATTERN.equals(pattern)) {
                     return partOptional.get().split(" ", 2)[1];
-                } else {
-                    return "undefined";
                 }
-            } else {
-                return "none";
             }
+            return "none";
         }
     }
 
     private String getImageUrl() throws IOException {
         Document document = null;
-        FilenameUtils.getExtension(originalFile.getAbsolutePath());
         switch (FilenameUtils.getExtension(originalFile.getAbsolutePath())) {
             case Constants.MARKDOWN_FORMAT:
                 document =  Jsoup.parse(MarkdownUtils.parseToHtml(originalFile));
