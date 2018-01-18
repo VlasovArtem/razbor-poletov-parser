@@ -4,6 +4,7 @@ package org.avlasov.razborpoletov.reader.converters;
  * Created by artemvlasov on 04/06/15.
  */
 public class TagsBuilder {
+
     public static String basicAsciidocElementBuilder(long podcastId,
                                                       long mp3FileLength,
                                                       String podcastTitle,
@@ -22,6 +23,7 @@ public class TagsBuilder {
         sb.append(String.format(":filename: %s", mp3FileName)).append("\n");
         return sb.toString();
     }
+
     public static String audioTagHtmlBuilder(String mp3Url) {
         StringBuilder sb = new StringBuilder();
         sb.append("++++\n");
@@ -36,6 +38,7 @@ public class TagsBuilder {
     public static String audioTagAsciidocBuilder(String mp3Url) {
         return String.format("audio::%s[]", mp3Url);
     }
+
     public static String downloadTagHtmlBuilder(String mp3Url) {
         StringBuilder sb = new StringBuilder();
         sb.append("++++\n");
@@ -48,11 +51,13 @@ public class TagsBuilder {
         sb.append("++++\n");
         return sb.toString();
     }
+
     public static String downloadTagAsciidocBuilder(String mp3Url) {
         return String.format("image::http://2.bp.blogspot" +
                 ".com/-qkfh8Q--dks/T0gixAMzuII/AAAAAAAAHD0/O5LbF3vvBNQ/s200/1330127522_mp3" +
                 ".png[link=\"%s\" width=\"64\" height=\"64\"]\n", mp3Url);
     }
+
     public static String imageTagHtmlBuilder(String imgUrl) {
         StringBuilder sb = new StringBuilder();
         sb.append("++++\n");
@@ -65,6 +70,7 @@ public class TagsBuilder {
         sb.append("++++\n");
         return sb.toString();
     }
+
     public static String imageTagAsciidocBuilder(String imgUrl) {
         return String.format("image::%s[width=\"350\" height=\"350\"" +
                 " link=\"%s\" align=\"center\"]\n", imgUrl, imgUrl);
