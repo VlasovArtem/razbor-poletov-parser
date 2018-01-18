@@ -39,7 +39,7 @@ public class AsciidocUtilsTest extends PowerMockitoTestCase {
     private StructuredDocument structuredDocument;
     @Mock
     private ContentPart contentPart;
-    @Mock(answer = Answers.RETURNS_DEEP_STUBS)
+    @Mock(answer = Answers.RETURNS_MOCKS)
     private Document document;
 
     @Before
@@ -88,8 +88,9 @@ public class AsciidocUtilsTest extends PowerMockitoTestCase {
 
     @Test
     public void parsePartById_WithNullContentPartId_ReturnElement() {
-        Document document = PowerMockito.mock(Document.class, Answers.RETURNS_DEEP_STUBS.get());
-        when(this.document.parent()).thenReturn(document);
+        Document documentMainMock = PowerMockito.mock(Document.class);
+        when(Jsoup.parse(anyString())).thenReturn(documentMainMock);
+        when(documentMainMock.parent()).thenReturn(document);
         when(contentPart.getId()).thenReturn(null);
         when(Collector.collect(any(Evaluator.class), any(Element.class))).thenReturn(new Elements(document));
         when(document.tag().getName()).thenReturn("h1");
