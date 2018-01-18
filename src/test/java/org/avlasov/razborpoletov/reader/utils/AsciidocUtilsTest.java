@@ -16,6 +16,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Answers;
 import org.mockito.Mock;
+import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.reflect.Whitebox;
 
@@ -87,7 +88,8 @@ public class AsciidocUtilsTest extends PowerMockitoTestCase {
 
     @Test
     public void parsePartById_WithNullContentPartId_ReturnElement() {
-        when(document.parent()).thenReturn(document);
+        Document document = PowerMockito.mock(Document.class, Answers.RETURNS_DEEP_STUBS.get());
+        when(this.document.parent()).thenReturn(document);
         when(contentPart.getId()).thenReturn(null);
         when(Collector.collect(any(Evaluator.class), any(Element.class))).thenReturn(new Elements(document));
         when(document.tag().getName()).thenReturn("h1");
