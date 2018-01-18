@@ -57,7 +57,7 @@ public class UserServiceDataImpl extends ExtendableServiceDataAbstract<User, Use
      */
     @Override
     protected boolean isAllFilesParsingRequired() {
-        return CreatorsGuestsArgument.ALL.equals(getCreatorsGuestsArgument()) || getJsonData().isEmpty();
+        return CreatorsGuestsArgument.ALL.equals(getCreatorsGuestsArgument()) || super.isAllFilesParsingRequired();
     }
 
     /**

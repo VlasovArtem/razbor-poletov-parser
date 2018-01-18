@@ -95,12 +95,7 @@ public abstract class ExtendableServiceDataAbstract<T, R extends Parser<T>> exte
                 .mapToInt(file -> PodcastFileUtils.getPodcastNumber(file).orElse(-999))
                 .sorted()
                 .toArray();
-        int lastParsedPodcastNumber = getLastParsedPodcastNumber();
-        if (lastParsedPodcastNumber > podcastFilesToParse[0] || lastParsedPodcastNumber < podcastFilesToParse[0]) {
-            return folderUtils.getPodcastsFiles(lastParsedPodcastNumber + 1, podcastFilesToParse[podcastFilesToParse.length - 1]);
-        } else {
-            return files;
-        }
+        return folderUtils.getPodcastsFiles(getLastParsedPodcastNumber() + 1, podcastFilesToParse[podcastFilesToParse.length - 1]);
     }
 
     /**
