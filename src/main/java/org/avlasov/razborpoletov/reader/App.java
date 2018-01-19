@@ -16,6 +16,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,28 +35,33 @@ import static org.avlasov.razborpoletov.reader.cli.enums.CommandLineArgument.*;
 public class App {
 
     private static final Logger LOGGER = LogManager.getLogger(App.class);
-    private static final int MIN_SIZE_OF_A_PODCAST_NUMBER_SIZE = 2;
     private ParserCommandLine commandLine;
     private ApplicationContext applicationContext;
-    private PodcastFolderUtils podcastFileUtils;
+    private PodcastFolderUtils podcastFolderUtils;
 
     @Autowired
-    public App(ParserCommandLine commandLine, ApplicationContext applicationContext, PodcastFolderUtils podcastFolderUtils) throws IOException, GitAPIException {
+    public App(ParserCommandLine commandLine, ApplicationContext applicationContext, PodcastFolderUtils podcastFolderUtils) {
         this.commandLine = commandLine;
         this.applicationContext = applicationContext;
-        this.podcastFileUtils = podcastFolderUtils;
+        this.podcastFolderUtils = podcastFolderUtils;
         podcastFolderUtils.checkPodcastFolder(commandLine.getOptionValue(GIT_FOLDER));
-        createDataFolder();
-        checkGitPull();
-        parseData();
-        System.exit(0);
     }
 
-    public static void main(String[] args) {
-        new SpringApplicationBuilder()
+    public static void main(String[] args) throws Exception {
+        SpringApplicationBuilder springApplicationBuilder = new SpringApplicationBuilder();
+        ConfigurableApplicationContext applicationContext = springApplicationBuilder
                 .sources(App.class)
                 .profiles("commandLine")
                 .run(args);
+        App app = applicationContext.getBean(App.class);
+        app.evaluateParser();
+        applicationContext.close();
+    }
+
+    public void evaluateParser() throws Exception {
+        createDataFolder();
+        checkGitPull();
+        parseData();
     }
 
     private void parseData() {
@@ -64,13 +70,13 @@ public class App {
 
     private List<File> getPodcastFilesToParse() {
         if (commandLine.hasOption(LAST)) {
-            return Collections.singletonList(podcastFileUtils.getLastPodcastFile());
+            return Collections.singletonList(podcastFolderUtils.getLastPodcastFile());
         } else if (commandLine.hasOption(NUMBER)) {
-            return Collections.singletonList(podcastFileUtils.getPodcastByNumber(Integer.parseInt(commandLine.getOptionValue(NUMBER))));
+            return Collections.singletonList(podcastFolderUtils.getPodcastByNumber(Integer.parseInt(commandLine.getOptionValue(NUMBER))));
         } else if (commandLine.hasOption(BATCH)) {
-            return podcastFileUtils.getPodcastFiles(getBatchEpisodes());
+            return podcastFolderUtils.getPodcastFiles(getBatchEpisodes());
         } else {
-            return podcastFileUtils.getAllPodcastFiles();
+            return podcastFolderUtils.getAllPodcastFiles();
         }
     }
 
@@ -84,18 +90,16 @@ public class App {
                 podcastNumbers.add(matcher.group());
             }
             if (commandLineValue.matches("\\d+\\s?-\\s?\\d+")) {
-                if (podcastNumbers.size() != 0 && podcastNumbers.size() == MIN_SIZE_OF_A_PODCAST_NUMBER_SIZE) {
-                    int firstPodcast = Integer.valueOf(podcastNumbers.get(0));
-                    int lastPodcast = Integer.valueOf(podcastNumbers.get(1));
-                    if (firstPodcast > lastPodcast) {
-                        LOGGER.warn("First podcast number cannot be greater than last podcast");
-                    } else {
-                        return IntStream
-                                .rangeClosed(firstPodcast, lastPodcast)
-                                .toArray();
-                    }
+                int firstPodcast = Integer.valueOf(podcastNumbers.get(0));
+                int lastPodcast = Integer.valueOf(podcastNumbers.get(1));
+                if (firstPodcast > lastPodcast) {
+                    String message = "First podcast number cannot be greater than last podcast";
+                    LOGGER.warn(message);
+                    throw new RuntimeException(message);
                 } else {
-                    LOGGER.warn("Batch of podcats numbers in format from - to, cannot contains more that two podcats numbers");
+                    return IntStream
+                            .rangeClosed(firstPodcast, lastPodcast)
+                            .toArray();
                 }
             }
         }
@@ -131,11 +135,11 @@ public class App {
         PullResult pullResult = gitPuller.pull();
         if (!pullResult.isSuccessful()) {
             throw new RuntimeException("Git pull execute unsuccessfully");
-        } else if (pullResult.toString().contains("Already up-to-date.") || pullResult.toString().contains
-                ("Already-up-to-date.")) {
+        } else if (pullResult.toString().contains("up-to-date.")) {
             if (!commandLine.hasOption(IGNORE_GIT)) {
-                LOGGER.info("All podcasts are parsed");
-                System.exit(0);
+                String message = String.format("All podcasts was parsed. Please set option %s to ignore this validation", IGNORE_GIT.getOption());
+                LOGGER.info(message);
+                throw new RuntimeException(message);
             }
         }
     }
