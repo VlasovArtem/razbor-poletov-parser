@@ -64,4 +64,39 @@ Whitebox.setInternalState(AsciidocUtils.class, "asciidoctor", asciidoctor);<1>
 * When you try to invoke final method on mock class, you need to add class to **@PrepareForTest**
 * To test any inner classes you can use **org.powermock.reflect.Whitebox**
 * When create SetUp method for test, do not forget about class initialization.
+* Please note if Class has private constructor and inner class is referenced to this constructor, then Java will generate additional class, but with package-private constructor
+[source,java]
+----
+public class Test { <1>
+
+    private String testString;
+
+    private Test(String testString) { <2>
+        this.testString = testString;
+    }
+
+    public static InnerTest getInnerTest(String innerTestString) {
+        return new InnerTest(innerTestString);
+    }
+
+    public static class InnerTest { <3>
+
+        private String innerTestString;
+
+        InnerTest(String innerTestString) {
+            this.innerTestString = innerTestString;
+        }
+
+        public Test getTest() {
+            return new Test(innerTestString);
+        }
+
+    }
+
+}
+----
+<1> Test.class
+<2> Test$1.class - the same as class **Test.class**, but with package-private constructor
+<3> Test$InnerTest.class
+--
 

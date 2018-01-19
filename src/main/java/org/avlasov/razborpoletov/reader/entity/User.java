@@ -22,7 +22,7 @@ public class User implements Comparable {
     public User() {
     }
 
-    private User(long twitterId, String twitterAccount, String twitterAccountUrl, String name, String twitterImgUrl, long episodeNumberOfTheFirstAppearance, String location, String bio, int totalAppearance, Set<Integer> appearanceEpisodeNumbers) {
+    User(long twitterId, String twitterAccount, String twitterAccountUrl, String name, String twitterImgUrl, long episodeNumberOfTheFirstAppearance, String location, String bio, int totalAppearance, Set<Integer> appearanceEpisodeNumbers) {
         this.twitterId = twitterId;
         this.twitterAccount = twitterAccount;
         this.twitterAccountUrl = twitterAccountUrl;

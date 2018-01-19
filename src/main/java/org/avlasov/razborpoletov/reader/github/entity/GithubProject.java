@@ -1,12 +1,17 @@
 package org.avlasov.razborpoletov.reader.github.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 /**
  * Created By artemvlasov on 17/01/2018
  **/
 @Builder
+@NoArgsConstructor(access = AccessLevel.PACKAGE)
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class GithubProject {
 
     private long id;
@@ -20,19 +25,6 @@ public class GithubProject {
     private String htmlUrl;
     private String description;
     private String language;
-
-    public GithubProject() {}
-
-    private GithubProject(long id, String name, String fullName, GithubProjectOwner owner, boolean privateProject, String htmlUrl, String description, String language) {
-        this.id = id;
-        this.name = name;
-        this.fullName = fullName;
-        this.owner = owner;
-        this.privateProject = privateProject;
-        this.htmlUrl = htmlUrl;
-        this.description = description;
-        this.language = language;
-    }
 
     public String getDescription() {
         return description;

@@ -1,7 +1,10 @@
 package org.avlasov.razborpoletov.reader.entity.info;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -10,6 +13,8 @@ import java.util.List;
  */
 @JsonAutoDetect
 @Builder
+@NoArgsConstructor(access = AccessLevel.PACKAGE)
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class UsefulThing {
 
     private String link;
@@ -18,17 +23,6 @@ public class UsefulThing {
     private boolean checked;
     private long podcastId;
     private String description;
-
-    public UsefulThing() {}
-
-    private UsefulThing(String link, String name, List<String> tags, boolean checked, long podcastId, String description) {
-        this.link = link;
-        this.name = name;
-        this.tags = tags;
-        this.checked = checked;
-        this.podcastId = podcastId;
-        this.description = description;
-    }
 
     public String getLink() {
         return link;
