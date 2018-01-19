@@ -9,6 +9,7 @@ import org.hamcrest.collection.IsEmptyCollection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Tag;
 import org.jsoup.select.Collector;
 import org.jsoup.select.Elements;
 import org.jsoup.select.Evaluator;
@@ -89,11 +90,13 @@ public class AsciidocUtilsTest extends PowerMockitoTestCase {
     @Test
     public void parsePartById_WithNullContentPartId_ReturnElement() {
         Document documentMainMock = PowerMockito.mock(Document.class);
+        when(Collector.collect(any(Evaluator.class), any(Element.class))).thenReturn(new Elements(documentMainMock));
         when(Jsoup.parse(anyString())).thenReturn(documentMainMock);
+        Tag mock = mock(Tag.class);
+        when(documentMainMock.tag()).thenReturn(mock);
+        when(mock.getName()).thenReturn("h1");
         when(documentMainMock.parent()).thenReturn(document);
         when(contentPart.getId()).thenReturn(null);
-        when(Collector.collect(any(Evaluator.class), any(Element.class))).thenReturn(new Elements(document));
-        when(document.tag().getName()).thenReturn("h1");
         Optional<Element> element = AsciidocUtils.parsePartById(new File(""), "полезняшки");
         assertTrue(element.isPresent());
     }
