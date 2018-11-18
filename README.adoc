@@ -53,7 +53,7 @@ Adding Twitter API configuration. Add twitter.properties to the class path with 
 * *ConsumerSecret* (Consumer Secret (API Secret))
 ====
 
-==== Developer NOTES
+=== Developer NOTES
 * Please beware, when you testing static class (utilities classes) with *final static* methods, please ref to AsciidocUtils.java (org.avlasov.razborpoletov.reader.utils). You should use next code like in the next example
 [source,java]
 ----
